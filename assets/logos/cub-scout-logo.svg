@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Pack 321 logo placeholder</title>
+  <desc id="desc">A simple blue and gold Pack 321 mark used until the final logo asset is added.</desc>
+  <circle cx="60" cy="60" r="56" fill="#062348"/>
+  <circle cx="60" cy="60" r="48" fill="#ffc629"/>
+  <circle cx="60" cy="60" r="38" fill="#0b315f"/>
+  <path d="M60 20l8 25 26 .2-21 15.2 7.8 25L60 70.3 39.2 85.4l7.8-25-21-15.2 26-.2z" fill="#ffc629"/>
+  <text x="60" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#062348">321</text>
+</svg>
