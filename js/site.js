@@ -1,19 +1,20 @@
-(function () {
-  const header = document.querySelector(".site-header");
-  const toggle = document.querySelector("[data-menu-toggle]");
-  const nav = document.querySelector("#primary-nav");
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const nav = document.getElementById('primary-nav') || document.querySelector('.nav-links');
 
-  if (!header || !toggle || !nav) return;
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
 
-  toggle.addEventListener("click", function () {
-    const isOpen = header.classList.toggle("menu-open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
+  document.querySelectorAll('img[data-fallback]').forEach((image) => {
+    image.addEventListener('error', () => {
+      const fallback = image.getAttribute('data-fallback');
+      if (fallback && image.getAttribute('src') !== fallback) {
+        image.setAttribute('src', fallback);
+      }
+    });
   });
-
-  nav.addEventListener("click", function (event) {
-    if (event.target.closest("a")) {
-      header.classList.remove("menu-open");
-      toggle.setAttribute("aria-expanded", "false");
-    }
-  });
-})();
+});
