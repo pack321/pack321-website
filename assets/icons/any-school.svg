@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img">
+  <defs><radialGradient id="navyBg" cx="35%" cy="25%" r="70%"><stop stop-color="#0f477f"/><stop offset=".62" stop-color="#002b4e"/><stop offset="1" stop-color="#03172f"/></radialGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#002b4e" flood-opacity=".28"/></filter></defs>
+  <style>.navy{fill:#002b4e}.gold{fill:#ffc72c}.white{fill:#fff}.gold-line{fill:none;stroke:#ffc72c;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.white-line{fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.navy-line{fill:none;stroke:#002b4e;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}</style>
+  <g filter="url(#shadow)"><circle cx="50" cy="50" r="45" fill="url(#navyBg)"/><circle cx="50" cy="50" r="45" fill="none" stroke="#ffc72c" stroke-width="6"/><circle cx="50" cy="50" r="38" fill="none" stroke="rgba(255,255,255,.32)" stroke-width="2"/></g>
+  <g transform="translate(10 8)"><path class="gold" d="M17 39l23-21 23 21v29H17z"/><path class="navy" d="M24 43h32v25H24z"/><path class="white" d="M33 54h14v14H33z"/><circle class="white" cx="40" cy="43" r="6"/><path class="gold-line" d="M40 18V9h16v12"/><path class="white-line" d="M16 39h48"/></g>
+</svg>
