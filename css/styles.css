@@ -24,3 +24,6 @@
 
 /* request information form */
 .request-info-section{background:var(--cream)}.request-info-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;box-shadow:var(--shadow)}.section-head.compact{margin-bottom:12px}.request-info-card .section-title{text-align:left;font-size:clamp(32px,4vw,48px);color:var(--navy)}.request-info-card .title-mark{margin-left:0}.form-note{margin:0 0 18px;color:#25364d;font-weight:700}.google-form-frame{width:100%;min-height:720px;border:0;border-radius:8px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line)}.request-info-card .action-row{margin-top:18px}.resources-request-card .button,.card .button{margin-top:12px}@media(max-width:760px){.request-info-card{padding:20px}.google-form-frame{min-height:620px}.request-info-card .section-title{text-align:left}}
+
+/* coming up next underline */
+.events-home .title-mark{width:72px;height:5px;background:linear-gradient(90deg,var(--gold2),var(--gold),var(--gold2));border-radius:999px;box-shadow:0 2px 0 rgba(6,35,72,.12);margin-top:14px;margin-bottom:34px}
