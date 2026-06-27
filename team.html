@@ -8,7 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <div class="construction-banner">Pack 321 Website Preview — Construction / Leadership Review Version</div>
@@ -33,15 +37,31 @@
   </div>
 </header>
 <main>
-<section class="subpage-hero" aria-label="Meet The Team hero">
-  <div class="subpage-hero-text">
-    <div class="hero-brand-line"><span></span><strong>Pack 321</strong><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span></span></div>
-    <h1>Meet The Team</h1>
-    <div class="hero-gold-rule"><span></span><b>✦</b><span></span></div>
+<section class="pack-hero" style="--hero-position: center 62%;" aria-label="Meet The Team hero">
+  <div class="pack-hero__copy">
+    <div class="pack-hero__lockup" aria-label="Pack 321 Oak Creek Wisconsin">
+      <span class="pack-hero__line"></span>
+      <img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo">
+      <span class="pack-hero__line"></span>
+      <div class="pack-hero__brand">
+        <strong>Pack 321</strong>
+        <span>Oak Creek, Wisconsin</span>
+        <em>Serving families since 1967</em>
+      </div>
+    </div>
+    <h1><span>Meet The</span><span class="gold">Team</span></h1>
+    <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
     <p>Volunteer leaders helping every Scout and family feel welcome.</p>
+    <div class="pack-hero__coins" aria-label="Pack 321 welcome highlights">
+      <article class="pack-hero__coin"><img src="assets/icons/boys-girls.png" alt="Boys & Girls Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Boys & Girls<br>Welcome</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/any-school.png" alt="Any School, Any Community" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Any School,<br>Any Community</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/parents-participate.png" alt="Parents Participate" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Parents<br>Participate</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/siblings-welcome.png" alt="Siblings Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Siblings<br>Welcome</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/grandparents-welcome.png" alt="Grandparents Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Grandparents<br>Welcome</strong></article>
+    </div>
   </div>
-  <div class="subpage-hero-photo">
-    <img src="assets/images/hero/team.jpg" alt="Meet The Team photo" data-fallback="assets/images/placeholders/hero-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.jpg';">
+  <div class="pack-hero__media">
+    <img src="assets/images/hero/team.jpg" alt="Meet The Team photo" data-fallback="assets/images/placeholders/hero-placeholder.png" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.png';">
   </div>
 </section><section class="page-section cream-section"><div class="wrap"><div class="section-heading"><h2>Leadership With Heart</h2><span></span><p>Our leaders help plan meetings, guide adventures, communicate with families, and keep the Pack moving together.</p></div><div class="brand-cards"><article class="brand-card"><div class="card-medallion">CM</div><h3>Cubmaster</h3><p>Leads Pack meetings, keeps the energy high, and helps Scouts feel celebrated.</p></article><article class="brand-card"><div class="card-medallion">DL</div><h3>Den Leaders</h3><p>Guide Scouts by grade level through adventures, activities, rank progress, and friendship.</p></article><article class="brand-card"><div class="card-medallion">CC</div><h3>Pack Committee</h3><p>Supports planning, fundraising, events, communication, and Pack operations.</p></article></div></div></section><section class="page-section"><div class="wrap two-panel"><article class="feature-panel"><h2>Want to Help?</h2><p>You do not need to know everything about Scouting to volunteer. Pack 321 has room for planners, helpers, encouragers, builders, communicators, and friendly extra hands.</p><a class="button gold" href="volunteer.html">Volunteer</a></article><article class="feature-panel navy-panel"><h2>Contact Leadership</h2><p>Questions about joining, meetings, leadership roles, or the Pack calendar? A Pack leader will be happy to follow up.</p><a class="button light" href="contact.html#request-info">Request Information</a></article></div></section>
 </main>

@@ -8,7 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <div class="construction-banner">Pack 321 Website Preview — Construction / Leadership Review Version</div>
@@ -33,15 +37,31 @@
   </div>
 </header>
 <main>
-<section class="subpage-hero" aria-label="Calendar hero">
-  <div class="subpage-hero-text">
-    <div class="hero-brand-line"><span></span><strong>Pack 321</strong><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span></span></div>
-    <h1>Calendar</h1>
-    <div class="hero-gold-rule"><span></span><b>✦</b><span></span></div>
+<section class="pack-hero" style="--hero-position: center 72%;" aria-label="Pack 321 Calendar hero">
+  <div class="pack-hero__copy">
+    <div class="pack-hero__lockup" aria-label="Pack 321 Oak Creek Wisconsin">
+      <span class="pack-hero__line"></span>
+      <img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo">
+      <span class="pack-hero__line"></span>
+      <div class="pack-hero__brand">
+        <strong>Pack 321</strong>
+        <span>Oak Creek, Wisconsin</span>
+        <em>Serving families since 1967</em>
+      </div>
+    </div>
+    <h1><span>Pack 321</span><span class="gold">Calendar</span></h1>
+    <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
     <p>See what is coming up and join us for our next adventure.</p>
+    <div class="pack-hero__coins" aria-label="Pack 321 welcome highlights">
+      <article class="pack-hero__coin"><img src="assets/icons/boys-girls.png" alt="Boys & Girls Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Boys & Girls<br>Welcome</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/any-school.png" alt="Any School, Any Community" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Any School,<br>Any Community</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/parents-participate.png" alt="Parents Participate" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Parents<br>Participate</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/siblings-welcome.png" alt="Siblings Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Siblings<br>Welcome</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/grandparents-welcome.png" alt="Grandparents Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Grandparents<br>Welcome</strong></article>
+    </div>
   </div>
-  <div class="subpage-hero-photo">
-    <img src="assets/images/hero/calendar.jpg" alt="Calendar photo" data-fallback="assets/images/placeholders/hero-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.jpg';">
+  <div class="pack-hero__media">
+    <img src="assets/images/hero/calendar.jpg" alt="Pack 321 Calendar photo" data-fallback="assets/images/placeholders/hero-placeholder.png" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.png';">
   </div>
 </section><section class="page-section cream-section"><div class="wrap"><div class="section-heading"><h2>Coming Up Next</h2><span></span></div><div class="event-card-grid"><article class="event-card"><strong>Pack Meeting</strong><h3>3rd Tuesday</h3><p>Carollton Elementary • families participate together.</p></article><article class="event-card"><strong>Next Adventure</strong><h3>See Calendar</h3><p>Campouts, service projects, fundraising, and family events.</p></article><article class="event-card"><strong>New Families</strong><h3>Visit a Meeting</h3><p>Ask questions, meet leaders, and see if Pack 321 feels like home.</p></article></div></div></section><section class="page-section"><div class="wrap"><iframe class="calendar-frame" src="https://calendar.google.com/calendar/embed?src=wicubscoutpack321%40gmail.com" title="Pack 321 Google Calendar"></iframe></div></section>
 </main>

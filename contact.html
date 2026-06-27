@@ -8,7 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <div class="construction-banner">Pack 321 Website Preview — Construction / Leadership Review Version</div>
@@ -33,15 +37,31 @@
   </div>
 </header>
 <main>
-<section class="subpage-hero" aria-label="Contact Us hero">
-  <div class="subpage-hero-text">
-    <div class="hero-brand-line"><span></span><strong>Pack 321</strong><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span></span></div>
-    <h1>Contact Us</h1>
-    <div class="hero-gold-rule"><span></span><b>✦</b><span></span></div>
+<section class="pack-hero" style="--hero-position: center 62%;" aria-label="Contact Us hero">
+  <div class="pack-hero__copy">
+    <div class="pack-hero__lockup" aria-label="Pack 321 Oak Creek Wisconsin">
+      <span class="pack-hero__line"></span>
+      <img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo">
+      <span class="pack-hero__line"></span>
+      <div class="pack-hero__brand">
+        <strong>Pack 321</strong>
+        <span>Oak Creek, Wisconsin</span>
+        <em>Serving families since 1967</em>
+      </div>
+    </div>
+    <h1><span>Contact</span><span class="gold">Us</span></h1>
+    <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
     <p>Have questions? We are here to help. We would love to hear from you.</p>
+    <div class="pack-hero__coins" aria-label="Pack 321 welcome highlights">
+      <article class="pack-hero__coin"><img src="assets/icons/boys-girls.png" alt="Boys & Girls Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Boys & Girls<br>Welcome</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/any-school.png" alt="Any School, Any Community" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Any School,<br>Any Community</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/parents-participate.png" alt="Parents Participate" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Parents<br>Participate</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/siblings-welcome.png" alt="Siblings Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Siblings<br>Welcome</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/grandparents-welcome.png" alt="Grandparents Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Grandparents<br>Welcome</strong></article>
+    </div>
   </div>
-  <div class="subpage-hero-photo">
-    <img src="assets/images/hero/contact.jpg" alt="Contact Us photo" data-fallback="assets/images/placeholders/hero-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.jpg';">
+  <div class="pack-hero__media">
+    <img src="assets/images/hero/contact.jpg" alt="Contact Us photo" data-fallback="assets/images/placeholders/hero-placeholder.png" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.png';">
   </div>
 </section><section class="page-section cream-section"><div class="wrap two-panel"><article class="feature-panel"><h2>Pack Contact</h2><p><strong>Phone:</strong> (414) 215-9261<br><strong>Email:</strong> wicubscoutpack321@gmail.com<br><strong>Location:</strong> Carollton Elementary, Oak Creek, WI</p></article><article class="feature-panel"><h2>What Happens Next</h2><p>A Pack leader will answer your question, help you plan a visit, or connect you with the right volunteer.</p></article></div></section><section class="page-section request-section" id="request-info">
   <div class="wrap">

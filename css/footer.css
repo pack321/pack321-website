@@ -1,0 +1,10 @@
+.site-footer { padding: 54px 0 20px; background: var(--navy); color: #fff; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.3fr 1fr; gap: 40px; align-items: start; }
+.site-footer h4 { margin: 0 0 14px; color: #fff; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.8rem; text-transform: uppercase; }
+.site-footer a, .site-footer p { display: block; margin: 0 0 9px; color: #fff; }
+.site-footer .brand { grid-template-columns: 68px max-content; min-width: 0; margin-bottom: 12px; } .site-footer .brand img { width: 68px; height: 68px; }
+.be-scout { color: var(--gold) !important; }
+.footer-bottom { margin-top: 34px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.16); color: var(--gold); font-family: 'Montserrat', Arial, sans-serif; font-size: .85rem; font-weight: 900; letter-spacing: .22em; text-align: center; text-transform: uppercase; }
+.feedback-float { position: fixed; right: 18px; bottom: 18px; z-index: 80; padding: 13px 18px; border-radius: 999px; background: var(--navy); color: #fff; border: 2px solid var(--gold); font-family: 'Montserrat', Arial, sans-serif; font-size: .8rem; font-weight: 900; text-transform: uppercase; box-shadow: 0 14px 30px rgba(0,0,0,.24); }
+@media (max-width: 980px) { .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; } .feedback-float { left: 14px; right: 14px; text-align: center; } }

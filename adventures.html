@@ -8,7 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <div class="construction-banner">Pack 321 Website Preview — Construction / Leadership Review Version</div>
@@ -33,15 +37,31 @@
   </div>
 </header>
 <main>
-<section class="subpage-hero" aria-label="Adventures hero">
-  <div class="subpage-hero-text">
-    <div class="hero-brand-line"><span></span><strong>Pack 321</strong><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span></span></div>
-    <h1>Adventures</h1>
-    <div class="hero-gold-rule"><span></span><b>✦</b><span></span></div>
+<section class="pack-hero" style="--hero-position: 68% 72%;" aria-label="Adventure Lives Here hero">
+  <div class="pack-hero__copy">
+    <div class="pack-hero__lockup" aria-label="Pack 321 Oak Creek Wisconsin">
+      <span class="pack-hero__line"></span>
+      <img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo">
+      <span class="pack-hero__line"></span>
+      <div class="pack-hero__brand">
+        <strong>Pack 321</strong>
+        <span>Oak Creek, Wisconsin</span>
+        <em>Serving families since 1967</em>
+      </div>
+    </div>
+    <h1><span>Adventure</span><span class="gold">Lives Here</span></h1>
+    <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
     <p>Memories that last a lifetime. Adventures that build character.</p>
+    <div class="pack-hero__coins" aria-label="Pack 321 welcome highlights">
+      <article class="pack-hero__coin"><img src="assets/icons/boys-girls.png" alt="Boys & Girls Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Boys & Girls<br>Welcome</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/any-school.png" alt="Any School, Any Community" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Any School,<br>Any Community</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/parents-participate.png" alt="Parents Participate" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Parents<br>Participate</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/siblings-welcome.png" alt="Siblings Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Siblings<br>Welcome</strong></article>
+      <article class="pack-hero__coin"><img src="assets/icons/grandparents-welcome.png" alt="Grandparents Welcome" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><strong>Grandparents<br>Welcome</strong></article>
+    </div>
   </div>
-  <div class="subpage-hero-photo">
-    <img src="assets/images/hero/adventures.jpg" alt="Adventures photo" data-fallback="assets/images/placeholders/hero-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.jpg';">
+  <div class="pack-hero__media">
+    <img src="assets/images/hero/adventures.jpg" alt="Adventure Lives Here photo" data-fallback="assets/images/placeholders/hero-placeholder.png" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.png';">
   </div>
 </section><section class="page-section cream-section"><div class="wrap"><div class="section-heading"><h2>Featured Adventures</h2><span></span><p>Each card uses a replaceable photo in assets/images/adventures/.</p></div> <div class="adventure-grid"><article class="adventure-card" tabindex="0"><img class="adventure-photo" src="assets/images/adventures/camping.jpg" alt="Camping" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><div class="adventure-fallback"></div><div class="adventure-overlay"><h3>Camping</h3><p>Camp under the stars, learn outdoor skills, and make lifelong memories.</p><strong>Learn More →</strong></div></article><article class="adventure-card" tabindex="0"><img class="adventure-photo" src="assets/images/adventures/fishing.jpg" alt="Fishing" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><div class="adventure-fallback"></div><div class="adventure-overlay"><h3>Fishing</h3><p>Learn patience, conservation, and the excitement of catching your first fish.</p><strong>Learn More →</strong></div></article><article class="adventure-card" tabindex="0"><img class="adventure-photo" src="assets/images/adventures/pinewood-derby.jpg" alt="Pinewood Derby" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><div class="adventure-fallback"></div><div class="adventure-overlay"><h3>Pinewood Derby</h3><p>Design it. Build it. Race it. Cheer each other on.</p><strong>Learn More →</strong></div></article><article class="adventure-card" tabindex="0"><img class="adventure-photo" src="assets/images/adventures/raingutter-regatta.jpg" alt="Raingutter Regatta" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><div class="adventure-fallback"></div><div class="adventure-overlay"><h3>Raingutter Regatta</h3><p>Friendly competition and lots of laughs for every Scout.</p><strong>Learn More →</strong></div></article><article class="adventure-card" tabindex="0"><img class="adventure-photo" src="assets/images/adventures/hiking.jpg" alt="Hiking" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><div class="adventure-fallback"></div><div class="adventure-overlay"><h3>Hiking</h3><p>Discover nature while building confidence and teamwork.</p><strong>Learn More →</strong></div></article><article class="adventure-card" tabindex="0"><img class="adventure-photo" src="assets/images/adventures/service.jpg" alt="Service" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><div class="adventure-fallback"></div><div class="adventure-overlay"><h3>Service</h3><p>We believe in giving back to our community.</p><strong>Learn More →</strong></div></article><article class="adventure-card" tabindex="0"><img class="adventure-photo" src="assets/images/adventures/blue-gold.jpg" alt="Blue & Gold" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><div class="adventure-fallback"></div><div class="adventure-overlay"><h3>Blue & Gold</h3><p>Celebrate achievements and milestones with the entire Pack.</p><strong>Learn More →</strong></div></article><article class="adventure-card" tabindex="0"><img class="adventure-photo" src="assets/images/adventures/graduation.jpg" alt="Graduation" data-fallback="assets/images/placeholders/card-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/card-placeholder.jpg';"><div class="adventure-fallback"></div><div class="adventure-overlay"><h3>Graduation</h3><p>Every adventure leads to the next step in their journey.</p><strong>Learn More →</strong></div></article></div> </div></section>
 </main>
