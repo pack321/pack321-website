@@ -27,3 +27,8 @@
 
 /* coming up next underline */
 .events-home .title-mark{width:72px;height:5px;background:linear-gradient(90deg,var(--gold2),var(--gold),var(--gold2));border-radius:999px;box-shadow:0 2px 0 rgba(6,35,72,.12);margin-top:14px;margin-bottom:34px}
+
+/* pack wordmark sharpening */
+.site-header .brand{min-width:340px;gap:16px}.site-header .brand img{width:72px;height:72px;flex:0 0 72px}.site-header .brand strong{font-family:"Arial Black",Arial,Helvetica,sans-serif;font-size:40px;font-weight:900;line-height:.95;letter-spacing:0;color:#fff;text-shadow:none;transform:none;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}.site-header .brand span span{font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;font-weight:900;line-height:1.15;letter-spacing:.02em;text-shadow:none;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}.site-header .brand .subline{font-size:12px;font-weight:900;letter-spacing:.015em}.site-footer .brand strong{font-family:"Arial Black",Arial,Helvetica,sans-serif;letter-spacing:0;text-shadow:none}.site-footer .brand span span{font-family:Inter,Arial,Helvetica,sans-serif;letter-spacing:.02em;text-shadow:none}
+@media(max-width:1320px){.site-header .brand{min-width:300px}.site-header .brand img{width:64px;height:64px;flex-basis:64px}.site-header .brand strong{font-size:34px}.site-header .brand span span{font-size:13px}.site-header .brand .subline{font-size:11px}}
+@media(max-width:760px){.site-header .brand{min-width:0;gap:11px}.site-header .brand img{width:52px;height:52px;flex-basis:52px}.site-header .brand strong{font-size:28px}.site-header .brand span span{font-size:12px}}
