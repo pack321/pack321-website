@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Tools | Pack 321</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+    .admin-home-hero { padding: 52px 0 38px; background: var(--cream); }
+    .admin-home-hero h1 { margin: 0 0 10px; color: var(--navy); font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(3.4rem, 6vw, 6.2rem); line-height: .88; text-transform: uppercase; }
+    .admin-home-hero p { max-width: 940px; margin: 0; color: var(--text); font-size: 1.08rem; line-height: 1.55; }
+    .admin-tools { padding: 34px 0 64px; }
+    .admin-tool-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .admin-tool-card { position: relative; overflow: hidden; display: grid; gap: 16px; padding: clamp(24px, 3vw, 36px); border: 1px solid rgba(8,43,87,.14); border-radius: 12px; background: #fff; box-shadow: 0 18px 42px rgba(8,43,87,.12); }
+    .admin-tool-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: var(--gold); }
+    .admin-tool-card h2 { margin: 0; color: var(--navy); font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(2.4rem, 3.4vw, 3.8rem); line-height: .92; text-transform: uppercase; }
+    .admin-tool-card p { margin: 0; color: var(--text); line-height: 1.55; }
+    .admin-tool-card ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .admin-tool-card li { position: relative; padding-left: 24px; color: var(--navy); font-weight: 800; }
+    .admin-tool-card li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 900; }
+    .admin-tool-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 8px; }
+    .admin-tool-actions a { display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; padding: 12px 16px; background: var(--navy); color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; text-transform: uppercase; }
+    .admin-tool-actions a:hover, .admin-tool-actions a:focus-visible { background: var(--gold); color: var(--navy); }
+    .admin-note { margin-top: 24px; padding: 18px 20px; border-radius: 8px; background: var(--navy); color: #fff; box-shadow: 0 12px 28px rgba(8,43,87,.16); }
+    .admin-note strong { color: var(--gold); }
+    @media (max-width: 800px) { .admin-tool-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="construction-banner">Pack 321 Website Preview — Construction / Leadership Review Version</div>
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Pack 321 Home">
+      <img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo">
+      <span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span><span class="subline">Serving families since 1967</span></span>
+    </a>
+    <button class="mobile-toggle" type="button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false">Menu</button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="why-pack321.html">Why Pack 321</a>
+      <a href="cub-scouts.html">Cub Scouts</a>
+      <a href="adventures.html">Adventures</a>
+      <a href="events-calendar.html">Calendar</a>
+      <a href="resources.html">Resources</a>
+      <a class="active" href="team.html" aria-current="page">Team</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="visit-btn" href="join.html">Visit a Meeting</a>
+  </div>
+</header>
+<main>
+  <section class="admin-home-hero">
+    <div class="wrap">
+      <h1>Pack 321 Admin Tools</h1>
+      <p>This internal dashboard keeps editing and review tools separate from the public website. These pages are not linked in the main navigation and are marked noindex for search engines.</p>
+    </div>
+  </section>
+  <section class="admin-tools">
+    <div class="wrap">
+      <div class="admin-tool-grid">
+        <article class="admin-tool-card">
+          <h2>Banner Review</h2>
+          <p>Preview every page banner, tune photo crop, adjust text position and sizing, control the blue/photo blend, and test replacement hero images.</p>
+          <ul>
+            <li>Photo position sliders</li>
+            <li>Text and blend controls</li>
+            <li>Hero image upload preview</li>
+            <li>Renamed photo download workflow</li>
+          </ul>
+          <div class="admin-tool-actions"><a href="banner-review.html">Open Banner Tool</a></div>
+        </article>
+        <article class="admin-tool-card">
+          <h2>Team Admin</h2>
+          <p>Edit fixed leadership roles as people change over time. Preview names, start years, favorite activities, bios, and replacement photos.</p>
+          <ul>
+            <li>Role-based leader editing</li>
+            <li>Photo upload preview</li>
+            <li>Timestamped backup guidance</li>
+            <li>Copy/export leader data</li>
+          </ul>
+          <div class="admin-tool-actions"><a href="team-admin.html">Open Team Tool</a></div>
+        </article>
+      </div>
+      <div class="admin-note"><strong>Reminder:</strong> GitHub Pages cannot save changes directly. Use these tools to preview, copy values, and download correctly named images, then apply the files to the repository.</div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div><a class="brand" href="index.html"><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span></span></a><p>Serving families in Oak Creek and surrounding communities since 1967.</p></div>
+    <div><h4>Quick Links</h4><a href="why-pack321.html">Why Pack 321</a><a href="cub-scouts.html">Cub Scouts</a><a href="adventures.html">Adventures</a><a href="events-calendar.html">Calendar</a><a href="resources.html">Resources</a>
+      <a class="active" href="team.html" aria-current="page">Team</a>
+      <a href="join.html">Join</a><a href="contact.html">Contact</a></div>
+    <div><h4>Contact Us</h4><a href="tel:14142159261">(414) 215-9261</a><a href="mailto:wicubscoutpack321@gmail.com">wicubscoutpack321@gmail.com</a><p>Carollton Elementary, Oak Creek, WI</p><a class="button" href="join.html">Visit a Meeting</a></div>
+    <div class="footer-scouting"><img class="scouting-america-logo" src="assets/logos/scouting-america-logo-reversed.png" alt="Scouting America"><p>Prepared. For Life.</p><h4 class="be-scout">Be A Scout</h4></div>
+  </div>
+  <div class="wrap footer-bottom">Preparing young people for life.</div>
+</footer>
+<a class="feedback-float" href="mailto:wicubscoutpack321@gmail.com?subject=Pack%20321%20Website%20Feedback">Leave Feedback</a>
+<script src="js/site.js"></script>
+</body>
+</html>

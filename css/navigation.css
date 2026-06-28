@@ -1,4 +1,25 @@
-.construction-banner { padding: 12px 20px; background: var(--gold); color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-size: .9rem; font-weight: 900; text-align: center; }
+.construction-banner {
+  padding: 10px 20px;
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      transparent 31%,
+      #ffc72c 31%,
+      #ffc72c 69%,
+      transparent 69%,
+      transparent 100%),
+    repeating-linear-gradient(135deg,
+      #111 0 18px,
+      #ffc72c 18px 36px);
+  color: #111;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: .9rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  text-shadow: 0 1px 0 rgba(255,255,255,.25);
+}
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--navy); border-bottom: 5px solid var(--gold); }
 .nav-inner { min-height: 92px; display: grid; grid-template-columns: 330px minmax(0, 1fr) 200px; align-items: center; gap: 24px; }
 .brand { display: grid; grid-template-columns: 64px max-content; align-items: center; gap: 13px; min-width: 0; color: #fff; }

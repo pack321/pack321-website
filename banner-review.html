@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Banner Review | Pack 321</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+    .review-intro { padding: 42px 0 24px; background: var(--cream); }
+    .review-intro h1 { margin: 0 0 8px; color: var(--navy); font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(3rem, 5vw, 5rem); line-height: .9; text-transform: uppercase; }
+    .review-intro p { max-width: 900px; margin: 0; color: var(--text); font-size: 1.05rem; line-height: 1.55; }
+    .review-list { display: grid; gap: 34px; padding: 26px 0 54px; }
+    .review-card { overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: var(--shadow); }
+    .review-card__top { display: flex; justify-content: space-between; gap: 20px; align-items: start; padding: 20px 22px; border-bottom: 1px solid var(--line); }
+    .review-card__top h2 { margin: 0 0 6px; color: var(--navy); font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2.1rem; line-height: 1; text-transform: uppercase; }
+    .review-card__top p { margin: 3px 0; color: var(--text); font-size: .95rem; }
+    .position-code { padding: 8px 10px; border-radius: 6px; background: var(--navy); color: var(--gold); white-space: nowrap; }
+    .review-hero { border-left: 0; border-right: 0; }
+    .review-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 18px 22px 22px; }
+    .review-controls fieldset { display: grid; gap: 12px; align-content: start; margin: 0; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    .review-controls legend { padding: 0 6px; color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; text-transform: uppercase; }
+    .review-controls label { display: grid; gap: 7px; color: var(--navy); font-weight: 900; }
+    .review-controls input { width: 100%; accent-color: var(--gold); }
+    .review-controls output { color: var(--text); font-weight: 800; }
+    .slider-directions { display: flex; justify-content: space-between; gap: 12px; color: #536175; font-size: .76rem; font-weight: 800; line-height: 1.2; }
+    .preset-row, .review-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; }
+    .preset-row button, .review-actions button { border: 0; border-radius: 6px; background: var(--navy); color: #fff; padding: 9px 12px; font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; cursor: pointer; }
+    .preset-row button:hover, .preset-row button:focus-visible, .review-actions button:hover, .review-actions button:focus-visible { background: var(--gold); color: var(--navy); }
+    .review-actions { padding-top: 2px; }
+    .upload-tool { grid-column: 1 / -1; display: grid; gap: 10px; margin-top: 4px; padding: 14px; border: 1px dashed var(--line); border-radius: 8px; background: var(--cream); }
+    .upload-label { display: inline-flex; flex-wrap: wrap; gap: 10px; align-items: center; color: var(--navy); font-weight: 900; }
+    .upload-label input { max-width: 100%; }
+    .upload-note { margin: 0; color: var(--text); font-size: .92rem; line-height: 1.45; }
+    .upload-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .download-renamed { border: 0; border-radius: 6px; background: var(--gold); color: var(--navy); padding: 9px 12px; font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; cursor: pointer; }
+    .download-renamed:disabled { opacity: .5; cursor: not-allowed; }
+    .backup-name { padding: 8px 10px; border-radius: 6px; background: #fff; color: var(--navy); }
+    @media (max-width: 1000px) { .review-controls { grid-template-columns: 1fr; } }
+    @media (max-width: 780px) {
+      .review-card__top, .review-controls { grid-template-columns: 1fr; display: grid; }
+      .position-code { white-space: normal; }
+      .copy-value { margin-left: 0; }
+    }
+    .admin-back-link { display: inline-flex; margin: 0 0 16px; color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; text-transform: uppercase; }
+    .admin-back-link:hover, .admin-back-link:focus-visible { color: #d99a00; }
+
+  </style>
+</head>
+<body>
+<div class="construction-banner">Pack 321 Website Preview — Construction / Leadership Review Version</div>
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Pack 321 Home">
+      <img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo">
+      <span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span><span class="subline">Serving families since 1967</span></span>
+    </a>
+    <button class="mobile-toggle" type="button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false">Menu</button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="why-pack321.html">Why Pack 321</a>
+      <a href="cub-scouts.html">Cub Scouts</a>
+      <a href="adventures.html">Adventures</a>
+      <a href="events-calendar.html">Calendar</a>
+      <a href="resources.html">Resources</a>
+      <a href="join.html">Join</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+    <a class="visit-btn" href="join.html">Visit a Meeting</a>
+  </div>
+</header>
+<main>
+  <section class="review-intro">
+    <div class="wrap">
+      <p><a class="admin-back-link" href="admin.html">← Back to Admin Tools</a></p>
+      <h1>Banner Review</h1>
+      <p>This internal page is not linked in the main navigation. Use it to preview every page banner side by side, adjust photo position values, and copy the value to apply to the real page.</p>
+    </div>
+  </section>
+  <section class="wrap review-list" aria-label="Hero banner review tools">
+
+      <article class="review-card" data-page="why-pack321.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Why Pack 321</h2>
+            <p><strong>File:</strong> why-pack321.html</p>
+            <p><strong>Image:</strong> assets/images/hero/why-pack321.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 42%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 42%; --hero-image: url('assets/images/hero/why-pack321.jpg');" aria-label="Why Pack 321 hero preview">
+          <div class="pack-hero__copy">
+            <h1><span>Why Families</span><span class="gold">Choose Pack 321</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>A family-first Cub Scout Pack where boys and girls build confidence, friendships, leadership, and lifelong memories.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/why-pack321.jpg" alt="Why Pack 321 hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="42" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>42%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-page="cub-scouts.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Cub Scouts</h2>
+            <p><strong>File:</strong> cub-scouts.html</p>
+            <p><strong>Image:</strong> assets/images/hero/cub-scouts.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 28%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 28%; --hero-image: url('assets/images/hero/cub-scouts.jpg');" aria-label="Cub Scouts hero preview">
+          <div class="pack-hero__copy">
+            <h1><span>Cub</span><span class="gold">Scouts</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>Creating confident, capable, and compassionate young leaders.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/cub-scouts.jpg" alt="Cub Scouts hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="28" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>28%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-page="adventures.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Adventures</h2>
+            <p><strong>File:</strong> adventures.html</p>
+            <p><strong>Image:</strong> assets/images/hero/adventures.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 40%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 40%; --hero-image: url('assets/images/hero/adventures.jpg');" aria-label="Adventures hero preview">
+          <div class="pack-hero__copy">
+            <h1><span>Adventure</span><span class="gold">Lives Here</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>Memories that last a lifetime. Adventures that build character.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/adventures.jpg" alt="Adventures hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="40" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>40%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-page="events-calendar.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Calendar</h2>
+            <p><strong>File:</strong> events-calendar.html</p>
+            <p><strong>Image:</strong> assets/images/hero/calendar.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 45%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 45%; --hero-image: url('assets/images/hero/calendar.jpg');" aria-label="Calendar hero preview">
+          <div class="pack-hero__copy">
+            <h1><span>Pack 321</span><span class="gold">Calendar</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>See what is coming up and join us for our next adventure.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/calendar.jpg" alt="Calendar hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="45" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>45%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-page="resources.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Resources</h2>
+            <p><strong>File:</strong> resources.html</p>
+            <p><strong>Image:</strong> assets/images/hero/resources.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 50%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 50%; --hero-image: url('assets/images/hero/resources.jpg');" aria-label="Resources hero preview">
+          <div class="pack-hero__copy">
+            <h1><span>Pack 321</span><span class="gold">Resources</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>Helpful links, guides, and reminders for Pack 321 families.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/resources.jpg" alt="Resources hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="50" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>50%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-page="team.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Team</h2>
+            <p><strong>File:</strong> team.html</p>
+            <p><strong>Image:</strong> assets/images/hero/team.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 46%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 46%; --hero-image: url('assets/images/hero/team.jpg');" aria-label="Team hero preview">
+          <div class="pack-hero__copy">
+            <h1><span>Pack 321</span><span class="gold">Team</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>Meet the leaders and volunteers who help make Pack 321 possible.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/team.jpg" alt="Team hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="46" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>46%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-page="volunteer.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Volunteer</h2>
+            <p><strong>File:</strong> volunteer.html</p>
+            <p><strong>Image:</strong> assets/images/hero/volunteer.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 48%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 48%; --hero-image: url('assets/images/hero/volunteer.jpg');" aria-label="Volunteer hero preview">
+          <div class="pack-hero__copy">
+            <h1><span class="gold">Volunteer</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>Make a difference. Share your skills. Help our Scouts succeed.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/volunteer.jpg" alt="Volunteer hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="48" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>48%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-page="join.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Join</h2>
+            <p><strong>File:</strong> join.html</p>
+            <p><strong>Image:</strong> assets/images/hero/join.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 18%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 18%; --hero-image: url('assets/images/hero/join.jpg');" aria-label="Join hero preview">
+          <div class="pack-hero__copy">
+            <h1><span>Join</span><span class="gold">Pack 321</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>A place where every youth belongs and every family is part of the Pack.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/join.jpg" alt="Join hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="18" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>18%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-page="contact.html">
+        <div class="review-card__top">
+          <div>
+            <h2>Contact</h2>
+            <p><strong>File:</strong> contact.html</p>
+            <p><strong>Image:</strong> assets/images/hero/contact.jpg</p>
+          </div>
+          <code class="position-code">--hero-position: center 38%;</code>
+        </div>
+        <section class="pack-hero review-hero" style="--hero-position: center 38%; --hero-image: url('assets/images/hero/contact.jpg');" aria-label="Contact hero preview">
+          <div class="pack-hero__copy">
+            <h1><span>Contact</span><span class="gold">Us</span></h1>
+            <div class="pack-hero__rule"><span></span><b>✦</b><span></span></div>
+            <p>Have questions? We are here to help. We would love to hear from you.</p>
+          </div>
+          <figure class="pack-hero__media"><img src="assets/images/hero/contact.jpg" alt="Contact hero image preview"></figure>
+        </section>
+        <div class="review-controls">
+          <fieldset>
+            <legend>Photo Position</legend>
+            <label>Photo horizontal crop <input type="range" min="0" max="100" value="50" data-control="position-x"><span class="slider-directions"><span>Show left side</span><span>Show right side</span></span><output>50%</output></label>
+            <label>Photo vertical crop <input type="range" min="0" max="100" value="38" data-control="position-y"><span class="slider-directions"><span>Show top</span><span>Show bottom</span></span><output>38%</output></label>
+            <div class="preset-row">
+              <button type="button" data-preset="center 18%">18%</button>
+              <button type="button" data-preset="center 25%">25%</button>
+              <button type="button" data-preset="center 28%">28%</button>
+              <button type="button" data-preset="center 35%">35%</button>
+              <button type="button" data-preset="center 40%">40%</button>
+              <button type="button" data-preset="center 50%">50%</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Text Controls</legend>
+            <label>Text left/right <input type="range" min="-80" max="120" value="0" data-var="--hero-text-x" data-unit="px"><output>0px</output></label>
+            <label>Text up/down <input type="range" min="-80" max="80" value="0" data-var="--hero-text-y" data-unit="px"><output>0px</output></label>
+            <label>Text width <input type="range" min="25" max="48" value="34" data-var="--hero-text-width" data-unit="%"><output>34%</output></label>
+            <label>Title size <input type="range" min="80" max="120" value="100" data-scale="--hero-title-scale"><output>100%</output></label>
+            <label>Body size <input type="range" min="80" max="120" value="100" data-scale="--hero-body-scale"><output>100%</output></label>
+          </fieldset>
+          <fieldset>
+            <legend>Blend Controls</legend>
+            <label>Photo starts <input type="range" min="20" max="50" value="36" data-var="--hero-photo-left" data-unit="%"><output>36%</output></label>
+            <label>Blue solid end <input type="range" min="20" max="50" value="34" data-var="--hero-blue-solid" data-unit="%"><output>34%</output></label>
+            <label>Fade start <input type="range" min="24" max="58" value="38" data-var="--hero-blue-fade-1" data-unit="%"><output>38%</output></label>
+            <label>Fade midpoint <input type="range" min="30" max="68" value="46" data-var="--hero-blue-fade-2" data-unit="%"><output>46%</output></label>
+            <label>Fade almost clear <input type="range" min="38" max="78" value="54" data-var="--hero-blue-fade-3" data-unit="%"><output>54%</output></label>
+            <label>Fade end <input type="range" min="45" max="90" value="62" data-var="--hero-blue-fade-end" data-unit="%"><output>62%</output></label>
+            <label>Blue strength <input type="range" min="50" max="100" value="100" data-opacity="--hero-blue-opacity"><output>100%</output></label>
+            <label>Photo tint <input type="range" min="0" max="35" value="10" data-opacity="--hero-photo-tint"><output>10%</output></label>
+          </fieldset>
+          <div class="review-actions">
+            <button type="button" class="copy-value">Copy photo position</button>
+            <button type="button" class="copy-all-values">Copy all CSS values</button>
+          </div>
+          <div class="upload-tool">
+            <label class="upload-label">Try New Photo <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <p class="upload-note">Preview only. Download the renamed photo, then replace the matching file in <code>assets/images/hero/</code>.</p>
+            <div class="upload-actions">
+              <button type="button" class="download-renamed" disabled>Download renamed photo</button>
+              <code class="backup-name">Backup current: choose a photo first</code>
+            </div>
+          </div>
+        </div>
+      </article>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div><a class="brand" href="index.html"><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span></span></a><p>Serving families in Oak Creek and surrounding communities since 1967.</p></div>
+    <div><h4>Quick Links</h4><a href="why-pack321.html">Why Pack 321</a><a href="cub-scouts.html">Cub Scouts</a><a href="adventures.html">Adventures</a><a href="events-calendar.html">Calendar</a><a href="resources.html">Resources</a><a href="join.html">Join</a><a href="contact.html">Contact</a></div>
+    <div><h4>Contact Us</h4><a href="tel:14142159261">(414) 215-9261</a><a href="mailto:wicubscoutpack321@gmail.com">wicubscoutpack321@gmail.com</a><p>Carollton Elementary, Oak Creek, WI</p><a class="button" href="join.html">Visit a Meeting</a></div>
+    <div class="footer-scouting"><img class="scouting-america-logo" src="assets/logos/scouting-america-logo-reversed.png" alt="Scouting America"><p>Prepared. For Life.</p><h4 class="be-scout">Be A Scout</h4></div>
+  </div>
+  <div class="wrap footer-bottom">Preparing young people for life.</div>
+</footer>
+<a class="feedback-float" href="mailto:wicubscoutpack321@gmail.com?subject=Pack%20321%20Website%20Feedback">Leave Feedback</a>
+<script src="js/site.js"></script>
+<script>
+  function timestampForFile() {
+    const now = new Date();
+    const pad = (value) => String(value).padStart(2, '0');
+    return now.getFullYear() + pad(now.getMonth() + 1) + pad(now.getDate()) + '-' + pad(now.getHours()) + pad(now.getMinutes()) + pad(now.getSeconds());
+  }
+  function targetNameFromPath(path) { return path.split('/').pop(); }
+  async function imageFileToJpegBlob(file) {
+    const url = URL.createObjectURL(file);
+    try {
+      const image = new Image();
+      image.decoding = 'async';
+      image.src = url;
+      await image.decode();
+      const canvas = document.createElement('canvas');
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(image, 0, 0);
+      return await new Promise((resolve) => canvas.toBlob(resolve, 'image/jpeg', .92));
+    } finally { URL.revokeObjectURL(url); }
+  }
+  function percentToScale(value) { return (Number(value) / 100).toFixed(2).replace(/0$/, '').replace(/.0$/, ''); }
+
+  document.querySelectorAll('.review-card').forEach((card) => {
+    const hero = card.querySelector('.review-hero');
+    const heroImg = card.querySelector('.pack-hero__media img');
+    const code = card.querySelector('.position-code');
+    const xInput = card.querySelector('[data-control="position-x"]');
+    const yInput = card.querySelector('[data-control="position-y"]');
+    const fileInput = card.querySelector('input[type="file"]');
+    const downloadButton = card.querySelector('.download-renamed');
+    const backupName = card.querySelector('.backup-name');
+    const imagePath = heroImg.getAttribute('src');
+    const targetName = targetNameFromPath(imagePath);
+    let selectedFile = null;
+    let previewUrl = null;
+
+    function setPosition(x, y) {
+      const value = x === 50 ? 'center ' + y + '%' : x + '% ' + y + '%';
+      hero.style.setProperty('--hero-position', value);
+      code.textContent = '--hero-position: ' + value + ';';
+      xInput.value = x;
+      yInput.value = y;
+      xInput.closest('label').querySelector('output').textContent = x + '%';
+      yInput.closest('label').querySelector('output').textContent = y + '%';
+    }
+    function backupFileName() {
+      const dot = targetName.lastIndexOf('.');
+      const base = dot > -1 ? targetName.slice(0, dot) : targetName;
+      const ext = dot > -1 ? targetName.slice(dot) : '.jpg';
+      return base + '-' + timestampForFile() + ext;
+    }
+    function allValues() {
+      const values = [code.textContent];
+      card.querySelectorAll('[data-var], [data-scale], [data-opacity]').forEach((input) => {
+        let name = input.dataset.var || input.dataset.scale || input.dataset.opacity;
+        let value;
+        if (input.dataset.scale) value = percentToScale(input.value);
+        else if (input.dataset.opacity) value = percentToScale(input.value);
+        else value = input.value + (input.dataset.unit || '');
+        values.push(name + ': ' + value + ';');
+      });
+      return values.join('\\n');
+    }
+
+    xInput.addEventListener('input', () => setPosition(Number(xInput.value), Number(yInput.value)));
+    yInput.addEventListener('input', () => setPosition(Number(xInput.value), Number(yInput.value)));
+
+    card.querySelectorAll('[data-var], [data-scale], [data-opacity]').forEach((input) => {
+      input.addEventListener('input', () => {
+        let value;
+        if (input.dataset.scale) value = percentToScale(input.value);
+        else if (input.dataset.opacity) value = percentToScale(input.value);
+        else value = input.value + (input.dataset.unit || '');
+        const name = input.dataset.var || input.dataset.scale || input.dataset.opacity;
+        hero.style.setProperty(name, value);
+        input.closest('label').querySelector('output').textContent = input.value + (input.dataset.unit || '%');
+      });
+    });
+
+    card.querySelectorAll('[data-preset]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const parts = button.dataset.preset.split(' ');
+        const x = parts[0] === 'center' ? 50 : parseInt(parts[0], 10);
+        const y = parseInt(parts[1], 10);
+        setPosition(x, y);
+      });
+    });
+
+    card.querySelector('.copy-value').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(code.textContent); } catch (error) {}
+      card.querySelector('.copy-value').textContent = 'Copied';
+      setTimeout(() => { card.querySelector('.copy-value').textContent = 'Copy photo position'; }, 1200);
+    });
+    card.querySelector('.copy-all-values').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(allValues()); } catch (error) {}
+      card.querySelector('.copy-all-values').textContent = 'Copied';
+      setTimeout(() => { card.querySelector('.copy-all-values').textContent = 'Copy all CSS values'; }, 1200);
+    });
+
+    fileInput.addEventListener('change', () => {
+      selectedFile = fileInput.files && fileInput.files[0] ? fileInput.files[0] : null;
+      if (previewUrl) URL.revokeObjectURL(previewUrl);
+      if (!selectedFile) {
+        downloadButton.disabled = true;
+        backupName.textContent = 'Backup current: choose a photo first';
+        return;
+      }
+      previewUrl = URL.createObjectURL(selectedFile);
+      hero.style.setProperty('--hero-image', 'url(' + previewUrl + ')');
+      heroImg.src = previewUrl;
+      downloadButton.disabled = false;
+      backupName.textContent = 'Rename old file first: ' + backupFileName();
+    });
+    downloadButton.addEventListener('click', async () => {
+      if (!selectedFile) return;
+      downloadButton.disabled = true;
+      downloadButton.textContent = 'Preparing...';
+      const blob = await imageFileToJpegBlob(selectedFile);
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = targetName.replace(/.[^.]+$/, '.jpg');
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+      downloadButton.textContent = 'Download renamed photo';
+      downloadButton.disabled = false;
+    });
+  });
+</script>
+</body>
+</html>

@@ -22,8 +22,14 @@
 .brand-card p, .event-card p { margin: 0; line-height: 1.6; }
 .page-journey { background: linear-gradient(135deg, var(--navy), #041b36); color: #fff; } .page-journey h2, .page-journey p { color: #fff; }
 .journey-grid { display: grid; grid-template-columns: .8fr 2fr; gap: 34px; align-items: center; } .page-journey h2 { margin: 0 0 12px; font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(3rem,5vw,4.5rem); line-height: .92; text-transform: uppercase; }
-.page-rank-row { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 16px; } .page-rank-card { display: grid; place-items: center; gap: 12px; min-height: 172px; padding: 18px 12px; border-radius: 14px; background: #fff; color: var(--navy); text-align: center; box-shadow: 0 16px 28px rgba(0,0,0,.22); }
-.rank-img { width: 86px; height: 86px; object-fit: contain; } .page-rank-card strong { font-family: 'Montserrat', Arial, sans-serif; font-size: .82rem; font-weight: 900; text-transform: uppercase; }
+.page-rank-row { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 16px; } .page-rank-card { display: grid; place-items: center; gap: 8px; min-height: 172px; padding: 18px 12px; border-radius: 14px; background: #fff; color: var(--navy); text-align: center; box-shadow: 0 16px 28px rgba(0,0,0,.22); }
+.rank-img { width: 86px; height: 86px; object-fit: contain; } .page-rank-card strong {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
 .event-card-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; } .event-card { padding: 26px; } .event-card strong { display: block; color: #d49a00; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2rem; line-height: 1; text-transform: uppercase; }
 .center-action { margin-top: 28px; text-align: center; }
 @media (max-width: 980px) { .family-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 34px 0; } .family-item:nth-child(odd) { border-left: 0; } .three-column-feature, .journey-grid { grid-template-columns: 1fr; } .adventure-grid, .brand-cards, .event-card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .page-rank-row { grid-template-columns: repeat(3,minmax(0,1fr)); } }
@@ -109,4 +115,456 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
   }
+}
+
+/* Team / Leadership page */
+.premium-card {
+  border: 1px solid rgba(8, 43, 87, .12);
+  border-radius: 12px;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 18px 40px rgba(8, 43, 87, .12);
+}
+.leadership-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(420px, 1.8fr);
+  gap: 22px;
+  align-items: stretch;
+}
+.leadership-philosophy,
+.glance-card {
+  padding: clamp(22px, 2.6vw, 34px);
+}
+.leadership-philosophy h2,
+.glance-card h2,
+.commitment-card h2,
+.leadership-cta h2 {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(2.1rem, 2.6vw, 3rem);
+  line-height: .95;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+.leadership-philosophy h2::after,
+.glance-card h2::after,
+.commitment-card h2::after {
+  content: '';
+  display: block;
+  width: 74px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+.leadership-philosophy p,
+.glance-card p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin-top: 18px;
+}
+.stats-grid div {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  padding: 14px 16px;
+  text-align: center;
+  border-left: 1px solid rgba(8,43,87,.14);
+}
+.stats-grid div:first-child { border-left: 0; }
+.stats-grid span {
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: .78rem;
+  font-weight: 900;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.stats-grid strong {
+  color: #d99a00;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(2.6rem, 3.4vw, 4rem);
+  line-height: .9;
+}
+.leadership-section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+.leadership-section-title h2 {
+  margin: 0;
+  color: var(--navy);
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(2.15rem, 2.8vw, 3.25rem);
+  line-height: .92;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+.leadership-section-title span {
+  flex: 1;
+  max-width: 150px;
+  height: 2px;
+  background: var(--gold);
+}
+.executive-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+.leader-card {
+  overflow: hidden;
+  text-align: center;
+}
+.leader-photo-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 20px 20px 6px;
+}
+.leader-photo-wrap img {
+  width: 138px;
+  height: 138px;
+  object-fit: cover;
+  border: 4px solid var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 12px 26px rgba(8,43,87,.18);
+}
+.years-badge {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: #fff;
+  color: #d99a00;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: .66rem;
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.leader-body { padding: 10px 20px 22px; }
+.leader-body h3 {
+  margin: 0;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+.leader-role {
+  margin: 5px 0 10px;
+  color: #d99a00;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: .82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.leader-since {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: .78rem;
+  font-weight: 800;
+}
+.leader-body p:not(.leader-role):not(.leader-since) {
+  margin: 0;
+  color: var(--text);
+  font-size: .88rem;
+  line-height: 1.45;
+}
+.leader-favorite {
+  display: grid;
+  gap: 3px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(8,43,87,.12);
+  color: var(--navy);
+  font-size: .82rem;
+}
+.leader-favorite span { color: var(--text); font-size: .75rem; }
+.leader-favorite strong { font-weight: 900; }
+.leadership-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, .85fr);
+  gap: 28px;
+  align-items: start;
+}
+.den-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+.den-card,
+.committee-card {
+  padding: 18px 14px;
+  border: 1px solid rgba(8,43,87,.12);
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(8,43,87,.10);
+}
+.rank-chip {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: .82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.rank-chip.lion { background: #f2a900; }
+.rank-chip.tiger { background: #f05a28; }
+.rank-chip.wolf { background: #c41230; }
+.rank-chip.bear { background: #0082a7; }
+.rank-chip.webelos { background: var(--navy); }
+.rank-chip.aol { background: #4b8b3b; }
+.den-card h3,
+.committee-card h3 {
+  margin: 0 0 9px;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: .88rem;
+  font-weight: 900;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.den-card p,
+.committee-card p {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: .84rem;
+  line-height: 1.4;
+}
+.den-card .den-name {
+  color: var(--navy);
+  font-weight: 900;
+}
+.den-card span,
+.committee-card span {
+  color: #d99a00;
+  font-size: .78rem;
+  font-weight: 900;
+}
+.assistant-list {
+  padding: 12px;
+}
+.assistant-list div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(8,43,87,.12);
+}
+.assistant-list div:last-child { border-bottom: 0; }
+.assistant-list strong { color: var(--navy); font-weight: 900; }
+.assistant-list span { color: var(--text); font-size: .9rem; }
+.committee-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, .75fr);
+  gap: 30px;
+  align-items: start;
+}
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.committee-card.future {
+  border-style: dashed;
+  background: var(--cream);
+}
+.commitment-card {
+  padding: 26px;
+  background: linear-gradient(145deg, #fff 0%, #edf5ff 100%);
+}
+.commitment-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.commitment-card li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--navy);
+  font-weight: 800;
+}
+.commitment-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: .75rem;
+}
+.leadership-cta {
+  padding: 32px 0;
+  background: var(--navy);
+  color: #fff;
+}
+.leadership-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+.leadership-cta h2 { color: #fff; }
+.leadership-cta p {
+  max-width: 720px;
+  margin: 0;
+  color: #fff;
+  line-height: 1.55;
+}
+@media (max-width: 1180px) {
+  .executive-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .den-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .committee-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .leadership-overview-grid,
+  .leadership-two-col,
+  .committee-layout,
+  .leadership-cta-inner { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid div { border-left: 0; border-top: 1px solid rgba(8,43,87,.12); }
+  .stats-grid div:first-child { border-top: 0; }
+}
+@media (max-width: 640px) {
+  .executive-grid,
+  .den-grid,
+  .committee-grid { grid-template-columns: 1fr; }
+  .assistant-list div { grid-template-columns: 1fr; gap: 4px; }
+  .leader-photo-wrap img { width: 126px; height: 126px; }
+}
+
+/* Cub Scout rank detail pages */
+.rank-detail-hero {
+  padding: 44px 0;
+  background: var(--navy);
+  color: #fff;
+  border-bottom: 4px solid var(--gold);
+}
+.rank-detail-hero__inner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.rank-detail-hero .back-link {
+  grid-column: 1 / -1;
+  color: var(--gold);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.rank-detail-hero img {
+  width: 118px;
+  height: 118px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.20);
+}
+.rank-detail-hero .eyebrow {
+  margin: 0 0 6px;
+  color: var(--gold);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.rank-detail-hero h1 {
+  margin: 0;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: .88;
+  text-transform: uppercase;
+}
+.rank-detail-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 8px 0 18px;
+  line-height: 1.55;
+}
+.embed-wrap {
+  width: min(1500px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.embedded-adventure-card {
+  display: grid;
+  gap: 18px;
+}
+.embed-heading {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.embed-heading h2 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  line-height: .92;
+  text-transform: uppercase;
+}
+.embed-heading p {
+  margin: 0;
+  color: var(--text);
+}
+.scouting-embed {
+  width: 100%;
+  min-height: 980px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.page-rank-card {
+  color: var(--navy);
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.page-rank-card:hover,
+.page-rank-card:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 34px rgba(8,43,87,.20);
+}
+@media (max-width: 640px) {
+  .rank-detail-hero__inner { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .scouting-embed { min-height: 760px; }
+}
+
+.rank-grade {
+  display: block;
+  color: #d99a00;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: .82rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
