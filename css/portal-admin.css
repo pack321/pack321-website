@@ -1,0 +1,36 @@
+.portal-shell { background: var(--light-bg); }
+.portal-hero { padding: 52px 0 34px; background: linear-gradient(135deg, var(--navy), #041b36); color: #fff; border-bottom: 5px solid var(--gold); }
+.portal-hero .eyebrow { margin: 0 0 8px; color: var(--gold); font-family: 'Montserrat', Arial, sans-serif; font-size: .82rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.portal-hero h1 { margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(3.4rem, 6vw, 6.5rem); line-height: .88; text-transform: uppercase; }
+.portal-hero p { max-width: 940px; margin: 12px 0 0; color: #fff; font-size: 1.08rem; line-height: 1.58; }
+.portal-nav { background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 8px 22px rgba(8,43,87,.08); }
+.portal-nav .wrap { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 12px; }
+.portal-nav a { display: inline-flex; align-items: center; min-height: 38px; padding: 9px 12px; border-radius: 999px; color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-size: .76rem; font-weight: 900; text-transform: uppercase; }
+.portal-nav a.active, .portal-nav a:hover { background: var(--navy); color: #fff; }
+.portal-section { padding: 42px 0 64px; }
+.portal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.portal-card { position: relative; overflow: hidden; padding: 26px; border: 1px solid rgba(8,43,87,.14); border-radius: 12px; background: #fff; box-shadow: var(--shadow); }
+.portal-card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 6px; background: var(--gold); }
+.portal-card h2, .portal-card h3 { margin: 0 0 10px; color: var(--navy); font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(2rem, 3vw, 3rem); line-height: .94; text-transform: uppercase; }
+.portal-card p { margin: 0 0 16px; color: var(--dark-text); line-height: 1.55; }
+.portal-card ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.portal-card li { position: relative; padding-left: 22px; color: var(--dark-text); font-weight: 700; }
+.portal-card li::before { content: ''; position: absolute; left: 0; top: .48em; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px rgba(255,199,44,.2); }
+.portal-table-card { overflow-x: auto; padding: 0; border: 1px solid rgba(8,43,87,.14); border-radius: 12px; background: #fff; box-shadow: var(--shadow); }
+.portal-table { width: 100%; min-width: 780px; border-collapse: collapse; }
+.portal-table th { background: var(--navy); color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-size: .78rem; letter-spacing: .04em; text-align: left; text-transform: uppercase; }
+.portal-table th, .portal-table td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.portal-table td { color: var(--dark-text); }
+.portal-table tr:last-child td { border-bottom: 0; }
+.badge { display: inline-flex; align-items: center; min-height: 26px; padding: 5px 9px; border-radius: 999px; background: rgba(8,43,87,.10); color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-size: .72rem; font-weight: 900; text-transform: uppercase; }
+.badge.gold { background: rgba(255,199,44,.26); }
+.badge.danger { background: rgba(180,30,40,.12); color: #9a1c25; }
+.portal-note { margin-top: 24px; padding: 18px 20px; border-left: 6px solid var(--gold); border-radius: 10px; background: #fff; color: var(--dark-text); box-shadow: 0 12px 26px rgba(8,43,87,.10); }
+.portal-note strong { color: var(--navy); }
+.permission-list { columns: 2; column-gap: 34px; }
+.permission-list code { display: inline-block; margin: 0 0 8px; color: var(--navy); font-weight: 900; }
+.flow-list { counter-reset: step; display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.flow-list li { counter-increment: step; display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: start; padding: 14px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.flow-list li::before { content: counter(step); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--gold); color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; }
+@media (max-width: 980px) { .portal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .permission-list { columns: 1; } }
+@media (max-width: 680px) { .portal-grid { grid-template-columns: 1fr; } .portal-hero h1 { font-size: clamp(3rem, 18vw, 4.8rem); } }

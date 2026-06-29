@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Roles & Permissions | Pack 321 Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/design-system.css">
+  <link rel="stylesheet" href="../../../css/portal-admin.css">
+</head>
+<body class="portal-shell">
+<main>
+  <section class="portal-hero">
+    <div class="wrap">
+      <p class="eyebrow">Pack 321 Portal Architecture</p>
+      <h1>Roles & Permissions</h1>
+      <p>Role-based access design for parents, den leaders, treasurer, committee chair, webmaster, and admin users.</p>
+    </div>
+  </section>
+  <nav class="portal-nav" aria-label="Portal admin navigation"><div class="wrap"><a class="" href="../../../portal/admin/">Dashboard</a><a class="" href="../../../portal/admin/users/">Users</a><a class="active" href="../../../portal/admin/roles/">Roles</a><a class="" href="../../../portal/admin/security/">Security</a><a class="" href="../../../portal/admin/audit-log/">Audit Log</a><a class="" href="../../../portal/admin/settings/">Settings</a></div></nav>
+  <section class="portal-section"><div class="wrap"><div class="portal-table-card"><table class="portal-table"><thead><tr><th>Recommended Role</th><th>Default Behavior</th><th>Notes</th></tr></thead><tbody>
+    <tr><td>Parent</td><td>Own family only</td><td>No den-wide, finance-wide, or admin access.</td></tr>
+    <tr><td>Den Leader</td><td>Assigned den only</td><td>No financial access unless another role is assigned.</td></tr>
+    <tr><td>Cubmaster</td><td>Operational Pack visibility</td><td>Can be expanded by assigned permissions.</td></tr>
+    <tr><td>Treasurer</td><td>Full finance access</td><td>Can view reports, create/edit transactions, and export finance reports.</td></tr>
+    <tr><td>Committee Chair</td><td>Full operational/report access</td><td>Does not manage system security unless also Admin.</td></tr>
+    <tr><td>Webmaster</td><td>Content and website tools</td><td>Should not imply finance or system security access.</td></tr>
+    <tr><td>Admin</td><td>Full system/security access</td><td>Manages users, roles, settings, and security controls.</td></tr>
+  </tbody></table></div>
+  <div class="portal-grid" style="margin-top:28px"><article class="portal-card"><h2>Role Tables</h2><ul><li>Roles: roleId, roleName, description, active</li><li>Permissions: permissionId, permissionKey, description, category</li><li>RolePermissions: rolePermissionId, roleId, permissionId, allowed</li></ul></article><article class="portal-card" style="grid-column: span 2"><h2>Permission Keys</h2><div class="permission-list"><code>family.view.own</code><br><code>family.edit.own</code><br><code>family.view.all</code><br><code>scout.view.own</code><br><code>scout.view.den</code><br><code>scout.view.all</code><br><code>scout.edit.all</code><br><code>finance.view.own</code><br><code>finance.view.all</code><br><code>finance.transaction.create</code><br><code>finance.transaction.edit</code><br><code>finance.correction.review</code><br><code>finance.report.view</code><br><code>finance.report.export</code><br><code>event.view</code><br><code>event.manage</code><br><code>event.registration.manage</code><br><code>admin.users.manage</code><br><code>admin.roles.manage</code><br><code>admin.security.view</code><br><code>admin.audit.view</code><br><code>admin.settings.manage</code></div></article></div></div></section>
+</main>
+</body>
+</html>

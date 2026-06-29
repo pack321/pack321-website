@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Audit Log | Pack 321 Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/design-system.css">
+  <link rel="stylesheet" href="../../../css/portal-admin.css">
+</head>
+<body class="portal-shell">
+<main>
+  <section class="portal-hero">
+    <div class="wrap">
+      <p class="eyebrow">Pack 321 Portal Architecture</p>
+      <h1>Audit Log</h1>
+      <p>Audit design for security-sensitive actions, exports, financial changes, access changes, and settings updates.</p>
+    </div>
+  </section>
+  <nav class="portal-nav" aria-label="Portal admin navigation"><div class="wrap"><a class="" href="../../../portal/admin/">Dashboard</a><a class="" href="../../../portal/admin/users/">Users</a><a class="" href="../../../portal/admin/roles/">Roles</a><a class="" href="../../../portal/admin/security/">Security</a><a class="active" href="../../../portal/admin/audit-log/">Audit Log</a><a class="" href="../../../portal/admin/settings/">Settings</a></div></nav>
+  <section class="portal-section"><div class="wrap"><div class="portal-table-card"><table class="portal-table"><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody>
+    <tr><td>auditId</td><td>Unique audit event id.</td></tr><tr><td>timestamp</td><td>Server timestamp for the action.</td></tr><tr><td>userId</td><td>User who performed the action.</td></tr><tr><td>action</td><td>User created, role assigned, transaction edited, report exported, etc.</td></tr><tr><td>module</td><td>Admin, finance, family, scout, event, settings.</td></tr><tr><td>tableName / recordId</td><td>Changed record location.</td></tr><tr><td>oldValue / newValue</td><td>Before/after values for review.</td></tr><tr><td>ipAddress / userAgent</td><td>Request metadata for security review.</td></tr>
+  </tbody></table></div>
+  <div class="portal-grid" style="margin-top:28px"><article class="portal-card"><h2>Log These Actions</h2><ul><li>User created or deactivated</li><li>Role assigned or removed</li><li>Permission changed</li><li>Family/scout record changed</li><li>Financial transaction created/edited</li><li>Correction request approved/denied</li><li>Report exported</li><li>Settings changed</li></ul></article><article class="portal-card"><h2>Audit UI</h2><ul><li>Search by user/action/module</li><li>Filter by date range</li><li>View before/after changes</li><li>Export logging should also create an audit event</li></ul></article></div></div></section>
+</main>
+</body>
+</html>

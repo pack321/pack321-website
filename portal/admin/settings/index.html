@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>System Settings | Pack 321 Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/design-system.css">
+  <link rel="stylesheet" href="../../../css/portal-admin.css">
+</head>
+<body class="portal-shell">
+<main>
+  <section class="portal-hero">
+    <div class="wrap">
+      <p class="eyebrow">Pack 321 Portal Architecture</p>
+      <h1>System Settings</h1>
+      <p>Portal settings, first-admin bootstrap, and deployment notes for the future secured application.</p>
+    </div>
+  </section>
+  <nav class="portal-nav" aria-label="Portal admin navigation"><div class="wrap"><a class="" href="../../../portal/admin/">Dashboard</a><a class="" href="../../../portal/admin/users/">Users</a><a class="" href="../../../portal/admin/roles/">Roles</a><a class="" href="../../../portal/admin/security/">Security</a><a class="" href="../../../portal/admin/audit-log/">Audit Log</a><a class="active" href="../../../portal/admin/settings/">Settings</a></div></nav>
+  <section class="portal-section"><div class="wrap"><div class="portal-grid">
+    <article class="portal-card"><h2>First Admin Bootstrap</h2><p>Use an environment variable such as <strong>ADMIN_EMAILS</strong>. If the signed-in Google email matches during first login, grant Admin role automatically.</p><span class="badge gold">Initial setup only</span></article>
+    <article class="portal-card"><h2>After Setup</h2><p>Admin manages all future users, roles, and permissions from the portal. Deactivate users instead of deleting them.</p><span class="badge">Preserve history</span></article>
+    <article class="portal-card"><h2>Data Boundary</h2><p>Never expose Google Sheets directly to normal users. All reads and writes go through secured API functions.</p><span class="badge danger">Server enforced</span></article>
+  </div>
+  <h2 class="section-heading" style="text-align:left;margin-top:42px"><span></span>Build Priority</h2>
+  <ol class="flow-list"><li>Google OAuth login</li><li>Users, Roles, Permissions tables</li><li>Backend permission checks</li><li>Admin user management page</li><li>Role assignment</li><li>Access request workflow</li><li>Audit log</li><li>Treasurer and family modules</li></ol></div></section>
+</main>
+</body>
+</html>

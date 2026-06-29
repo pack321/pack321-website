@@ -29,6 +29,8 @@
     .admin-preview { display: grid; gap: 12px; align-content: start; }
     .admin-preview img { width: 150px; height: 150px; object-fit: cover; border: 4px solid var(--gold); border-radius: 50%; background: var(--cream); }
     .admin-preview h3 { margin: 0; color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-size: 1.05rem; font-weight: 900; line-height: 1.15; }
+    .preview-label { margin: 0; color: #d99a00; font-family: 'Montserrat', Arial, sans-serif; font-size: .72rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+    .admin-form input[readonly] { background: var(--cream); color: var(--navy); font-weight: 900; cursor: not-allowed; }
     .admin-preview p { margin: 0; color: var(--text); font-size: .9rem; line-height: 1.4; }
     .admin-preview code { display: block; padding: 8px; border-radius: 6px; background: var(--cream); color: var(--navy); font-size: .78rem; overflow-wrap: anywhere; }
     .admin-form { display: grid; gap: 10px; }
@@ -92,7 +94,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div><a class="brand" href="index.html"><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span></span></a><p>Serving families in Oak Creek and surrounding communities since 1967.</p></div>
+    <div><a class="brand" href="index.html"><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span></span></a><p>Serving families in Oak Creek and surrounding communities since 1967.</p><div class="footer-social-links" aria-label="Pack 321 website links"><a href="https://www.facebook.com/occubscoutpack321" target="_blank" rel="noopener" aria-label="Pack 321 on Facebook"><img src="assets/icons/social/facebook.jpg" alt=""><span>Facebook</span></a><a href="https://www.band.us/" target="_blank" rel="noopener" aria-label="BAND app"><img src="assets/icons/social/band.jpg" alt=""><span>BAND</span></a></div></div>
     <div><h4>Quick Links</h4><a href="why-pack321.html">Why Pack 321</a><a href="cub-scouts.html">Cub Scouts</a><a href="adventures.html">Adventures</a><a href="events-calendar.html">Calendar</a><a href="resources.html">Resources</a>
       <a class="active" href="team.html" aria-current="page">Team</a>
       <a href="join.html">Join</a><a href="contact.html">Contact</a></div>
@@ -104,14 +106,14 @@
 <a class="feedback-float" href="mailto:wicubscoutpack321@gmail.com?subject=Pack%20321%20Website%20Feedback">Leave Feedback</a>
 <script src="js/site.js"></script>
 <script>
-const teamData = {
+let teamData = {
   "executive": [
     {
       "role": "Committee Chair",
       "name": "Jason Griffin",
-      "started": 2023,
+      "started": "2019",
       "favorite": "Camping",
-      "photo": "assets/images/leaders/jason-griffin.jpg",
+      "photo": "assets/images/leaders/committee-chair.jpg",
       "bio": "Provides leadership, long-term planning, and support to ensure every Pack family has an exceptional experience."
     },
     {
@@ -119,7 +121,7 @@ const teamData = {
       "name": "Kevin Vallenari",
       "started": 2014,
       "favorite": "Camping",
-      "photo": "assets/images/leaders/kevin-vallenari.jpg",
+      "photo": "assets/images/leaders/cubmaster.jpg",
       "bio": "Creates memorable adventures, leads Pack meetings, mentors Scouts, and welcomes families into Pack 321."
     },
     {
@@ -127,7 +129,7 @@ const teamData = {
       "name": "John Szydel",
       "started": 2022,
       "favorite": "Hiking",
-      "photo": "assets/images/leaders/john-szydel.jpg",
+      "photo": "assets/images/leaders/assistant-cubmaster.jpg",
       "bio": "Supports Pack meetings, outdoor adventures, and helps every Scout feel included."
     },
     {
@@ -135,7 +137,7 @@ const teamData = {
       "name": "Heather Rankel",
       "started": 2024,
       "favorite": "Blue & Gold",
-      "photo": "assets/images/leaders/heather-rankel.jpg",
+      "photo": "assets/images/leaders/secretary.jpg",
       "bio": "Keeps Pack families informed through communications, newsletters, meeting coordination, and organizational support."
     },
     {
@@ -143,7 +145,7 @@ const teamData = {
       "name": "Melissa Skrivanek",
       "started": 2021,
       "favorite": "Raingutter Regatta",
-      "photo": "assets/images/leaders/melissa-skrivanek.jpg",
+      "photo": "assets/images/leaders/treasurer.jpg",
       "bio": "Manages Pack finances, budgeting, fundraising support, and helps ensure resources are available for every Scout."
     }
   ],
@@ -169,7 +171,7 @@ const teamData = {
     {
       "role": "Wolf Den Leader",
       "den": "Wolf Den",
-      "name": "Leader Name",
+      "name": "Andy Donalds",
       "started": 2024,
       "favorite": "Camping",
       "photo": "assets/images/leaders/wolf-den-leader.jpg",
@@ -178,8 +180,8 @@ const teamData = {
     {
       "role": "Bear Den Leader",
       "den": "Bear Den",
-      "name": "Leader Name",
-      "started": 2022,
+      "name": "John Szydel",
+      "started": "2023",
       "favorite": "Hiking",
       "photo": "assets/images/leaders/bear-den-leader.jpg",
       "bio": "Supports Bear Scouts as they grow through service, outdoor skills, and teamwork."
@@ -196,8 +198,8 @@ const teamData = {
     {
       "role": "Arrow of Light Den Leader",
       "den": "Arrow of Light",
-      "name": "Leader Name",
-      "started": 2023,
+      "name": "Kevin Vallenari",
+      "started": "2014",
       "favorite": "Camping",
       "photo": "assets/images/leaders/arrow-of-light-den-leader.jpg",
       "bio": "Helps Arrow of Light Scouts prepare for the next step in their Scouting journey."
@@ -242,9 +244,9 @@ const teamData = {
     },
     {
       "role": "Arrow of Light Assistant",
-      "name": "Assistant Leader Name",
+      "name": "Dan Schneider",
       "den": "Arrow of Light",
-      "started": 2024,
+      "started": "2023",
       "favorite": "Helping Scouts",
       "photo": "assets/images/leaders/arrow-of-light-assistant.jpg",
       "bio": "Assists Arrow of Light Scouts as they prepare for what comes next."
@@ -253,24 +255,24 @@ const teamData = {
   "committee": [
     {
       "role": "Advancement Chair",
-      "name": "Open / Editable",
-      "started": 2024,
+      "name": "Kelly Surges",
+      "started": "2026",
       "favorite": "Advancement",
       "photo": "assets/images/leaders/advancement-chair.jpg",
       "bio": "Tracks rank progress, awards, and recognition."
     },
     {
       "role": "Popcorn Kernel",
-      "name": "Open / Editable",
-      "started": 2024,
+      "name": "Melissa Donalds",
+      "started": "2026",
       "favorite": "Fundraising",
       "photo": "assets/images/leaders/popcorn-kernel.jpg",
       "bio": "Coordinates the annual popcorn fundraiser."
     },
     {
       "role": "Wreath Coordinator",
-      "name": "Open / Editable",
-      "started": 2024,
+      "name": "Jessie Szydel",
+      "started": "2023",
       "favorite": "Fundraising",
       "photo": "assets/images/leaders/wreath-coordinator.jpg",
       "bio": "Supports seasonal fundraising and family communication."
@@ -278,6 +280,20 @@ const teamData = {
   ]
 };
 const fallback = 'assets/images/placeholders/leader-placeholder.jpg';
+const executivePhotoTargets = {
+  'Committee Chair': 'assets/images/leaders/committee-chair.jpg',
+  'Cubmaster': 'assets/images/leaders/cubmaster.jpg',
+  'Assistant Cubmaster': 'assets/images/leaders/assistant-cubmaster.jpg',
+  'Secretary': 'assets/images/leaders/secretary.jpg',
+  'Treasurer': 'assets/images/leaders/treasurer.jpg'
+};
+function normalizeTeamPhotos(data) {
+  if (!data || !Array.isArray(data.executive)) return data;
+  data.executive.forEach(person => {
+    if (executivePhotoTargets[person.role]) person.photo = executivePhotoTargets[person.role];
+  });
+  return data;
+}
 function slugFile(path) { return path.split('/').pop(); }
 function timestampForFile() { const now = new Date(); const pad = v => String(v).padStart(2, '0'); return now.getFullYear()+pad(now.getMonth()+1)+pad(now.getDate())+'-'+pad(now.getHours())+pad(now.getMinutes())+pad(now.getSeconds()); }
 function backupName(photo) { const name = slugFile(photo); const dot = name.lastIndexOf('.'); return name.slice(0,dot) + '-' + timestampForFile() + name.slice(dot); }
@@ -288,24 +304,45 @@ function cardHtml(person) { return '<article class="leader-card premium-card">\n
 '  <div class="leader-body"><h3>' + escapeHtml(person.name) + '</h3><p class="leader-role">' + escapeHtml(person.role) + '</p><p class="leader-since">Serving Pack 321 since ' + escapeHtml(person.started) + '</p><p>' + escapeHtml(person.bio) + '</p><div class="leader-favorite"><span>Favorite Activity</span><strong>' + escapeHtml(person.favorite) + '</strong></div></div>\n' +
 '</article>'; }
 function allPeople() { return ['executive','dens','assistants','committee'].flatMap(group => teamData[group].map(item => ({...item, group}))); }
-function renderExport() { document.getElementById('export-box').value = JSON.stringify(teamData, null, 2); }
+function cleanTeamData() {
+  normalizeTeamPhotos(teamData);
+  return Object.fromEntries(Object.entries(teamData).map(([group, people]) => [
+    group,
+    people.map(({previewPhoto, ...person}) => person)
+  ]));
+}
+async function loadInitialTeamData() {
+  const preview = localStorage.getItem('pack321TeamDataPreview');
+  if (preview) {
+    try { teamData = normalizeTeamPhotos(JSON.parse(preview)); return; } catch (error) {}
+  }
+  try {
+    const response = await fetch('assets/data/leaders.json', { cache: 'no-store' });
+    if (response.ok) teamData = normalizeTeamPhotos(await response.json());
+  } catch (error) {
+    // File previews can block fetch; keep the embedded fallback data.
+  }
+}
+function renderExport() { document.getElementById('export-box').value = JSON.stringify(cleanTeamData(), null, 2); }
 function renderCard(group, person, index) {
   const article = document.createElement('article');
   article.className = 'admin-card';
   article.innerHTML = '<div class="admin-preview">' +
-    '<img src="' + person.photo + '" alt="' + escapeHtml(person.name) + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';">' +
+    '<img src="' + (person.previewPhoto || person.photo) + '" alt="' + escapeHtml(person.name) + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';">' +
+    '<p class="preview-label">Position</p>' +
     '<h3>' + escapeHtml(person.role) + '</h3>' +
-    '<p class="preview-name">' + escapeHtml(person.name) + '</p>' +
+    '<p class="preview-name">Current: ' + escapeHtml(person.name) + '</p>' +
     '<p class="preview-meta">Started ' + escapeHtml(person.started) + ' • ' + yearsBadge(person.started) + '</p>' +
     '<p class="preview-favorite">Favorite: ' + escapeHtml(person.favorite) + '</p>' +
     '<code>Photo target: ' + escapeHtml(person.photo) + '</code>' +
   '</div>' +
   '<form class="admin-form">' +
-    '<label>Name <input name="name" value="' + escapeHtml(person.name) + '"></label>' +
+    '<label>Fixed position <input name="role" value="' + escapeHtml(person.role) + '" readonly></label>' +
+    '<label>Person assigned <input name="name" value="' + escapeHtml(person.name) + '"></label>' +
     '<label>Started serving year <input name="started" type="number" min="1900" max="2100" value="' + escapeHtml(person.started) + '"></label>' +
     '<label>Favorite activity <input name="favorite" value="' + escapeHtml(person.favorite) + '"></label>' +
     '<label>Short bio <textarea name="bio">' + escapeHtml(person.bio) + '</textarea></label>' +
-    '<label>Photo path <input name="photo" value="' + escapeHtml(person.photo) + '"></label>' +
+    '<label>Fixed photo target <input name="photo" value="' + escapeHtml(person.photo) + '" readonly></label>' +
     '<label>Upload replacement photo <input name="upload" type="file" accept="image/jpeg,image/png,image/webp"></label>' +
     '<div class="photo-actions"><button type="button" class="download-photo" disabled>Download renamed photo</button><code class="backup-name">Backup current: choose a photo</code></div>' +
   '</form>';
@@ -317,9 +354,9 @@ function renderCard(group, person, index) {
   let previewUrl = null;
   form.addEventListener('input', event => {
     const name = event.target.name;
-    if (!name || name === 'upload') return;
+    if (!name || name === 'upload' || name === 'role' || name === 'photo') return;
     person[name] = event.target.value;
-    article.querySelector('.preview-name').textContent = person.name;
+    article.querySelector('.preview-name').textContent = 'Current: ' + person.name;
     article.querySelector('.preview-meta').textContent = 'Started ' + person.started + ' • ' + yearsBadge(person.started);
     article.querySelector('.preview-favorite').textContent = 'Favorite: ' + person.favorite;
     article.querySelector('.admin-preview code').textContent = 'Photo target: ' + person.photo;
@@ -329,9 +366,22 @@ function renderCard(group, person, index) {
   form.upload.addEventListener('change', () => {
     selectedFile = form.upload.files && form.upload.files[0] ? form.upload.files[0] : null;
     if (previewUrl) URL.revokeObjectURL(previewUrl);
-    if (!selectedFile) { download.disabled = true; backup.textContent = 'Backup current: choose a photo'; return; }
+    if (!selectedFile) {
+      delete person.previewPhoto;
+      previewImg.src = person.photo;
+      download.disabled = true;
+      backup.textContent = 'Backup current: choose a photo';
+      renderExport();
+      return;
+    }
     previewUrl = URL.createObjectURL(selectedFile);
     previewImg.src = previewUrl;
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      person.previewPhoto = reader.result;
+      renderExport();
+    });
+    reader.readAsDataURL(selectedFile);
     download.disabled = false;
     backup.textContent = 'Rename old file first: ' + backupName(person.photo);
   });
@@ -368,10 +418,11 @@ document.getElementById('clear-preview').addEventListener('click', () => {
   document.getElementById('clear-preview').textContent = 'Preview Cleared';
   setTimeout(() => { document.getElementById('clear-preview').textContent = 'Clear Browser Preview'; }, 1400);
 });
-document.getElementById('copy-json').addEventListener('click', async () => { await navigator.clipboard.writeText(JSON.stringify(teamData, null, 2)); });
-document.getElementById('download-json').addEventListener('click', () => { const blob = new Blob([JSON.stringify(teamData, null, 2)], {type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'leaders.json'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url); });
+document.getElementById('copy-json').addEventListener('click', async () => { await navigator.clipboard.writeText(JSON.stringify(cleanTeamData(), null, 2)); });
+document.getElementById('download-json').addEventListener('click', () => { const blob = new Blob([JSON.stringify(cleanTeamData(), null, 2)], {type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'leaders.json'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url); });
 document.getElementById('copy-html').addEventListener('click', async () => { await navigator.clipboard.writeText(teamData.executive.map(cardHtml).join('\n')); });
-render();
+normalizeTeamPhotos(teamData);
+loadInitialTeamData().then(() => { normalizeTeamPhotos(teamData); render(); });
 </script>
 </body>
 </html>

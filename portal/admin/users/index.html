@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>User Access Management | Pack 321 Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/design-system.css">
+  <link rel="stylesheet" href="../../../css/portal-admin.css">
+</head>
+<body class="portal-shell">
+<main>
+  <section class="portal-hero">
+    <div class="wrap">
+      <p class="eyebrow">Pack 321 Portal Architecture</p>
+      <h1>User Access Management</h1>
+      <p>Admin workflow for Google-authenticated users, access requests, role assignment, and inactive access handling.</p>
+    </div>
+  </section>
+  <nav class="portal-nav" aria-label="Portal admin navigation"><div class="wrap"><a class="" href="../../../portal/admin/">Dashboard</a><a class="active" href="../../../portal/admin/users/">Users</a><a class="" href="../../../portal/admin/roles/">Roles</a><a class="" href="../../../portal/admin/security/">Security</a><a class="" href="../../../portal/admin/audit-log/">Audit Log</a><a class="" href="../../../portal/admin/settings/">Settings</a></div></nav>
+  <section class="portal-section"><div class="wrap"><div class="portal-grid">
+    <article class="portal-card"><h2>User Management</h2><ul><li>Add user by email</li><li>Assign display name</li><li>Link family and den</li><li>Assign one or more roles</li><li>Mark active or inactive</li><li>View last login and audit history</li></ul></article>
+    <article class="portal-card"><h2>Access Requests</h2><p>If a signed-in Google account is not authorized, show a request form and save it to AccessRequests for admin review.</p><span class="badge gold">Request Access</span></article>
+    <article class="portal-card"><h2>No Passwords</h2><p>Google authenticates identity. The portal authorizes access by matching active user records and permissions.</p><span class="badge">Google OAuth only</span></article>
+  </div>
+  <h2 class="section-heading" style="text-align:left;margin-top:42px"><span></span>User Tables</h2>
+  <div class="portal-table-card"><table class="portal-table"><thead><tr><th>Table</th><th>Fields</th><th>Purpose</th></tr></thead><tbody>
+    <tr><td><strong>Users</strong></td><td>userId, googleId, email, displayName, photoUrl, familyId, denId, active, lastLogin, createdAt, updatedAt</td><td>Authorized Google accounts and identity metadata.</td></tr>
+    <tr><td><strong>UserRoles</strong></td><td>userRoleId, userId, roleId, assignedBy, assignedAt, active</td><td>Many-to-many role assignment with history-friendly active flag.</td></tr>
+    <tr><td><strong>AccessRequests</strong></td><td>requestId, name, email, familyName, scoutNames, requestedRole, notes, status, reviewedBy, reviewedAt, createdAt</td><td>Tracks request/approval workflow for unauthenticated-but-not-authorized users.</td></tr>
+  </tbody></table></div>
+  <h2 class="section-heading" style="text-align:left;margin-top:42px"><span></span>Approval Flow</h2>
+  <ol class="flow-list"><li>Admin reviews pending request.</li><li>Admin links request to existing family/scout or creates records.</li><li>Admin assigns one or more roles.</li><li>System creates or activates user record.</li><li>System logs approval in AuditLog.</li></ol></div></section>
+</main>
+</body>
+</html>

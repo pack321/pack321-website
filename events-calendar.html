@@ -64,11 +64,30 @@
   <div class="pack-hero__media">
     <img src="assets/images/hero/calendar.jpg" alt="Pack 321 Calendar photo" data-fallback="assets/images/placeholders/hero-placeholder.png" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.png';">
   </div>
-</section><section class="page-section cream-section"><div class="wrap"><div class="section-heading"><h2>Coming Up Next</h2><span></span></div><div class="event-card-grid"><article class="event-card"><strong>Pack Meeting</strong><h3>3rd Tuesday</h3><p>Carollton Elementary • families participate together.</p></article><article class="event-card"><strong>Next Adventure</strong><h3>See Calendar</h3><p>Campouts, service projects, fundraising, and family events.</p></article><article class="event-card"><strong>New Families</strong><h3>Visit a Meeting</h3><p>Ask questions, meet leaders, and see if Pack 321 feels like home.</p></article></div></div></section><section class="page-section"><div class="wrap"><iframe class="calendar-frame" src="https://calendar.google.com/calendar/embed?src=wicubscoutpack321%40gmail.com" title="Pack 321 Google Calendar"></iframe></div></section>
+</section><section class="page-section cream-section upcoming-events-section">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2>Coming Up Next</h2>
+      <span></span>
+      <p>Here are the next Pack 321 activities. The full Pack calendar is embedded below.</p>
+    </div>
+    <div class="event-card-grid" id="upcoming-events" data-events-src="assets/data/events.json">
+      <article class="event-card"><strong>3rd Tuesday</strong><h3>Pack Meeting</h3><div class="event-meta"><span>6:30 PM</span><span>Carollton Elementary</span></div><p>Families participate together. New families are welcome.</p></article>
+      <article class="event-card"><strong>Next Adventure</strong><h3>Pack Activity</h3><div class="event-meta"><span>See Calendar</span><span>Pack 321</span></div><p>Campouts, service projects, fundraising, and family events are listed on the full calendar below.</p></article>
+      <article class="event-card"><strong>New Families</strong><h3>Visit a Meeting</h3><div class="event-meta"><span>Questions Welcome</span><span>Oak Creek, WI</span></div><p>Ask questions, meet leaders, and see if Pack 321 feels like home.</p></article>
+    </div>
+  </div>
+</section>
+<section class="page-section calendar-section">
+  <div class="wrap">
+    <div class="section-heading compact-heading"><h2>Full Calendar</h2><span></span></div>
+    <iframe class="calendar-frame" src="https://calendar.google.com/calendar/embed?src=wicubscoutpack321%40gmail.com" title="Pack 321 Google Calendar"></iframe>
+  </div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div><a class="brand" href="index.html"><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span></span></a><p>Serving families in Oak Creek and surrounding communities since 1967.</p></div>
+    <div><a class="brand" href="index.html"><img src="assets/logos/cub-scout-logo.svg" alt="Pack 321 logo"><span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span></span></a><p>Serving families in Oak Creek and surrounding communities since 1967.</p><div class="footer-social-links" aria-label="Pack 321 website links"><a href="https://www.facebook.com/occubscoutpack321" target="_blank" rel="noopener" aria-label="Pack 321 on Facebook"><img src="assets/icons/social/facebook.jpg" alt=""><span>Facebook</span></a><a href="https://www.band.us/" target="_blank" rel="noopener" aria-label="BAND app"><img src="assets/icons/social/band.jpg" alt=""><span>BAND</span></a></div></div>
     <div><h4>Quick Links</h4><a href="why-pack321.html">Why Pack 321</a><a href="cub-scouts.html">Cub Scouts</a><a href="adventures.html">Adventures</a><a href="events-calendar.html">Calendar</a><a href="resources.html">Resources</a>
       <a href="team.html">Team</a>
       <a href="join.html">Join</a><a href="contact.html">Contact</a></div>
@@ -79,5 +98,6 @@
 </footer>
 <a class="feedback-float" href="mailto:wicubscoutpack321@gmail.com?subject=Pack%20321%20Website%20Feedback">Leave Feedback</a>
 <script src="js/site.js"></script>
+<script src="js/calendar.js"></script>
 </body>
 </html>

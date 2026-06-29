@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Security Controls | Pack 321 Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/design-system.css">
+  <link rel="stylesheet" href="../../../css/portal-admin.css">
+</head>
+<body class="portal-shell">
+<main>
+  <section class="portal-hero">
+    <div class="wrap">
+      <p class="eyebrow">Pack 321 Portal Architecture</p>
+      <h1>Security Controls</h1>
+      <p>Required security rules and settings for the Pack 321 Portal once it moves behind a secured backend/API.</p>
+    </div>
+  </section>
+  <nav class="portal-nav" aria-label="Portal admin navigation"><div class="wrap"><a class="" href="../../../portal/admin/">Dashboard</a><a class="" href="../../../portal/admin/users/">Users</a><a class="" href="../../../portal/admin/roles/">Roles</a><a class="active" href="../../../portal/admin/security/">Security</a><a class="" href="../../../portal/admin/audit-log/">Audit Log</a><a class="" href="../../../portal/admin/settings/">Settings</a></div></nav>
+  <section class="portal-section"><div class="wrap"><div class="portal-grid">
+    <article class="portal-card"><h2>Authentication</h2><ul><li>Google OAuth only</li><li>No local passwords</li><li>No password storage</li><li>No forgot password workflow</li><li>Require active user record</li></ul></article>
+    <article class="portal-card"><h2>Authorization</h2><ul><li>Match Google email to Users table</li><li>Load assigned roles</li><li>Load RolePermissions</li><li>Allow or deny by permission key</li><li>Enforce on server/API layer</li></ul></article>
+    <article class="portal-card"><h2>Settings</h2><ul><li>Session timeout</li><li>Inactive user handling</li><li>Last login tracking</li><li>Audit logging enabled</li><li>Export logging enabled</li></ul></article>
+  </div>
+  <div class="portal-note"><strong>Important:</strong> frontend hiding is not security. Every read/write API function must check the signed-in user and permission key before returning or changing data.</div></div></section>
+</main>
+</body>
+</html>
