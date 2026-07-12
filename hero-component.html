@@ -2,8 +2,8 @@
 Use the same structure on every major page. Only update:
 - h1 lines
 - description paragraph
-- hero photo src: assets/images/hero/[page-name].jpg
-Missing photos fall back to assets/images/placeholders/hero-placeholder.png.
+- hero photo src: update per page, for example assets/images/hero/why-pack321.jpg
+Missing photos fall back to assets/images/placeholders/hero-placeholder.jpg.
 -->
 <section class="pack-hero" aria-label="Page Title hero">
   <div class="pack-hero__copy">
@@ -29,6 +29,6 @@ Missing photos fall back to assets/images/placeholders/hero-placeholder.png.
     </div>
   </div>
   <div class="pack-hero__media">
-    <img src="assets/images/hero/[page-name].jpg" alt="Page Title photo" data-fallback="assets/images/placeholders/hero-placeholder.png" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.png';">
+    <img src="assets/images/placeholders/hero-placeholder.jpg" alt="Page Title photo" data-fallback="assets/images/placeholders/hero-placeholder.jpg" onerror="this.onerror=null;this.src='assets/images/placeholders/hero-placeholder.jpg';">
   </div>
 </section>
