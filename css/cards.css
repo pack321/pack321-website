@@ -1,6 +1,6 @@
 .family-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
 .family-item { position: relative; padding: 8px 28px 0; text-align: center; } .family-item + .family-item { border-left: 1px solid rgba(255,199,44,.75); }
-.family-icon-img { width: 150px; height: 150px; margin: 0 auto 20px; object-fit: contain; filter: drop-shadow(0 14px 14px rgba(8,43,87,.16)); }
+.family-icon-img { width: 150px; height: 150px; aspect-ratio: 1 / 1; margin: 0 auto 20px; object-fit: contain; filter: drop-shadow(0 14px 14px rgba(8,43,87,.16)); }
 .family-item h3 { margin: 0; color: var(--navy); font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(2rem, 3vw, 2.75rem); line-height: .95; text-transform: uppercase; }
 .family-item span { display: block; width: 48px; height: 4px; margin: 18px auto; border-radius: 999px; background: var(--gold); } .family-item p { max-width: 230px; margin: 0 auto; }
 .three-column-feature { display: grid; grid-template-columns: minmax(250px,.9fr) minmax(560px,1.65fr) minmax(280px,1fr); gap: 46px; align-items: start; }
@@ -23,7 +23,7 @@
 .page-journey { background: linear-gradient(135deg, var(--navy), #041b36); color: #fff; } .page-journey h2, .page-journey p { color: #fff; }
 .journey-grid { display: grid; grid-template-columns: .8fr 2fr; gap: 34px; align-items: center; } .page-journey h2 { margin: 0 0 12px; font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(3rem,5vw,4.5rem); line-height: .92; text-transform: uppercase; }
 .page-rank-row { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 16px; } .page-rank-card { display: grid; place-items: center; gap: 8px; min-height: 172px; padding: 18px 12px; border-radius: 14px; background: #fff; color: var(--navy); text-align: center; box-shadow: 0 16px 28px rgba(0,0,0,.22); }
-.rank-img { width: 86px; height: 86px; object-fit: contain; } .page-rank-card strong {
+.rank-img { width: 86px; height: 86px; aspect-ratio: 1 / 1; object-fit: contain; } .page-rank-card strong {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 1.05rem;
   font-weight: 900;
