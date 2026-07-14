@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin.html
+Disallow: /banner-review.html
+Disallow: /team-admin.html
+Disallow: /portal/
+
+Sitemap: https://pack321wi.org/sitemap.xml

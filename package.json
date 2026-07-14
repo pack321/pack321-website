@@ -1,0 +1,9 @@
+{
+  "name": "pack321-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-seo.js",
+    "generate:seo": "node scripts/generate-seo.js"
+  }
+}

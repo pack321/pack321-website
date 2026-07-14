@@ -13,6 +13,10 @@ Leadership preview build with homepage and supporting pages.
 - Replace card text as dates become final.
 - Add real Google Form / Drive / Facebook / BAND links when ready.
 
+## Production build
+
+Run `npm run build` before deploying. The build regenerates `sitemap.xml` and `robots.txt` from the public HTML pages and excludes admin, portal, review, and fragment pages.
+
 ## Interest / Contact Request Form
 This GitHub Pages site does not save form submissions directly. Keep all form handling inside Google Forms / Google Drive.
 
