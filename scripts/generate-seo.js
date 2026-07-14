@@ -7,7 +7,9 @@ const ROOT = path.resolve(__dirname, "..");
 const EXCLUDED_FILES = new Set([
   "admin.html",
   "banner-review.html",
+  "favicon-links.html",
   "hero-component.html",
+  "scout-accounts.html",
   "team-admin.html",
 ]);
 
@@ -67,6 +69,8 @@ Allow: /
 
 Disallow: /admin.html
 Disallow: /banner-review.html
+Disallow: /favicon-links.html
+Disallow: /scout-accounts.html
 Disallow: /team-admin.html
 Disallow: /portal/
 

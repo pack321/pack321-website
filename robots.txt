@@ -3,6 +3,8 @@ Allow: /
 
 Disallow: /admin.html
 Disallow: /banner-review.html
+Disallow: /favicon-links.html
+Disallow: /scout-accounts.html
 Disallow: /team-admin.html
 Disallow: /portal/
 

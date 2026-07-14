@@ -13,6 +13,17 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--light-bg); color: var(--dark-text); font-family: 'Inter', Arial, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.5; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; height: auto; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .wrap, .container { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 .page-section { padding: 66px 0; }
 .home-photo-banner {
