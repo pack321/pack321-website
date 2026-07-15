@@ -199,10 +199,7 @@ function updateHead(source, page) {
 function updateH1(source, file, page) {
   if (file === "index.html") {
     let next = source.replace(/\s*<h1\b[^>]*>[\s\S]*?<\/h1>\s*/i, "\n");
-    return next.replace(
-      /(<section class="home-photo-banner"[^>]*>)\s*/i,
-      `$1\n  ${page.h1Html}\n  `
-    );
+    return next.replace("<main>", `<main>\n${page.h1Html}`);
   }
   return source.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/i, page.h1Html);
 }
