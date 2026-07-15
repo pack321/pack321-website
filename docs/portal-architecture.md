@@ -13,6 +13,7 @@ This document captures the planned Pack 321 Portal architecture. The current pub
 
 ## Routes
 
+- /portal/my-day
 - /portal/admin
 - /portal/admin/users
 - /portal/admin/roles

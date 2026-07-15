@@ -4,6 +4,19 @@
 
   const pageContexts = [
     {
+      match: /\/portal\/my-day\/?$/,
+      module: 'My Day',
+      workspace: 'Daily Workspace',
+      permissions: ['portal.view', 'event.view', 'admin.audit.view'],
+      suggestions: ['Review today schedule', 'Explain the Ryn briefing', 'Show organization health', 'Prepare next actions'],
+      actions: [
+        { label: 'Review Schedule', response: 'Start with the highest-priority time-bound items, then check items due this week.' },
+        { label: 'Explain Health', response: 'Organization Health summarizes roster readiness, approvals, and the next planning milestone.' },
+        { label: 'Prepare Next Actions', response: 'I recommend checking access requests, reviewing calendar cleanup, and confirming tonight planning follow-ups.' },
+      ],
+      notifications: ['My Day is showing schedule, health, briefing, quick actions, and recent activity for the current workspace.'],
+    },
+    {
       match: /\/portal\/admin\/users\/?$/,
       module: 'User Access',
       workspace: 'Admin',
@@ -180,10 +193,11 @@
       </div>
     `;
 
+    prepareInitialPosition(root);
     document.body.append(root, confirm);
-    applyStoredPosition(root);
     render(root);
     bind(root, confirm);
+    window.requestAnimationFrame(() => root.classList.add('is-ready'));
   }
 
   function bind(root, confirm) {
@@ -427,7 +441,7 @@
     window.setTimeout(() => { drag = null; }, 0);
   }
 
-  function applyStoredPosition(root) {
+  function prepareInitialPosition(root) {
     try {
       const stored = JSON.parse(localStorage.getItem(storageKey) || '{}');
       if (Number.isFinite(stored.left) && Number.isFinite(stored.top)) {
@@ -437,10 +451,14 @@
         root.style.top = `${top}px`;
         root.style.right = 'auto';
         root.style.bottom = 'auto';
+        return;
       }
     } catch (error) {
-      return;
     }
+    root.style.left = 'auto';
+    root.style.top = 'auto';
+    root.style.right = '';
+    root.style.bottom = '';
   }
 
   function getContext() {

@@ -1,0 +1,348 @@
+.my-day-shell {
+  background: #f4f7fb;
+  color: var(--dark-text);
+}
+
+.my-day-hero {
+  padding: 42px 0 30px;
+  background: linear-gradient(135deg, #071f3f, #0d356a);
+  color: #fff;
+  border-bottom: 5px solid var(--gold);
+}
+
+.my-day-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
+}
+
+.my-day-hero .eyebrow {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.my-day-hero h1 {
+  margin: 0;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(3.5rem, 7vw, 6.4rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.my-day-hero p {
+  max-width: 760px;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.04rem;
+  line-height: 1.6;
+}
+
+.my-day-date {
+  min-width: 178px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 199, 44, 0.38);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: right;
+}
+
+.my-day-date strong {
+  display: block;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.my-day-date span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.88rem;
+}
+
+.my-day-main {
+  padding: 28px 0 76px;
+}
+
+.my-day-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.my-day-stack,
+.my-day-side {
+  display: grid;
+  gap: 28px;
+}
+
+.my-day-card {
+  min-height: 186px;
+  padding: 28px;
+  border: 1px solid rgba(8, 43, 87, 0.12);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(8, 43, 87, 0.11);
+}
+
+.my-day-card--schedule,
+.my-day-card--ryn,
+.my-day-card--health,
+.my-day-card--activity,
+.my-day-card--actions {
+  min-height: 230px;
+}
+
+.my-day-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.my-day-card__title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.my-day-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 199, 44, 0.28);
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.my-day-card h2 {
+  margin: 0;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.my-day-card__subtitle {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.my-day-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(8, 43, 87, 0.08);
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.my-day-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.my-day-list li {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid rgba(8, 43, 87, 0.1);
+}
+
+.my-day-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.my-day-time {
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.my-day-list strong,
+.my-day-activity strong,
+.my-day-health strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.my-day-list span,
+.my-day-activity span,
+.my-day-health span {
+  color: #667085;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.my-day-briefing {
+  display: grid;
+  gap: 18px;
+}
+
+.my-day-briefing p {
+  margin: 0;
+  color: var(--dark-text);
+  font-size: 0.96rem;
+  line-height: 1.68;
+}
+
+.my-day-briefing__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.my-day-health {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.my-day-health__item {
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid rgba(8, 43, 87, 0.1);
+  border-radius: 10px;
+  background: rgba(8, 43, 87, 0.035);
+}
+
+.my-day-health__score {
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 2.6rem;
+  line-height: 0.9;
+}
+
+.my-day-activity {
+  display: grid;
+  gap: 15px;
+}
+
+.my-day-activity__item {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.my-day-activity__item::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(255, 199, 44, 0.2);
+}
+
+.my-day-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.my-day-action {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+  min-height: 76px;
+  padding: 15px;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+}
+
+.my-day-action:focus-visible {
+  outline: 4px solid rgba(255, 199, 44, 0.44);
+  outline-offset: 3px;
+}
+
+.my-day-action__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.my-day-action span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1040px) {
+  .my-day-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .my-day-hero__grid,
+  .my-day-list li,
+  .my-day-health {
+    grid-template-columns: 1fr;
+  }
+
+  .my-day-date {
+    text-align: left;
+  }
+
+  .my-day-main,
+  .my-day-stack,
+  .my-day-side {
+    gap: 24px;
+  }
+
+  .my-day-card {
+    padding: 24px;
+  }
+
+  .my-day-card__header {
+    display: grid;
+  }
+
+  .my-day-actions {
+    grid-template-columns: 1fr;
+  }
+}

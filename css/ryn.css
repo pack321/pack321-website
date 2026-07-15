@@ -11,6 +11,13 @@
   inset: auto 22px 22px auto;
   z-index: 1200;
   font-family: 'Inter', Arial, system-ui, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ryn-root.is-ready {
+  opacity: 1;
+  visibility: visible;
 }
 
 .ryn-orb {

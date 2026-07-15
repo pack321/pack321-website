@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>My Day | ScoutHQ Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/portal-admin.css">
+  <link rel="stylesheet" href="../../css/my-day.css">
+  <link rel="stylesheet" href="../../css/ryn.css">
+  <link rel="icon" href="/favicon.ico?v=3" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+  <link rel="manifest" href="/site.webmanifest?v=3">
+  <meta name="theme-color" content="#0D1B2A">
+</head>
+<body class="my-day-shell">
+<main>
+  <section class="my-day-hero">
+    <div class="wrap my-day-hero__grid">
+      <div>
+        <p class="eyebrow">ScoutHQ Workspace</p>
+        <h1>My Day</h1>
+        <p>A calm operating view for the schedule, reminders, health signals, and actions that need attention today.</p>
+      </div>
+      <div class="my-day-date" aria-label="Current planning context">
+        <strong>Today</strong>
+        <span>Pack 321 planning year</span>
+      </div>
+    </div>
+  </section>
+  <nav class="portal-nav" aria-label="Portal navigation"><div class="wrap"><a class="active" href="../../portal/my-day/">My Day</a><a href="../../portal/admin/">Admin</a><a href="../../portal/admin/users/">Users</a><a href="../../portal/admin/roles/">Roles</a><a href="../../portal/admin/security/">Security</a><a href="../../portal/admin/audit-log/">Audit Log</a><a href="../../portal/admin/settings/">Settings</a></div></nav>
+
+  <section class="my-day-main">
+    <div class="wrap my-day-grid">
+      <div class="my-day-stack">
+        <article class="my-day-card my-day-card--schedule">
+          <div class="my-day-card__header">
+            <div class="my-day-card__title">
+              <span class="my-day-icon" aria-hidden="true">01</span>
+              <div>
+                <h2>Today's Schedule</h2>
+                <p class="my-day-card__subtitle">Meetings, deadlines, and reminders that shape the day.</p>
+              </div>
+            </div>
+            <span class="my-day-badge">3 items</span>
+          </div>
+          <ul class="my-day-list">
+            <li><span class="my-day-time">6:30 PM</span><div><strong>Pack planning review</strong><span>Confirm agenda owners and open follow-ups.</span></div><span class="my-day-badge">Tonight</span></li>
+            <li><span class="my-day-time">Tomorrow</span><div><strong>Access request review</strong><span>Review pending Google account requests before approvals.</span></div><span class="my-day-badge">Admin</span></li>
+            <li><span class="my-day-time">This week</span><div><strong>Calendar cleanup</strong><span>Check event dates, registration status, and communication drafts.</span></div><span class="my-day-badge">Calendar</span></li>
+          </ul>
+        </article>
+
+        <article class="my-day-card my-day-card--health">
+          <div class="my-day-card__header">
+            <div class="my-day-card__title">
+              <span class="my-day-icon" aria-hidden="true">02</span>
+              <div>
+                <h2>Organization Health</h2>
+                <p class="my-day-card__subtitle">High-level signals for the current workspace.</p>
+              </div>
+            </div>
+          </div>
+          <div class="my-day-health">
+            <div class="my-day-health__item"><div class="my-day-health__score">92</div><strong>Roster readiness</strong><span>Most family records are complete.</span></div>
+            <div class="my-day-health__item"><div class="my-day-health__score">4</div><strong>Open approvals</strong><span>Access and planning items need review.</span></div>
+            <div class="my-day-health__item"><div class="my-day-health__score">7d</div><strong>Next milestone</strong><span>Annual planning reminder window.</span></div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="my-day-side" aria-label="My Day supporting panels">
+        <article class="my-day-card my-day-card--ryn">
+          <div class="my-day-card__header">
+            <div class="my-day-card__title">
+              <span class="my-day-icon" aria-hidden="true">R</span>
+              <div>
+                <h2>Ryn Briefing</h2>
+                <p class="my-day-card__subtitle">Context-aware guidance for the current workspace.</p>
+              </div>
+            </div>
+          </div>
+          <div class="my-day-briefing">
+            <p>Start with pending access requests, then review calendar cleanup items. Ask Ryn to explain a workflow or guide a safe action before changing data.</p>
+            <div class="my-day-briefing__footer"><span class="my-day-badge">Calm mode</span><span class="my-day-badge">Admin aware</span></div>
+          </div>
+        </article>
+
+        <article class="my-day-card my-day-card--actions">
+          <div class="my-day-card__header">
+            <div class="my-day-card__title">
+              <span class="my-day-icon" aria-hidden="true">03</span>
+              <div>
+                <h2>Quick Actions</h2>
+                <p class="my-day-card__subtitle">Common actions with stable sizing and touch targets.</p>
+              </div>
+            </div>
+          </div>
+          <div class="my-day-actions">
+            <button class="my-day-action" type="button"><span class="my-day-action__icon">+</span><span>Create Event</span></button>
+            <button class="my-day-action" type="button"><span class="my-day-action__icon">U</span><span>Add User</span></button>
+            <button class="my-day-action" type="button"><span class="my-day-action__icon">$</span><span>Open Ledger</span></button>
+            <button class="my-day-action" type="button"><span class="my-day-action__icon">R</span><span>Generate Report</span></button>
+            <button class="my-day-action" type="button"><span class="my-day-action__icon">@</span><span>Email Committee</span></button>
+            <button class="my-day-action" type="button"><span class="my-day-action__icon">?</span><span>Ask Ryn</span></button>
+          </div>
+        </article>
+
+        <article class="my-day-card my-day-card--activity">
+          <div class="my-day-card__header">
+            <div class="my-day-card__title">
+              <span class="my-day-icon" aria-hidden="true">04</span>
+              <div>
+                <h2>Recent Activity</h2>
+                <p class="my-day-card__subtitle">A quiet summary of recent workspace movement.</p>
+              </div>
+            </div>
+          </div>
+          <div class="my-day-activity">
+            <div class="my-day-activity__item"><div><strong>Role map reviewed</strong><span>Admin permissions were checked for least-privilege alignment.</span></div></div>
+            <div class="my-day-activity__item"><div><strong>Security note added</strong><span>Backend enforcement remains the required security boundary.</span></div></div>
+            <div class="my-day-activity__item"><div><strong>Ryn available</strong><span>The assistant is ready from the lower-right workspace control.</span></div></div>
+          </div>
+        </article>
+      </aside>
+    </div>
+  </section>
+</main>
+<script src="../../js/ryn.js" defer></script>
+</body>
+</html>
