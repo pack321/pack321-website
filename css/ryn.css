@@ -1,0 +1,449 @@
+.ryn-root {
+  --ryn-navy: #071f3f;
+  --ryn-blue: #0b3f7a;
+  --ryn-gold: #ffc72c;
+  --ryn-ink: #14213d;
+  --ryn-muted: #667085;
+  --ryn-line: rgba(8, 43, 87, 0.16);
+  --ryn-panel: #ffffff;
+  --ryn-shadow: 0 24px 60px rgba(8, 43, 87, 0.22);
+  position: fixed;
+  inset: auto 22px 22px auto;
+  z-index: 1200;
+  font-family: 'Inter', Arial, system-ui, sans-serif;
+}
+
+.ryn-orb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border: 2px solid rgba(255, 199, 44, 0.82);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #2f78c9 0 12%, var(--ryn-blue) 38%, var(--ryn-navy) 100%);
+  color: #fff;
+  box-shadow: 0 16px 38px rgba(8, 43, 87, 0.28);
+  cursor: grab;
+  touch-action: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.ryn-orb:focus-visible {
+  outline: 4px solid rgba(255, 199, 44, 0.48);
+  outline-offset: 4px;
+}
+
+.ryn-orb:hover,
+.ryn-root.is-panel-open .ryn-orb {
+  transform: translateY(-2px) scale(1.03);
+  border-color: var(--ryn-gold);
+  box-shadow: 0 20px 44px rgba(8, 43, 87, 0.34);
+}
+
+.ryn-orb:active {
+  cursor: grabbing;
+}
+
+.ryn-orb__mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.ryn-orb__pulse {
+  position: absolute;
+  inset: -7px;
+  border: 2px solid rgba(255, 199, 44, 0.38);
+  border-radius: 50%;
+  opacity: 0;
+  animation: rynPulse 3.4s ease-out infinite;
+}
+
+.ryn-orb__status {
+  position: absolute;
+  right: 3px;
+  bottom: 4px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #20c997;
+}
+
+.ryn-root[data-state="thinking"] .ryn-orb__mark,
+.ryn-root[data-state="working"] .ryn-orb__mark {
+  animation: rynThink 1.1s ease-in-out infinite;
+}
+
+.ryn-root[data-state="listening"] .ryn-orb {
+  animation: rynListen 1.8s ease-in-out infinite;
+}
+
+.ryn-root[data-state="speaking"] .ryn-orb__pulse,
+.ryn-root[data-state="notification"] .ryn-orb__pulse {
+  opacity: 1;
+}
+
+.ryn-root[data-state="offline"] .ryn-orb {
+  filter: grayscale(0.85);
+}
+
+.ryn-root[data-state="offline"] .ryn-orb__status {
+  background: #98a2b3;
+}
+
+.ryn-root[data-state="notification"] .ryn-orb__status {
+  background: var(--ryn-gold);
+}
+
+.ryn-panel {
+  position: absolute;
+  right: 0;
+  bottom: 82px;
+  width: min(390px, calc(100vw - 28px));
+  max-height: min(680px, calc(100vh - 118px));
+  overflow: hidden;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 14px;
+  background: var(--ryn-panel);
+  box-shadow: var(--ryn-shadow);
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
+  transform-origin: bottom right;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.ryn-root.is-panel-open .ryn-panel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.ryn-panel__header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 18px 14px;
+  background: linear-gradient(135deg, var(--ryn-navy), #0d356a);
+  color: #fff;
+}
+
+.ryn-panel__header p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.88rem;
+}
+
+.ryn-panel__title {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ryn-panel__close,
+.ryn-confirm__button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.ryn-panel__close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.ryn-panel__body {
+  display: grid;
+  gap: 16px;
+  max-height: calc(min(680px, calc(100vh - 118px)) - 80px);
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.ryn-search {
+  display: grid;
+  gap: 8px;
+}
+
+.ryn-search label,
+.ryn-section__label {
+  color: var(--ryn-muted);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ryn-search__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.ryn-search input {
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--ryn-line);
+  border-radius: 9px;
+  color: var(--ryn-ink);
+  font: inherit;
+}
+
+.ryn-search button,
+.ryn-chip,
+.ryn-action {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ryn-search button {
+  min-height: 44px;
+  padding: 0 14px;
+  background: var(--ryn-gold);
+  color: var(--ryn-navy);
+}
+
+.ryn-chip-list,
+.ryn-action-grid,
+.ryn-notification-list,
+.ryn-memory-list,
+.ryn-recent-list {
+  display: grid;
+  gap: 8px;
+}
+
+.ryn-chip-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ryn-chip,
+.ryn-action {
+  min-height: 40px;
+  padding: 10px 11px;
+  text-align: left;
+}
+
+.ryn-chip {
+  background: rgba(8, 43, 87, 0.08);
+  color: var(--ryn-navy);
+}
+
+.ryn-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #fff;
+  color: var(--ryn-navy);
+  border: 1px solid var(--ryn-line);
+}
+
+.ryn-action::after {
+  content: '>';
+  color: var(--ryn-gold);
+}
+
+.ryn-card {
+  padding: 12px;
+  border: 1px solid var(--ryn-line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.ryn-card strong {
+  display: block;
+  color: var(--ryn-navy);
+  font-size: 0.9rem;
+}
+
+.ryn-card span,
+.ryn-card p {
+  margin: 3px 0 0;
+  color: var(--ryn-muted);
+  font-size: 0.84rem;
+  line-height: 1.42;
+}
+
+.ryn-context-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ryn-context-card span {
+  display: grid;
+  gap: 2px;
+  min-height: 48px;
+  padding: 9px;
+  border: 1px solid var(--ryn-line);
+  border-radius: 9px;
+  background: rgba(8, 43, 87, 0.05);
+  color: var(--ryn-ink);
+  font-size: 0.8rem;
+}
+
+.ryn-context-card strong {
+  color: var(--ryn-muted);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+}
+
+.ryn-thread {
+  display: grid;
+  gap: 10px;
+}
+
+.ryn-message {
+  padding: 11px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.ryn-message--ryn {
+  background: rgba(8, 43, 87, 0.08);
+  color: var(--ryn-ink);
+}
+
+.ryn-message--user {
+  margin-left: 26px;
+  background: var(--ryn-navy);
+  color: #fff;
+}
+
+.ryn-memory-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ryn-memory {
+  padding: 8px 9px;
+  border-radius: 8px;
+  background: rgba(255, 199, 44, 0.22);
+  color: var(--ryn-navy);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.ryn-confirm {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: none;
+  place-items: center;
+  padding: 22px;
+  background: rgba(7, 31, 63, 0.38);
+}
+
+.ryn-confirm.is-open {
+  display: grid;
+}
+
+.ryn-confirm__dialog {
+  width: min(420px, 100%);
+  padding: 22px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--ryn-shadow);
+}
+
+.ryn-confirm__dialog h2 {
+  margin: 0 0 8px;
+  color: var(--ryn-navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.ryn-confirm__dialog p {
+  margin: 0 0 18px;
+  color: var(--ryn-ink);
+}
+
+.ryn-confirm__actions {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.ryn-confirm__button {
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: rgba(8, 43, 87, 0.09);
+  color: var(--ryn-navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ryn-confirm__button--primary {
+  background: var(--ryn-gold);
+}
+
+@keyframes rynPulse {
+  0% { transform: scale(0.84); opacity: 0.54; }
+  80% { transform: scale(1.18); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes rynThink {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.92); }
+}
+
+@keyframes rynListen {
+  0%, 100% { box-shadow: 0 16px 38px rgba(8, 43, 87, 0.28); }
+  50% { box-shadow: 0 16px 38px rgba(8, 43, 87, 0.28), 0 0 0 10px rgba(255, 199, 44, 0.18); }
+}
+
+@media (max-width: 680px) {
+  .ryn-root {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .ryn-panel {
+    position: fixed;
+    right: 14px;
+    bottom: 92px;
+    width: calc(100vw - 28px);
+  }
+
+  .ryn-orb {
+    width: 62px;
+    height: 62px;
+  }
+
+  .ryn-chip-list,
+  .ryn-memory-list,
+  .ryn-context-card {
+    grid-template-columns: 1fr;
+  }
+}
