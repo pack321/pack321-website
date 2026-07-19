@@ -43,9 +43,9 @@ const problems = {
   duplicateSlugs: [],
   missingLocalAdventureIcons: [],
   badAdventureCardLinks: [],
+  badAdventureDetailPages: [],
   scoutingIframeUsage: [],
   oldRequirementPlaceholders: [],
-  staleAdventureDetailDirectories: [],
 };
 
 const hrefPattern = /href="([^"]*)"/g;
@@ -55,7 +55,7 @@ const adventureCardPattern = /<a\s+class="(rank-(?:required|elective)-card)"([^>
 htmlFiles.forEach((file) => {
   const html = fs.readFileSync(file, "utf8");
   if (/<iframe\b[^>]+src="[^"]*scouting\.org/i.test(html)) problems.scoutingIframeUsage.push(path.relative(ROOT, file));
-  if (/rank-requirements-empty|Print Requirements|requirements coming soon|rank-official-card__link|Go to Scouting America/i.test(html)) {
+  if (/rank-requirements-empty|Print Requirements|requirements coming soon|rank-official-card__link|Go to Scouting America|Official Source/i.test(html)) {
     problems.oldRequirementPlaceholders.push(path.relative(ROOT, file));
   }
   for (const match of html.matchAll(hrefPattern)) {
@@ -98,14 +98,42 @@ Object.entries(cubScoutRanks).forEach(([rankSlug, rank]) => {
       const iconPath = path.join(ROOT, adventure.icon.slice(1));
       if (!fs.existsSync(iconPath)) problems.missingLocalAdventureIcons.push(adventure.icon);
     }
-  });
 
-  const rankDir = path.join(ROOT, "cub-scouts", "adventures", rankSlug);
-  if (fs.existsSync(rankDir)) {
-    fs.readdirSync(rankDir, { withFileTypes: true })
-      .filter((entry) => entry.isDirectory())
-      .forEach((entry) => problems.staleAdventureDetailDirectories.push(path.join("cub-scouts", "adventures", rankSlug, entry.name)));
-  }
+    const detailPath = path.join(ROOT, "cub-scouts", "adventures", rankSlug, adventure.slug, "index.html");
+    if (!fs.existsSync(detailPath)) {
+      problems.badAdventureDetailPages.push([`${rankSlug}:${adventure.slug}`, "missing detail page"]);
+      return;
+    }
+
+    const detailHtml = fs.readFileSync(detailPath, "utf8");
+    const officialButtons = [...detailHtml.matchAll(/<a class="button gold rank-detail-actions__official"([^>]*)>/g)];
+    const backButtons = [...detailHtml.matchAll(/<a class="button rank-detail-actions__back"([^>]*)>/g)];
+    const requirementsInfoHtml = detailHtml.match(/<section class="rank-requirements-info"[\s\S]*?<\/section>/)?.[0] || "";
+    const lowerRequirementButtons = /<a\s/i.test(requirementsInfoHtml);
+    const duplicatedType = /<p class="rank-detail__meta">\s*(Required|Elective)\s*[·&middot;]\s*\1\s*<\/p>/i.test(detailHtml);
+    const officialButton = officialButtons[0]?.[0] || "";
+
+    if (
+      officialButtons.length !== 1 ||
+      backButtons.length !== 1 ||
+      !officialButton.includes(`href="${adventure.officialUrl}"`) ||
+      !officialButton.includes('target="_blank"') ||
+      !officialButton.includes('rel="noopener noreferrer"') ||
+      !detailHtml.includes(`View Official ${adventure.name.replace(/&/g, "&amp;")} Requirements`) ||
+      !detailHtml.includes('rank-external-indicator') ||
+      !detailHtml.includes(`Back to ${rank.name} Adventures`) ||
+      lowerRequirementButtons ||
+      duplicatedType
+    ) {
+      problems.badAdventureDetailPages.push([`${rankSlug}:${adventure.slug}`, {
+        officialButtons: officialButtons.length,
+        backButtons: backButtons.length,
+        hasCorrectHref: officialButton.includes(`href="${adventure.officialUrl}"`),
+        lowerRequirementButtons,
+        duplicatedType,
+      }]);
+    }
+  });
 });
 
 const summary = {
@@ -116,9 +144,9 @@ const summary = {
   duplicateSlugs: problems.duplicateSlugs.length,
   missingLocalAdventureIcons: problems.missingLocalAdventureIcons.length,
   badAdventureCardLinks: problems.badAdventureCardLinks.length,
+  badAdventureDetailPages: problems.badAdventureDetailPages.length,
   scoutingIframeUsage: problems.scoutingIframeUsage.length,
   oldRequirementPlaceholders: problems.oldRequirementPlaceholders.length,
-  staleAdventureDetailDirectories: problems.staleAdventureDetailDirectories.length,
 };
 
 console.log(JSON.stringify({ summary, problems }, null, 2));

@@ -168,6 +168,10 @@
   color: currentColor;
 }
 
+.rank-official-card__button::after {
+  content: none;
+}
+
 .rank-divider {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
@@ -381,6 +385,107 @@
   margin: 0;
 }
 
+.rank-detail {
+  padding: 34px 0 44px;
+}
+
+.rank-detail__grid {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding: 32px;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.rank-detail__media {
+  display: grid;
+  place-items: center;
+}
+
+.rank-detail__media img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.rank-detail__copy {
+  min-width: 0;
+}
+
+.rank-detail__copy h1 {
+  margin: 0;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.rank-detail__copy > p:not(.rank-adventure-kicker):not(.rank-detail__meta) {
+  margin: 0;
+  color: var(--dark-text);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.rank-detail__meta {
+  margin: 14px 0 12px;
+  color: var(--dark-text);
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.rank-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.rank-detail-actions .button {
+  min-height: 50px;
+  border-radius: 7px;
+}
+
+.rank-detail-actions__official .rank-external-indicator {
+  color: currentColor;
+  margin-left: 4px;
+}
+
+.rank-detail-actions__official::after {
+  content: none;
+}
+
+.rank-detail__requirements {
+  margin-top: 22px;
+}
+
+.rank-requirements-info {
+  padding: 28px 30px;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(8, 43, 87, 0.08);
+}
+
+.rank-requirements-info h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 900;
+}
+
+.rank-requirements-info p {
+  margin: 0;
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
 @media (max-width: 1060px) {
   .rank-adventure-hero__grid {
     grid-template-columns: 1fr;
@@ -406,7 +511,13 @@
     padding: 24px;
   }
 
-  .rank-adventure-hero__emblem {
+  .rank-detail__grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .rank-adventure-hero__emblem,
+  .rank-detail__media img {
     justify-self: start;
     width: 150px;
     height: 150px;
@@ -421,6 +532,15 @@
 
   .rank-official-card {
     padding: 24px;
+  }
+
+  .rank-detail-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .rank-detail-actions .button {
+    width: 100%;
   }
 
   .rank-disclaimer .button {

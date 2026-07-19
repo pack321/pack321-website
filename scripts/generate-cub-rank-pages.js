@@ -210,6 +210,26 @@ function electiveCard(item) {
       </a>`;
 }
 
+function adventureType(rank, adventure) {
+  return rank.requiredAdventures.some((item) => item.slug === adventure.slug) ? "Required" : "Elective";
+}
+
+function detailActions(rank, adventure) {
+  return `
+        <div class="rank-detail-actions">
+          <a class="button gold rank-detail-actions__official" href="${adventure.officialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Open official ${escapeHtml(adventure.name)} requirements on Scouting America">View Official ${escapeHtml(adventure.name)} Requirements <span class="rank-external-indicator" aria-hidden="true">&#8599;</span></a>
+          <a class="button rank-detail-actions__back" href="/cub-scouts/adventures/${rank.slug}/">Back to ${escapeHtml(rank.name)} Adventures</a>
+        </div>`;
+}
+
+function officialRequirementsInfo() {
+  return `
+      <section class="rank-requirements-info" aria-labelledby="official-requirements-heading">
+        <h2 id="official-requirements-heading">Official Requirements</h2>
+        <p>Scouting America maintains the official current requirements for this adventure. Use the button above to open the official requirements in a new tab.</p>
+      </section>`;
+}
+
 function disclaimer() {
   return `
   <section class="rank-disclaimer-section">
@@ -272,6 +292,29 @@ function rankMain(rank) {
   ${disclaimer()}`;
 }
 
+function adventureMain(rank, adventure) {
+  const type = adventureType(rank, adventure);
+  return `${breadcrumbs(rank, adventure.name)}
+  <section class="rank-detail">
+    <div class="wrap rank-detail__grid">
+      <div class="rank-detail__media">
+        <img src="${adventure.icon}" width="360" height="360" alt="${escapeHtml(adventure.iconAlt)}">
+      </div>
+      <div class="rank-detail__copy">
+        <p class="rank-adventure-kicker">${escapeHtml(rank.name)} Adventure</p>
+        <h1>${escapeHtml(adventure.name)}</h1>
+        <p class="rank-detail__meta">${type}</p>
+        <p>${escapeHtml(adventure.description)}</p>
+        ${detailActions(rank, adventure)}
+      </div>
+    </div>
+    <div class="wrap rank-detail__requirements">
+      ${officialRequirementsInfo()}
+    </div>
+  </section>
+  ${disclaimer()}`;
+}
+
 function writeRankPage(rank) {
   writeFile(`cub-scouts/adventures/${rank.slug}/index.html`, pageShell({
     depth: 3,
@@ -283,6 +326,21 @@ function writeRankPage(rank) {
     appAttributes: {
       attrs: `data-rank-app data-mode="rank" data-rank="${rank.slug}" data-static="true" style="--rank-accent: ${rank.accentColor}"`,
       content: rankMain(rank),
+    },
+  }));
+}
+
+function writeAdventurePage(rank, adventure) {
+  writeFile(`cub-scouts/adventures/${rank.slug}/${adventure.slug}/index.html`, pageShell({
+    depth: 4,
+    meta: {
+      title: `${adventure.name} | ${rank.name} Adventures | Pack 321`,
+      description: `View Pack 321 information for the ${adventure.name} ${rank.name} Cub Scout adventure, with the official Scouting America requirements linked for reference.`,
+      canonical: `${SITE}/cub-scouts/adventures/${rank.slug}/${adventure.slug}/`,
+    },
+    appAttributes: {
+      attrs: `data-rank-app data-mode="adventure" data-rank="${rank.slug}" data-adventure="${adventure.slug}" data-static="true" style="--rank-accent: ${rank.accentColor}"`,
+      content: adventureMain(rank, adventure),
     },
   }));
 }
@@ -313,7 +371,8 @@ ${faviconLinks()}
 cubScoutRankOrder.forEach((slug) => {
   const rank = cubScoutRanks[slug];
   writeRankPage(rank);
+  rank.requiredAdventures.concat(rank.electiveAdventures).forEach((adventure) => writeAdventurePage(rank, adventure));
   writeLegacyRedirect(rank);
 });
 
-console.log(`Generated ${cubScoutRankOrder.length} Cub Scout rank pages.`);
+console.log(`Generated ${cubScoutRankOrder.length} Cub Scout rank pages and Cub Scout adventure detail pages.`);

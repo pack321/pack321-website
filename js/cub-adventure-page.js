@@ -17,7 +17,7 @@
   document.documentElement.style.setProperty('--rank-accent', rank.accentColor);
 
   if (mode === 'adventure') {
-    renderNotFound(app);
+    renderAdventureDetail(app, rank, getAdventureSlug());
   } else {
     renderRankPage(app, rank);
   }
@@ -26,6 +26,12 @@
     const parts = window.location.pathname.split('/').filter(Boolean);
     const adventuresIndex = parts.indexOf('adventures');
     return adventuresIndex >= 0 ? parts[adventuresIndex + 1] : '';
+  }
+
+  function getAdventureSlug() {
+    const parts = window.location.pathname.split('/').filter(Boolean);
+    const adventuresIndex = parts.indexOf('adventures');
+    return adventuresIndex >= 0 ? parts[adventuresIndex + 2] : '';
   }
 
   function renderRankPage(target, currentRank) {
@@ -166,6 +172,57 @@
           </aside>
         </div>
       </section>
+    `;
+  }
+
+  function adventureType(currentRank, adventure) {
+    return currentRank.requiredAdventures.some((item) => item.slug === adventure.slug) ? 'Required' : 'Elective';
+  }
+
+  function renderAdventureDetail(target, currentRank, adventureSlug) {
+    const adventure = currentRank.requiredAdventures.concat(currentRank.electiveAdventures)
+      .find((item) => item.slug === adventureSlug);
+    if (!adventure) {
+      renderNotFound(target);
+      return;
+    }
+
+    const type = adventureType(currentRank, adventure);
+    document.title = `${adventure.name} | ${currentRank.name} Adventures | Pack 321`;
+    target.innerHTML = `
+      <nav class="rank-breadcrumbs wrap" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">></span>
+        <a href="/cub-scouts.html">Cub Scouts</a>
+        <span aria-hidden="true">></span>
+        <a href="/cub-scouts/adventures/${currentRank.slug}/">${escapeHtml(currentRank.name)}</a>
+        <span aria-hidden="true">></span>
+        <span>${escapeHtml(adventure.name)}</span>
+      </nav>
+      <section class="rank-detail">
+        <div class="wrap rank-detail__grid">
+          <div class="rank-detail__media">
+            <img src="${adventure.icon}" width="360" height="360" alt="${escapeHtml(adventure.iconAlt)}">
+          </div>
+          <div class="rank-detail__copy">
+            <p class="rank-adventure-kicker">${escapeHtml(currentRank.name)} Adventure</p>
+            <h1>${escapeHtml(adventure.name)}</h1>
+            <p class="rank-detail__meta">${type}</p>
+            <p>${escapeHtml(adventure.description)}</p>
+            <div class="rank-detail-actions">
+              <a class="button gold rank-detail-actions__official" href="${adventure.officialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Open official ${escapeHtml(adventure.name)} requirements on Scouting America">View Official ${escapeHtml(adventure.name)} Requirements <span class="rank-external-indicator" aria-hidden="true">&#8599;</span></a>
+              <a class="button rank-detail-actions__back" href="/cub-scouts/adventures/${currentRank.slug}/">Back to ${escapeHtml(currentRank.name)} Adventures</a>
+            </div>
+          </div>
+        </div>
+        <div class="wrap rank-detail__requirements">
+          <section class="rank-requirements-info" aria-labelledby="official-requirements-heading">
+            <h2 id="official-requirements-heading">Official Requirements</h2>
+            <p>Scouting America maintains the official current requirements for this adventure. Use the button above to open the official requirements in a new tab.</p>
+          </section>
+        </div>
+      </section>
+      ${renderDisclaimer()}
     `;
   }
 
