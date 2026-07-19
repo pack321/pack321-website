@@ -7,6 +7,14 @@
  * @property {string} iconAlt
  * @property {string} category
  * @property {string} officialUrl
+ * @property {Requirement[]} requirements
+ */
+
+/**
+ * @typedef {Object} Requirement
+ * @property {string} label
+ * @property {string} text
+ * @property {Requirement[]} [children]
  */
 
 /**
@@ -63,6 +71,7 @@
       iconAlt: `${name} adventure insignia`,
       officialUrl: `${officialBase}/cub-scout-adventures/${officialSlug || slug}/`,
       href: `/cub-scouts/adventures/${rankSlug}/${slug}/`,
+      requirements: [],
     };
   }
 

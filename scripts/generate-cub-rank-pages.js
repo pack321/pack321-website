@@ -211,6 +211,31 @@ function electiveCard(item) {
       </a>`;
 }
 
+function renderRequirements(adventure) {
+  if (!adventure.requirements || adventure.requirements.length === 0) {
+    return `
+        <div class="rank-requirements-empty">
+          <h2>Official Requirements</h2>
+          <p>Scouting America maintains the official current requirements for this adventure. Use the official source link to view and print the published requirements.</p>
+          <a class="button gold" href="${adventure.officialUrl}" target="_blank" rel="noopener noreferrer">View Official ${escapeHtml(adventure.name)} Requirements</a>
+        </div>`;
+  }
+
+  const renderItems = (items) => `<ol class="rank-requirements-list">${items.map((item) => `
+          <li>
+            <strong>${escapeHtml(item.label)}</strong>
+            <p>${escapeHtml(item.text)}</p>
+            ${item.children && item.children.length ? renderItems(item.children) : ""}
+          </li>`).join("")}
+        </ol>`;
+
+  return `
+        <section class="rank-requirements" aria-labelledby="official-requirements-heading">
+          <h2 id="official-requirements-heading">Official Requirements</h2>
+          ${renderItems(adventure.requirements)}
+        </section>`;
+}
+
 function disclaimer() {
   return `
   <section class="rank-disclaimer-section">
@@ -267,18 +292,25 @@ function rankMain(rank) {
 
 function adventureMain(rank, adventure) {
   return `${breadcrumbs(rank, adventure.name)}
-  <section class="rank-detail-placeholder">
-    <div class="wrap rank-detail-placeholder__grid">
-      <img src="${rank.emblem}" width="${rank.emblemWidth}" height="${rank.emblemHeight}" alt="${escapeHtml(rank.name)} rank emblem">
-      <div class="rank-detail-placeholder__copy">
+  <section class="rank-detail">
+    <div class="wrap rank-detail__grid">
+      <div class="rank-detail__media">
+        <img src="${adventure.icon}" width="360" height="360" alt="${escapeHtml(adventure.iconAlt)}">
+      </div>
+      <div class="rank-detail__copy">
         <p class="rank-adventure-kicker">${escapeHtml(rank.name)} Adventure</p>
         <h1>${escapeHtml(adventure.name)}</h1>
+        <p class="rank-detail__meta">${escapeHtml(adventure.category)} · ${rank.requiredAdventures.some((item) => item.slug === adventure.slug) ? "Required" : "Elective"}</p>
         <p>${escapeHtml(adventure.description)}</p>
         <div class="rank-detail-placeholder__actions">
           <a class="button gold" href="${adventure.officialUrl}" target="_blank" rel="noopener noreferrer">Official Source</a>
+          <button class="button rank-print-button" type="button" onclick="window.print()">Print Requirements</button>
           <a class="button" href="/cub-scouts/adventures/${rank.slug}/">Back to ${escapeHtml(rank.name)} Adventures</a>
         </div>
       </div>
+    </div>
+    <div class="wrap rank-detail__requirements">
+      ${renderRequirements(adventure)}
     </div>
   </section>
   ${disclaimer()}`;

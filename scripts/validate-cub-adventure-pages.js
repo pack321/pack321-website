@@ -42,6 +42,7 @@ const problems = {
   remoteScoutingImageDeps: [],
   duplicateSlugs: [],
   missingLocalAdventureIcons: [],
+  missingRequirements: [],
 };
 
 const hrefPattern = /href="([^"]*)"/g;
@@ -71,6 +72,10 @@ Object.entries(cubScoutRanks).forEach(([rankSlug, rank]) => {
       const iconPath = path.join(ROOT, adventure.icon.slice(1));
       if (!fs.existsSync(iconPath)) problems.missingLocalAdventureIcons.push(adventure.icon);
     }
+
+    if (!adventure.requirements || adventure.requirements.length === 0) {
+      problems.missingRequirements.push(`${rankSlug}:${adventure.slug}`);
+    }
   });
 });
 
@@ -81,6 +86,7 @@ const summary = {
   remoteScoutingImageDeps: problems.remoteScoutingImageDeps.length,
   duplicateSlugs: problems.duplicateSlugs.length,
   missingLocalAdventureIcons: problems.missingLocalAdventureIcons.length,
+  missingRequirements: problems.missingRequirements.length,
 };
 
 console.log(JSON.stringify({ summary, problems }, null, 2));

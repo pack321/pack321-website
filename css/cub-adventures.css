@@ -346,11 +346,13 @@
   margin: 0;
 }
 
-.rank-detail-placeholder {
+.rank-detail-placeholder,
+.rank-detail {
   padding: 34px 0 44px;
 }
 
-.rank-detail-placeholder__grid {
+.rank-detail-placeholder__grid,
+.rank-detail__grid {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
   gap: 28px;
@@ -362,10 +364,29 @@
   box-shadow: var(--shadow);
 }
 
-.rank-detail-placeholder__grid img {
+.rank-detail-placeholder__grid img,
+.rank-detail__media img {
   width: 180px;
   height: 180px;
   object-fit: contain;
+}
+
+.rank-detail__media {
+  display: grid;
+  place-items: center;
+}
+
+.rank-detail__copy {
+  min-width: 0;
+}
+
+.rank-detail__meta {
+  margin: 8px 0 14px;
+  color: var(--rank-accent);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .rank-detail-placeholder__actions {
@@ -373,6 +394,62 @@
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 22px;
+}
+
+.rank-detail__requirements {
+  margin-top: 22px;
+}
+
+.rank-requirements,
+.rank-requirements-empty {
+  padding: 28px 30px;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(8, 43, 87, 0.08);
+}
+
+.rank-requirements h2,
+.rank-requirements-empty h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 900;
+}
+
+.rank-requirements-empty p {
+  margin: 0 0 18px;
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+.rank-requirements-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.rank-requirements-list li {
+  padding: 14px 16px;
+  border: 1px solid rgba(8, 43, 87, 0.1);
+  border-radius: 8px;
+  background: rgba(8, 43, 87, 0.035);
+}
+
+.rank-requirements-list strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+}
+
+.rank-requirements-list p {
+  margin: 0;
+  color: var(--dark-text);
+  line-height: 1.56;
 }
 
 @media (max-width: 1060px) {
@@ -396,13 +473,15 @@
   }
 
   .rank-adventure-hero__intro,
-  .rank-detail-placeholder__grid {
+  .rank-detail-placeholder__grid,
+  .rank-detail__grid {
     grid-template-columns: 1fr;
     padding: 24px;
   }
 
   .rank-adventure-hero__emblem,
-  .rank-detail-placeholder__grid img {
+  .rank-detail-placeholder__grid img,
+  .rank-detail__media img {
     justify-self: start;
     width: 150px;
     height: 150px;
@@ -421,6 +500,46 @@
 
   .rank-disclaimer .button {
     width: 100%;
+  }
+}
+
+@media print {
+  .construction-banner,
+  .site-header,
+  .rank-breadcrumbs,
+  .site-footer,
+  .feedback-float,
+  .rank-print-button,
+  .rank-disclaimer-section {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .rank-detail,
+  .rank-detail-placeholder {
+    padding: 0;
+  }
+
+  .rank-detail__grid,
+  .rank-requirements,
+  .rank-requirements-empty {
+    box-shadow: none;
+    border-color: #999;
+  }
+
+  .rank-detail-placeholder__actions a[href^="http"]::after,
+  .rank-requirements-empty a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    display: block;
+    margin-top: 6px;
+    color: #000;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: none;
   }
 }
 
