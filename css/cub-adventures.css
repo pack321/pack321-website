@@ -1,0 +1,436 @@
+.rank-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 18px 0 0;
+  color: rgba(20, 33, 61, 0.74);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.rank-breadcrumbs a {
+  color: var(--navy);
+}
+
+.rank-breadcrumbs a:hover,
+.rank-breadcrumbs a:focus-visible {
+  color: var(--rank-accent);
+}
+
+.rank-adventure-hero {
+  padding: 28px 0 34px;
+}
+
+.rank-adventure-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.rank-adventure-hero__intro {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  min-height: 320px;
+  padding: 30px;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.rank-adventure-hero__emblem {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+}
+
+.rank-adventure-kicker {
+  margin: 0 0 7px;
+  color: var(--rank-accent);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.rank-adventure-hero h1,
+.rank-detail-placeholder h1 {
+  margin: 0;
+  color: var(--navy);
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(3.5rem, 6vw, 5.8rem);
+  font-weight: 700;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.rank-adventure-underline {
+  display: block;
+  width: 88px;
+  height: 5px;
+  margin: 14px 0 18px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+.rank-adventure-hero__copy p:not(.rank-adventure-kicker),
+.rank-detail-placeholder__copy p:not(.rank-adventure-kicker) {
+  margin: 0;
+  color: var(--dark-text);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.rank-adventure-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0 0;
+}
+
+.rank-adventure-facts div {
+  min-height: 74px;
+  padding: 14px 15px;
+  border: 1px solid rgba(8, 43, 87, 0.12);
+  border-radius: 8px;
+  background: rgba(8, 43, 87, 0.04);
+}
+
+.rank-adventure-facts dt {
+  margin: 0 0 4px;
+  color: rgba(20, 33, 61, 0.66);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.rank-adventure-facts dd {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.rank-official-card {
+  min-height: 320px;
+  padding: 30px;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.rank-official-card__icon,
+.rank-disclaimer__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+}
+
+.rank-official-card h2,
+.rank-section h2,
+.rank-disclaimer h2 {
+  margin: 18px 0 10px;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.rank-official-card p,
+.rank-disclaimer p {
+  margin: 0 0 18px;
+  color: var(--dark-text);
+  line-height: 1.58;
+}
+
+.rank-official-card__button {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.rank-official-card__button span,
+.rank-detail-placeholder__actions span {
+  margin-left: 4px;
+}
+
+.rank-official-card__link {
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.rank-divider {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+  gap: 13px;
+  align-items: center;
+  padding: 0 0 16px;
+}
+
+.rank-divider span {
+  height: 2px;
+  background: rgba(8, 43, 87, 0.16);
+}
+
+.rank-divider img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.rank-section {
+  padding: 22px 0 34px;
+}
+
+.rank-section h2 {
+  margin: 0 0 18px;
+}
+
+.rank-required-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.rank-required-card {
+  display: grid;
+  grid-template-rows: 82px minmax(0, 1fr);
+  min-height: 244px;
+  overflow: hidden;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--dark-text);
+  box-shadow: 0 14px 28px rgba(8, 43, 87, 0.1);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.rank-required-card:hover,
+.rank-required-card:focus-visible,
+.rank-elective-card:hover,
+.rank-elective-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 38px rgba(8, 43, 87, 0.18);
+  outline: 3px solid rgba(255, 199, 44, 0.52);
+  outline-offset: 3px;
+}
+
+.rank-required-card__image {
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  background: color-mix(in srgb, var(--rank-accent) 16%, #ffffff);
+  border-bottom: 4px solid var(--gold);
+}
+
+.rank-required-card__image img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.rank-required-card__body {
+  display: grid;
+  gap: 7px;
+  align-content: start;
+  padding: 16px;
+}
+
+.rank-required-card__category {
+  color: var(--rank-accent);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.rank-required-card strong {
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.rank-required-card__body span:last-child {
+  font-size: 0.9rem;
+  line-height: 1.46;
+}
+
+.rank-section--elective {
+  padding-top: 12px;
+}
+
+.rank-elective-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rank-elective-card {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  min-height: 68px;
+  padding: 12px 14px;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.86rem;
+  font-weight: 900;
+  line-height: 1.22;
+  box-shadow: 0 10px 20px rgba(8, 43, 87, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.rank-elective-card__icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--rank-accent) 14%, #ffffff);
+}
+
+.rank-elective-card__icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.rank-elective-card b {
+  color: var(--rank-accent);
+}
+
+.rank-disclaimer-section {
+  padding: 8px 0 54px;
+}
+
+.rank-disclaimer {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgba(8, 43, 87, 0.12);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.rank-disclaimer h2 {
+  margin: 0 0 5px;
+}
+
+.rank-disclaimer p {
+  margin: 0;
+}
+
+.rank-detail-placeholder {
+  padding: 34px 0 44px;
+}
+
+.rank-detail-placeholder__grid {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding: 32px;
+  border: 1px solid rgba(8, 43, 87, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.rank-detail-placeholder__grid img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.rank-detail-placeholder__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+@media (max-width: 1060px) {
+  .rank-adventure-hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rank-official-card,
+  .rank-adventure-hero__intro {
+    min-height: 0;
+  }
+
+  .rank-elective-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .rank-adventure-hero {
+    padding-top: 22px;
+  }
+
+  .rank-adventure-hero__intro,
+  .rank-detail-placeholder__grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .rank-adventure-hero__emblem,
+  .rank-detail-placeholder__grid img {
+    justify-self: start;
+    width: 150px;
+    height: 150px;
+  }
+
+  .rank-adventure-facts,
+  .rank-required-grid,
+  .rank-elective-grid,
+  .rank-disclaimer {
+    grid-template-columns: 1fr;
+  }
+
+  .rank-official-card {
+    padding: 24px;
+  }
+
+  .rank-disclaimer .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .rank-breadcrumbs {
+    font-size: 0.7rem;
+  }
+
+  .rank-adventure-hero h1,
+  .rank-detail-placeholder h1 {
+    font-size: clamp(3rem, 18vw, 4.6rem);
+  }
+}

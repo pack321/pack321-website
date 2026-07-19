@@ -91,48 +91,6 @@ const pages = {
     h1: "Volunteer With Pack 321",
     h1Html: '<h1><span>Volunteer </span><span class="gold">With Pack 321</span></h1>',
   },
-  "cub-lion.html": {
-    url: `${SITE}/cub-lion.html`,
-    title: "Lion Cub Scout Adventures | Pack 321",
-    description: "Explore Lion Cub Scout adventures for kindergarten Scouts with Pack 321, serving Oak Creek and surrounding communities.",
-    h1: "Lion Cub Scout Adventures",
-    h1Html: "<h1>Lion Cub Scout Adventures</h1>",
-  },
-  "cub-tiger.html": {
-    url: `${SITE}/cub-tiger.html`,
-    title: "Tiger Cub Scout Adventures | Pack 321",
-    description: "Explore Tiger Cub Scout adventures for first grade Scouts with Pack 321, serving Oak Creek and surrounding communities.",
-    h1: "Tiger Cub Scout Adventures",
-    h1Html: "<h1>Tiger Cub Scout Adventures</h1>",
-  },
-  "cub-wolf.html": {
-    url: `${SITE}/cub-wolf.html`,
-    title: "Wolf Cub Scout Adventures | Pack 321",
-    description: "Explore Wolf Cub Scout adventures for second grade Scouts with Pack 321, serving Oak Creek and surrounding communities.",
-    h1: "Wolf Cub Scout Adventures",
-    h1Html: "<h1>Wolf Cub Scout Adventures</h1>",
-  },
-  "cub-bear.html": {
-    url: `${SITE}/cub-bear.html`,
-    title: "Bear Cub Scout Adventures | Pack 321",
-    description: "Explore Bear Cub Scout adventures for third grade Scouts with Pack 321, serving Oak Creek and surrounding communities.",
-    h1: "Bear Cub Scout Adventures",
-    h1Html: "<h1>Bear Cub Scout Adventures</h1>",
-  },
-  "cub-webelos.html": {
-    url: `${SITE}/cub-webelos.html`,
-    title: "Webelos Cub Scout Adventures | Pack 321",
-    description: "Explore Webelos Cub Scout adventures for fourth grade Scouts with Pack 321, serving Oak Creek and surrounding communities.",
-    h1: "Webelos Cub Scout Adventures",
-    h1Html: "<h1>Webelos Cub Scout Adventures</h1>",
-  },
-  "cub-arrow-of-light.html": {
-    url: `${SITE}/cub-arrow-of-light.html`,
-    title: "Arrow of Light Cub Scout Adventures | Pack 321",
-    description: "Explore Arrow of Light Cub Scout adventures for fifth grade Scouts with Pack 321, serving Oak Creek and surrounding communities.",
-    h1: "Arrow of Light Cub Scout Adventures",
-    h1Html: "<h1>Arrow of Light Cub Scout Adventures</h1>",
-  },
 };
 
 function escapeHtml(value) {

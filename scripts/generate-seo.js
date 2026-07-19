@@ -11,6 +11,12 @@ const EXCLUDED_FILES = new Set([
   "hero-component.html",
   "scout-accounts.html",
   "team-admin.html",
+  "cub-lion.html",
+  "cub-tiger.html",
+  "cub-wolf.html",
+  "cub-bear.html",
+  "cub-webelos.html",
+  "cub-arrow-of-light.html",
 ]);
 
 const EXCLUDED_PREFIXES = [
@@ -40,6 +46,9 @@ function isPublicPage(relativePath) {
 
 function pageUrl(relativePath) {
   if (relativePath === "index.html") return `${SITE_URL}/`;
+  if (relativePath.endsWith("/index.html")) {
+    return `${SITE_URL}/${relativePath.slice(0, -"index.html".length)}`;
+  }
   return `${SITE_URL}/${relativePath}`;
 }
 
