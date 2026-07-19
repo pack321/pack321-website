@@ -553,17 +553,48 @@
     font-size: 0.7rem;
   }
 
+  .rank-adventure-hero__grid {
+    min-width: 0;
+  }
+
+  .rank-adventure-hero__intro,
+  .rank-official-card,
+  .rank-source-note,
+  .rank-disclaimer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
   .rank-adventure-hero h1 {
     font-size: clamp(2.45rem, 13vw, 3.25rem);
+    overflow-wrap: break-word;
   }
 
   .rank-adventure-hero__copy,
   .rank-adventure-facts {
-    max-width: calc(100vw - 80px);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
-  .rank-adventure-hero__copy p:not(.rank-adventure-kicker) {
+  .rank-adventure-hero__copy p:not(.rank-adventure-kicker),
+  .rank-official-card p,
+  .rank-source-note p {
     overflow-wrap: anywhere;
+  }
+
+  .rank-official-card__button {
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 0.76rem;
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .rank-official-card__button .rank-external-indicator {
+    flex: 0 0 auto;
   }
 }
 .rank-adventure-hero__copy {

@@ -44,6 +44,8 @@ const problems = {
   missingLocalAdventureIcons: [],
   badAdventureCardLinks: [],
   badAdventureDetailPages: [],
+  badRankOfficialCards: [],
+  badLionData: [],
   scoutingIframeUsage: [],
   oldRequirementPlaceholders: [],
 };
@@ -87,6 +89,28 @@ htmlFiles.forEach((file) => {
 });
 
 Object.entries(cubScoutRanks).forEach(([rankSlug, rank]) => {
+  const rankPath = path.join(ROOT, "cub-scouts", "adventures", rankSlug, "index.html");
+  if (fs.existsSync(rankPath)) {
+    const rankHtml = fs.readFileSync(rankPath, "utf8");
+    const rankOfficialButtons = [...rankHtml.matchAll(/<a class="button gold rank-official-card__button"([^>]*)>([\s\S]*?)<\/a>/g)];
+    const rankOfficialButton = rankOfficialButtons[0]?.[0] || "";
+    const officialUrl = rank.officialRankUrl || rank.officialRequirementsUrl;
+    if (
+      rankOfficialButtons.length !== 1 ||
+      !rankOfficialButton.includes(`href="${officialUrl}"`) ||
+      !rankOfficialButton.includes('target="_blank"') ||
+      !rankOfficialButton.includes('rel="noopener noreferrer"') ||
+      !rankOfficialButton.includes(`View Official ${rank.name} Requirements`) ||
+      !rankOfficialButton.includes("rank-external-indicator")
+    ) {
+      problems.badRankOfficialCards.push([rankSlug, {
+        officialButtons: rankOfficialButtons.length,
+        hasCorrectHref: rankOfficialButton.includes(`href="${officialUrl}"`),
+        hasRankSpecificLabel: rankOfficialButton.includes(`View Official ${rank.name} Requirements`),
+      }]);
+    }
+  }
+
   const seen = new Set();
   rank.requiredAdventures.concat(rank.electiveAdventures).forEach((adventure) => {
     if (seen.has(adventure.slug)) problems.duplicateSlugs.push(`${rankSlug}:${adventure.slug}`);
@@ -136,6 +160,43 @@ Object.entries(cubScoutRanks).forEach(([rankSlug, rank]) => {
   });
 });
 
+const lion = cubScoutRanks.lion;
+const lionRankFields = [
+  "slug",
+  "name",
+  "title",
+  "emblem",
+  "grade",
+  "ageRange",
+  "introduction",
+  "officialRankUrl",
+  "requiredAdventures",
+  "electiveAdventures",
+];
+
+lionRankFields.forEach((field) => {
+  if (!lion || !lion[field] || (Array.isArray(lion[field]) && lion[field].length === 0)) {
+    problems.badLionData.push(`lion.${field}`);
+  }
+});
+
+if (lion) {
+  if (lion.officialRankUrl !== "https://www.scouting.org/programs/cub-scouts/adventures/lion/") {
+    problems.badLionData.push(`lion.officialRankUrl:${lion.officialRankUrl}`);
+  }
+  lion.requiredAdventures.concat(lion.electiveAdventures).forEach((adventure) => {
+    ["slug", "name", "icon", "iconAlt", "officialUrl"].forEach((field) => {
+      if (!adventure[field]) problems.badLionData.push(`lion.${adventure.slug || adventure.name}.${field}`);
+    });
+    if (!adventure.officialUrl.startsWith("https://www.scouting.org/cub-scout-adventures/")) {
+      problems.badLionData.push(`lion.${adventure.slug}.officialUrl:${adventure.officialUrl}`);
+    }
+    if (!adventure.icon.startsWith("/assets/images/cub-scouts/adventures/lion/")) {
+      problems.badLionData.push(`lion.${adventure.slug}.icon:${adventure.icon}`);
+    }
+  });
+}
+
 const summary = {
   htmlFiles: htmlFiles.length,
   badHrefOrSrc: problems.badHrefOrSrc.length,
@@ -145,6 +206,8 @@ const summary = {
   missingLocalAdventureIcons: problems.missingLocalAdventureIcons.length,
   badAdventureCardLinks: problems.badAdventureCardLinks.length,
   badAdventureDetailPages: problems.badAdventureDetailPages.length,
+  badRankOfficialCards: problems.badRankOfficialCards.length,
+  badLionData: problems.badLionData.length,
   scoutingIframeUsage: problems.scoutingIframeUsage.length,
   oldRequirementPlaceholders: problems.oldRequirementPlaceholders.length,
 };

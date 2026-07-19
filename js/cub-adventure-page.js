@@ -87,13 +87,15 @@
   }
 
   function renderOfficialCard(currentRank) {
+    const ctaLabel = `View Official ${currentRank.name} Requirements`;
+    const officialUrl = currentRank.officialRankUrl || currentRank.officialRequirementsUrl;
     return `
       <aside class="rank-official-card" aria-label="Official Adventure Requirements">
         <div class="rank-official-card__icon" aria-hidden="true">i</div>
         <h2>Official Adventure Requirements</h2>
         <p>Adventure requirements are maintained by Scouting America and open in a new tab.</p>
-        <a class="button gold rank-official-card__button" href="${currentRank.officialRequirementsUrl}" target="_blank" rel="noopener noreferrer" aria-label="View Official ${escapeHtml(currentRank.name)} Requirements on Scouting America">
-          View Official Requirements <span class="rank-external-indicator" aria-hidden="true">&#8599;</span>
+        <a class="button gold rank-official-card__button" href="${officialUrl}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(ctaLabel)} on Scouting America">
+          ${escapeHtml(ctaLabel)} <span class="rank-external-indicator" aria-hidden="true">&#8599;</span>
         </a>
       </aside>
     `;

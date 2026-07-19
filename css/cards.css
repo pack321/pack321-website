@@ -120,6 +120,41 @@
   }
 }
 
++.adventure-card { border: 0; padding: 0; font: inherit; }
+.adventure-overlay { justify-content: flex-end; gap: 8px; }
+.adventure-card-title { color: #fff; font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(1.7rem, 2vw, 2.18rem); line-height: .92; text-align: center; text-transform: uppercase; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
+.adventure-overlay strong { margin-top: 0; }
+.adventure-card:hover .adventure-photo, .adventure-card:focus-visible .adventure-photo { transform: scale(1.035); }
+.adventure-photo { transition: transform .25s ease; }
+body.modal-open { overflow: hidden; }
+.home-adventure-modal { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; padding: 24px; }
+.home-adventure-modal[hidden] { display: none; }
+.home-adventure-backdrop { position: absolute; inset: 0; background: rgba(3, 15, 31, .78); }
+.home-adventure-dialog { position: relative; width: min(790px, 100%); max-height: calc(100vh - 48px); overflow-y: auto; border-radius: 16px; background: #fff; box-shadow: 0 28px 80px rgba(0,0,0,.42); }
+.home-adventure-hero { width: 100%; height: clamp(210px, 31vh, 300px); object-fit: cover; background: var(--navy); }
+.home-adventure-x { position: absolute; top: 14px; right: 14px; z-index: 1; display: grid; width: 46px; height: 46px; place-items: center; border: 2px solid rgba(255,255,255,.8); border-radius: 50%; background: rgba(8,43,87,.92); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+.home-adventure-content { padding: clamp(26px, 5vw, 44px); }
+.home-adventure-content h2 { margin: 0; color: var(--navy); font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(3rem, 7vw, 4.6rem); line-height: .9; text-transform: uppercase; }
+.home-adventure-rule { display: block; width: 82px; height: 5px; margin: 14px 0 22px; border-radius: 99px; background: var(--gold); }
+.home-adventure-content h3 { margin: 24px 0 8px; color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; }
+.home-adventure-content p { margin: 0; line-height: 1.65; }
+.home-adventure-highlights { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 28px; margin: 22px 0 0; padding-left: 21px; }
+.home-adventure-highlights li::marker { color: #d49a00; }
+.home-adventure-actions { display: flex; align-items: center; gap: 16px; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--line); }
+.home-adventure-actions .button { margin-top: 0; }
+.home-adventure-close { min-height: 50px; padding: 12px 20px; border: 2px solid var(--navy); border-radius: 7px; background: #fff; color: var(--navy); font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+.home-adventure-x:focus-visible, .home-adventure-close:focus-visible, .home-adventure-actions a:focus-visible { outline: 4px solid var(--gold); outline-offset: 3px; }
+@media (max-width: 560px) {
+  .home-adventure-modal { padding: 10px; }
+  .home-adventure-dialog { width: 100%; max-height: calc(100dvh - 20px); border-radius: 12px; }
+  .home-adventure-hero { height: 190px; }
+  .home-adventure-content { padding: 24px 20px; }
+  .home-adventure-highlights { grid-template-columns: 1fr; }
+  .home-adventure-actions { align-items: stretch; flex-direction: column; }
+  .home-adventure-actions .button, .home-adventure-close { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .adventure-photo { transition: none; } }
+
 /* Team / Leadership page */
 .premium-card {
   border: 1px solid rgba(8, 43, 87, .12);

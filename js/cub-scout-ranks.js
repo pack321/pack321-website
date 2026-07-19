@@ -20,6 +20,7 @@
  * @property {string} grade
  * @property {string} ageRange
  * @property {string} introduction
+ * @property {string} officialRankUrl
  * @property {string} officialRequirementsUrl
  * @property {string} accentColor
  * @property {RankAdventure[]} requiredAdventures
@@ -316,6 +317,10 @@
       ]),
     },
   };
+
+  Object.values(cubScoutRanks).forEach((rank) => {
+    rank.officialRankUrl = rank.officialRequirementsUrl;
+  });
 
   return {
     cubScoutRanks,
