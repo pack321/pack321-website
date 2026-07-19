@@ -28,6 +28,10 @@ function fromRoot(depth, target) {
   return `${"../".repeat(depth)}${target}`;
 }
 
+function sitePath(target) {
+  return target === "index.html" ? "/" : `/${target}`;
+}
+
 function faviconLinks() {
   return [
     '<link rel="icon" href="/favicon.ico?v=3" sizes="any">',
@@ -77,23 +81,23 @@ function header(depth) {
 <div class="construction-banner">Pack 321 Website Preview - Construction / Leadership Review Version</div>
 <header class="site-header">
   <div class="wrap nav-inner">
-    <a class="brand" href="${fromRoot(depth, "index.html")}" aria-label="Pack 321 Home">
+    <a class="brand" href="${sitePath("index.html")}" aria-label="Pack 321 Home">
       <img src="${fromRoot(depth, "assets/logos/cub-scout-logo.svg")}" alt="Pack 321 logo">
       <span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span><span class="subline">Serving families since 1967</span></span>
     </a>
     <button class="mobile-toggle" type="button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false">Menu</button>
     <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
-      <a href="${fromRoot(depth, "index.html")}">Home</a>
-      <a href="${fromRoot(depth, "why-pack321.html")}">Why Pack 321</a>
-      <a class="active" href="${fromRoot(depth, "cub-scouts.html")}">Cub Scouts</a>
-      <a href="${fromRoot(depth, "adventures.html")}">Adventures</a>
-      <a href="${fromRoot(depth, "events-calendar.html")}">Calendar</a>
-      <a href="${fromRoot(depth, "resources.html")}">Resources</a>
-      <a href="${fromRoot(depth, "team.html")}">Team</a>
-      <a href="${fromRoot(depth, "join.html")}">Join</a>
-      <a href="${fromRoot(depth, "contact.html")}">Contact</a>
+      <a href="${sitePath("index.html")}">Home</a>
+      <a href="${sitePath("why-pack321.html")}">Why Pack 321</a>
+      <a class="active" href="${sitePath("cub-scouts.html")}">Cub Scouts</a>
+      <a href="${sitePath("adventures.html")}">Adventures</a>
+      <a href="${sitePath("events-calendar.html")}">Calendar</a>
+      <a href="${sitePath("resources.html")}">Resources</a>
+      <a href="${sitePath("team.html")}">Team</a>
+      <a href="${sitePath("join.html")}">Join</a>
+      <a href="${sitePath("contact.html")}">Contact</a>
     </nav>
-    <a class="visit-btn" href="${fromRoot(depth, "join.html")}">Visit a Meeting</a>
+    <a class="visit-btn" href="${sitePath("join.html")}">Visit a Meeting</a>
   </div>
 </header>`;
 }
@@ -102,11 +106,11 @@ function footer(depth) {
   return `
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div><a class="brand" href="${fromRoot(depth, "index.html")}"><img src="${fromRoot(depth, "assets/logos/cub-scout-logo.svg")}" alt="Pack 321 logo"><span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span></span></a><p>Serving families in Oak Creek and surrounding communities since 1967.</p><div class="footer-social-links" aria-label="Pack 321 website links"><a href="https://www.facebook.com/occubscoutpack321" target="_blank" rel="noopener" aria-label="Pack 321 on Facebook"><img src="${fromRoot(depth, "assets/icons/social/facebook.jpg")}" alt=""><span>Facebook</span></a><a href="https://www.band.us/" target="_blank" rel="noopener" aria-label="BAND app"><img src="${fromRoot(depth, "assets/icons/social/band.jpg")}" alt=""><span>BAND</span></a></div></div>
-    <div><h4>Quick Links</h4><a href="${fromRoot(depth, "why-pack321.html")}">Why Pack 321</a><a href="${fromRoot(depth, "cub-scouts.html")}">Cub Scouts</a><a href="${fromRoot(depth, "adventures.html")}">Adventures</a><a href="${fromRoot(depth, "events-calendar.html")}">Calendar</a><a href="${fromRoot(depth, "resources.html")}">Resources</a>
-      <a href="${fromRoot(depth, "team.html")}">Team</a>
-      <a href="${fromRoot(depth, "join.html")}">Join</a><a href="${fromRoot(depth, "contact.html")}">Contact</a></div>
-    <div><h4>Contact Us</h4><a href="tel:14142159261">(414) 215-9261</a><a href="mailto:wicubscoutpack321@gmail.com">wicubscoutpack321@gmail.com</a><p>Carollton Elementary, Oak Creek, WI</p><a class="button" href="${fromRoot(depth, "join.html")}">Visit a Meeting</a></div>
+    <div><a class="brand" href="${sitePath("index.html")}"><img src="${fromRoot(depth, "assets/logos/cub-scout-logo.svg")}" alt="Pack 321 logo"><span><strong>Pack 321</strong><span>Oak Creek, Wisconsin</span></span></a><p>Serving families in Oak Creek and surrounding communities since 1967.</p><div class="footer-social-links" aria-label="Pack 321 website links"><a href="https://www.facebook.com/occubscoutpack321" target="_blank" rel="noopener" aria-label="Pack 321 on Facebook"><img src="${fromRoot(depth, "assets/icons/social/facebook.jpg")}" alt=""><span>Facebook</span></a><a href="https://www.band.us/" target="_blank" rel="noopener" aria-label="BAND app"><img src="${fromRoot(depth, "assets/icons/social/band.jpg")}" alt=""><span>BAND</span></a></div></div>
+    <div><h4>Quick Links</h4><a href="${sitePath("why-pack321.html")}">Why Pack 321</a><a href="${sitePath("cub-scouts.html")}">Cub Scouts</a><a href="${sitePath("adventures.html")}">Adventures</a><a href="${sitePath("events-calendar.html")}">Calendar</a><a href="${sitePath("resources.html")}">Resources</a>
+      <a href="${sitePath("team.html")}">Team</a>
+      <a href="${sitePath("join.html")}">Join</a><a href="${sitePath("contact.html")}">Contact</a></div>
+    <div><h4>Contact Us</h4><a href="tel:14142159261">(414) 215-9261</a><a href="mailto:wicubscoutpack321@gmail.com">wicubscoutpack321@gmail.com</a><p>Carollton Elementary, Oak Creek, WI</p><a class="button" href="${sitePath("join.html")}">Visit a Meeting</a></div>
     <div class="footer-scouting"><img class="scouting-america-logo" src="${fromRoot(depth, "assets/logos/scouting-america-logo-reversed.png")}" alt="Scouting America"><p>Prepared. For Life.</p><h4 class="be-scout">Be A Scout</h4></div>
   </div>
   <div class="wrap footer-bottom">Preparing young people for life.</div>
@@ -189,7 +193,7 @@ function divider(rank) {
 function requiredCard(item) {
   return `
       <a class="rank-required-card" href="${item.href}" aria-label="${escapeHtml(item.name)} adventure details">
-        <span class="rank-required-card__image"><img src="${item.icon}" alt="" aria-hidden="true"></span>
+        <span class="rank-required-card__image"><img src="${item.icon}" alt="${escapeHtml(item.iconAlt)}"></span>
         <span class="rank-required-card__body">
           <span class="rank-required-card__category">${escapeHtml(item.category)}</span>
           <strong>${escapeHtml(item.name)}</strong>
@@ -201,7 +205,7 @@ function requiredCard(item) {
 function electiveCard(item) {
   return `
       <a class="rank-elective-card" href="${item.href}" aria-label="${escapeHtml(item.name)} adventure details">
-        <span class="rank-elective-card__icon" aria-hidden="true"><img src="${item.icon}" alt=""></span>
+        <span class="rank-elective-card__icon"><img src="${item.icon}" alt="${escapeHtml(item.iconAlt)}"></span>
         <span>${escapeHtml(item.name)}</span>
         <b aria-hidden="true">></b>
       </a>`;

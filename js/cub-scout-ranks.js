@@ -4,6 +4,7 @@
  * @property {string} name
  * @property {string} description
  * @property {string} icon
+ * @property {string} iconAlt
  * @property {string} category
  * @property {string} officialUrl
  */
@@ -33,6 +34,15 @@
 }(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   const officialBase = 'https://www.scouting.org';
   const rankBase = `${officialBase}/programs/cub-scouts/adventures`;
+  const adventureIconRanks = new Set(['lion']);
+  const rankIconFallbacks = {
+    lion: '/assets/ranks/lion.jpg',
+    tiger: '/assets/ranks/tiger.jpg',
+    wolf: '/assets/ranks/wolf.jpg',
+    bear: '/assets/ranks/bear.jpg',
+    webelos: '/assets/ranks/webelos.jpg',
+    'arrow-of-light': '/assets/ranks/aol.jpg',
+  };
 
   function slugify(value) {
     return value
@@ -42,25 +52,26 @@
       .replace(/^-+|-+$/g, '');
   }
 
-  function adventure(name, description, category, rankSlug, icon, officialSlug) {
+  function adventure(name, description, category, rankSlug, officialSlug) {
     const slug = slugify(name);
     return {
       slug,
       name,
       description,
       category,
-      icon,
+      icon: adventureIconRanks.has(rankSlug) ? `/assets/images/cub-scouts/adventures/${rankSlug}/${slug}.jpg` : rankIconFallbacks[rankSlug],
+      iconAlt: `${name} adventure insignia`,
       officialUrl: `${officialBase}/cub-scout-adventures/${officialSlug || slug}/`,
       href: `/cub-scouts/adventures/${rankSlug}/${slug}/`,
     };
   }
 
-  function required(rankSlug, icon, items) {
-    return items.map(([name, category, description, officialSlug]) => adventure(name, description, category, rankSlug, icon, officialSlug));
+  function required(rankSlug, items) {
+    return items.map(([name, category, description, officialSlug]) => adventure(name, description, category, rankSlug, officialSlug));
   }
 
-  function elective(rankSlug, icon, names) {
-    return names.map((name) => adventure(name, 'An elective adventure families may complete with their den, pack, or at home.', 'Elective', rankSlug, icon));
+  function elective(rankSlug, names) {
+    return names.map((name) => adventure(name, 'An elective adventure families may complete with their den, pack, or at home.', 'Elective', rankSlug));
   }
 
   const cubScoutRanks = {
@@ -76,7 +87,7 @@
       introduction: 'Lion Adventures are fun, hands-on activities that help Kindergarten children learn new things, build confidence, and grow a love for learning and the outdoors.',
       officialRequirementsUrl: `${rankBase}/lion/`,
       accentColor: '#f2a900',
-      requiredAdventures: required('lion', '/assets/ranks/lion.jpg', [
+      requiredAdventures: required('lion', [
         ['Bobcat Adventure', 'Character & Leadership', 'Build den belonging and learn the first safety and family foundations.', 'lion-bobcat'],
         ['Fun on the Run', 'Personal Fitness', 'Practice active play, healthy habits, and taking care of your body.'],
         ["Lion's Roar", 'Personal Safety', 'Learn simple safety steps and how to ask trusted adults for help.', 'lions-roar'],
@@ -84,7 +95,7 @@
         ['King of the Jungle', 'Citizenship', 'Practice helping the group, using good manners, and being kind.'],
         ['Mountain Lion', 'Outdoors', 'Get outside, explore nature, and learn basic outdoor awareness.'],
       ]),
-      electiveAdventures: elective('lion', '/assets/ranks/lion.jpg', [
+      electiveAdventures: elective('lion', [
         'Build It Up, Knock It Down',
         'Champions for Nature Lion',
         'Count On Me',
@@ -115,7 +126,7 @@
       introduction: 'Tiger Adventures help first grade Scouts learn by doing with their adult partners, their den, and their pack.',
       officialRequirementsUrl: `${rankBase}/tiger/`,
       accentColor: '#f05a28',
-      requiredAdventures: required('tiger', '/assets/ranks/tiger.jpg', [
+      requiredAdventures: required('tiger', [
         ['Bobcat Adventure', 'Character & Leadership', 'Build den belonging and learn the first safety and family foundations.', 'tiger-bobcat'],
         ['Tiger Bites', 'Personal Fitness', 'Practice nutrition, movement, and personal wellness.'],
         ["Tiger's Roar", 'Personal Safety', 'Learn safety habits and how to respond when something feels unsafe.', 'tigers-roar'],
@@ -123,7 +134,7 @@
         ['Team Tiger', 'Citizenship', 'Practice teamwork, service, and being part of a community.'],
         ['Tigers in the Wild', 'Outdoors', 'Explore the outdoors and learn simple outdoor skills.'],
       ]),
-      electiveAdventures: elective('tiger', '/assets/ranks/tiger.jpg', [
+      electiveAdventures: elective('tiger', [
         'Champions for Nature Tiger',
         'Curiosity, Intrigue, and Magical Mysteries',
         'Designed by Tiger',
@@ -158,7 +169,7 @@
       introduction: 'Wolf Adventures give second grade Scouts practical ways to build skills, confidence, fitness, safety, service, and outdoor curiosity.',
       officialRequirementsUrl: `${rankBase}/wolf/`,
       accentColor: '#c41230',
-      requiredAdventures: required('wolf', '/assets/ranks/wolf.jpg', [
+      requiredAdventures: required('wolf', [
         ['Bobcat Adventure', 'Character & Leadership', 'Build den belonging and learn the first safety and family foundations.', 'wolf-bobcat'],
         ['Running With the Pack', 'Personal Fitness', 'Explore healthy choices, movement, rest, and personal wellness.'],
         ['Safety in Numbers', 'Personal Safety', 'Practice safety awareness and trusted-adult communication.'],
@@ -166,7 +177,7 @@
         ['Council Fire', 'Citizenship', 'Learn about community, service, and doing your part.'],
         ['Paws on the Path', 'Outdoors', 'Practice outdoor skills, hiking awareness, and preparedness.'],
       ]),
-      electiveAdventures: elective('wolf', '/assets/ranks/wolf.jpg', [
+      electiveAdventures: elective('wolf', [
         'A Wolf Goes Fishing',
         'Adventures in Coins',
         'Air of the Wolf',
@@ -201,7 +212,7 @@
       introduction: 'Bear Adventures help third grade Scouts stretch their independence through service, safety, outdoor skills, creativity, and discovery.',
       officialRequirementsUrl: `${rankBase}/bear/`,
       accentColor: '#0082a7',
-      requiredAdventures: required('bear', '/assets/ranks/bear.jpg', [
+      requiredAdventures: required('bear', [
         ['Bobcat Adventure', 'Character & Leadership', 'Build den belonging and learn the first safety and family foundations.', 'bear-bobcat'],
         ['Bear Strong', 'Personal Fitness', 'Practice strength, wellness, and healthy habits.'],
         ['Standing Tall', 'Personal Safety', 'Learn ways to stay safe and ask for help.'],
@@ -209,7 +220,7 @@
         ['Paws for Action', 'Citizenship', 'Serve others and learn about community responsibility.'],
         ['Bear Habitat', 'Outdoors', 'Explore outdoor spaces, wildlife, and conservation.'],
       ]),
-      electiveAdventures: elective('bear', '/assets/ranks/bear.jpg', [
+      electiveAdventures: elective('bear', [
         'A Bear Goes Fishing',
         'Balancing Bears',
         'Baloo the Builder',
@@ -244,7 +255,7 @@
       introduction: 'Webelos Adventures prepare fourth grade Scouts for more leadership, stronger outdoor skills, and the next steps in Scouting.',
       officialRequirementsUrl: `${rankBase}/webelos/`,
       accentColor: '#082b57',
-      requiredAdventures: required('webelos', '/assets/ranks/webelos.jpg', [
+      requiredAdventures: required('webelos', [
         ['Bobcat Adventure', 'Character & Leadership', 'Build den belonging and learn the first safety and family foundations.', 'webelos-bobcat'],
         ['Stronger, Faster, Higher', 'Personal Fitness', 'Build fitness habits and learn how your body grows stronger.'],
         ['My Safety', 'Personal Safety', 'Practice safety planning and trusted-adult communication.'],
@@ -252,7 +263,7 @@
         ['My Community', 'Citizenship', 'Learn how communities work and how Scouts can help.'],
         ['Webelos Walkabout', 'Outdoors', 'Prepare for and complete an outdoor walkabout.'],
       ]),
-      electiveAdventures: elective('webelos', '/assets/ranks/webelos.jpg', [
+      electiveAdventures: elective('webelos', [
         'Aquanaut',
         'Art Explosion',
         'Aware and Care',
@@ -287,7 +298,7 @@
       introduction: 'Arrow of Light Adventures help fifth grade Scouts practice leadership, outdoor readiness, citizenship, and the skills that prepare them for Scouts BSA.',
       officialRequirementsUrl: `${rankBase}/arrow-of-light/`,
       accentColor: '#4b8b3b',
-      requiredAdventures: required('arrow-of-light', '/assets/ranks/aol.jpg', [
+      requiredAdventures: required('arrow-of-light', [
         ['Bobcat Adventure', 'Character & Leadership', 'Build den belonging and learn the first safety and family foundations.', 'arrow-of-light-bobcat'],
         ['Personal Fitness', 'Personal Fitness', 'Practice fitness, health, and personal readiness.'],
         ['First Aid', 'Personal Safety', 'Learn first-aid awareness and emergency response basics.'],
@@ -295,7 +306,7 @@
         ['Citizenship', 'Citizenship', 'Practice leadership, service, and community responsibility.'],
         ['Outdoor Adventurer', 'Outdoors', 'Build outdoor skills and prepare for more independent adventures.'],
       ]),
-      electiveAdventures: elective('arrow-of-light', '/assets/ranks/aol.jpg', [
+      electiveAdventures: elective('arrow-of-light', [
         'Champions for Nature AOL',
         'Cycling',
         'Engineer',

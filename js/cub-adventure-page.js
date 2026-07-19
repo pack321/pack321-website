@@ -119,7 +119,7 @@
   function renderRequiredCard(item) {
     return `
       <a class="rank-required-card" href="${item.href}" aria-label="${escapeHtml(item.name)} adventure details">
-        <span class="rank-required-card__image"><img src="${item.icon}" alt="" aria-hidden="true"></span>
+        <span class="rank-required-card__image"><img src="${item.icon}" alt="${escapeHtml(item.iconAlt)}"></span>
         <span class="rank-required-card__body">
           <span class="rank-required-card__category">${escapeHtml(item.category)}</span>
           <strong>${escapeHtml(item.name)}</strong>
@@ -145,7 +145,7 @@
   function renderElectiveCard(item) {
     return `
       <a class="rank-elective-card" href="${item.href}" aria-label="${escapeHtml(item.name)} adventure details">
-        <span class="rank-elective-card__icon" aria-hidden="true"><img src="${item.icon}" alt=""></span>
+        <span class="rank-elective-card__icon"><img src="${item.icon}" alt="${escapeHtml(item.iconAlt)}"></span>
         <span>${escapeHtml(item.name)}</span>
         <b aria-hidden="true">></b>
       </a>
