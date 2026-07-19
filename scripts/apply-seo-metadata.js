@@ -56,6 +56,13 @@ const pages = {
     h1: "Pack 321 Family Resources",
     h1Html: '<h1><span>Pack 321 </span><span class="gold">Family Resources</span></h1>',
   },
+  "new-family-guide.html": {
+    url: `${SITE}/new-family-guide.html`,
+    title: "New Family Guide | Cub Scout Pack 321",
+    description: "A welcoming guide for new Cub Scout Pack 321 families in Oak Creek and surrounding communities, including meetings, ranks, uniforms, communication, safety, and volunteering.",
+    h1: "Welcome to Pack 321",
+    h1Html: '<h1><span>Welcome to </span><span class="gold">Pack 321</span></h1>',
+  },
   "join.html": {
     url: `${SITE}/join.html`,
     title: "Join Cub Scout Pack 321 | Oak Creek, WI",
