@@ -654,18 +654,37 @@ body.modal-open { overflow: hidden; }
   position: relative;
   overflow: hidden;
   min-height: 210px;
-  padding: 28px;
+  padding: 28px 88px 78px 28px;
   border-left: 6px solid var(--gold);
 }
-.event-card::after {
-  content: '';
+.event-card-icon {
   position: absolute;
-  inset: auto 20px 18px auto;
+  right: 20px;
+  bottom: 18px;
+  display: grid;
   width: 54px;
   height: 54px;
-  border: 2px solid rgba(255,199,44,.55);
+  place-items: center;
+  border: 2px solid rgba(255,199,44,.75);
   border-radius: 50%;
-  opacity: .45;
+  background: rgba(255,199,44,.10);
+  color: var(--navy);
+  opacity: .82;
+  pointer-events: none;
+}
+.event-card-icon svg {
+  width: 29px;
+  height: 29px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.event-card:hover .event-card-icon,
+.event-card:focus-within .event-card-icon {
+  background: var(--gold);
+  opacity: 1;
 }
 .event-card strong {
   display: inline-flex;
