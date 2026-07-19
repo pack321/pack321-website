@@ -7,7 +7,6 @@
 
   const mode = app.dataset.mode || 'rank';
   const rankSlug = app.dataset.rank || getRankSlug();
-  const adventureSlug = app.dataset.adventure || getAdventureSlug();
   const rank = rankMap[rankSlug];
 
   if (!rank) {
@@ -18,7 +17,7 @@
   document.documentElement.style.setProperty('--rank-accent', rank.accentColor);
 
   if (mode === 'adventure') {
-    renderAdventureDetail(app, rank, adventureSlug);
+    renderNotFound(app);
   } else {
     renderRankPage(app, rank);
   }
@@ -27,12 +26,6 @@
     const parts = window.location.pathname.split('/').filter(Boolean);
     const adventuresIndex = parts.indexOf('adventures');
     return adventuresIndex >= 0 ? parts[adventuresIndex + 1] : '';
-  }
-
-  function getAdventureSlug() {
-    const parts = window.location.pathname.split('/').filter(Boolean);
-    const adventuresIndex = parts.indexOf('adventures');
-    return adventuresIndex >= 0 ? parts[adventuresIndex + 2] : '';
   }
 
   function renderRankPage(target, currentRank) {
@@ -59,6 +52,14 @@
         </div>
       </section>
       ${renderDivider(currentRank)}
+      <section class="rank-source-note-section">
+        <div class="wrap">
+          <aside class="rank-source-note" aria-label="Official requirements notice">
+            <span class="rank-source-note__icon" aria-hidden="true">i</span>
+            <p>Adventure requirements are maintained by Scouting America. Selecting an adventure will open its official requirements in a new tab.</p>
+          </aside>
+        </div>
+      </section>
       ${required}
       ${electives}
       ${renderDisclaimer()}
@@ -86,9 +87,8 @@
         <h2>Official Adventure Requirements</h2>
         <p>Adventure requirements are maintained by Scouting America and open in a new tab.</p>
         <a class="button gold rank-official-card__button" href="${currentRank.officialRequirementsUrl}" target="_blank" rel="noopener noreferrer" aria-label="View Official ${escapeHtml(currentRank.name)} Requirements on Scouting America">
-          View Official ${escapeHtml(currentRank.name)} Requirements
+          View Official Requirements <span class="rank-external-indicator" aria-hidden="true">&#8599;</span>
         </a>
-        <a class="rank-official-card__link" href="https://www.scouting.org/programs/cub-scouts/adventures/" target="_blank" rel="noopener noreferrer">Go to Scouting America (opens in new tab)</a>
       </aside>
     `;
   }
@@ -118,11 +118,11 @@
 
   function renderRequiredCard(item) {
     return `
-      <a class="rank-required-card" href="${item.href}" aria-label="${escapeHtml(item.name)} adventure details">
+      <a class="rank-required-card" href="${item.officialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Open official ${escapeHtml(item.name)} adventure requirements on Scouting America">
         <span class="rank-required-card__image"><img src="${item.icon}" alt="${escapeHtml(item.iconAlt)}"></span>
         <span class="rank-required-card__body">
           <span class="rank-required-card__category">${escapeHtml(item.category)}</span>
-          <strong>${escapeHtml(item.name)}</strong>
+          <strong>${escapeHtml(item.name)} <span class="rank-external-indicator" aria-hidden="true">&#8599;</span></strong>
           <span>${escapeHtml(item.description)}</span>
         </span>
       </a>
@@ -144,10 +144,10 @@
 
   function renderElectiveCard(item) {
     return `
-      <a class="rank-elective-card" href="${item.href}" aria-label="${escapeHtml(item.name)} adventure details">
+      <a class="rank-elective-card" href="${item.officialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Open official ${escapeHtml(item.name)} adventure requirements on Scouting America">
         <span class="rank-elective-card__icon"><img src="${item.icon}" alt="${escapeHtml(item.iconAlt)}"></span>
         <span>${escapeHtml(item.name)}</span>
-        <b aria-hidden="true">></b>
+        <b class="rank-external-indicator" aria-hidden="true">&#8599;</b>
       </a>
     `;
   }
@@ -166,77 +166,6 @@
           </aside>
         </div>
       </section>
-    `;
-  }
-
-  function renderRequirements(adventure) {
-    if (!adventure.requirements || adventure.requirements.length === 0) {
-      return `
-        <div class="rank-requirements-empty">
-          <h2>Official Requirements</h2>
-          <p>Scouting America maintains the official current requirements for this adventure. Use the official source link to view and print the published requirements.</p>
-          <a class="button gold" href="${adventure.officialUrl}" target="_blank" rel="noopener noreferrer">View Official ${escapeHtml(adventure.name)} Requirements</a>
-        </div>
-      `;
-    }
-
-    const renderItems = (items) => `<ol class="rank-requirements-list">${items.map((item) => `
-      <li>
-        <strong>${escapeHtml(item.label)}</strong>
-        <p>${escapeHtml(item.text)}</p>
-        ${item.children && item.children.length ? renderItems(item.children) : ''}
-      </li>`).join('')}
-    </ol>`;
-
-    return `
-      <section class="rank-requirements" aria-labelledby="official-requirements-heading">
-        <h2 id="official-requirements-heading">Official Requirements</h2>
-        ${renderItems(adventure.requirements)}
-      </section>
-    `;
-  }
-
-  function renderAdventureDetail(target, currentRank, currentAdventureSlug) {
-    const allAdventures = currentRank.requiredAdventures.concat(currentRank.electiveAdventures);
-    const adventure = allAdventures.find((item) => item.slug === currentAdventureSlug);
-    if (!adventure) {
-      renderNotFound(target);
-      return;
-    }
-
-    document.title = `${adventure.name} | ${currentRank.name} Adventures | Pack 321`;
-    target.innerHTML = `
-      <nav class="rank-breadcrumbs wrap" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span aria-hidden="true">></span>
-        <a href="/cub-scouts.html">Cub Scouts</a>
-        <span aria-hidden="true">></span>
-        <a href="/cub-scouts/adventures/${currentRank.slug}/">${escapeHtml(currentRank.name)}</a>
-        <span aria-hidden="true">></span>
-        <span>${escapeHtml(adventure.name)}</span>
-      </nav>
-      <section class="rank-detail">
-        <div class="wrap rank-detail__grid">
-          <div class="rank-detail__media">
-            <img src="${adventure.icon}" width="360" height="360" alt="${escapeHtml(adventure.iconAlt)}">
-          </div>
-          <div class="rank-detail__copy">
-            <p class="rank-adventure-kicker">${escapeHtml(currentRank.name)} Adventure</p>
-            <h1>${escapeHtml(adventure.name)}</h1>
-            <p class="rank-detail__meta">${escapeHtml(adventure.category)} · ${currentRank.requiredAdventures.some((item) => item.slug === adventure.slug) ? 'Required' : 'Elective'}</p>
-            <p>${escapeHtml(adventure.description)}</p>
-            <div class="rank-detail-placeholder__actions">
-              <a class="button gold" href="${adventure.officialUrl}" target="_blank" rel="noopener noreferrer">Official Source</a>
-              <button class="button rank-print-button" type="button" onclick="window.print()">Print Requirements</button>
-              <a class="button" href="/cub-scouts/adventures/${currentRank.slug}/">Back to ${escapeHtml(currentRank.name)} Adventures</a>
-            </div>
-          </div>
-        </div>
-        <div class="wrap rank-detail__requirements">
-          ${renderRequirements(adventure)}
-        </div>
-      </section>
-      ${renderDisclaimer()}
     `;
   }
 

@@ -7,14 +7,6 @@
  * @property {string} iconAlt
  * @property {string} category
  * @property {string} officialUrl
- * @property {Requirement[]} requirements
- */
-
-/**
- * @typedef {Object} Requirement
- * @property {string} label
- * @property {string} text
- * @property {Requirement[]} [children]
  */
 
 /**
@@ -42,15 +34,6 @@
 }(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   const officialBase = 'https://www.scouting.org';
   const rankBase = `${officialBase}/programs/cub-scouts/adventures`;
-  const adventureIconRanks = new Set(['lion']);
-  const rankIconFallbacks = {
-    lion: '/assets/ranks/lion.jpg',
-    tiger: '/assets/ranks/tiger.jpg',
-    wolf: '/assets/ranks/wolf.jpg',
-    bear: '/assets/ranks/bear.jpg',
-    webelos: '/assets/ranks/webelos.jpg',
-    'arrow-of-light': '/assets/ranks/aol.jpg',
-  };
 
   function slugify(value) {
     return value
@@ -67,11 +50,9 @@
       name,
       description,
       category,
-      icon: adventureIconRanks.has(rankSlug) ? `/assets/images/cub-scouts/adventures/${rankSlug}/${slug}.jpg` : rankIconFallbacks[rankSlug],
+      icon: `/assets/images/cub-scouts/adventures/${rankSlug}/${slug}.jpg`,
       iconAlt: `${name} adventure insignia`,
       officialUrl: `${officialBase}/cub-scout-adventures/${officialSlug || slug}/`,
-      href: `/cub-scouts/adventures/${rankSlug}/${slug}/`,
-      requirements: [],
     };
   }
 

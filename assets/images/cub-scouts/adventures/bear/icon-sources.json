@@ -1,0 +1,238 @@
+[
+  {
+    "slug": "bobcat-adventure",
+    "name": "Bobcat Adventure",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/bobcat-adventure.jpg",
+    "bytes": 19703,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/bobcat-adventure.jpg"
+  },
+  {
+    "slug": "bear-strong",
+    "name": "Bear Strong",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/bear-strong.jpg",
+    "bytes": 9195,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/bear-strong.jpg"
+  },
+  {
+    "slug": "standing-tall",
+    "name": "Standing Tall",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/standing-tall.jpg",
+    "bytes": 10131,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/standing-tall.jpg"
+  },
+  {
+    "slug": "fellowship",
+    "name": "Fellowship",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/fellowship.jpg",
+    "bytes": 17002,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/fellowship.jpg"
+  },
+  {
+    "slug": "paws-for-action",
+    "name": "Paws for Action",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/paws-for-action.jpg",
+    "bytes": 14224,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/paws-for-action.jpg"
+  },
+  {
+    "slug": "bear-habitat",
+    "name": "Bear Habitat",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/bear-habitat.jpg",
+    "bytes": 9099,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/bear-habitat.jpg"
+  },
+  {
+    "slug": "a-bear-goes-fishing",
+    "name": "A Bear Goes Fishing",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/a-bear-goes-fishing.jpg",
+    "bytes": 11102,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/a-bear-goes-fishing.jpg"
+  },
+  {
+    "slug": "balancing-bears",
+    "name": "Balancing Bears",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/balancing-bears.jpg",
+    "bytes": 9093,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/balancing-bears.jpg"
+  },
+  {
+    "slug": "baloo-the-builder",
+    "name": "Baloo the Builder",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/baloo-the-builder.jpg",
+    "bytes": 9364,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/baloo-the-builder.jpg"
+  },
+  {
+    "slug": "bears-afloat",
+    "name": "Bears Afloat",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/bears-afloat.jpg",
+    "bytes": 8501,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/bears-afloat.jpg"
+  },
+  {
+    "slug": "bears-on-bikes",
+    "name": "Bears on Bikes",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/bears-on-bikes.jpg",
+    "bytes": 9133,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/bears-on-bikes.jpg"
+  },
+  {
+    "slug": "champions-for-nature-bear",
+    "name": "Champions for Nature Bear",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/champions-for-nature-bear.jpg",
+    "bytes": 16149,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/champions-for-nature-bear.jpg"
+  },
+  {
+    "slug": "chef-tech",
+    "name": "Chef Tech",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/chef-tech.jpg",
+    "bytes": 8300,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/chef-tech.jpg"
+  },
+  {
+    "slug": "critter-care",
+    "name": "Critter Care",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/critter-care.jpg",
+    "bytes": 10401,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/critter-care.jpg"
+  },
+  {
+    "slug": "forensics",
+    "name": "Forensics",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/forensics.jpg",
+    "bytes": 15521,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/forensics.jpg"
+  },
+  {
+    "slug": "let-s-camp-bear",
+    "name": "Let's Camp Bear",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/let-s-camp-bear.jpg",
+    "bytes": 10824,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/let-s-camp-bear.jpg"
+  },
+  {
+    "slug": "marble-madness",
+    "name": "Marble Madness",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/marble-madness.jpg",
+    "bytes": 9876,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/marble-madness.jpg"
+  },
+  {
+    "slug": "race-time-bear",
+    "name": "Race Time Bear",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/race-time-bear.jpg",
+    "bytes": 8344,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/race-time-bear.jpg"
+  },
+  {
+    "slug": "roaring-laughter",
+    "name": "Roaring Laughter",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/roaring-laughter.jpg",
+    "bytes": 11501,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/roaring-laughter.jpg"
+  },
+  {
+    "slug": "salmon-run",
+    "name": "Salmon Run",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/salmon-run.jpg",
+    "bytes": 9276,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/salmon-run.jpg"
+  },
+  {
+    "slug": "summertime-fun-bear",
+    "name": "Summertime Fun Bear",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/summertime-fun-bear.jpg",
+    "bytes": 10017,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/summertime-fun-bear.jpg"
+  },
+  {
+    "slug": "super-science",
+    "name": "Super Science",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/super-science.jpg",
+    "bytes": 10568,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/super-science.jpg"
+  },
+  {
+    "slug": "whittling",
+    "name": "Whittling",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/whittling.jpg",
+    "bytes": 7992,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/whittling.jpg"
+  },
+  {
+    "slug": "archery-bear",
+    "name": "Archery Bear",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/archery-bear.jpg",
+    "bytes": 8982,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/archery-bear.jpg"
+  },
+  {
+    "slug": "slingshot",
+    "name": "Slingshot",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/bear/slingshot.jpg",
+    "bytes": 7846,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/slingshot.jpg"
+  },
+  {
+    "slug": "bb-guns",
+    "name": "BB Guns",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-elective-adventure-pin-archery-webelos-660278.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660278_webelos_bb-_1_.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/bear/bb-guns.jpg",
+    "bytes": 19391,
+    "sourcePath": "/assets/source/cub-scouts/adventures/bear/bb-guns.jpg",
+    "sku": "660278",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - BB - Webelos"
+  }
+]

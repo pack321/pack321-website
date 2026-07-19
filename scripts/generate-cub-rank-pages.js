@@ -176,8 +176,7 @@ function officialCard(rank) {
         <div class="rank-official-card__icon" aria-hidden="true">i</div>
         <h2>Official Adventure Requirements</h2>
         <p>Adventure requirements are maintained by Scouting America and open in a new tab.</p>
-        <a class="button gold rank-official-card__button" href="${rank.officialRequirementsUrl}" target="_blank" rel="noopener noreferrer" aria-label="View Official ${escapeHtml(rank.name)} Requirements on Scouting America">View Official ${escapeHtml(rank.name)} Requirements</a>
-        <a class="rank-official-card__link" href="https://www.scouting.org/programs/cub-scouts/adventures/" target="_blank" rel="noopener noreferrer">Go to Scouting America (opens in new tab)</a>
+        <a class="button gold rank-official-card__button" href="${rank.officialRequirementsUrl}" target="_blank" rel="noopener noreferrer" aria-label="View official ${escapeHtml(rank.name)} requirements on Scouting America">View Official Requirements <span class="rank-external-indicator" aria-hidden="true">&#8599;</span></a>
       </aside>`;
 }
 
@@ -192,11 +191,11 @@ function divider(rank) {
 
 function requiredCard(item) {
   return `
-      <a class="rank-required-card" href="${item.href}" aria-label="${escapeHtml(item.name)} adventure details">
+      <a class="rank-required-card" href="${item.officialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Open official ${escapeHtml(item.name)} adventure requirements on Scouting America">
         <span class="rank-required-card__image"><img src="${item.icon}" alt="${escapeHtml(item.iconAlt)}"></span>
         <span class="rank-required-card__body">
           <span class="rank-required-card__category">${escapeHtml(item.category)}</span>
-          <strong>${escapeHtml(item.name)}</strong>
+          <strong>${escapeHtml(item.name)} <span class="rank-external-indicator" aria-hidden="true">&#8599;</span></strong>
           <span>${escapeHtml(item.description)}</span>
         </span>
       </a>`;
@@ -204,36 +203,11 @@ function requiredCard(item) {
 
 function electiveCard(item) {
   return `
-      <a class="rank-elective-card" href="${item.href}" aria-label="${escapeHtml(item.name)} adventure details">
+      <a class="rank-elective-card" href="${item.officialUrl}" target="_blank" rel="noopener noreferrer" aria-label="Open official ${escapeHtml(item.name)} adventure requirements on Scouting America">
         <span class="rank-elective-card__icon"><img src="${item.icon}" alt="${escapeHtml(item.iconAlt)}"></span>
         <span>${escapeHtml(item.name)}</span>
-        <b aria-hidden="true">></b>
+        <b class="rank-external-indicator" aria-hidden="true">&#8599;</b>
       </a>`;
-}
-
-function renderRequirements(adventure) {
-  if (!adventure.requirements || adventure.requirements.length === 0) {
-    return `
-        <div class="rank-requirements-empty">
-          <h2>Official Requirements</h2>
-          <p>Scouting America maintains the official current requirements for this adventure. Use the official source link to view and print the published requirements.</p>
-          <a class="button gold" href="${adventure.officialUrl}" target="_blank" rel="noopener noreferrer">View Official ${escapeHtml(adventure.name)} Requirements</a>
-        </div>`;
-  }
-
-  const renderItems = (items) => `<ol class="rank-requirements-list">${items.map((item) => `
-          <li>
-            <strong>${escapeHtml(item.label)}</strong>
-            <p>${escapeHtml(item.text)}</p>
-            ${item.children && item.children.length ? renderItems(item.children) : ""}
-          </li>`).join("")}
-        </ol>`;
-
-  return `
-        <section class="rank-requirements" aria-labelledby="official-requirements-heading">
-          <h2 id="official-requirements-heading">Official Requirements</h2>
-          ${renderItems(adventure.requirements)}
-        </section>`;
 }
 
 function disclaimer() {
@@ -273,6 +247,14 @@ function rankMain(rank) {
     </div>
   </section>
   ${divider(rank)}
+  <section class="rank-source-note-section">
+    <div class="wrap">
+      <aside class="rank-source-note" aria-label="Official requirements notice">
+        <span class="rank-source-note__icon" aria-hidden="true">i</span>
+        <p>Adventure requirements are maintained by Scouting America. Selecting an adventure will open its official requirements in a new tab.</p>
+      </aside>
+    </div>
+  </section>
   <section class="rank-section">
     <div class="wrap">
       <h2>Required Adventures</h2>
@@ -290,32 +272,6 @@ function rankMain(rank) {
   ${disclaimer()}`;
 }
 
-function adventureMain(rank, adventure) {
-  return `${breadcrumbs(rank, adventure.name)}
-  <section class="rank-detail">
-    <div class="wrap rank-detail__grid">
-      <div class="rank-detail__media">
-        <img src="${adventure.icon}" width="360" height="360" alt="${escapeHtml(adventure.iconAlt)}">
-      </div>
-      <div class="rank-detail__copy">
-        <p class="rank-adventure-kicker">${escapeHtml(rank.name)} Adventure</p>
-        <h1>${escapeHtml(adventure.name)}</h1>
-        <p class="rank-detail__meta">${escapeHtml(adventure.category)} · ${rank.requiredAdventures.some((item) => item.slug === adventure.slug) ? "Required" : "Elective"}</p>
-        <p>${escapeHtml(adventure.description)}</p>
-        <div class="rank-detail-placeholder__actions">
-          <a class="button gold" href="${adventure.officialUrl}" target="_blank" rel="noopener noreferrer">Official Source</a>
-          <button class="button rank-print-button" type="button" onclick="window.print()">Print Requirements</button>
-          <a class="button" href="/cub-scouts/adventures/${rank.slug}/">Back to ${escapeHtml(rank.name)} Adventures</a>
-        </div>
-      </div>
-    </div>
-    <div class="wrap rank-detail__requirements">
-      ${renderRequirements(adventure)}
-    </div>
-  </section>
-  ${disclaimer()}`;
-}
-
 function writeRankPage(rank) {
   writeFile(`cub-scouts/adventures/${rank.slug}/index.html`, pageShell({
     depth: 3,
@@ -327,21 +283,6 @@ function writeRankPage(rank) {
     appAttributes: {
       attrs: `data-rank-app data-mode="rank" data-rank="${rank.slug}" data-static="true" style="--rank-accent: ${rank.accentColor}"`,
       content: rankMain(rank),
-    },
-  }));
-}
-
-function writeAdventurePage(rank, adventure) {
-  writeFile(`cub-scouts/adventures/${rank.slug}/${adventure.slug}/index.html`, pageShell({
-    depth: 4,
-    meta: {
-      title: `${adventure.name} | ${rank.name} Adventures | Pack 321`,
-      description: `View Pack 321 information for the ${adventure.name} ${rank.name} Cub Scout adventure, with official Scouting America requirements linked for reference.`,
-      canonical: `${SITE}/cub-scouts/adventures/${rank.slug}/${adventure.slug}/`,
-    },
-    appAttributes: {
-      attrs: `data-rank-app data-mode="adventure" data-rank="${rank.slug}" data-adventure="${adventure.slug}" data-static="true" style="--rank-accent: ${rank.accentColor}"`,
-      content: adventureMain(rank, adventure),
     },
   }));
 }
@@ -372,7 +313,6 @@ ${faviconLinks()}
 cubScoutRankOrder.forEach((slug) => {
   const rank = cubScoutRanks[slug];
   writeRankPage(rank);
-  rank.requiredAdventures.concat(rank.electiveAdventures).forEach((adventure) => writeAdventurePage(rank, adventure));
   writeLegacyRedirect(rank);
 });
 

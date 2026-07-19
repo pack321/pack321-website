@@ -1,0 +1,282 @@
+[
+  {
+    "slug": "bobcat-adventure",
+    "name": "Bobcat Adventure",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/bobcat-adventure.jpg",
+    "bytes": 15945,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/bobcat-adventure.jpg"
+  },
+  {
+    "slug": "stronger-faster-higher",
+    "name": "Stronger, Faster, Higher",
+    "productUrl": "https://www.scoutshop.org/webelos-core-pin-stronger-faster-higher-619986.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619986.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/stronger-faster-higher.jpg",
+    "bytes": 16683,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/stronger-faster-higher.jpg",
+    "sku": "619986",
+    "productName": "Webelos Core Pin - Stronger, Faster, Higher"
+  },
+  {
+    "slug": "my-safety",
+    "name": "My Safety",
+    "productUrl": "https://www.scoutshop.org/webelos-core-pin-my-safety-619985.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619985_webelo_first_responder_front.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/my-safety.jpg",
+    "bytes": 13774,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/my-safety.jpg",
+    "sku": "619985",
+    "productName": "Webelos Core Pin - My Safety"
+  },
+  {
+    "slug": "my-family",
+    "name": "My Family",
+    "productUrl": "https://www.scoutshop.org/webelos-core-pin-my-family-619988.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619988_webelo_duty_to_god_front.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/my-family.jpg",
+    "bytes": 15921,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/my-family.jpg",
+    "sku": "619988",
+    "productName": "Webelos Core Pin - My Family"
+  },
+  {
+    "slug": "my-community",
+    "name": "My Community",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-core-adventure-pin-my-community-660266.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660266_webelos_my_community_1_.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/my-community.jpg",
+    "bytes": 12508,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/my-community.jpg",
+    "sku": "660266",
+    "productName": "Cub Scout Webelos Core Adventure Pin - My Community"
+  },
+  {
+    "slug": "webelos-walkabout",
+    "name": "Webelos Walkabout",
+    "productUrl": "https://www.scoutshop.org/webelos-core-pin-webelos-walkabout-619987.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619987.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/webelos-walkabout.jpg",
+    "bytes": 17249,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/webelos-walkabout.jpg",
+    "sku": "619987",
+    "productName": "Webelos Core Pin - Webelos Walkabout"
+  },
+  {
+    "slug": "aquanaut",
+    "name": "Aquanaut",
+    "productUrl": "https://www.scoutshop.org/webelos-elective-pin-aquanaut-619970.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619970.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/aquanaut.jpg",
+    "bytes": 14443,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/aquanaut.jpg",
+    "sku": "619970",
+    "productName": "Webelos Elective Pin - Aquanaut"
+  },
+  {
+    "slug": "art-explosion",
+    "name": "Art Explosion",
+    "productUrl": "https://www.scoutshop.org/webelos-elective-pin-art-explosion-619983.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619983.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/art-explosion.jpg",
+    "bytes": 12592,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/art-explosion.jpg",
+    "sku": "619983",
+    "productName": "Webelos Elective Pin - Art Explosion"
+  },
+  {
+    "slug": "aware-and-care",
+    "name": "Aware and Care",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-core-adventure-pin-bobcat-webelos-660265.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660265_webelo_bobcat_1200x1200.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/aware-and-care.jpg",
+    "bytes": 15183,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/aware-and-care.jpg",
+    "sku": "660265",
+    "productName": "Cub Scout Webelos Core Adventure Pin - Bobcat - Webelos"
+  },
+  {
+    "slug": "build-it",
+    "name": "Build It",
+    "productUrl": "https://www.scoutshop.org/webelos-elective-pin-build-it-619991.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619991.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/build-it.jpg",
+    "bytes": 13427,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/build-it.jpg",
+    "sku": "619991",
+    "productName": "Webelos Elective Pin - Build It"
+  },
+  {
+    "slug": "catch-the-big-one",
+    "name": "Catch the Big One",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-elective-adventure-pin-catch-the-big-one-660268.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660268_webelos_big_one.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/catch-the-big-one.jpg",
+    "bytes": 11319,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/catch-the-big-one.jpg",
+    "sku": "660268",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Catch the Big One"
+  },
+  {
+    "slug": "champions-for-nature-webelos",
+    "name": "Champions for Nature Webelos",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-elective-adventure-pin-champions-for-nature-webelos-660275.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660275_webelo_champofnature_front.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/champions-for-nature-webelos.jpg",
+    "bytes": 19114,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/champions-for-nature-webelos.jpg",
+    "sku": "660275",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Champions for Nature - Webelos"
+  },
+  {
+    "slug": "chef-s-knife",
+    "name": "Chef's Knife",
+    "productUrl": "https://www.scoutshop.org/adventure-loop-660277.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660277_webelos_chef_knife.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/chef-s-knife.jpg",
+    "bytes": 11778,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/chef-s-knife.jpg",
+    "sku": "660277",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Chef's Knife"
+  },
+  {
+    "slug": "earth-rocks",
+    "name": "Earth Rocks",
+    "productUrl": "https://www.scoutshop.org/webelos-elective-pin-earth-rocks-619995.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619995.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/earth-rocks.jpg",
+    "bytes": 13131,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/earth-rocks.jpg",
+    "sku": "619995",
+    "productName": "Webelos Elective Pin - Earth Rocks!"
+  },
+  {
+    "slug": "let-s-camp-webelos",
+    "name": "Let's Camp Webelos",
+    "productUrl": "https://www.scoutshop.org/adventure-loop-660274.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660274_webelos_lets_camp.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/let-s-camp-webelos.jpg",
+    "bytes": 11685,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/let-s-camp-webelos.jpg",
+    "sku": "660274",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Let's Camp - Webelos"
+  },
+  {
+    "slug": "math-on-the-trail",
+    "name": "Math on the Trail",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-elective-adventure-pin-math-on-the-trail-660269.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660269_webelos_math_on_the_trail.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/math-on-the-trail.jpg",
+    "bytes": 16494,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/math-on-the-trail.jpg",
+    "sku": "660269",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Math on the Trail"
+  },
+  {
+    "slug": "modular-design",
+    "name": "Modular Design",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-elective-adventure-pin-modular-design-660267.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660267_webelos_modular_design_1_.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/modular-design.jpg",
+    "bytes": 12428,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/modular-design.jpg",
+    "sku": "660267",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Modular Design"
+  },
+  {
+    "slug": "paddle-onward",
+    "name": "Paddle Onward",
+    "productUrl": "https://www.scoutshop.org/adventure-loop-660270.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660270_webelos_paddle_onward.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/paddle-onward.jpg",
+    "bytes": 11013,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/paddle-onward.jpg",
+    "sku": "660270",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Paddle Onward"
+  },
+  {
+    "slug": "pedal-away",
+    "name": "Pedal Away",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-elective-adventure-pin-pedal-away-660271.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660271_webelos_pedal_away.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/pedal-away.jpg",
+    "bytes": 16480,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/pedal-away.jpg",
+    "sku": "660271",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Pedal Away"
+  },
+  {
+    "slug": "race-time-webelos",
+    "name": "Race Time Webelos",
+    "productUrl": "https://www.scoutshop.org/adventure-loop-660272.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660272_webelos_race_time.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/race-time-webelos.jpg",
+    "bytes": 12372,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/race-time-webelos.jpg",
+    "sku": "660272",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Race Time - Webelos"
+  },
+  {
+    "slug": "summertime-fun-webelos",
+    "name": "Summertime Fun Webelos",
+    "productUrl": "https://www.scoutshop.org/cub-scout-tiger-elective-adventure-loop-summertime-fun-tiger-660234.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660234_tiger_elec_summer_fun.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/summertime-fun-webelos.jpg",
+    "bytes": 17149,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/summertime-fun-webelos.jpg",
+    "sku": "660234",
+    "productName": "Cub Scout Tiger Elective Adventure Loop - Summertime Fun - Tiger"
+  },
+  {
+    "slug": "tech-on-the-trail",
+    "name": "Tech on the Trail",
+    "productUrl": "https://www.scoutshop.org/adventure-loop-660273.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660273_webelos_tech_trail.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/tech-on-the-trail.jpg",
+    "bytes": 10935,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/tech-on-the-trail.jpg",
+    "sku": "660273",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Tech on the Trail"
+  },
+  {
+    "slug": "yo-yo",
+    "name": "Yo-yo",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/yo-yo.jpg",
+    "bytes": 11336,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/yo-yo.jpg"
+  },
+  {
+    "slug": "archery-webelos",
+    "name": "Archery Webelos",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/archery-webelos.jpg",
+    "bytes": 11336,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/archery-webelos.jpg"
+  },
+  {
+    "slug": "slingshot",
+    "name": "Slingshot",
+    "productUrl": "https://www.scoutshop.org/adventure-loop-660280.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660280_webelos_slingshot.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/slingshot.jpg",
+    "bytes": 11264,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/slingshot.jpg",
+    "sku": "660280",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - Slingshot - Webelos"
+  },
+  {
+    "slug": "bb-guns",
+    "name": "BB Guns",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-elective-adventure-pin-archery-webelos-660278.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660278_webelos_bb-_1_.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/webelos/bb-guns.jpg",
+    "bytes": 19391,
+    "sourcePath": "/assets/source/cub-scouts/adventures/webelos/bb-guns.jpg",
+    "sku": "660278",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - BB - Webelos"
+  }
+]

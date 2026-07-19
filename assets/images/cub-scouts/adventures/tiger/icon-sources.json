@@ -1,0 +1,238 @@
+[
+  {
+    "slug": "bobcat-adventure",
+    "name": "Bobcat Adventure",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/bobcat-adventure.jpg",
+    "bytes": 20147,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/bobcat-adventure.jpg"
+  },
+  {
+    "slug": "tiger-bites",
+    "name": "Tiger Bites",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/tiger-bites.jpg",
+    "bytes": 14963,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/tiger-bites.jpg"
+  },
+  {
+    "slug": "tiger-s-roar",
+    "name": "Tiger's Roar",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/tiger-s-roar.jpg",
+    "bytes": 15529,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/tiger-s-roar.jpg"
+  },
+  {
+    "slug": "tiger-circles",
+    "name": "Tiger Circles",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/tiger-circles.jpg",
+    "bytes": 15625,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/tiger-circles.jpg"
+  },
+  {
+    "slug": "team-tiger",
+    "name": "Team Tiger",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/team-tiger.jpg",
+    "bytes": 15628,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/team-tiger.jpg"
+  },
+  {
+    "slug": "tigers-in-the-wild",
+    "name": "Tigers in the Wild",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/tigers-in-the-wild.jpg",
+    "bytes": 16384,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/tigers-in-the-wild.jpg"
+  },
+  {
+    "slug": "champions-for-nature-tiger",
+    "name": "Champions for Nature Tiger",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/champions-for-nature-tiger.jpg",
+    "bytes": 19031,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/champions-for-nature-tiger.jpg"
+  },
+  {
+    "slug": "curiosity-intrigue-and-magical-mysteries",
+    "name": "Curiosity, Intrigue, and Magical Mysteries",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/curiosity-intrigue-and-magical-mysteries.jpg",
+    "bytes": 12885,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/curiosity-intrigue-and-magical-mysteries.jpg"
+  },
+  {
+    "slug": "designed-by-tiger",
+    "name": "Designed by Tiger",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/designed-by-tiger.jpg",
+    "bytes": 12014,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/designed-by-tiger.jpg"
+  },
+  {
+    "slug": "fish-on",
+    "name": "Fish On",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/fish-on.jpg",
+    "bytes": 9593,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/fish-on.jpg"
+  },
+  {
+    "slug": "floats-and-boats",
+    "name": "Floats and Boats",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/floats-and-boats.jpg",
+    "bytes": 11907,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/floats-and-boats.jpg"
+  },
+  {
+    "slug": "good-knights",
+    "name": "Good Knights",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/good-knights.jpg",
+    "bytes": 15979,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/good-knights.jpg"
+  },
+  {
+    "slug": "let-s-camp-tiger",
+    "name": "Let's Camp Tiger",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/let-s-camp-tiger.jpg",
+    "bytes": 11979,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/let-s-camp-tiger.jpg"
+  },
+  {
+    "slug": "race-time-tiger",
+    "name": "Race Time Tiger",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/race-time-tiger.jpg",
+    "bytes": 9021,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/race-time-tiger.jpg"
+  },
+  {
+    "slug": "rolling-tigers",
+    "name": "Rolling Tigers",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/rolling-tigers.jpg",
+    "bytes": 14101,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/rolling-tigers.jpg"
+  },
+  {
+    "slug": "safe-and-smart",
+    "name": "Safe and Smart",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/safe-and-smart.jpg",
+    "bytes": 13894,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/safe-and-smart.jpg"
+  },
+  {
+    "slug": "sky-is-the-limit",
+    "name": "Sky is the Limit",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/sky-is-the-limit.jpg",
+    "bytes": 13051,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/sky-is-the-limit.jpg"
+  },
+  {
+    "slug": "stories-in-shapes",
+    "name": "Stories in Shapes",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/stories-in-shapes.jpg",
+    "bytes": 14116,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/stories-in-shapes.jpg"
+  },
+  {
+    "slug": "summertime-fun-tiger",
+    "name": "Summertime Fun Tiger",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/summertime-fun-tiger.jpg",
+    "bytes": 17149,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/summertime-fun-tiger.jpg"
+  },
+  {
+    "slug": "tech-all-around",
+    "name": "Tech All Around",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/tech-all-around.jpg",
+    "bytes": 10001,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/tech-all-around.jpg"
+  },
+  {
+    "slug": "tiger-tag",
+    "name": "Tiger Tag",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/tiger-tag.jpg",
+    "bytes": 13926,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/tiger-tag.jpg"
+  },
+  {
+    "slug": "tiger-iffic",
+    "name": "Tiger-iffic!",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/tiger-iffic.jpg",
+    "bytes": 13674,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/tiger-iffic.jpg"
+  },
+  {
+    "slug": "tigers-in-the-water",
+    "name": "Tigers in the Water",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/tigers-in-the-water.jpg",
+    "bytes": 11164,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/tigers-in-the-water.jpg"
+  },
+  {
+    "slug": "archery-tiger",
+    "name": "Archery Tiger",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/archery-tiger.jpg",
+    "bytes": 10624,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/archery-tiger.jpg"
+  },
+  {
+    "slug": "slingshot",
+    "name": "Slingshot",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/slingshot.jpg",
+    "bytes": 9828,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/slingshot.jpg"
+  },
+  {
+    "slug": "bb-guns",
+    "name": "BB Guns",
+    "productUrl": "https://www.scoutshop.org/cub-scout-webelos-elective-adventure-pin-archery-webelos-660278.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660278_webelos_bb-_1_.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/tiger/bb-guns.jpg",
+    "bytes": 19391,
+    "sourcePath": "/assets/source/cub-scouts/adventures/tiger/bb-guns.jpg",
+    "sku": "660278",
+    "productName": "Cub Scout Webelos Elective Adventure Pin - BB - Webelos"
+  }
+]

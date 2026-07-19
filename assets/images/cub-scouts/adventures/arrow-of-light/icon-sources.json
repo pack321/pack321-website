@@ -1,0 +1,210 @@
+[
+  {
+    "slug": "bobcat-adventure",
+    "name": "Bobcat Adventure",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/bobcat-adventure.jpg",
+    "bytes": 15945,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/bobcat-adventure.jpg"
+  },
+  {
+    "slug": "personal-fitness",
+    "name": "Personal Fitness",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/personal-fitness.jpg",
+    "bytes": 11005,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/personal-fitness.jpg"
+  },
+  {
+    "slug": "first-aid",
+    "name": "First Aid",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/first-aid.jpg",
+    "bytes": 11514,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/first-aid.jpg"
+  },
+  {
+    "slug": "duty-to-god",
+    "name": "Duty to God",
+    "productUrl": "https://www.scoutshop.org/cub-scout-arrow-of-light-core-pin-duty-to-god-in-action-619974.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619974.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/duty-to-god.jpg",
+    "bytes": 17128,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/duty-to-god.jpg",
+    "sku": "619974",
+    "productName": "Cub Scout Arrow of Light Core Pin - Duty to God in Action"
+  },
+  {
+    "slug": "citizenship",
+    "name": "Citizenship",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/citizenship.jpg",
+    "bytes": 19316,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/citizenship.jpg"
+  },
+  {
+    "slug": "outdoor-adventurer",
+    "name": "Outdoor Adventurer",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/outdoor-adventurer.jpg",
+    "bytes": 19139,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/outdoor-adventurer.jpg"
+  },
+  {
+    "slug": "champions-for-nature-aol",
+    "name": "Champions for Nature AOL",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/champions-for-nature-aol.jpg",
+    "bytes": 18552,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/champions-for-nature-aol.jpg"
+  },
+  {
+    "slug": "cycling",
+    "name": "Cycling",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/cycling.jpg",
+    "bytes": 19126,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/cycling.jpg"
+  },
+  {
+    "slug": "engineer",
+    "name": "Engineer",
+    "productUrl": "https://www.scoutshop.org/arrow-of-light-elective-pin-engineer-619996.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619996.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/engineer.jpg",
+    "bytes": 14970,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/engineer.jpg",
+    "sku": "619996",
+    "productName": "Arrow of Light Elective Pin - Engineer"
+  },
+  {
+    "slug": "estimations",
+    "name": "Estimations",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/estimations.jpg",
+    "bytes": 17890,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/estimations.jpg"
+  },
+  {
+    "slug": "fishing",
+    "name": "Fishing",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/fishing.jpg",
+    "bytes": 16715,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/fishing.jpg"
+  },
+  {
+    "slug": "high-tech-outdoors",
+    "name": "High Tech Outdoors",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/high-tech-outdoors.jpg",
+    "bytes": 19139,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/high-tech-outdoors.jpg"
+  },
+  {
+    "slug": "into-the-wild",
+    "name": "Into the Wild",
+    "productUrl": "https://www.scoutshop.org/arrow-of-light-elective-pin-into-the-wild-619976.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619976.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/into-the-wild.jpg",
+    "bytes": 11795,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/into-the-wild.jpg",
+    "sku": "619976",
+    "productName": "Arrow of Light Elective Pin - Into the Wild"
+  },
+  {
+    "slug": "into-the-woods",
+    "name": "Into the Woods",
+    "productUrl": "https://www.scoutshop.org/arrow-of-light-elective-pin-into-the-woods-619977.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/1/619977.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/into-the-woods.jpg",
+    "bytes": 12911,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/into-the-woods.jpg",
+    "sku": "619977",
+    "productName": "Arrow of Light Elective Pin - Into the Woods"
+  },
+  {
+    "slug": "knife-safety",
+    "name": "Knife Safety",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/knife-safety.jpg",
+    "bytes": 18207,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/knife-safety.jpg"
+  },
+  {
+    "slug": "paddle-craft",
+    "name": "Paddle Craft",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/paddle-craft.jpg",
+    "bytes": 18028,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/paddle-craft.jpg"
+  },
+  {
+    "slug": "race-time-aol",
+    "name": "Race Time AOL",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/race-time-aol.jpg",
+    "bytes": 16241,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/race-time-aol.jpg"
+  },
+  {
+    "slug": "summertime-fun-aol",
+    "name": "Summertime Fun AOL",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/summertime-fun-aol.jpg",
+    "bytes": 18896,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/summertime-fun-aol.jpg"
+  },
+  {
+    "slug": "swimming",
+    "name": "Swimming",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/swimming.jpg",
+    "bytes": 17555,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/swimming.jpg"
+  },
+  {
+    "slug": "archery-arrow-of-light",
+    "name": "Archery Arrow of Light",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/archery-arrow-of-light.jpg",
+    "bytes": 17558,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/archery-arrow-of-light.jpg"
+  },
+  {
+    "slug": "slingshot",
+    "name": "Slingshot",
+    "productUrl": null,
+    "imageUrl": null,
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/slingshot.jpg",
+    "bytes": 15885,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/slingshot.jpg"
+  },
+  {
+    "slug": "bb-guns",
+    "name": "BB Guns",
+    "productUrl": "https://www.scoutshop.org/cub-scout-arrow-of-light-elective-adventure-pin-bb-arrow-of-light-660295.html",
+    "imageUrl": "https://www.scoutshop.org/media/klevu_images/400X400/6/6/660295_aol_elec_bb.jpg",
+    "localPath": "/assets/images/cub-scouts/adventures/arrow-of-light/bb-guns.jpg",
+    "bytes": 18468,
+    "sourcePath": "/assets/source/cub-scouts/adventures/arrow-of-light/bb-guns.jpg",
+    "sku": "660295",
+    "productName": "Cub Scout Arrow of Light Elective Adventure Pin - BB - Arrow of Light"
+  }
+]

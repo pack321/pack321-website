@@ -42,14 +42,22 @@ const problems = {
   remoteScoutingImageDeps: [],
   duplicateSlugs: [],
   missingLocalAdventureIcons: [],
-  missingRequirements: [],
+  badAdventureCardLinks: [],
+  scoutingIframeUsage: [],
+  oldRequirementPlaceholders: [],
+  staleAdventureDetailDirectories: [],
 };
 
 const hrefPattern = /href="([^"]*)"/g;
 const srcPattern = /src="([^"]*)"/g;
+const adventureCardPattern = /<a\s+class="(rank-(?:required|elective)-card)"([^>]*)>/g;
 
 htmlFiles.forEach((file) => {
   const html = fs.readFileSync(file, "utf8");
+  if (/<iframe\b[^>]+src="[^"]*scouting\.org/i.test(html)) problems.scoutingIframeUsage.push(path.relative(ROOT, file));
+  if (/rank-requirements-empty|Print Requirements|requirements coming soon|rank-official-card__link|Go to Scouting America/i.test(html)) {
+    problems.oldRequirementPlaceholders.push(path.relative(ROOT, file));
+  }
   for (const match of html.matchAll(hrefPattern)) {
     const href = match[1];
     if (href === "" || href === "#") problems.emptyHref.push([path.relative(ROOT, file), href]);
@@ -60,6 +68,22 @@ htmlFiles.forEach((file) => {
     if (/scouting\.org/.test(src)) problems.remoteScoutingImageDeps.push([path.relative(ROOT, file), src]);
     if (!existsForUrl(src, file)) problems.badHrefOrSrc.push([path.relative(ROOT, file), src]);
   }
+  for (const match of html.matchAll(adventureCardPattern)) {
+    const attrs = match[2];
+    const href = attrs.match(/\shref="([^"]+)"/)?.[1] || "";
+    const target = attrs.match(/\starget="([^"]+)"/)?.[1] || "";
+    const rel = attrs.match(/\srel="([^"]+)"/)?.[1] || "";
+    const ariaLabel = attrs.match(/\saria-label="([^"]+)"/)?.[1] || "";
+    if (
+      !href.startsWith("https://www.scouting.org/cub-scout-adventures/") ||
+      target !== "_blank" ||
+      !/\bnoopener\b/.test(rel) ||
+      !/\bnoreferrer\b/.test(rel) ||
+      !/Scouting America/.test(ariaLabel)
+    ) {
+      problems.badAdventureCardLinks.push([path.relative(ROOT, file), href, target, rel, ariaLabel]);
+    }
+  }
 });
 
 Object.entries(cubScoutRanks).forEach(([rankSlug, rank]) => {
@@ -68,15 +92,20 @@ Object.entries(cubScoutRanks).forEach(([rankSlug, rank]) => {
     if (seen.has(adventure.slug)) problems.duplicateSlugs.push(`${rankSlug}:${adventure.slug}`);
     seen.add(adventure.slug);
 
-    if (adventure.icon.startsWith("/assets/images/")) {
+    if (!adventure.icon.startsWith(`/assets/images/cub-scouts/adventures/${rankSlug}/`)) {
+      problems.missingLocalAdventureIcons.push(adventure.icon);
+    } else {
       const iconPath = path.join(ROOT, adventure.icon.slice(1));
       if (!fs.existsSync(iconPath)) problems.missingLocalAdventureIcons.push(adventure.icon);
     }
-
-    if (!adventure.requirements || adventure.requirements.length === 0) {
-      problems.missingRequirements.push(`${rankSlug}:${adventure.slug}`);
-    }
   });
+
+  const rankDir = path.join(ROOT, "cub-scouts", "adventures", rankSlug);
+  if (fs.existsSync(rankDir)) {
+    fs.readdirSync(rankDir, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .forEach((entry) => problems.staleAdventureDetailDirectories.push(path.join("cub-scouts", "adventures", rankSlug, entry.name)));
+  }
 });
 
 const summary = {
@@ -86,7 +115,10 @@ const summary = {
   remoteScoutingImageDeps: problems.remoteScoutingImageDeps.length,
   duplicateSlugs: problems.duplicateSlugs.length,
   missingLocalAdventureIcons: problems.missingLocalAdventureIcons.length,
-  missingRequirements: problems.missingRequirements.length,
+  badAdventureCardLinks: problems.badAdventureCardLinks.length,
+  scoutingIframeUsage: problems.scoutingIframeUsage.length,
+  oldRequirementPlaceholders: problems.oldRequirementPlaceholders.length,
+  staleAdventureDetailDirectories: problems.staleAdventureDetailDirectories.length,
 };
 
 console.log(JSON.stringify({ summary, problems }, null, 2));
