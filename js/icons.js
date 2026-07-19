@@ -1,32 +1,130 @@
 (function () {
   const namespace = 'http://www.w3.org/2000/svg';
 
-  const icons = {
-    'calendar-days': [
+  const iconPaths = {
+    calendar: [
       '<path d="M8 2v4M16 2v4M3.5 9.5h17M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>',
       '<path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/>'
     ].join(''),
-    'user-round-plus': [
-      '<path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>',
-      '<circle cx="10" cy="7" r="4"/>',
-      '<path d="M19 8v6M22 11h-6"/>'
+    visitMeeting: [
+      '<path d="m11 17 2 2a2.8 2.8 0 0 0 4 0l4-4a2.8 2.8 0 0 0 0-4l-3.5-3.5a2.8 2.8 0 0 0-4 0l-.5.5"/>',
+      '<path d="m13 7-2-2a2.8 2.8 0 0 0-4 0l-4 4a2.8 2.8 0 0 0 0 4l3.5 3.5a2.8 2.8 0 0 0 4 0l.5-.5"/>',
+      '<path d="m8 12 2 2 4-4"/>'
     ].join(''),
-    'users-round': [
+    packMeeting: [
       '<path d="M18 21a5 5 0 0 0-10 0"/>',
       '<circle cx="13" cy="7" r="4"/>',
       '<path d="M22 21a4 4 0 0 0-3-3.87M6 17.13A4 4 0 0 0 3 21"/>',
       '<path d="M17.5 3.2a4 4 0 0 1 0 7.6M6.5 3.2a4 4 0 0 0 0 7.6"/>'
     ].join(''),
-    'calendar-check': [
+    camping: [
+      '<path d="M3 20h18"/>',
+      '<path d="m12 4 8 16H4Z"/>',
+      '<path d="m12 4 3 16"/>',
+      '<path d="m12 4-3 16"/>'
+    ].join(''),
+    fishing: [
+      '<path d="M6.5 12c2.4-4 7.2-5.4 13.5-4-1.2 2.3-3.2 4-6 5.1"/>',
+      '<path d="M20 8.1 22 6v5Z"/>',
+      '<path d="M3 15c2.2-1.9 4.7-2.4 7.5-1.4 2.8 1 5.4.5 7.5-1.4"/>',
+      '<circle cx="16" cy="9" r=".5"/>'
+    ].join(''),
+    hiking: [
+      '<path d="M4 17.5c1.8 1 3.7 1 5.5 0"/>',
+      '<path d="M14.5 17.5c1.8 1 3.7 1 5.5 0"/>',
+      '<path d="M7 14.5 8.5 9 12 7l3 2.5"/>',
+      '<path d="m12 7 1.5-3"/>',
+      '<path d="m9.5 12 3 2.5 1.5 4"/>'
+    ].join(''),
+    service: [
+      '<path d="M12 21s-7-4.4-9.2-8.1C.9 9.6 2.6 6 6.1 6c2 0 3.2 1.1 3.9 2.1C10.8 7.1 12 6 14 6c3.5 0 5.2 3.6 3.3 6.9C15.1 16.6 12 21 12 21Z"/>',
+      '<path d="M16 11h5M18.5 8.5v5"/>'
+    ].join(''),
+    blueGold: [
+      '<circle cx="12" cy="8" r="5"/>',
+      '<path d="m8.5 12.5-2 8 5.5-3 5.5 3-2-8"/>'
+    ].join(''),
+    graduation: [
+      '<path d="m22 10-10-5-10 5 10 5Z"/>',
+      '<path d="M6 12v5c3.5 2 8.5 2 12 0v-5"/>',
+      '<path d="M22 10v6"/>'
+    ].join(''),
+    resources: [
+      '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>',
+      '<path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5Z"/>'
+    ].join(''),
+    newFamilyGuide: [
+      '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>',
+      '<path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5Z"/>',
+      '<path d="M9 7h6M9 11h6"/>'
+    ].join(''),
+    team: [
+      '<path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>',
+      '<circle cx="10" cy="7" r="4"/>',
+      '<path d="M22 21v-2a4 4 0 0 0-3-3.87"/>',
+      '<path d="M17 3.13a4 4 0 0 1 0 7.75"/>'
+    ].join(''),
+    join: [
+      '<path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>',
+      '<circle cx="10" cy="7" r="4"/>',
+      '<path d="M19 8v6M22 11h-6"/>'
+    ].join(''),
+    safety: [
+      '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>',
+      '<path d="m9 12 2 2 4-5"/>'
+    ].join(''),
+    forms: [
+      '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>',
+      '<path d="M14 2v6h6"/>',
+      '<path d="M8 13h8M8 17h5"/>'
+    ].join(''),
+    pinewoodDerby: [
+      '<path d="M5 16h12l2-4-3-4H8l-3 4Z"/>',
+      '<path d="M7 12h10"/>',
+      '<circle cx="8" cy="18" r="2"/>',
+      '<circle cx="16" cy="18" r="2"/>'
+    ].join(''),
+    raingutterRegatta: [
+      '<path d="M4 19c2 1 4 1 6 0s4-1 6 0 4 1 6 0"/>',
+      '<path d="M5 15h14l-2 3H7Z"/>',
+      '<path d="M12 4v11"/>',
+      '<path d="m12 4 5 7H12Z"/>'
+    ].join(''),
+    contact: [
+      '<rect x="3" y="5" width="18" height="14" rx="2"/>',
+      '<path d="m3 7 9 6 9-6"/>'
+    ].join(''),
+    fallback: [
       '<path d="M8 2v4M16 2v4M3.5 9.5h17M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>',
       '<path d="m8 16 2.2 2.2L16 12.4"/>'
-    ].join(''),
-    'door-open': [
-      '<path d="M13 4h3a2 2 0 0 1 2 2v14"/>',
-      '<path d="M3 20h18"/>',
-      '<path d="M13 20V3.5L6 5v15"/>',
-      '<path d="M10 12h.01"/>'
     ].join('')
+  };
+
+  const icons = {
+    packMeeting: iconPaths.packMeeting,
+    calendar: iconPaths.calendar,
+    visitMeeting: iconPaths.visitMeeting,
+    camping: iconPaths.camping,
+    fishing: iconPaths.fishing,
+    hiking: iconPaths.hiking,
+    service: iconPaths.service,
+    blueGold: iconPaths.blueGold,
+    graduation: iconPaths.graduation,
+    resources: iconPaths.resources,
+    volunteerHelp: iconPaths.service,
+    newFamilyGuide: iconPaths.newFamilyGuide,
+    volunteer: iconPaths.service,
+    team: iconPaths.team,
+    join: iconPaths.join,
+    contact: iconPaths.contact,
+    safety: iconPaths.safety,
+    forms: iconPaths.forms,
+    pinewoodDerby: iconPaths.pinewoodDerby,
+    raingutterRegatta: iconPaths.raingutterRegatta,
+    'calendar-days': iconPaths.calendar,
+    'user-round-plus': iconPaths.visitMeeting,
+    'users-round': iconPaths.packMeeting,
+    'calendar-check': iconPaths.fallback
   };
 
   function renderIcon(name) {
@@ -51,6 +149,7 @@
   window.Pack321Icons = {
     hydrate,
     renderIcon,
+    supportedKeys: Object.freeze(Object.keys(icons)),
   };
 
   document.addEventListener('DOMContentLoaded', () => hydrate());

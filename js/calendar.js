@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const iconForEvent = (event) => {
     const title = (event.title || '').toLowerCase();
     const text = `${title} ${event.description || ''}`.toLowerCase();
-    if (title.includes('visit')) return 'user-round-plus';
-    if (title.includes('meeting') || text.includes('gathering')) return 'users-round';
-    if (text.includes('visit') || text.includes('new famil')) return 'user-round-plus';
-    return 'calendar-days';
+    if (title.includes('visit')) return 'visitMeeting';
+    if (title.includes('meeting') || text.includes('gathering')) return 'packMeeting';
+    if (text.includes('visit') || text.includes('new famil')) return 'visitMeeting';
+    return 'calendar';
   };
 
   const card = (event, date) => {
