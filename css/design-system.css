@@ -2,6 +2,8 @@
   --navy: #082B57;
   --navy-2: #0D356A;
   --gold: #FFC72C;
+  --pack-navy: var(--navy);
+  --pack-gold: var(--gold);
   --light-bg: #F7F6F2;
   --dark-text: #14213D;
   --white: #ffffff;

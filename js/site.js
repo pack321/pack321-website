@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ...image('fishing', '3ea43d80', '9d49e4dd'),
       summary: 'Learn patience, conservation, and the excitement of catching your first fish.',
       description: 'Fishing activities introduce Scouts to patience, conservation, outdoor responsibility, and the excitement of catching their first fish.',
-      expectations: 'Events may include basic casting instruction, safe use of fishing equipment, local fishing opportunities, and guidance from experienced adults. Activities should remain welcoming for beginners.',
+      expectations: 'Events may include basic casting instruction, safe use of fishing equipment, local fishing opportunities, and guidance from experienced adults. Activities are designed to be welcoming for beginners, with plenty of guidance and encouragement along the way.',
       highlights: ['Beginner-friendly instruction', 'Safety and equipment basics', 'Conservation and respect for nature', 'Time outdoors with family and friends'],
       focalPoint: focus(
         responsivePoint(point('34%', '46%'), point('32%', '46%'), point('30%', '44%')),
