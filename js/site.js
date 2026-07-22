@@ -17,15 +17,43 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const pathname = window.location.pathname.replace(/\/index\.html$/i, '/').replace(/\/+$/, '') || '/';
+  const activeRoutes = [
+    ['/', ['/']],
+    ['/why-pack321/', ['/why-pack321', '/why-pack321.html']],
+    ['/cub-scouts/', ['/cub-scouts', '/cub-scouts.html', '/cub-scouts/adventures']],
+    ['/adventures/', ['/adventures', '/adventures.html']],
+    ['/calendar/', ['/calendar', '/events-calendar.html']],
+    ['/resources/', ['/resources', '/resources.html']],
+    ['/team/', ['/team', '/team.html']],
+    ['/join/', ['/join', '/join.html']],
+    ['/contact/', ['/contact', '/contact.html']],
+  ];
+  document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.classList.remove('active');
+    link.removeAttribute('aria-current');
+    const hrefPath = new URL(link.getAttribute('href'), window.location.origin).pathname.replace(/\/+$/, '') || '/';
+    const matchedRoute = activeRoutes.find(([target, aliases]) => {
+      const cleanTarget = target.replace(/\/+$/, '') || '/';
+      if (hrefPath !== cleanTarget) return false;
+      return aliases.some((alias) => pathname === alias || (alias !== '/' && pathname.startsWith(`${alias}/`)));
+    });
+    if (matchedRoute) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
 });
 
 (() => {
-  const adventuresUrl = 'adventures.html';
+  const siteUrl = 'https://pack321wi.org';
+  const adventuresUrl = '/adventures/';
   const learnMoreLabel = 'Learn More →';
 
   const image = (name, large, small) => ({
-    src: `assets/optimized/adventures/${name}-640.${large}.webp`,
-    srcset: `assets/optimized/adventures/${name}-360.${small}.webp 360w, assets/optimized/adventures/${name}-640.${large}.webp 640w`,
+    src: `/assets/optimized/adventures/${name}-640.${large}.webp`,
+    srcset: `/assets/optimized/adventures/${name}-360.${small}.webp 360w, /assets/optimized/adventures/${name}-640.${large}.webp 640w`,
   });
 
   const point = (x, y) => ({ x, y });
@@ -35,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const adventureData = [
     {
       id: 'camping',
+      slug: 'camping',
       title: 'Camping',
       ...image('camping', 'f8beed81', 'abc85275'),
       summary: 'Camp under the stars, learn outdoor skills, and make lifelong memories.',
@@ -49,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'fishing',
+      slug: 'fishing',
       title: 'Fishing',
       ...image('fishing', '3ea43d80', '9d49e4dd'),
       summary: 'Learn patience, conservation, and the excitement of catching your first fish.',
@@ -63,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'pinewood-derby',
+      slug: 'pinewood-derby',
       title: 'Pinewood Derby',
       ...image('pinewood-derby', '135545b4', 'de0d4105'),
       summary: 'Design it. Build it. Race it. Cheer each other on.',
@@ -77,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'raingutter-regatta',
+      slug: 'raingutter-regatta',
       title: 'Raingutter Regatta',
       ...image('raingutter-regatta', 'a2d3d1b6', 'ba627008'),
       summary: 'Friendly competition and lots of laughs for every Scout.',
@@ -91,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'hiking',
+      slug: 'hiking',
       title: 'Hiking',
       ...image('hiking', '70833d18', '3d740c5b'),
       summary: 'Discover nature while building confidence and teamwork.',
@@ -105,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'service',
+      slug: 'service',
       title: 'Service',
       ...image('service', 'd16e9200', 'eb5cbdfa'),
       summary: 'We believe in giving back to our community.',
@@ -119,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'blue-gold',
+      slug: 'blue-gold',
       title: 'Blue & Gold',
       ...image('blue-gold', 'e4046dc9', '69ebe23d'),
       summary: 'Celebrate achievements and milestones with the entire Pack.',
@@ -133,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'graduation',
+      slug: 'graduation',
       title: 'Graduation',
       ...image('graduation', 'c975276f', '6be58028'),
       summary: 'Every adventure leads to the next step in their journey.',
@@ -164,6 +200,96 @@ document.addEventListener('DOMContentLoaded', () => {
     element.style.setProperty('--focal-mobile-y', focalPoint.mobile.y);
   }
 
+  const adventureBySlug = new Map(adventureData.map((adventure) => [adventure.slug, adventure]));
+
+  function adventureUrl(adventure) {
+    return `${adventuresUrl}${adventure.slug}/`;
+  }
+
+  function normalizedPathname(pathname) {
+    const cleanPath = pathname
+      .replace(/\/index\.html$/i, '/')
+      .replace(/\/adventures\.html$/i, '/adventures/')
+      .replace(/\/+$/, '')
+      .toLowerCase();
+    return cleanPath || '/';
+  }
+
+  function getRouteFromPathname(pathname) {
+    const normalized = normalizedPathname(pathname);
+    if (normalized === '/adventures') return { view: 'adventures' };
+    const adventureMatch = normalized.match(/^\/adventures\/([^/]+)$/);
+    if (adventureMatch) return { view: 'adventure', slug: adventureMatch[1] };
+    return { view: 'page', pathname: normalized };
+  }
+
+  function setMetaValue(selector, attribute, value) {
+    const element = document.head.querySelector(selector);
+    if (element) element.setAttribute(attribute, value);
+  }
+
+  function setAdventureMetadata(adventure, defaults) {
+    const title = `${adventure.title} | Cub Scout Pack 321`;
+    const description = adventure.description;
+    const url = `${siteUrl}${adventureUrl(adventure)}`;
+    document.title = title;
+    setMetaValue('meta[name="description"]', 'content', description);
+    setMetaValue('link[rel="canonical"]', 'href', url);
+    setMetaValue('meta[property="og:title"]', 'content', title);
+    setMetaValue('meta[property="og:description"]', 'content', description);
+    setMetaValue('meta[property="og:url"]', 'content', url);
+    setMetaValue('meta[name="twitter:title"]', 'content', title);
+    setMetaValue('meta[name="twitter:description"]', 'content', description);
+    if (!defaults) return;
+  }
+
+  function restoreDefaultMetadata(defaults) {
+    if (!defaults) return;
+    document.title = defaults.title;
+    setMetaValue('meta[name="description"]', 'content', defaults.description);
+    setMetaValue('link[rel="canonical"]', 'href', defaults.canonical);
+    setMetaValue('meta[property="og:title"]', 'content', defaults.ogTitle);
+    setMetaValue('meta[property="og:description"]', 'content', defaults.ogDescription);
+    setMetaValue('meta[property="og:url"]', 'content', defaults.ogUrl);
+    setMetaValue('meta[name="twitter:title"]', 'content', defaults.twitterTitle);
+    setMetaValue('meta[name="twitter:description"]', 'content', defaults.twitterDescription);
+  }
+
+  function readDefaultMetadata() {
+    return {
+      title: document.title,
+      description: document.head.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      canonical: document.head.querySelector('link[rel="canonical"]')?.getAttribute('href') || `${siteUrl}${adventuresUrl}`,
+      ogTitle: document.head.querySelector('meta[property="og:title"]')?.getAttribute('content') || document.title,
+      ogDescription: document.head.querySelector('meta[property="og:description"]')?.getAttribute('content') || '',
+      ogUrl: document.head.querySelector('meta[property="og:url"]')?.getAttribute('content') || `${siteUrl}${adventuresUrl}`,
+      twitterTitle: document.head.querySelector('meta[name="twitter:title"]')?.getAttribute('content') || document.title,
+      twitterDescription: document.head.querySelector('meta[name="twitter:description"]')?.getAttribute('content') || '',
+    };
+  }
+
+  function adventureOverviewMetadata(defaults) {
+    const description = 'See the camping, fishing, racing, hiking, service, and family adventures Pack 321 offers Scouts in Oak Creek and surrounding communities.';
+    return {
+      ...defaults,
+      title: 'Cub Scout Adventures | Pack 321 Oak Creek',
+      description,
+      canonical: `${siteUrl}${adventuresUrl}`,
+      ogTitle: 'Cub Scout Adventures | Pack 321 Oak Creek',
+      ogDescription: description,
+      ogUrl: `${siteUrl}${adventuresUrl}`,
+      twitterTitle: 'Cub Scout Adventures | Pack 321 Oak Creek',
+      twitterDescription: description,
+    };
+  }
+
+  function renderRouteNotice(message) {
+    const host = document.querySelector('[data-adventure-route-notice]');
+    if (!host) return;
+    host.textContent = message || '';
+    host.hidden = !message;
+  }
+
   function renderAdventureCard(adventure) {
     const card = document.createElement('button');
     card.type = 'button';
@@ -174,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.setAttribute('aria-label', `Learn more about Pack 321 ${adventure.title} adventures`);
     applyFocalPoint(card, adventure.focalPoint.card);
     card.innerHTML = `
-      <img class="adventure-photo" src="${adventure.src}" srcset="${adventure.srcset}" sizes="(max-width: 520px) calc(100vw - 28px), (max-width: 820px) calc((100vw - 46px) / 2), 170px" width="640" height="480" alt="" loading="lazy" decoding="async" data-fallback="assets/images/placeholders/card-placeholder.jpg">
+      <img class="adventure-photo" src="${adventure.src}" srcset="${adventure.srcset}" sizes="(max-width: 520px) calc(100vw - 28px), (max-width: 820px) calc((100vw - 46px) / 2), 170px" width="640" height="480" alt="" loading="lazy" decoding="async" data-fallback="/assets/images/placeholders/card-placeholder.jpg">
       <span class="adventure-fallback"></span>
       <span class="adventure-overlay">
         <span class="adventure-card-title">${escapeHtml(adventure.title)}</span>
@@ -184,7 +310,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   class AdventureModal {
-    constructor() {
+    constructor(onClose) {
+      this.onClose = onClose;
       this.returnFocus = null;
       this.root = document.createElement('div');
       this.root.className = 'home-adventure-modal';
@@ -215,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.addEventListener('keydown', (event) => this.onKeydown(event));
     }
 
-    open(adventure, origin) {
+    open(adventure, origin, options = {}) {
       this.returnFocus = origin;
       this.hero.src = adventure.src;
       this.hero.srcset = adventure.srcset;
@@ -229,14 +356,15 @@ document.addEventListener('DOMContentLoaded', () => {
       this.root.hidden = false;
       document.body.classList.add('modal-open');
       this.dialog.scrollTop = 0;
-      this.closeButton.focus();
+      if (options.focus !== false) this.closeButton.focus();
     }
 
-    close() {
+    close(options = {}) {
       if (this.root.hidden) return;
       this.root.hidden = true;
       document.body.classList.remove('modal-open');
-      this.returnFocus?.focus();
+      if (options.restoreFocus !== false) this.returnFocus?.focus();
+      if (!options.fromPopState) this.onClose?.();
     }
 
     onKeydown(event) {
@@ -263,19 +391,75 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', () => {
     const grids = document.querySelectorAll('[data-home-adventure-grid], [data-adventure-card-grid]');
     if (!grids.length) return;
-    const modal = new AdventureModal();
+    const routeEnabled = Boolean(document.querySelector('[data-adventure-card-grid]')) || getRouteFromPathname(window.location.pathname).view !== 'page';
+    const initialRoute = getRouteFromPathname(window.location.pathname);
+    const defaults = initialRoute.view === 'adventure' ? adventureOverviewMetadata(readDefaultMetadata()) : readDefaultMetadata();
+    const modal = new AdventureModal(() => {
+      if (!routeEnabled) return;
+      if (getRouteFromPathname(window.location.pathname).view === 'adventure') {
+        window.history.pushState({ view: 'adventures' }, '', adventuresUrl);
+      }
+      renderRouteNotice('');
+      restoreDefaultMetadata(defaults);
+    });
+
+    function openAdventureRoute(adventure, origin, options = {}) {
+      renderRouteNotice('');
+      modal.open(adventure, origin, options);
+      setAdventureMetadata(adventure, defaults);
+    }
+
+    function syncViewToCurrentUrl(options = {}) {
+      if (!routeEnabled) return;
+      const route = getRouteFromPathname(window.location.pathname);
+      if (route.view === 'adventure') {
+        const adventure = adventureBySlug.get(route.slug);
+        if (!adventure) {
+          modal.close({ fromPopState: true, restoreFocus: false });
+          renderRouteNotice('Adventure not found. Explore the current Pack 321 adventures below.');
+          document.title = 'Adventure Not Found | Cub Scout Pack 321';
+          return;
+        }
+        openAdventureRoute(adventure, null, { focus: options.focus !== false });
+        return;
+      }
+      if (route.view === 'adventures') {
+        modal.close({ fromPopState: true, restoreFocus: false });
+        renderRouteNotice('');
+        restoreDefaultMetadata(defaults);
+      }
+    }
+
+    if (routeEnabled) {
+      const route = getRouteFromPathname(window.location.pathname);
+      if (route.view === 'adventure') {
+        window.history.replaceState({ view: 'adventure', slug: route.slug }, '', window.location.pathname);
+      } else if (route.view === 'adventures') {
+        window.history.replaceState({ view: 'adventures' }, '', adventuresUrl);
+      }
+      window.addEventListener('popstate', () => syncViewToCurrentUrl({ focus: true }));
+    }
+
     grids.forEach((grid) => {
       grid.replaceChildren();
       adventureData.forEach((adventure) => {
         const card = renderAdventureCard(adventure);
-        card.addEventListener('click', () => modal.open(adventure, card));
+        card.addEventListener('click', () => {
+          if (routeEnabled) {
+            window.history.pushState({ view: 'adventure', slug: adventure.slug }, '', adventureUrl(adventure));
+            openAdventureRoute(adventure, card);
+            return;
+          }
+          modal.open(adventure, card);
+        });
         card.addEventListener('keydown', (event) => {
           if (event.key !== 'Enter' && event.key !== ' ') return;
           event.preventDefault();
-          modal.open(adventure, card);
+          card.click();
         });
         grid.append(card);
       });
     });
+    syncViewToCurrentUrl({ focus: false });
   });
 })();

@@ -18,6 +18,19 @@
 .adventure-card:hover .adventure-overlay, .adventure-card:focus-visible .adventure-overlay { background: linear-gradient(180deg, rgba(8,43,87,.16) 0%, rgba(8,43,87,.62) 42%, rgba(8,43,87,.99) 100%); }
 .adventure-card:hover .adventure-overlay p, .adventure-card:focus-visible .adventure-overlay p { max-height: 120px; margin-top: 8px; opacity: 1; }
 .adventure-card:hover .adventure-overlay strong, .adventure-card:focus-visible .adventure-overlay strong { color: #fff; transform: translateX(3px); }
+.route-notice {
+  max-width: 720px;
+  margin: -8px auto 24px;
+  padding: 14px 18px;
+  border-left: 5px solid var(--gold);
+  background: #fff;
+  color: var(--navy);
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
+.route-notice[hidden] {
+  display: none;
+}
 .brand-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; } .brand-card, .event-card { border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: var(--shadow); }
 .brand-card { position: relative; overflow: hidden; min-height: 220px; padding: 30px; } .brand-card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 5px; background: var(--gold); }
 .card-medallion { width: 62px; height: 62px; display: grid; place-items: center; margin-bottom: 18px; border: 4px solid var(--gold); border-radius: 50%; background: var(--navy); color: var(--gold); font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; box-shadow: 0 10px 22px rgba(8,43,87,.22); }

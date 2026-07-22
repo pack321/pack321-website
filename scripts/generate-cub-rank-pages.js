@@ -29,7 +29,18 @@ function fromRoot(depth, target) {
 }
 
 function sitePath(target) {
-  return target === "index.html" ? "/" : `/${target}`;
+  const cleanRoutes = {
+    "index.html": "/",
+    "why-pack321.html": "/why-pack321/",
+    "cub-scouts.html": "/cub-scouts/",
+    "adventures.html": "/adventures/",
+    "events-calendar.html": "/calendar/",
+    "resources.html": "/resources/",
+    "team.html": "/team/",
+    "join.html": "/join/",
+    "contact.html": "/contact/",
+  };
+  return cleanRoutes[target] || `/${target}`;
 }
 
 function faviconLinks() {
@@ -166,7 +177,7 @@ function breadcrumbs(rank, current) {
   <nav class="rank-breadcrumbs wrap" aria-label="Breadcrumb">
     <a href="/">Home</a>
     <span aria-hidden="true">></span>
-    <a href="/cub-scouts.html">Cub Scouts</a>
+    <a href="/cub-scouts/">Cub Scouts</a>
     <span aria-hidden="true">></span>
     ${current ? `<a href="/cub-scouts/adventures/${rank.slug}/">${escapeHtml(rank.name)}</a><span aria-hidden="true">></span><span>${escapeHtml(current)}</span>` : `<span>${escapeHtml(rank.name)}</span><span aria-hidden="true">></span><span>Adventures</span>`}
   </nav>`;
@@ -243,7 +254,7 @@ function disclaimer() {
           <h2>Please Note</h2>
           <p>Pack 321 adventure information is provided for convenience. Scouting America maintains the official requirements.</p>
         </div>
-        <a class="button light" href="/cub-scouts.html">About Cub Scouts</a>
+        <a class="button light" href="/cub-scouts/">About Cub Scouts</a>
       </aside>
     </div>
   </section>`;
