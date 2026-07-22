@@ -18,28 +18,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const pathname = window.location.pathname.replace(/\/index\.html$/i, '/').replace(/\/+$/, '') || '/';
-  const activeRoutes = [
-    ['/', ['/']],
-    ['/why-pack321/', ['/why-pack321', '/why-pack321.html']],
-    ['/cub-scouts/', ['/cub-scouts', '/cub-scouts.html', '/cub-scouts/adventures']],
-    ['/adventures/', ['/adventures', '/adventures.html']],
-    ['/calendar/', ['/calendar', '/events-calendar.html']],
-    ['/resources/', ['/resources', '/resources.html']],
-    ['/team/', ['/team', '/team.html']],
-    ['/join/', ['/join', '/join.html']],
-    ['/contact/', ['/contact', '/contact.html']],
-  ];
+  const firstSegment = window.location.pathname.split('/').filter(Boolean)[0] || 'home';
+  const activeRouteByHref = {
+    '/': 'home',
+    '/why-pack321/': 'why-pack321',
+    '/cub-scouts/': 'cub-scouts',
+    '/adventures/': 'adventures',
+    '/calendar/': 'calendar',
+    '/resources/': 'resources',
+    '/team/': 'team',
+    '/join/': 'join',
+    '/contact/': 'contact',
+  };
   document.querySelectorAll('.nav-links a').forEach((link) => {
     link.classList.remove('active');
     link.removeAttribute('aria-current');
-    const hrefPath = new URL(link.getAttribute('href'), window.location.origin).pathname.replace(/\/+$/, '') || '/';
-    const matchedRoute = activeRoutes.find(([target, aliases]) => {
-      const cleanTarget = target.replace(/\/+$/, '') || '/';
-      if (hrefPath !== cleanTarget) return false;
-      return aliases.some((alias) => pathname === alias || (alias !== '/' && pathname.startsWith(`${alias}/`)));
-    });
-    if (matchedRoute) {
+    const hrefPath = new URL(link.getAttribute('href'), window.location.origin).pathname;
+    if (activeRouteByHref[hrefPath] === firstSegment) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     }

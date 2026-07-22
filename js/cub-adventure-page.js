@@ -77,7 +77,7 @@
       <nav class="rank-breadcrumbs wrap" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">></span>
-        <a href="/cub-scouts.html">Cub Scouts</a>
+        <a href="/cub-scouts/">Cub Scouts</a>
         <span aria-hidden="true">></span>
         <a href="/cub-scouts/adventures/${currentRank.slug}/">${escapeHtml(currentRank.name)}</a>
         <span aria-hidden="true">></span>
@@ -170,7 +170,7 @@
               <h2>Please Note</h2>
               <p>Pack 321 adventure information is provided for convenience. Scouting America maintains the official requirements.</p>
             </div>
-            <a class="button light" href="/cub-scouts.html">About Cub Scouts</a>
+            <a class="button light" href="/cub-scouts/">About Cub Scouts</a>
           </aside>
         </div>
       </section>
@@ -195,7 +195,7 @@
       <nav class="rank-breadcrumbs wrap" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">></span>
-        <a href="/cub-scouts.html">Cub Scouts</a>
+        <a href="/cub-scouts/">Cub Scouts</a>
         <span aria-hidden="true">></span>
         <a href="/cub-scouts/adventures/${currentRank.slug}/">${escapeHtml(currentRank.name)}</a>
         <span aria-hidden="true">></span>
@@ -235,7 +235,7 @@
           <p class="rank-adventure-kicker">Page not found</p>
           <h1>Adventure Page Not Found</h1>
           <p>The requested Cub Scout rank or adventure could not be found.</p>
-          <a class="button gold" href="/cub-scouts.html">Back to Cub Scouts</a>
+          <a class="button gold" href="/cub-scouts/">Back to Cub Scouts</a>
         </div>
       </section>
     `;

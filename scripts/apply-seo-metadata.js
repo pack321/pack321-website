@@ -21,77 +21,77 @@ const pages = {
     h1: "Cub Scout Pack 321 in Oak Creek, Wisconsin",
     h1Html: '<h1 class="sr-only">Cub Scout Pack 321 in Oak Creek, Wisconsin</h1>',
   },
-  "why-pack321.html": {
+  "why-pack321/index.html": {
     url: `${SITE}/why-pack321/`,
     title: "Why Choose Cub Scout Pack 321 | Oak Creek, WI",
     description: "Learn why families in Oak Creek and surrounding communities choose Cub Scout Pack 321 for character, friendship, service, and adventure.",
     h1: "Why Families Choose Pack 321",
     h1Html: '<h1><span>Why Families </span><span class="gold">Choose Pack 321</span></h1>',
   },
-  "cub-scouts.html": {
+  "cub-scouts/index.html": {
     url: `${SITE}/cub-scouts/`,
     title: "Cub Scouts at Pack 321 | Oak Creek, WI",
     description: "Explore the Cub Scout journey with Pack 321, serving Oak Creek and surrounding communities from Lion through Arrow of Light.",
     h1: "Cub Scouts at Pack 321",
     h1Html: '<h1><span>Cub Scouts </span><span class="gold">at Pack 321</span></h1>',
   },
-  "adventures.html": {
+  "adventures/index.html": {
     url: `${SITE}/adventures/`,
     title: "Cub Scout Adventures | Pack 321 Oak Creek",
     description: "See the camping, fishing, racing, hiking, service, and family adventures Pack 321 offers Scouts in Oak Creek and surrounding communities.",
     h1: "Adventure Lives Here",
     h1Html: '<h1><span>Adventure </span><span class="gold">Lives Here</span></h1>',
   },
-  "events-calendar.html": {
+  "calendar/index.html": {
     url: `${SITE}/calendar/`,
     title: "Pack 321 Events and Calendar | Oak Creek, WI",
     description: "View Pack 321 meetings, adventures, and family events for Oak Creek and surrounding communities, including gatherings at Carollton Elementary.",
     h1: "Pack 321 Events and Calendar",
     h1Html: '<h1><span>Pack 321 </span><span class="gold">Events and Calendar</span></h1>',
   },
-  "resources.html": {
+  "resources/index.html": {
     url: `${SITE}/resources/`,
     title: "Pack 321 Family Resources | Oak Creek, WI",
     description: "Find Pack 321 resources for families in Oak Creek and surrounding communities, including uniforms, forms, volunteering, and scouting support.",
     h1: "Pack 321 Family Resources",
     h1Html: '<h1><span>Pack 321 </span><span class="gold">Family Resources</span></h1>',
   },
-  "new-family-guide.html": {
+  "new-family-guide/index.html": {
     url: `${SITE}/new-family-guide/`,
     title: "New Family Guide | Cub Scout Pack 321",
     description: "A welcoming guide for new Cub Scout Pack 321 families in Oak Creek and surrounding communities, including meetings, ranks, uniforms, communication, safety, and volunteering.",
     h1: "Welcome to Pack 321",
     h1Html: '<h1><span>Welcome to </span><span class="gold">Pack 321</span></h1>',
   },
-  "join.html": {
+  "join/index.html": {
     url: `${SITE}/join/`,
     title: "Join Cub Scout Pack 321 | Oak Creek, WI",
     description: "Learn how to join Cub Scout Pack 321, visit a meeting at Carollton Elementary, and connect with scouting families in Oak Creek and surrounding communities.",
     h1: "Join Pack 321",
     h1Html: '<h1><span>Join </span><span class="gold">Pack 321</span></h1>',
   },
-  "contact.html": {
+  "contact/index.html": {
     url: `${SITE}/contact/`,
     title: "Contact Cub Scout Pack 321 | Oak Creek, WI",
     description: "Contact Cub Scout Pack 321 in Oak Creek, Wisconsin to ask questions, visit a meeting at Carollton, or learn more about joining.",
     h1: "Contact Pack 321",
     h1Html: '<h1><span>Contact </span><span class="gold">Pack 321</span></h1>',
   },
-  "team.html": {
+  "team/index.html": {
     url: `${SITE}/team/`,
     title: "Pack 321 Leadership Team | Oak Creek, WI",
     description: "Meet the volunteer leaders who support Cub Scout Pack 321 families in Oak Creek and surrounding communities.",
     h1: "Meet the Pack 321 Leadership Team",
     h1Html: '<h1><span>Meet the Pack 321 </span><span class="gold">Leadership Team</span></h1>',
   },
-  "uniforms.html": {
+  "uniforms/index.html": {
     url: `${SITE}/uniforms/`,
     title: "Pack 321 Uniform Standards | Oak Creek, WI",
     description: "Review Pack 321 Cub Scout uniform standards by den and rank for families in Oak Creek and surrounding communities.",
     h1: "Pack 321 Uniform Standards",
     h1Html: '<h1><span>Pack 321 </span><span class="gold">Uniform Standards</span></h1>',
   },
-  "volunteer.html": {
+  "volunteer/index.html": {
     url: `${SITE}/volunteer/`,
     title: "Volunteer With Pack 321 | Oak Creek, WI",
     description: "Learn how parents, grandparents, and community members can volunteer with Cub Scout Pack 321 in Oak Creek and surrounding communities.",

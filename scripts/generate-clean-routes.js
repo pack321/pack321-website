@@ -4,18 +4,18 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://pack321wi.org";
 
-const cleanPages = [
-  { source: "why-pack321.html", route: "why-pack321/" },
-  { source: "cub-scouts.html", route: "cub-scouts/" },
-  { source: "adventures.html", route: "adventures/" },
-  { source: "events-calendar.html", route: "calendar/" },
-  { source: "resources.html", route: "resources/" },
-  { source: "new-family-guide.html", route: "new-family-guide/" },
-  { source: "join.html", route: "join/" },
-  { source: "contact.html", route: "contact/" },
-  { source: "team.html", route: "team/" },
-  { source: "uniforms.html", route: "uniforms/" },
-  { source: "volunteer.html", route: "volunteer/" },
+const redirects = [
+  { file: "why-pack321.html", route: "why-pack321/", label: "Why Pack 321" },
+  { file: "cub-scouts.html", route: "cub-scouts/", label: "Cub Scouts" },
+  { file: "adventures.html", route: "adventures/", label: "Cub Scout Adventures" },
+  { file: "events-calendar.html", route: "calendar/", label: "Pack 321 Calendar" },
+  { file: "resources.html", route: "resources/", label: "Pack 321 Resources" },
+  { file: "new-family-guide.html", route: "new-family-guide/", label: "New Family Guide" },
+  { file: "join.html", route: "join/", label: "Join Pack 321" },
+  { file: "contact.html", route: "contact/", label: "Contact Pack 321" },
+  { file: "team.html", route: "team/", label: "Pack 321 Team" },
+  { file: "uniforms.html", route: "uniforms/", label: "Pack 321 Uniforms" },
+  { file: "volunteer.html", route: "volunteer/", label: "Volunteer With Pack 321" },
 ];
 
 const adventures = [
@@ -107,15 +107,6 @@ function setSocialRoute(html, { title, description, url }) {
     .replace(/<meta\s+name=["']twitter:description["'][^>]*>/i, `<meta name="twitter:description" content="${safeDescription}">`);
 }
 
-function cleanRouteHtml(source, route) {
-  const url = `${SITE}/${route}`;
-  return setSocialRoute(setCanonical(rootRelativeAssets(source), url), {
-    title: source.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || "Cub Scout Pack 321",
-    description: source.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["'][^>]*>/i)?.[1] || "",
-    url,
-  });
-}
-
 function adventureRouteHtml(source, adventure) {
   const url = `${SITE}/adventures/${adventure.slug}/`;
   const title = `${adventure.title} | Cub Scout Pack 321`;
@@ -131,13 +122,32 @@ function adventureRouteHtml(source, adventure) {
   return html;
 }
 
-cleanPages.forEach(({ source, route }) => {
-  write(`${route}index.html`, cleanRouteHtml(read(source), route));
-});
+function redirectHtml({ route, label }) {
+  const href = `/${route}`;
+  const canonical = `${SITE}/${route}`;
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <link rel="canonical" href="${canonical}">
+  <meta http-equiv="refresh" content="0; url=${href}">
+  <script>window.location.replace("${href}");</script>
+</head>
+<body>
+  <p>Redirecting to <a href="${href}">${label}</a>.</p>
+</body>
+</html>
+`;
+}
 
-const adventuresShell = read("adventures.html");
+const adventuresShell = read("adventures/index.html");
 adventures.forEach((adventure) => {
   write(`adventures/${adventure.slug}/index.html`, adventureRouteHtml(adventuresShell, adventure));
+});
+
+redirects.forEach((redirect) => {
+  write(redirect.file, redirectHtml(redirect));
 });
 
 const notFound = `<!doctype html>
@@ -170,4 +180,4 @@ const notFound = `<!doctype html>
 
 write("404.html", notFound);
 
-console.log(`Generated ${cleanPages.length} clean page routes and ${adventures.length} adventure routes.`);
+console.log(`Generated ${adventures.length} adventure routes and ${redirects.length} legacy redirects.`);
