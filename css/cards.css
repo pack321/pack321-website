@@ -39,6 +39,16 @@
   line-height: 1.05;
   text-transform: uppercase;
 }
+.journey-rank-title span {
+  display: block;
+}
+.journey-rank-card.aol .journey-rank-title {
+  line-height: .9;
+  height: 1.2rem;
+  margin-top: 14px;
+  overflow: visible;
+  transform: translateY(-10px);
+}
 .journey-rank-grade {
   margin: 10px 0 0;
   color: var(--pack-navy, var(--navy)) !important;
