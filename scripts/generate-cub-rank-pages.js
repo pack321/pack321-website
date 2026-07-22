@@ -78,7 +78,6 @@ function metadata({ title, description, canonical }) {
 
 function header(depth) {
   return `
-<div class="construction-banner">Pack 321 Website Preview - Construction / Leadership Review Version</div>
 <header class="site-header">
   <div class="wrap nav-inner">
     <a class="brand" href="${sitePath("index.html")}" aria-label="Pack 321 Home">
@@ -114,8 +113,7 @@ function footer(depth) {
     <div class="footer-scouting"><img class="scouting-america-logo" src="${fromRoot(depth, "assets/logos/scouting-america-logo-reversed.png")}" alt="Scouting America"><p>Prepared. For Life.</p><h4 class="be-scout">Be A Scout</h4></div>
   </div>
   <div class="wrap footer-bottom">Preparing young people for life.</div>
-</footer>
-<a class="feedback-float" href="mailto:wicubscoutpack321@gmail.com?subject=Pack%20321%20Website%20Feedback">Leave Feedback</a>`;
+</footer>`;
 }
 
 function pageShell({ depth, meta, appAttributes }) {
