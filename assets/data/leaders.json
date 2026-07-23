@@ -2,11 +2,13 @@
   "executive": [
     {
       "role": "Committee Chair",
+      "secondaryRole": "Chartered Organization Representative",
       "name": "Jason Griffin",
-      "started": "2019",
+      "started": 2023,
       "favorite": "Camping",
       "photo": "assets/images/leaders/committee-chair.jpg",
       "email": "chair@pack321wi.org",
+      "contactLabel": "Contact Chair",
       "bio": "Provides leadership, long-term planning, and support to ensure every Pack family has an exceptional experience."
     },
     {
@@ -16,6 +18,7 @@
       "favorite": "Camping",
       "photo": "assets/images/leaders/cubmaster.jpg",
       "email": "cubmaster@pack321wi.org",
+      "contactLabel": "Contact Cubmaster",
       "bio": "Creates memorable adventures, leads Pack meetings, mentors Scouts, and welcomes families into Pack 321."
     },
     {
@@ -25,15 +28,17 @@
       "favorite": "Hiking",
       "photo": "assets/images/leaders/assistant-cubmaster.jpg",
       "email": "cubmaster@pack321wi.org",
+      "contactLabel": "Contact Assistant Cubmaster",
       "bio": "Supports Pack meetings, outdoor adventures, and helps every Scout feel included."
     },
     {
-      "role": "Secretary",
+      "role": "Secretary / Communications",
       "name": "Heather Rankel",
       "started": 2024,
       "favorite": "Blue & Gold",
       "photo": "assets/images/leaders/secretary.jpg",
       "email": "secretary@pack321wi.org",
+      "contactLabel": "Contact Secretary",
       "bio": "Keeps Pack families informed through communications, newsletters, meeting coordination, and organizational support."
     },
     {
@@ -43,6 +48,7 @@
       "favorite": "Raingutter Regatta",
       "photo": "assets/images/leaders/treasurer.jpg",
       "email": "treasurer@pack321wi.org",
+      "contactLabel": "Contact Treasurer",
       "bio": "Manages Pack finances, budgeting, fundraising support, and helps ensure resources are available for every Scout."
     }
   ],
@@ -50,141 +56,128 @@
     {
       "role": "Lion Den Leader",
       "den": "Lion Den",
-      "name": "Leader Name",
-      "started": 2024,
-      "favorite": "Story Time",
-      "photo": "assets/images/leaders/lion-den-leader.jpg",
-      "bio": "Guides Lion Scouts and families through their first year of Cub Scout adventures."
+      "name": "",
+      "status": "volunteerOpportunity",
+      "started": null,
+      "favorite": "Help Lion Scouts begin their Cub Scout journey",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
+      "bio": "A volunteer opportunity for a family member who wants to guide Lion Scouts and their families."
     },
     {
       "role": "Tiger Den Leader",
       "den": "Tiger Den",
-      "name": "Leader Name",
-      "started": 2023,
-      "favorite": "Fishing",
+      "name": "Andy Donalds",
+      "started": 2024,
+      "favorite": "Camping",
       "photo": "assets/images/leaders/tiger-den-leader.jpg",
       "bio": "Helps Tiger Scouts build confidence through hands-on adventures and family participation."
     },
     {
       "role": "Wolf Den Leader",
       "den": "Wolf Den",
-      "name": "Andy Donalds",
-      "started": 2024,
-      "favorite": "Camping",
-      "photo": "assets/images/leaders/wolf-den-leader.jpg",
-      "bio": "Leads Wolf Scouts through fun activities, skills, and Pack adventures."
+      "name": "",
+      "status": "volunteerOpportunity",
+      "started": null,
+      "favorite": "Help Wolf Scouts learn by doing",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
+      "bio": "A volunteer opportunity for a family member who wants to support Wolf Scout activities and adventures."
     },
     {
       "role": "Bear Den Leader",
       "den": "Bear Den",
-      "name": "John Szydel",
-      "started": "2023",
-      "favorite": "Hiking",
-      "photo": "assets/images/leaders/bear-den-leader.jpg",
-      "bio": "Supports Bear Scouts as they grow through service, outdoor skills, and teamwork."
+      "name": "",
+      "status": "volunteerOpportunity",
+      "started": null,
+      "favorite": "Help Bear Scouts grow through service and teamwork",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
+      "bio": "A volunteer opportunity for a family member who wants to guide Bear Scouts through outdoor skills and service."
     },
     {
       "role": "Webelos Den Leader",
       "den": "Webelos Den",
-      "name": "Leader Name",
-      "started": 2022,
-      "favorite": "Pinewood Derby",
-      "photo": "assets/images/leaders/webelos-den-leader.jpg",
-      "bio": "Prepares Webelos Scouts for new adventures and leadership opportunities."
+      "name": "",
+      "status": "volunteerOpportunity",
+      "started": null,
+      "favorite": "Help Webelos Scouts build leadership",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
+      "bio": "A volunteer opportunity for a family member who wants to prepare Webelos Scouts for new responsibilities."
     },
     {
       "role": "Arrow of Light Den Leader",
       "den": "Arrow of Light",
-      "name": "Kevin Vallenari",
-      "started": "2014",
-      "favorite": "Camping",
-      "photo": "assets/images/leaders/arrow-of-light-den-leader.jpg",
-      "bio": "Helps Arrow of Light Scouts prepare for the next step in their Scouting journey."
+      "name": "",
+      "status": "volunteerOpportunity",
+      "started": null,
+      "favorite": "Help Scouts prepare for the next step",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
+      "bio": "A volunteer opportunity for a family member who wants to help Arrow of Light Scouts prepare for what comes next."
     }
   ],
   "assistants": [
     {
-      "role": "Tiger Den Assistant",
-      "name": "Assistant Leader Name",
-      "den": "Tiger Den",
-      "started": 2024,
-      "favorite": "Helping Scouts",
-      "photo": "assets/images/leaders/tiger-den-assistant.jpg",
-      "bio": "Assists with Tiger Den activities and family communication."
-    },
-    {
-      "role": "Wolf Den Assistant",
-      "name": "Assistant Leader Name",
-      "den": "Wolf Den",
-      "started": 2024,
-      "favorite": "Helping Scouts",
-      "photo": "assets/images/leaders/wolf-den-assistant.jpg",
-      "bio": "Assists with Wolf Den activities and adventures."
-    },
-    {
-      "role": "Bear Den Assistant",
-      "name": "Assistant Leader Name",
+      "role": "Assistant Den Leader",
+      "name": "Dan Schneider",
       "den": "Bear Den",
-      "started": 2024,
+      "started": 2023,
       "favorite": "Helping Scouts",
       "photo": "assets/images/leaders/bear-den-assistant.jpg",
-      "bio": "Assists with Bear Den activities and outdoor fun."
-    },
-    {
-      "role": "Webelos Den Assistant",
-      "name": "Assistant Leader Name",
-      "den": "Webelos Den",
-      "started": 2024,
-      "favorite": "Helping Scouts",
-      "photo": "assets/images/leaders/webelos-den-assistant.jpg",
-      "bio": "Assists with Webelos Den adventures and planning."
-    },
-    {
-      "role": "Arrow of Light Assistant",
-      "name": "Dan Schneider",
-      "den": "Arrow of Light",
-      "started": "2023",
-      "favorite": "Helping Scouts",
-      "photo": "assets/images/leaders/arrow-of-light-assistant.jpg",
-      "bio": "Assists Arrow of Light Scouts as they prepare for what comes next."
+      "bio": "Assists Bear Scouts as they learn new skills and take part in Pack adventures."
     }
   ],
   "committee": [
     {
       "role": "Advancement Chair",
-      "name": "Kelly Surges",
-      "started": "2026",
+      "name": "",
+      "status": "teamFunction",
+      "started": null,
       "favorite": "Advancement",
-      "photo": "assets/images/leaders/advancement-chair.jpg",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
       "email": "advancement@pack321wi.org",
+      "contactLabel": "Contact Advancement",
       "bio": "Tracks rank progress, awards, and recognition."
     },
     {
       "role": "Popcorn Kernel",
-      "name": "Melissa Donalds",
-      "started": "2026",
+      "name": "",
+      "status": "teamFunction",
+      "started": null,
       "favorite": "Fundraising",
-      "photo": "assets/images/leaders/popcorn-kernel.jpg",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
       "email": "popcorn@pack321wi.org",
+      "contactLabel": "Contact Popcorn Kernel",
       "bio": "Coordinates the annual popcorn fundraiser."
     },
     {
       "role": "Wreath Coordinator",
-      "name": "Jessie Szydel",
-      "started": "2023",
+      "name": "Tiffany Krysiak",
+      "started": 2024,
       "favorite": "Fundraising",
       "photo": "assets/images/leaders/wreath-coordinator.jpg",
       "email": "wreaths@pack321wi.org",
+      "contactLabel": "Contact Wreath Coordinator",
       "bio": "Supports seasonal fundraising and family communication."
     },
     {
-      "role": "Chartered Organization Representative",
+      "role": "Sports / Professional Sporting Events",
       "name": "",
-      "started": "2026",
-      "favorite": "Pack Support",
+      "status": "teamFunction",
+      "started": null,
+      "favorite": "Pack Outings",
       "photo": "assets/images/placeholders/leader-placeholder.jpg",
-      "email": "cor@pack321wi.org",
-      "bio": "Connects Pack 321 with the chartered organization."
+      "email": "sports@pack321wi.org",
+      "contactLabel": "Contact Sports Events",
+      "bio": "Coordinates sports and professional sporting event opportunities for Pack families."
+    },
+    {
+      "role": "Candy Bar Fundraiser",
+      "name": "",
+      "status": "teamFunction",
+      "started": null,
+      "favorite": "Fundraising",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
+      "email": "candybars@pack321wi.org",
+      "contactLabel": "Contact Candy Bar Fundraiser",
+      "bio": "Coordinates candy bar fundraiser communication and support."
     }
   ]
 }

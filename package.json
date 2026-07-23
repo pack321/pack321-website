@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/generate-cub-rank-pages.js && node scripts/apply-seo-metadata.js && node scripts/generate-clean-routes.js && node scripts/generate-seo.js",
+    "build": "node scripts/generate-cub-rank-pages.js && node scripts/generate-team-page.js && node scripts/apply-seo-metadata.js && node scripts/generate-clean-routes.js && node scripts/generate-seo.js",
     "apply:seo": "node scripts/apply-seo-metadata.js",
     "generate:seo": "node scripts/generate-seo.js"
   }
