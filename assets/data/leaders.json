@@ -6,6 +6,7 @@
       "started": "2019",
       "favorite": "Camping",
       "photo": "assets/images/leaders/committee-chair.jpg",
+      "email": "chair@pack321wi.org",
       "bio": "Provides leadership, long-term planning, and support to ensure every Pack family has an exceptional experience."
     },
     {
@@ -14,6 +15,7 @@
       "started": 2014,
       "favorite": "Camping",
       "photo": "assets/images/leaders/cubmaster.jpg",
+      "email": "cubmaster@pack321wi.org",
       "bio": "Creates memorable adventures, leads Pack meetings, mentors Scouts, and welcomes families into Pack 321."
     },
     {
@@ -22,6 +24,7 @@
       "started": 2022,
       "favorite": "Hiking",
       "photo": "assets/images/leaders/assistant-cubmaster.jpg",
+      "email": "leaders@pack321wi.org",
       "bio": "Supports Pack meetings, outdoor adventures, and helps every Scout feel included."
     },
     {
@@ -30,6 +33,7 @@
       "started": 2024,
       "favorite": "Blue & Gold",
       "photo": "assets/images/leaders/secretary.jpg",
+      "email": "secretary@pack321wi.org",
       "bio": "Keeps Pack families informed through communications, newsletters, meeting coordination, and organizational support."
     },
     {
@@ -38,6 +42,7 @@
       "started": 2021,
       "favorite": "Raingutter Regatta",
       "photo": "assets/images/leaders/treasurer.jpg",
+      "email": "treasurer@pack321wi.org",
       "bio": "Manages Pack finances, budgeting, fundraising support, and helps ensure resources are available for every Scout."
     }
   ],
@@ -151,6 +156,7 @@
       "started": "2026",
       "favorite": "Advancement",
       "photo": "assets/images/leaders/advancement-chair.jpg",
+      "email": "advancement@pack321wi.org",
       "bio": "Tracks rank progress, awards, and recognition."
     },
     {
@@ -159,6 +165,7 @@
       "started": "2026",
       "favorite": "Fundraising",
       "photo": "assets/images/leaders/popcorn-kernel.jpg",
+      "email": "popcorn@pack321wi.org",
       "bio": "Coordinates the annual popcorn fundraiser."
     },
     {
@@ -167,7 +174,17 @@
       "started": "2023",
       "favorite": "Fundraising",
       "photo": "assets/images/leaders/wreath-coordinator.jpg",
+      "email": "wreaths@pack321wi.org",
       "bio": "Supports seasonal fundraising and family communication."
+    },
+    {
+      "role": "Chartered Organization Representative",
+      "name": "Open / Editable",
+      "started": "2026",
+      "favorite": "Pack Support",
+      "photo": "assets/images/placeholders/leader-placeholder.jpg",
+      "email": "cor@pack321wi.org",
+      "bio": "Connects Pack 321 with the chartered organization."
     }
   ]
 }

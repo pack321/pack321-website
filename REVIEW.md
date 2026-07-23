@@ -8,4 +8,4 @@ Review focus:
 - Is anything confusing?
 - What story, event, or resource is missing?
 
-Feedback currently goes to: wicubscoutpack321@gmail.com
+Feedback currently goes to: info@pack321wi.org

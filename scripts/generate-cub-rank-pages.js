@@ -120,7 +120,7 @@ function footer(depth) {
     <div><h4>Quick Links</h4><a href="${sitePath("why-pack321.html")}">Why Pack 321</a><a href="${sitePath("cub-scouts.html")}">Cub Scouts</a><a href="${sitePath("adventures.html")}">Adventures</a><a href="${sitePath("events-calendar.html")}">Calendar</a><a href="${sitePath("resources.html")}">Resources</a>
       <a href="${sitePath("team.html")}">Team</a>
       <a href="${sitePath("join.html")}">Join</a><a href="${sitePath("contact.html")}">Contact</a></div>
-    <div><h4>Contact Us</h4><a href="tel:14142159261">(414) 215-9261</a><a href="mailto:wicubscoutpack321@gmail.com">wicubscoutpack321@gmail.com</a><p>Carollton Elementary, Oak Creek, WI</p><a class="button" href="${sitePath("join.html")}">Visit a Meeting</a></div>
+    <div><h4>Contact Us</h4><a href="tel:14142159261">(414) 215-9261</a><a href="mailto:info@pack321wi.org">info@pack321wi.org</a><p>Carollton Elementary, Oak Creek, WI</p><a class="button" href="${sitePath("join.html")}">Visit a Meeting</a></div>
     <div class="footer-scouting"><img class="scouting-america-logo" src="${fromRoot(depth, "assets/logos/scouting-america-logo-reversed.png")}" alt="Scouting America"><p>Prepared. For Life.</p><h4 class="be-scout">Be A Scout</h4></div>
   </div>
   <div class="wrap footer-bottom">Preparing young people for life.</div>
