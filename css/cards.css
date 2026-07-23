@@ -808,10 +808,28 @@ body.modal-open { overflow: hidden; }
 }
 .event-card {
   position: relative;
+  display: block;
   overflow: hidden;
   min-height: 210px;
   padding: 28px 88px 78px 28px;
   border-left: 6px solid var(--gold);
+}
+.upcoming-card {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+.upcoming-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: 0 18px 34px rgba(8,43,87,.20);
+  text-decoration: none;
+}
+.upcoming-card:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+  text-decoration: none;
 }
 .event-card-icon {
   position: absolute;
@@ -837,7 +855,8 @@ body.modal-open { overflow: hidden; }
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.event-card:hover .event-card-icon,
+.upcoming-card:hover .event-card-icon,
+.upcoming-card:focus-visible .event-card-icon,
 .event-card:focus-within .event-card-icon {
   background: var(--gold);
   opacity: 1;
