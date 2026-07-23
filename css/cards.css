@@ -399,19 +399,43 @@ body.modal-open { overflow: hidden; }
   word-break: break-word;
   white-space: normal;
 }
-.leader-email {
-  min-height: 2.6em;
-  color: var(--navy);
+.leader-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-height: 42px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: var(--navy);
+  box-shadow: 0 8px 18px rgba(8,43,87,.16);
+  color: #fff;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: clamp(.78rem, .9vw, .95rem);
+  font-size: .78rem;
   font-weight: 900;
-  text-decoration: underline;
-  text-decoration-color: rgba(217,154,0,.55);
-  text-underline-offset: 3px;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-.leader-email:hover,
-.leader-email:focus-visible {
-  color: #d99a00;
+.leader-contact-button::after {
+  content: '>';
+  margin-left: 8px;
+  color: var(--gold);
+}
+.leader-contact-button:hover,
+.leader-contact-button:focus-visible {
+  background: var(--gold);
+  color: var(--navy);
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+.leader-contact-button:hover::after,
+.leader-contact-button:focus-visible::after {
+  color: var(--navy);
 }
 .leader-favorite {
   display: grid;
@@ -512,15 +536,15 @@ body.modal-open { overflow: hidden; }
   font-size: .84rem;
   line-height: 1.4;
 }
-.committee-card .leader-email {
-  margin: 2px 0 12px;
-}
 .committee-card__contact {
   display: block;
   width: 100%;
   max-width: 100%;
   margin-top: auto;
   min-width: 0;
+}
+.committee-card__contact .leader-contact-button {
+  margin-top: 0;
 }
 .den-card .den-name {
   color: var(--navy);
