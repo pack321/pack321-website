@@ -39,7 +39,13 @@ const serviceLine = (person, prefix = 'Serving Pack 321 since') => {
 const contactButton = (person) => {
   if (!person.email) return '';
   const label = person.contactLabel || 'Contact Leader';
-  return `<a class="leader-contact-button" href="mailto:${esc(person.email)}" aria-label="${esc(label)}">${esc(label)}</a>`;
+  const aria = person.role ? `${label}: ${person.role}` : label;
+  return `<a class="leader-contact-button" href="mailto:${esc(person.email)}" aria-label="${esc(aria)}">${esc(label)}</a>`;
+};
+
+const denHelpButton = (person) => {
+  const den = person.den || person.role || 'this den';
+  return `<a class="leader-contact-button den-help-button" href="mailto:volunteer@pack321wi.org" aria-label="Volunteer to help ${esc(den)}">Help This Den</a>`;
 };
 
 const imgTag = (person) => {
@@ -60,7 +66,8 @@ const denCard = (person) => {
   const className = vacant ? 'den-card profile-card vacant' : 'den-card profile-card';
   const name = vacant ? 'Volunteer Opportunity' : person.name;
   const service = person.started ? `<p>Serving since ${esc(person.started)}</p>` : '<p>Role available for a Pack volunteer</p>';
-  return `        <article class="${className}">${imgTag(person)}<h3>${esc(person.role)}</h3><p class="den-name">${esc(name)}</p>${service}<span>${esc(person.favorite)}</span></article>`;
+  const action = vacant ? denHelpButton(person) : '';
+  return `        <article class="${className}">${imgTag(person)}<h3>${esc(person.role)}</h3><p class="den-name">${esc(name)}</p>${service}<span>${esc(person.favorite)}</span>${action}</article>`;
 };
 
 const assistantRow = (person) => {

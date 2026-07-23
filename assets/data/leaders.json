@@ -28,7 +28,7 @@
       "favorite": "Hiking",
       "photo": "assets/images/leaders/assistant-cubmaster.jpg",
       "email": "cubmaster@pack321wi.org",
-      "contactLabel": "Contact Assistant Cubmaster",
+      "contactLabel": "Contact Assistant",
       "bio": "Supports Pack meetings, outdoor adventures, and helps every Scout feel included."
     },
     {
@@ -144,7 +144,7 @@
       "favorite": "Fundraising",
       "photo": "assets/images/placeholders/leader-placeholder.jpg",
       "email": "popcorn@pack321wi.org",
-      "contactLabel": "Contact Popcorn Kernel",
+      "contactLabel": "Contact Popcorn",
       "bio": "Coordinates the annual popcorn fundraiser."
     },
     {
@@ -154,7 +154,7 @@
       "favorite": "Fundraising",
       "photo": "assets/images/leaders/wreath-coordinator.jpg",
       "email": "wreaths@pack321wi.org",
-      "contactLabel": "Contact Wreath Coordinator",
+      "contactLabel": "Contact Wreaths",
       "bio": "Supports seasonal fundraising and family communication."
     },
     {
@@ -165,7 +165,7 @@
       "favorite": "Pack Outings",
       "photo": "assets/images/placeholders/leader-placeholder.jpg",
       "email": "sports@pack321wi.org",
-      "contactLabel": "Contact Sports Events",
+      "contactLabel": "Contact Sports",
       "bio": "Coordinates sports and professional sporting event opportunities for Pack families."
     },
     {
@@ -176,7 +176,7 @@
       "favorite": "Fundraising",
       "photo": "assets/images/placeholders/leader-placeholder.jpg",
       "email": "candybars@pack321wi.org",
-      "contactLabel": "Contact Candy Bar Fundraiser",
+      "contactLabel": "Contact Candy Bars",
       "bio": "Coordinates candy bar fundraiser communication and support."
     }
   ]
