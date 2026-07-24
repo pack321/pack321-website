@@ -95,9 +95,17 @@ function replaceBetween(html, start, end, replacement) {
 
 let html = fs.readFileSync(teamPath, 'utf8');
 
-html = html.replace(
-  /<div><span>Dedicated Leaders<\/span><strong>[^<]+<\/strong><\/div>\s*<div><span>Annual Adventures<\/span><strong>[^<]+<\/strong><\/div>\s*<div><span>Years of Adventure<\/span><strong>[^<]+<\/strong><\/div>/,
-  '<div><span>Pack Type</span><strong>Boys &amp; Girls</strong></div>\n        <div><span>Families Welcome From</span><strong>Any School</strong></div>\n        <div><span>Communities Served</span><strong>Oak Creek Area</strong></div>'
+html = replaceBetween(
+  html,
+  '<div class="stats-grid">',
+  '\\s*</div>\\s*</article>',
+  [
+    '        <div class="stat-item"><span class="stat-icon" data-card-icon="calendar" aria-hidden="true"></span><span class="stat-label">Serving<br>Families Since</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">1967</strong><p>Over five decades of Scouting</p></div>',
+    '        <div class="stat-item"><span class="stat-icon" data-card-icon="familyGroup" aria-hidden="true"></span><span class="stat-label">Active<br>Scouts</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">31</strong><p>Across all Cub Scout ranks</p></div>',
+    '        <div class="stat-item"><span class="stat-icon" data-card-icon="fleurDeLis" aria-hidden="true"></span><span class="stat-label">Pack Type</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">Boys<br><small>&amp;</small><br>Girls</strong><p>A welcoming family Pack</p></div>',
+    '        <div class="stat-item"><span class="stat-icon" data-card-icon="school" aria-hidden="true"></span><span class="stat-label">Schools<br>Welcome</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">Any<br>School</strong><p>Open to the surrounding area</p></div>',
+    '        <div class="stat-item"><span class="stat-icon" data-card-icon="locationPin" aria-hidden="true"></span><span class="stat-label">Community</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">Oak<br>Creek</strong><p>And surrounding communities</p></div>'
+  ].join('\n')
 );
 
 html = replaceBetween(

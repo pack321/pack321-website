@@ -110,6 +110,29 @@
       '<path d="M6 21v-2a3 3 0 0 1 3-3"/>',
       '<path d="M6 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>'
     ].join(''),
+    familyGroup: [
+      '<circle cx="12" cy="8" r="3"/>',
+      '<circle cx="5.5" cy="10" r="2.5"/>',
+      '<circle cx="18.5" cy="10" r="2.5"/>',
+      '<path d="M7 21v-2a5 5 0 0 1 10 0v2"/>',
+      '<path d="M1.5 21v-1.5A4.5 4.5 0 0 1 6 15M22.5 21v-1.5A4.5 4.5 0 0 0 18 15"/>'
+    ].join(''),
+    fleurDeLis: [
+      '<path d="M12 22V8"/>',
+      '<path d="M12 8c-1.8-2.4-1.8-4.4 0-6 1.8 1.6 1.8 3.6 0 6Z"/>',
+      '<path d="M12 10c-2.7-3-6.8-2.8-8.5.7 3.8-.6 5.4 1.2 5.5 4.3H5.5"/>',
+      '<path d="M12 10c2.7-3 6.8-2.8 8.5.7-3.8-.6-5.4 1.2-5.5 4.3h3.5"/>',
+      '<path d="M8.5 18h7M9.5 21h5"/>'
+    ].join(''),
+    school: [
+      '<path d="m3 10 9-6 9 6"/>',
+      '<path d="M5 9v11h14V9"/>',
+      '<path d="M9 20v-6h6v6M8 11h.01M12 11h.01M16 11h.01"/>'
+    ].join(''),
+    locationPin: [
+      '<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>',
+      '<circle cx="12" cy="10" r="2.5"/>'
+    ].join(''),
     fallback: [
       '<path d="M8 2v4M16 2v4M3.5 9.5h17M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>',
       '<path d="m8 16 2.2 2.2L16 12.4"/>'
@@ -136,6 +159,10 @@
     questionBubble: iconPaths.questionBubble,
     leadershipShield: iconPaths.leadershipShield,
     committee: iconPaths.committee,
+    familyGroup: iconPaths.familyGroup,
+    fleurDeLis: iconPaths.fleurDeLis,
+    school: iconPaths.school,
+    locationPin: iconPaths.locationPin,
     safety: iconPaths.safety,
     forms: iconPaths.forms,
     pinewoodDerby: iconPaths.pinewoodDerby,
