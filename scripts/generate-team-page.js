@@ -69,8 +69,8 @@ const denCard = (person) => {
   const name = vacant ? 'Volunteer Opportunity' : person.name;
   const service = person.started ? `<p>Serving since ${esc(person.started)}</p>` : '<p>Role available for a Pack volunteer</p>';
   const badgeSrc = denBadgeByRole[person.roleKey];
-  const rankClass = person.roleKey === 'arrow-of-light-den-leader' ? ' den-card__rank--aol' : '';
-  return `        <a class="${className} den-leader-card" href="/volunteer/" aria-label="Contact Pack 321 about the ${esc(person.role)} role"><span class="den-card__media">${imgTag(person, 'leader-card__photo den-card__photo')}<img class="den-card__rank${rankClass}" src="${badgeSrc}" alt="" aria-hidden="true"></span><h3 class="den-card__title">${esc(person.role)}</h3><div class="den-card__identity"><p class="den-name">${esc(name)}</p>${service}</div><span class="den-card__divider" aria-hidden="true"></span><span class="den-card__message">${esc(person.favorite)}</span><span class="den-card__cta"><span>Click Here</span><span aria-hidden="true">&rarr;</span></span></a>`;
+  const rankClass = person.roleKey === 'arrow-of-light-den-leader' ? ' leadership-role-card__badge--aol' : '';
+  return `        <a class="${className} den-leader-card leadership-role-card leadership-role-card--den" href="/volunteer/" aria-label="Contact Pack 321 about the ${esc(person.role)} role"><span class="leadership-role-card__media">${imgTag(person, 'leader-card__photo leadership-role-card__photo')}<img class="leadership-role-card__badge${rankClass}" src="${badgeSrc}" alt="" aria-hidden="true"></span><h3 class="leadership-role-card__title">${esc(person.role)}</h3><div class="leadership-role-card__identity"><p class="den-name">${esc(name)}</p>${service}</div><span class="leadership-role-card__divider" aria-hidden="true"></span><span class="leadership-role-card__message">${esc(person.favorite)}</span><span class="leadership-role-card__cta"><span>Click Here</span><span aria-hidden="true">&rarr;</span></span></a>`;
 };
 
 const assistantRow = (person) => {
@@ -83,7 +83,7 @@ const committeeCard = (person) => {
   const className = vacant ? 'committee-card profile-card team-function' : 'committee-card profile-card';
   const personMeta = hasPerson(person) ? `<strong>${esc(person.name)}</strong>` : '';
   const emblemSrc = committeeEmblemByRole[person.roleKey];
-  return `        <a class="${className}" href="mailto:${esc(person.email)}" aria-label="${esc(person.contactLabel || `Contact ${person.role}`)}: ${esc(person.role)}"><span class="committee-card__media">${imgTag(person, 'leader-card__photo committee-card__photo')}<img class="committee-card__emblem" src="${emblemSrc}" alt="" aria-hidden="true"></span><h3 class="committee-card__title">${esc(person.role)}</h3><div class="committee-card__identity">${personMeta}</div><span class="committee-card__divider" aria-hidden="true"></span><span class="committee-card__message">${esc(person.bio)}</span><span class="committee-card__cta"><span>Click Here</span><span aria-hidden="true">&rarr;</span></span></a>`;
+  return `        <a class="${className} leadership-role-card leadership-role-card--committee" href="mailto:${esc(person.email)}" aria-label="${esc(person.contactLabel || `Contact ${person.role}`)}: ${esc(person.role)}"><span class="leadership-role-card__media">${imgTag(person, 'leader-card__photo leadership-role-card__photo')}<img class="leadership-role-card__badge" src="${emblemSrc}" alt="" aria-hidden="true"></span><h3 class="leadership-role-card__title">${esc(person.role)}</h3><div class="leadership-role-card__identity">${personMeta}</div><span class="leadership-role-card__divider" aria-hidden="true"></span><span class="leadership-role-card__message">${esc(person.bio)}</span><span class="leadership-role-card__cta"><span>Click Here</span><span aria-hidden="true">&rarr;</span></span></a>`;
 };
 
 function replaceBetween(html, start, end, replacement) {
@@ -132,7 +132,7 @@ html = replaceBetween(
 
 html = replaceBetween(
   html,
-  '<div class="committee-grid">',
+  '<div class="committee-grid committee-card-grid">',
   '\\s*</div>\\s*</div>\\s*<article class="commitment-card premium-card"',
   data.committee.map(committeeCard).join('\n')
 );

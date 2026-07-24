@@ -605,46 +605,6 @@ body.modal-open { overflow: hidden; }
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
-.den-card,
-.committee-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  max-width: 100%;
-  padding: 18px 14px;
-  border: 1px solid rgba(8,43,87,.12);
-  border-radius: 10px;
-  background: #fff;
-  text-align: center;
-  box-shadow: 0 12px 28px rgba(8,43,87,.10);
-}
-.den-card.vacant,
-.committee-card.team-function {
-  border-style: dashed;
-  background: var(--cream);
-}
-.rank-chip {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  margin: 0 auto 12px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: #fff;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: .82rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-.rank-chip.lion { background: #f2a900; }
-.rank-chip.tiger { background: #f05a28; }
-.rank-chip.wolf { background: #c41230; }
-.rank-chip.bear { background: #0082a7; }
-.rank-chip.webelos { background: var(--navy); }
-.rank-chip.aol { background: #4b8b3b; }
-.den-card img,
-.committee-card img,
 .assistant-list img {
   width: 82px;
   height: 82px;
@@ -654,69 +614,11 @@ body.modal-open { overflow: hidden; }
   background: var(--cream);
   box-shadow: 0 12px 24px rgba(8,43,87,.16);
 }
-.den-card img,
-.committee-card img {
-  display: block;
-  margin: 0 auto 12px;
-}
-.den-card .rank-chip + img,
-.committee-card .rank-chip + img { margin-top: 0; }
-.den-card .rank-chip {
-  display: none;
-}
 .assistant-list img {
   width: 52px;
   height: 52px;
   border-width: 3px;
   box-shadow: 0 8px 18px rgba(8,43,87,.14);
-}
-.den-card h3,
-.committee-card h3 {
-  margin: 0 0 9px;
-  color: var(--navy);
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: .88rem;
-  font-weight: 900;
-  line-height: 1.15;
-  text-transform: uppercase;
-}
-.den-card p,
-.committee-card p {
-  margin: 0 0 8px;
-  color: var(--text);
-  font-size: .84rem;
-  line-height: 1.4;
-}
-.committee-card__contact {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin-top: auto;
-  min-width: 0;
-}
-.committee-card__contact .leader-contact-button {
-  margin-top: 0;
-}
-.den-card .den-name {
-  color: var(--navy);
-  font-weight: 900;
-}
-.den-card span,
-.committee-card span {
-  color: #d99a00;
-  font-size: .78rem;
-  font-weight: 900;
-}
-.den-card .leader-contact-button {
-  margin-top: auto;
-}
-.den-help-button {
-  min-height: 40px;
-  font-size: clamp(.72rem, .75vw, .8rem);
-}
-.committee-card__person {
-  display: block;
-  margin-top: 8px;
 }
 .assistant-list {
   padding: 12px;
@@ -869,8 +771,7 @@ body.modal-open { overflow: hidden; }
   gap: 16px;
   align-items: stretch;
 }
-.den-card,
-.den-card.vacant {
+.leadership-role-card {
   display: grid;
   grid-template-rows: 166px 66px 72px 22px 84px 38px;
   justify-items: center;
@@ -888,26 +789,33 @@ body.modal-open { overflow: hidden; }
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  overflow: visible;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
-.den-card:hover {
+.leadership-role-card.vacant,
+.leadership-role-card.team-function {
+  border-style: dashed;
+  background: var(--cream);
+}
+.leadership-role-card:hover {
   transform: translateY(-3px);
   border-color: var(--gold);
   box-shadow: 0 10px 24px rgba(0,32,91,.12);
 }
-.den-card:focus-visible {
+.leadership-role-card:focus-visible {
   border-color: var(--gold);
   outline: 3px solid var(--gold);
   outline-offset: 3px;
 }
-.den-card .den-card__media {
+.leadership-role-card .leadership-role-card__media {
   position: relative;
   display: block;
   width: 132px;
   height: 164px;
   margin: 0 auto;
+  overflow: visible;
 }
-.den-card .den-card__photo {
+.leadership-role-card .leadership-role-card__photo {
   display: block;
   width: 132px;
   height: 132px;
@@ -919,11 +827,11 @@ body.modal-open { overflow: hidden; }
   background: #fff;
   box-shadow: 0 10px 24px rgba(8,43,87,.15);
 }
-.den-card img.den-card__rank {
+.leadership-role-card img.leadership-role-card__badge {
   position: absolute;
   left: 50%;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
   width: 62px;
   height: 62px;
   max-width: none;
@@ -935,13 +843,13 @@ body.modal-open { overflow: hidden; }
   box-shadow: none;
   transform: translateX(-50%);
 }
-.den-card img.den-card__rank:not(.den-card__rank--aol) {
+.leadership-role-card--den img.leadership-role-card__badge:not(.leadership-role-card__badge--aol) {
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
-.den-card img.den-card__rank--aol {
+.leadership-role-card img.leadership-role-card__badge--aol {
   width: 74px;
 }
-.den-card .den-card__title {
+.leadership-role-card .leadership-role-card__title {
   min-height: 60px;
   margin: 0;
   display: flex;
@@ -949,7 +857,7 @@ body.modal-open { overflow: hidden; }
   justify-content: center;
   text-align: center;
 }
-.den-card h3 {
+.leadership-role-card h3 {
   margin: 0;
   color: var(--navy);
   font-family: 'Bebas Neue', Impact, sans-serif;
@@ -959,20 +867,20 @@ body.modal-open { overflow: hidden; }
   letter-spacing: .015em;
   text-transform: uppercase;
 }
-.den-card p.den-name {
+.leadership-role-card--den p.den-name {
   margin: 0 0 6px;
   color: var(--navy);
   font-size: 1.15rem;
   font-weight: 800;
   line-height: 1.2;
 }
-.den-card p:not(.den-name) {
+.leadership-role-card--den .leadership-role-card__identity p:not(.den-name) {
   margin: 0;
   color: rgba(8,43,87,.72);
   font-size: .95rem;
   line-height: 1.45;
 }
-.den-card .den-card__identity {
+.leadership-role-card .leadership-role-card__identity {
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -982,14 +890,14 @@ body.modal-open { overflow: hidden; }
   min-height: 72px;
   padding-top: 6px;
 }
-.den-card .den-card__divider {
+.leadership-role-card .leadership-role-card__divider {
   display: block;
   width: 72px;
   height: 2px;
   margin: 0 auto;
   background: var(--gold);
 }
-.den-card .den-card__message {
+.leadership-role-card .leadership-role-card__message {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1002,7 +910,7 @@ body.modal-open { overflow: hidden; }
   line-height: 1.35;
   text-align: center;
 }
-.den-card .den-card__cta {
+.leadership-role-card .leadership-role-card__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1014,12 +922,16 @@ body.modal-open { overflow: hidden; }
   line-height: 1;
   text-transform: uppercase;
 }
-.den-card .den-card__cta [aria-hidden="true"] {
+.leadership-role-card .leadership-role-card__cta > span:first-child {
+  font-size: .78rem;
+  font-weight: 900;
+}
+.leadership-role-card .leadership-role-card__cta [aria-hidden="true"] {
   color: #c98d00;
   font-size: 1.25em;
   transition: transform .18s;
 }
-.den-card:hover .den-card__cta [aria-hidden="true"] {
+.leadership-role-card:hover .leadership-role-card__cta [aria-hidden="true"] {
   transform: translateX(3px);
 }
 .den-volunteer-banner {
@@ -1109,151 +1021,27 @@ body.modal-open { overflow: hidden; }
   line-height: 1.65;
   text-align: left;
 }
-.committee-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.committee-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
   gap: 24px;
   align-items: stretch;
+  overflow: visible;
 }
-.committee-card,
-.committee-card.team-function {
-  display: grid;
-  grid-template-rows: 166px 66px 72px 22px 84px 38px;
-  justify-items: center;
-  align-items: center;
-  row-gap: 5px;
-  min-width: 0;
-  min-height: 520px;
-  height: auto;
-  padding: 22px 18px 20px;
-  border: 1px solid #dce2e9;
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
-  color: var(--navy);
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+.committee-card-grid > * {
+  overflow: visible;
 }
-.committee-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--gold);
-  box-shadow: 0 10px 24px rgba(0,32,91,.12);
-}
-.committee-card:focus-visible {
-  border-color: var(--gold);
-  outline: 3px solid var(--gold);
-  outline-offset: 3px;
-}
-.committee-card .committee-card__media {
-  position: relative;
-  display: block;
-  width: 132px;
-  height: 164px;
-  margin: 0 auto;
-}
-.committee-card .committee-card__photo {
-  display: block;
-  width: 132px;
-  height: 132px;
-  margin: 0;
-  border: 3px solid var(--gold);
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(8,43,87,.15);
-}
-.committee-card .committee-card__emblem {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  z-index: 2;
-  display: block;
-  width: 62px;
-  height: 62px;
-  max-width: none;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  transform: translateX(-50%);
-  object-fit: contain;
-}
-.committee-card .committee-card__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60px;
-  margin: 0;
-  text-align: center;
-}
-.committee-card h3 {
-  margin: 0;
-  color: var(--navy);
-  font-family: 'Bebas Neue', Impact, sans-serif;
-  font-size: clamp(1.75rem, 2vw, 2.2rem);
-  font-weight: 700;
-  line-height: .98;
-  letter-spacing: .015em;
-  text-transform: uppercase;
-}
-.committee-card .committee-card__identity {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-width: 0;
-  min-height: 72px;
-  padding-top: 6px;
-}
-.committee-card .committee-card__identity strong {
+.leadership-role-card--committee .leadership-role-card__identity strong {
   color: var(--navy);
   font-size: 1.15rem;
   font-weight: 800;
   line-height: 1.2;
   text-align: center;
 }
-.committee-card .committee-card__divider {
-  display: block;
-  width: 72px;
-  height: 2px;
-  margin: 0 auto;
-  background: var(--gold);
-}
-.committee-card .committee-card__message {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: stretch;
-  max-width: 220px;
-  margin: 0 auto;
+.leadership-role-card--committee .leadership-role-card__message {
+  max-width: 210px;
   color: var(--navy);
-  font-size: 1rem;
   font-weight: 600;
-  line-height: 1.35;
-  text-align: center;
-}
-.committee-card .committee-card__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0;
-  color: var(--navy);
-  font-size: 1rem;
-  font-weight: 800;
-  line-height: 1;
-  text-transform: uppercase;
-}
-.committee-card .committee-card__cta [aria-hidden="true"] {
-  color: #c98d00;
-  font-size: 1.25em;
-  transition: transform .18s;
-}
-.committee-card:hover .committee-card__cta [aria-hidden="true"] {
-  transform: translateX(3px);
 }
 .commitment-card {
   min-height: 100%;
@@ -1315,12 +1103,12 @@ body.modal-open { overflow: hidden; }
   }
 }
 @media (max-width: 900px) {
-  .committee-grid {
+  .committee-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 560px) {
-  .committee-grid {
+  .committee-card-grid {
     grid-template-columns: 1fr;
   }
   .commitment-card {
