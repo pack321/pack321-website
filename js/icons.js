@@ -94,6 +94,22 @@
       '<rect x="3" y="5" width="18" height="14" rx="2"/>',
       '<path d="m3 7 9 6 9-6"/>'
     ].join(''),
+    questionBubble: [
+      '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/>',
+      '<path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.7-2.5 1.9-2.5 3.5"/>',
+      '<path d="M12 16h.01"/>'
+    ].join(''),
+    leadershipShield: [
+      '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>',
+      '<path d="M9 12h6"/>',
+      '<path d="M12 9v6"/>'
+    ].join(''),
+    committee: [
+      '<path d="M18 21a4 4 0 0 0-8 0"/>',
+      '<circle cx="14" cy="8" r="4"/>',
+      '<path d="M6 21v-2a3 3 0 0 1 3-3"/>',
+      '<path d="M6 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>'
+    ].join(''),
     fallback: [
       '<path d="M8 2v4M16 2v4M3.5 9.5h17M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>',
       '<path d="m8 16 2.2 2.2L16 12.4"/>'
@@ -117,6 +133,9 @@
     team: iconPaths.team,
     join: iconPaths.join,
     contact: iconPaths.contact,
+    questionBubble: iconPaths.questionBubble,
+    leadershipShield: iconPaths.leadershipShield,
+    committee: iconPaths.committee,
     safety: iconPaths.safety,
     forms: iconPaths.forms,
     pinewoodDerby: iconPaths.pinewoodDerby,

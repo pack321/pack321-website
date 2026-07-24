@@ -43,9 +43,14 @@ const contactButton = (person) => {
   return `<a class="leader-contact-button" href="mailto:${esc(person.email)}" aria-label="${esc(aria)}">${esc(label)}</a>`;
 };
 
-const denHelpButton = (person) => {
-  const den = person.den || person.role || 'this den';
-  return `<a class="leader-contact-button den-help-button" href="mailto:volunteer@pack321wi.org" aria-label="Volunteer to help ${esc(den)}">Help This Den</a>`;
+const denRank = (person) => {
+  const den = String(person.den || person.role || '').toLowerCase();
+  if (den.includes('arrow of light')) return { name: 'Arrow of Light', file: 'aol' };
+  if (den.includes('webelos')) return { name: 'Webelos', file: 'webelos' };
+  if (den.includes('bear')) return { name: 'Bear', file: 'bear' };
+  if (den.includes('wolf')) return { name: 'Wolf', file: 'wolf' };
+  if (den.includes('tiger')) return { name: 'Tiger', file: 'tiger' };
+  return { name: 'Lion', file: 'lion' };
 };
 
 const imgTag = (person) => {
@@ -66,8 +71,8 @@ const denCard = (person) => {
   const className = vacant ? 'den-card profile-card vacant' : 'den-card profile-card';
   const name = vacant ? 'Volunteer Opportunity' : person.name;
   const service = person.started ? `<p>Serving since ${esc(person.started)}</p>` : '<p>Role available for a Pack volunteer</p>';
-  const action = vacant ? denHelpButton(person) : '';
-  return `        <article class="${className}">${imgTag(person)}<h3>${esc(person.role)}</h3><p class="den-name">${esc(name)}</p>${service}<span>${esc(person.favorite)}</span>${action}</article>`;
+  const rank = denRank(person);
+  return `        <a class="${className}" href="/volunteer/" aria-label="${esc(person.role)}: ${esc(name)}"><span class="den-profile">${imgTag(person)}</span><img class="den-rank-badge" src="/assets/ranks/${rank.file}.svg" alt="${rank.name} Cub Scout rank badge"><h3>${esc(person.role)}</h3><p class="den-name">${esc(name)}</p>${service}<span class="den-divider" aria-hidden="true"></span><span class="den-mission">${esc(person.favorite)}</span><span class="den-card-cta">Click Here <b aria-hidden="true">&rarr;</b></span></a>`;
 };
 
 const assistantRow = (person) => {
@@ -105,7 +110,7 @@ html = replaceBetween(
 html = replaceBetween(
   html,
   '<div class="den-grid">',
-  '\\s*</div>\\s*</div>\\s*<aside>',
+  '\\s*</div>\\s*(?:<a class="den-volunteer-banner"[\\s\\S]*?</a>\\s*)?</div>\\s*<aside>',
   data.dens.map(denCard).join('\n')
 );
 
