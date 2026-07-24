@@ -90,7 +90,9 @@ const committeeCard = (person) => {
 function replaceBetween(html, start, end, replacement) {
   const pattern = new RegExp(`(${start})([\\s\\S]*?)(${end})`);
   if (!pattern.test(html)) throw new Error(`Could not find Team page block: ${start}`);
-  return html.replace(pattern, `$1\n${replacement}\n$3`);
+  return html.replace(pattern, (_match, startMatch, _body, endMatch) => (
+    `${startMatch}\n${replacement}${endMatch.replace(/^(?:\r?\n)+/, '\n')}`
+  ));
 }
 
 let html = fs.readFileSync(teamPath, 'utf8');
