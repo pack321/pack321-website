@@ -3,10 +3,12 @@ const path = require('path');
 
 const root = path.join(__dirname, '..');
 const dataPath = path.join(root, 'assets', 'data', 'leaders.json');
+const leaderImagesPath = path.join(root, 'assets', 'data', 'leader-images.json');
 const teamPath = path.join(root, 'team', 'index.html');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+const leaderImageByRole = Object.freeze(JSON.parse(fs.readFileSync(leaderImagesPath, 'utf8')));
 
-const fallbackLeader = '/assets/images/placeholders/leader-placeholder.jpg';
+const fallbackLeader = '/assets/images/leaders/Standard.jpg';
 const currentYear = new Date().getFullYear();
 
 const esc = (value) => String(value ?? '').replace(/[&<>"]/g, (char) => ({
@@ -22,6 +24,7 @@ const asset = (value) => {
 };
 
 const hasPerson = (person) => Boolean(String(person.name || '').trim());
+const leaderImage = (person) => leaderImageByRole[person.roleKey] || fallbackLeader;
 
 const yearsBadge = (started) => {
   const year = Number(started);
@@ -55,7 +58,7 @@ const denRank = (person) => {
 
 const imgTag = (person) => {
   const alt = hasPerson(person) ? person.name : person.role;
-  return `<img src="${asset(person.photo)}" alt="${esc(alt)}" data-fallback="${fallbackLeader}" onerror="this.onerror=null;this.src='${fallbackLeader}';">`;
+  return `<img class="leader-card__photo" src="${leaderImage(person)}" alt="${esc(alt)}, ${esc(person.role)}" data-fallback="${fallbackLeader}" onerror="this.onerror=null;this.src='${fallbackLeader}';">`;
 };
 
 const executiveCard = (person) => {
@@ -99,14 +102,14 @@ let html = fs.readFileSync(teamPath, 'utf8');
 
 html = replaceBetween(
   html,
-  '<div class="stats-grid">',
+  '<div class="pack-glance-grid">',
   '\\s*</div>\\s*</article>',
   [
-    '        <div class="stat-item"><span class="stat-icon" data-card-icon="calendar" aria-hidden="true"></span><span class="stat-label">Serving<br>Families Since</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">1967</strong><p>Over five decades of Scouting</p></div>',
-    '        <div class="stat-item"><span class="stat-icon" data-card-icon="familyGroup" aria-hidden="true"></span><span class="stat-label">Active<br>Scouts</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">31</strong><p>Across all Cub Scout ranks</p></div>',
-    '        <div class="stat-item"><span class="stat-icon" data-card-icon="fleurDeLis" aria-hidden="true"></span><span class="stat-label">Pack Type</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">Boys<br><small>&amp;</small><br>Girls</strong><p>A welcoming family Pack</p></div>',
-    '        <div class="stat-item"><span class="stat-icon" data-card-icon="school" aria-hidden="true"></span><span class="stat-label">Schools<br>Welcome</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">Any<br>School</strong><p>Open to the surrounding area</p></div>',
-    '        <div class="stat-item"><span class="stat-icon" data-card-icon="locationPin" aria-hidden="true"></span><span class="stat-label">Community</span><span class="stat-divider" aria-hidden="true"></span><strong class="stat-value">Oak<br>Creek</strong><p>And surrounding communities</p></div>'
+    '        <article class="pack-glance-stat"><div class="pack-glance-stat__icon" data-card-icon="calendar" aria-hidden="true"></div><h3 class="pack-glance-stat__label">Serving<br>Families Since</h3><span class="pack-glance-stat__divider" aria-hidden="true"></span><div class="pack-glance-stat__value"><span>1967</span></div><p class="pack-glance-stat__description">Over five decades of Scouting</p></article>',
+    '        <article class="pack-glance-stat"><div class="pack-glance-stat__icon" data-card-icon="familyGroup" aria-hidden="true"></div><h3 class="pack-glance-stat__label">Active<br>Scouts</h3><span class="pack-glance-stat__divider" aria-hidden="true"></span><div class="pack-glance-stat__value"><span>31</span></div><p class="pack-glance-stat__description">Across all Cub Scout ranks</p></article>',
+    '        <article class="pack-glance-stat"><div class="pack-glance-stat__icon" data-card-icon="fleurDeLis" aria-hidden="true"></div><h3 class="pack-glance-stat__label">Pack Type</h3><span class="pack-glance-stat__divider" aria-hidden="true"></span><div class="pack-glance-stat__value pack-glance-stat__value--words"><span>Boys &amp;</span><span>Girls</span></div><p class="pack-glance-stat__description">A welcoming family Pack</p></article>',
+    '        <article class="pack-glance-stat"><div class="pack-glance-stat__icon" data-card-icon="school" aria-hidden="true"></div><h3 class="pack-glance-stat__label">Schools<br>Welcome</h3><span class="pack-glance-stat__divider" aria-hidden="true"></span><div class="pack-glance-stat__value pack-glance-stat__value--words"><span>Any</span><span>School</span></div><p class="pack-glance-stat__description">Open to the surrounding area</p></article>',
+    '        <article class="pack-glance-stat"><div class="pack-glance-stat__icon" data-card-icon="locationPin" aria-hidden="true"></div><h3 class="pack-glance-stat__label">Community</h3><span class="pack-glance-stat__divider" aria-hidden="true"></span><div class="pack-glance-stat__value pack-glance-stat__value--words"><span>Oak</span><span>Creek</span></div><p class="pack-glance-stat__description">And surrounding communities</p></article>'
   ].join('\n')
 );
 

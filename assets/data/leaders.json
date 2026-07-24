@@ -2,6 +2,7 @@
   "executive": [
     {
       "role": "Committee Chair",
+      "roleKey": "committee-chair",
       "secondaryRole": "Chartered Organization Representative",
       "name": "Jason Griffin",
       "started": "2019",
@@ -13,6 +14,7 @@
     },
     {
       "role": "Cubmaster",
+      "roleKey": "cubmaster",
       "name": "Kevin Vallenari",
       "started": 2014,
       "favorite": "Camping",
@@ -23,6 +25,7 @@
     },
     {
       "role": "Assistant Cubmaster",
+      "roleKey": "assistant-cubmaster",
       "name": "John Szydel",
       "started": 2022,
       "favorite": "Hiking",
@@ -33,6 +36,7 @@
     },
     {
       "role": "Secretary / Communications",
+      "roleKey": "secretary",
       "name": "Heather Rankel",
       "started": "2022",
       "favorite": "Blue & Gold",
@@ -43,6 +47,7 @@
     },
     {
       "role": "Treasurer",
+      "roleKey": "treasurer",
       "name": "Melissa Skrivanek",
       "started": "2024",
       "favorite": "Raingutter Regatta",
@@ -55,6 +60,7 @@
   "dens": [
     {
       "role": "Lion Den Leader",
+      "roleKey": "lion-den-leader",
       "den": "Lion Den",
       "name": "",
       "status": "volunteerOpportunity",
@@ -65,6 +71,7 @@
     },
     {
       "role": "Tiger Den Leader",
+      "roleKey": "tiger-den-leader",
       "den": "Tiger Den",
       "name": "Adam Cohen",
       "started": "2026",
@@ -74,6 +81,7 @@
     },
     {
       "role": "Wolf Den Leader",
+      "roleKey": "wolf-den-leader",
       "den": "Wolf Den",
       "name": "Andy Donalds",
       "status": "volunteerOpportunity",
@@ -84,6 +92,7 @@
     },
     {
       "role": "Bear Den Leader",
+      "roleKey": "bear-den-leader",
       "den": "Bear Den",
       "name": "John Szydel",
       "status": "volunteerOpportunity",
@@ -94,6 +103,7 @@
     },
     {
       "role": "Webelos Den Leader",
+      "roleKey": "webelos-den-leader",
       "den": "Webelos Den",
       "name": "Jason Griffin",
       "status": "volunteerOpportunity",
@@ -104,6 +114,7 @@
     },
     {
       "role": "Arrow of Light Den Leader",
+      "roleKey": "arrow-of-light-den-leader",
       "den": "Arrow of Light",
       "name": "Kevin Vallenari",
       "status": "volunteerOpportunity",
@@ -116,6 +127,7 @@
   "assistants": [
     {
       "role": "Assistant Den Leader",
+      "roleKey": "bear-den-assistant",
       "name": "Dan Schneider",
       "den": "Bear Den",
       "started": 2023,
@@ -127,6 +139,7 @@
   "committee": [
     {
       "role": "Advancement Chair",
+      "roleKey": "advancement-chair",
       "name": "Kelly Surges",
       "status": "teamFunction",
       "started": "2026",
@@ -138,6 +151,7 @@
     },
     {
       "role": "Popcorn Kernel",
+      "roleKey": "popcorn-kernel",
       "name": "Melissa Donalds",
       "status": "teamFunction",
       "started": "2026",
@@ -149,6 +163,7 @@
     },
     {
       "role": "Wreath Coordinator",
+      "roleKey": "wreath-coordinator",
       "name": "Jessie Szydel",
       "started": "2023",
       "favorite": "Fundraising",
@@ -159,6 +174,7 @@
     },
     {
       "role": "Sports / Professional Sporting Events",
+      "roleKey": "sports-events",
       "name": "Heather Rankel",
       "status": "teamFunction",
       "started": "2022",
@@ -170,6 +186,7 @@
     },
     {
       "role": "Candy Bar Fundraiser",
+      "roleKey": "candy-bar-fundraiser",
       "name": "Heather Rankel",
       "status": "teamFunction",
       "started": "2022",
