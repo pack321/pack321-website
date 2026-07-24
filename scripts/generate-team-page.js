@@ -67,7 +67,8 @@ const denCard = (person) => {
   const name = vacant ? 'Volunteer Opportunity' : person.name;
   const service = person.started ? `<p>Serving since ${esc(person.started)}</p>` : '<p>Role available for a Pack volunteer</p>';
   const badgeSrc = denBadgeByRole[person.roleKey];
-  return `        <a class="${className}" href="/volunteer/" aria-label="${esc(person.role)}: ${esc(name)}"><span class="den-leader-card__photo-wrap">${imgTag(person, 'leader-card__photo den-leader-card__photo')}<img class="den-leader-card__rank-badge" src="${badgeSrc}" alt="" aria-hidden="true"></span><h3 class="den-leader-card__title">${esc(person.role)}</h3><p class="den-name">${esc(name)}</p>${service}<span class="den-divider" aria-hidden="true"></span><span class="den-mission">${esc(person.favorite)}</span><span class="den-card-cta">Click Here <b aria-hidden="true">&rarr;</b></span></a>`;
+  const badgeClass = person.roleKey === 'arrow-of-light-den-leader' ? ' den-card-rank-badge--aol' : '';
+  return `        <a class="${className}" href="/volunteer/" aria-label="${esc(person.role)}: ${esc(name)}"><span class="den-card-photo-group">${imgTag(person, 'leader-card__photo den-card-photo')}<span class="den-card-rank-badge${badgeClass}" aria-hidden="true"><img src="${badgeSrc}" alt=""></span></span><h3 class="den-card-title">${esc(person.role)}</h3><div class="den-card-details"><p class="den-name">${esc(name)}</p>${service}</div><span class="den-divider" aria-hidden="true"></span><span class="den-mission">${esc(person.favorite)}</span><span class="den-card-cta">Click Here <b aria-hidden="true">&rarr;</b></span></a>`;
 };
 
 const assistantRow = (person) => {
