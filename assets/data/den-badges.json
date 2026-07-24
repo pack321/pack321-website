@@ -1,8 +1,8 @@
 {
-  "lion-den-leader": "/assets/ranks/lion.svg",
-  "tiger-den-leader": "/assets/ranks/tiger.svg",
-  "wolf-den-leader": "/assets/ranks/wolf.svg",
-  "bear-den-leader": "/assets/ranks/bear.svg",
-  "webelos-den-leader": "/assets/ranks/webelos.svg",
-  "arrow-of-light-den-leader": "/assets/ranks/aol.svg"
+  "lion-den-leader": "/assets/ranks/lion.jpg",
+  "tiger-den-leader": "/assets/ranks/tiger.jpg",
+  "wolf-den-leader": "/assets/ranks/wolf.jpg",
+  "bear-den-leader": "/assets/ranks/bear.jpg",
+  "webelos-den-leader": "/assets/ranks/webelos.jpg",
+  "arrow-of-light-den-leader": "/assets/ranks/aol.jpg"
 }
