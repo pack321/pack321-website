@@ -84,7 +84,7 @@ const committeeCard = (person) => {
   const vacant = !hasPerson(person);
   const className = vacant ? 'committee-card profile-card team-function' : 'committee-card profile-card';
   const personMeta = hasPerson(person) ? `<span class="committee-card__person">${esc(person.name)}</span>` : '';
-  return `        <article class="${className}">${imgTag(person)}<h3>${esc(person.role)}</h3><p>${esc(person.bio)}</p><div class="committee-card__contact">${contactButton(person)}</div>${personMeta}</article>`;
+  return `        <a class="${className}" href="mailto:${esc(person.email)}" aria-label="${esc(person.contactLabel || `Contact ${person.role}`)}: ${esc(person.role)}"><span class="committee-profile">${imgTag(person)}</span><h3>${esc(person.role)}</h3><span class="committee-divider" aria-hidden="true"></span><p>${esc(person.bio)}</p><span class="committee-card__cta">Click Here <b aria-hidden="true">&rarr;</b></span>${personMeta}</a>`;
 };
 
 function replaceBetween(html, start, end, replacement) {
@@ -124,7 +124,7 @@ html = replaceBetween(
 html = replaceBetween(
   html,
   '<div class="committee-grid">',
-  '\\s*</div>\\s*</div>\\s*<article class="commitment-card premium-card">',
+  '\\s*</div>\\s*</div>\\s*<article class="commitment-card premium-card"',
   data.committee.map(committeeCard).join('\n')
 );
 

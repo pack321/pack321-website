@@ -927,6 +927,207 @@ body.modal-open { overflow: hidden; }
   }
 }
 
+/* Approved Committee Members card system */
+.committee-section {
+  padding-block: 64px;
+}
+.committee-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(290px, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.committee-section-title {
+  margin-bottom: 32px;
+}
+.committee-section-title p {
+  max-width: 700px;
+  margin: 20px 0 0;
+  color: var(--navy);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  text-align: left;
+}
+.committee-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.committee-card,
+.committee-card.team-function {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 520px;
+  min-width: 0;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid #dfe4ea;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  color: var(--navy);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.committee-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 14px 30px rgba(0,0,0,.14);
+}
+.committee-card:focus-visible {
+  outline: 4px solid var(--gold);
+  outline-offset: 4px;
+  border-color: var(--gold);
+}
+.committee-card .committee-profile {
+  display: block;
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  margin: 0 0 18px;
+  overflow: hidden;
+  border: 4px solid var(--gold);
+  border-radius: 50%;
+  background: #fff;
+}
+.committee-card .committee-profile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  object-fit: cover;
+}
+.committee-card h3 {
+  margin: 0;
+  color: var(--navy);
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(1.65rem, 1.7vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.committee-card .committee-divider {
+  display: block;
+  flex: 0 0 auto;
+  width: 80px;
+  height: 3px;
+  margin: 20px auto;
+  border-radius: 999px;
+  background: var(--gold);
+}
+.committee-card p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.committee-card .committee-card__cta {
+  margin-top: auto;
+  padding-top: 20px;
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.committee-card .committee-card__cta b {
+  margin-left: 5px;
+  color: var(--gold);
+  transition: transform .18s;
+}
+.committee-card:hover .committee-card__cta b {
+  display: inline-block;
+  transform: translateX(4px);
+}
+.committee-card .committee-card__person {
+  margin-top: 10px;
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.committee-card:not(:has(.committee-card__person)) .committee-card__cta {
+  margin-bottom: 34px;
+}
+.commitment-card {
+  min-height: 100%;
+  padding: 32px;
+  border: 1px solid #dfe4ea;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.commitment-card h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(2rem, 3vw, 2.7rem);
+}
+.commitment-card h2::after {
+  width: 80px;
+  height: 3px;
+  margin-top: 16px;
+}
+.commitment-card ul {
+  display: block;
+  margin: 20px 0 0;
+}
+.commitment-card li {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  min-height: 76px;
+  padding: 16px 0;
+  color: var(--navy);
+  font-size: 1.125rem;
+  line-height: 1.35;
+}
+.commitment-card li + li {
+  border-top: 1px solid #e3e7ec;
+}
+.commitment-card li::before {
+  content: none;
+}
+.commitment-card li > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+@media (max-width: 1100px) {
+  .committee-layout {
+    grid-template-columns: 1fr;
+  }
+  .commitment-card {
+    min-height: 0;
+  }
+}
+@media (max-width: 900px) {
+  .committee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+  .commitment-card {
+    padding: 28px 24px;
+  }
+}
+
 /* Cub Scout rank detail pages */
 .rank-detail-hero {
   padding: 44px 0;
