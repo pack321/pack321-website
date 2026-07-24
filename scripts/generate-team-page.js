@@ -5,10 +5,12 @@ const root = path.join(__dirname, '..');
 const dataPath = path.join(root, 'assets', 'data', 'leaders.json');
 const leaderImagesPath = path.join(root, 'assets', 'data', 'leader-images.json');
 const denBadgesPath = path.join(root, 'assets', 'data', 'den-badges.json');
+const committeeEmblemsPath = path.join(root, 'assets', 'data', 'committee-emblems.json');
 const teamPath = path.join(root, 'team', 'index.html');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 const leaderImageByRole = Object.freeze(JSON.parse(fs.readFileSync(leaderImagesPath, 'utf8')));
 const denBadgeByRole = Object.freeze(JSON.parse(fs.readFileSync(denBadgesPath, 'utf8')));
+const committeeEmblemByRole = Object.freeze(JSON.parse(fs.readFileSync(committeeEmblemsPath, 'utf8')));
 
 const fallbackLeader = '/assets/images/leaders/Standard.jpg';
 const currentYear = new Date().getFullYear();
@@ -80,7 +82,8 @@ const committeeCard = (person) => {
   const vacant = !hasPerson(person);
   const className = vacant ? 'committee-card profile-card team-function' : 'committee-card profile-card';
   const personMeta = hasPerson(person) ? `<span class="committee-card__person">${esc(person.name)}</span>` : '';
-  return `        <a class="${className}" href="mailto:${esc(person.email)}" aria-label="${esc(person.contactLabel || `Contact ${person.role}`)}: ${esc(person.role)}"><span class="committee-profile">${imgTag(person)}</span><h3>${esc(person.role)}</h3><span class="committee-divider" aria-hidden="true"></span><p>${esc(person.bio)}</p><span class="committee-card__cta">Click Here <b aria-hidden="true">&rarr;</b></span>${personMeta}</a>`;
+  const emblemSrc = committeeEmblemByRole[person.roleKey];
+  return `        <a class="${className}" href="mailto:${esc(person.email)}" aria-label="${esc(person.contactLabel || `Contact ${person.role}`)}: ${esc(person.role)}"><span class="committee-card__media">${imgTag(person, 'leader-card__photo committee-card__photo')}<img class="committee-card__emblem" src="${emblemSrc}" alt="" aria-hidden="true"></span><h3>${esc(person.role)}</h3><span class="committee-divider" aria-hidden="true"></span><p>${esc(person.bio)}</p><span class="committee-card__cta">Click Here <b aria-hidden="true">&rarr;</b></span>${personMeta}</a>`;
 };
 
 function replaceBetween(html, start, end, replacement) {

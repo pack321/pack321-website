@@ -1143,26 +1143,39 @@ body.modal-open { overflow: hidden; }
   outline-offset: 4px;
   border-color: var(--gold);
 }
-.committee-card .committee-profile {
+.committee-card .committee-card__media {
+  position: relative;
   display: block;
   flex: 0 0 auto;
-  width: 120px;
-  height: 120px;
-  margin: 0 0 18px;
-  overflow: hidden;
-  border: 4px solid var(--gold);
-  border-radius: 50%;
-  background: #fff;
+  width: 112px;
+  height: 132px;
+  margin: 0 auto 10px;
 }
-.committee-card .committee-profile img {
+.committee-card .committee-card__photo {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 112px;
+  height: 112px;
   margin: 0;
-  border: 0;
+  border: 3px solid var(--gold);
   border-radius: 50%;
   box-shadow: none;
   object-fit: cover;
+  object-position: center;
+}
+.committee-card .committee-card__emblem {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 2;
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: translateX(-50%);
+  object-fit: contain;
 }
 .committee-card h3 {
   margin: 0;
