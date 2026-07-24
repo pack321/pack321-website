@@ -81,9 +81,9 @@ const assistantRow = (person) => {
 const committeeCard = (person) => {
   const vacant = !hasPerson(person);
   const className = vacant ? 'committee-card profile-card team-function' : 'committee-card profile-card';
-  const personMeta = hasPerson(person) ? `<span class="committee-card__person">${esc(person.name)}</span>` : '';
+  const personMeta = hasPerson(person) ? `<strong>${esc(person.name)}</strong>` : '';
   const emblemSrc = committeeEmblemByRole[person.roleKey];
-  return `        <a class="${className}" href="mailto:${esc(person.email)}" aria-label="${esc(person.contactLabel || `Contact ${person.role}`)}: ${esc(person.role)}"><span class="committee-card__media">${imgTag(person, 'leader-card__photo committee-card__photo')}<img class="committee-card__emblem" src="${emblemSrc}" alt="" aria-hidden="true"></span><h3>${esc(person.role)}</h3><span class="committee-divider" aria-hidden="true"></span><p>${esc(person.bio)}</p><span class="committee-card__cta">Click Here <b aria-hidden="true">&rarr;</b></span>${personMeta}</a>`;
+  return `        <a class="${className}" href="mailto:${esc(person.email)}" aria-label="${esc(person.contactLabel || `Contact ${person.role}`)}: ${esc(person.role)}"><span class="committee-card__media">${imgTag(person, 'leader-card__photo committee-card__photo')}<img class="committee-card__emblem" src="${emblemSrc}" alt="" aria-hidden="true"></span><h3 class="committee-card__title">${esc(person.role)}</h3><div class="committee-card__identity">${personMeta}</div><span class="committee-card__divider" aria-hidden="true"></span><span class="committee-card__message">${esc(person.bio)}</span><span class="committee-card__cta"><span>Click Here</span><span aria-hidden="true">&rarr;</span></span></a>`;
 };
 
 function replaceBetween(html, start, end, replacement) {
