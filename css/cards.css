@@ -898,15 +898,15 @@ body.modal-open { overflow: hidden; }
   outline-offset: 4px;
   box-shadow: 0 14px 30px rgba(8,43,87,.18);
 }
-.den-card .den-profile {
+.den-card .den-leader-card__photo-wrap {
+  position: relative;
   display: block;
   flex: 0 0 auto;
   width: 120px;
-  height: 120px;
+  height: 140px;
   margin: 0 auto 12px;
-  border-radius: 50%;
 }
-.den-card .den-profile img {
+.den-card .den-leader-card__photo {
   width: 120px;
   height: 120px;
   margin: 0;
@@ -916,15 +916,23 @@ body.modal-open { overflow: hidden; }
   background: var(--cream);
   box-shadow: 0 10px 24px rgba(8,43,87,.15);
 }
-.den-card img.den-rank-badge {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 16px;
+.den-card img.den-leader-card__rank-badge {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  margin: 0;
   border: 0;
   border-radius: 0;
   object-fit: contain;
   background: transparent;
   box-shadow: none;
+  transform: translateX(-50%);
+}
+.den-card .den-leader-card__title {
+  margin-top: 12px;
 }
 .den-card h3 {
   margin: 0 0 10px;

@@ -4,9 +4,11 @@ const path = require('path');
 const root = path.join(__dirname, '..');
 const dataPath = path.join(root, 'assets', 'data', 'leaders.json');
 const leaderImagesPath = path.join(root, 'assets', 'data', 'leader-images.json');
+const denBadgesPath = path.join(root, 'assets', 'data', 'den-badges.json');
 const teamPath = path.join(root, 'team', 'index.html');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 const leaderImageByRole = Object.freeze(JSON.parse(fs.readFileSync(leaderImagesPath, 'utf8')));
+const denBadgeByRole = Object.freeze(JSON.parse(fs.readFileSync(denBadgesPath, 'utf8')));
 
 const fallbackLeader = '/assets/images/leaders/Standard.jpg';
 const currentYear = new Date().getFullYear();
@@ -46,19 +48,9 @@ const contactButton = (person) => {
   return `<a class="leader-contact-button" href="mailto:${esc(person.email)}" aria-label="${esc(aria)}">${esc(label)}</a>`;
 };
 
-const denRank = (person) => {
-  const den = String(person.den || person.role || '').toLowerCase();
-  if (den.includes('arrow of light')) return { name: 'Arrow of Light', file: 'aol' };
-  if (den.includes('webelos')) return { name: 'Webelos', file: 'webelos' };
-  if (den.includes('bear')) return { name: 'Bear', file: 'bear' };
-  if (den.includes('wolf')) return { name: 'Wolf', file: 'wolf' };
-  if (den.includes('tiger')) return { name: 'Tiger', file: 'tiger' };
-  return { name: 'Lion', file: 'lion' };
-};
-
-const imgTag = (person) => {
+const imgTag = (person, className = 'leader-card__photo') => {
   const alt = hasPerson(person) ? person.name : person.role;
-  return `<img class="leader-card__photo" src="${leaderImage(person)}" alt="${esc(alt)}, ${esc(person.role)}" data-fallback="${fallbackLeader}" onerror="this.onerror=null;this.src='${fallbackLeader}';">`;
+  return `<img class="${className}" src="${leaderImage(person)}" alt="${esc(alt)}, ${esc(person.role)}" data-fallback="${fallbackLeader}" onerror="this.onerror=null;this.src='${fallbackLeader}';">`;
 };
 
 const executiveCard = (person) => {
@@ -74,8 +66,8 @@ const denCard = (person) => {
   const className = vacant ? 'den-card profile-card vacant' : 'den-card profile-card';
   const name = vacant ? 'Volunteer Opportunity' : person.name;
   const service = person.started ? `<p>Serving since ${esc(person.started)}</p>` : '<p>Role available for a Pack volunteer</p>';
-  const rank = denRank(person);
-  return `        <a class="${className}" href="/volunteer/" aria-label="${esc(person.role)}: ${esc(name)}"><span class="den-profile">${imgTag(person)}</span><img class="den-rank-badge" src="/assets/ranks/${rank.file}.svg" alt="${rank.name} Cub Scout rank badge"><h3>${esc(person.role)}</h3><p class="den-name">${esc(name)}</p>${service}<span class="den-divider" aria-hidden="true"></span><span class="den-mission">${esc(person.favorite)}</span><span class="den-card-cta">Click Here <b aria-hidden="true">&rarr;</b></span></a>`;
+  const badgeSrc = denBadgeByRole[person.roleKey];
+  return `        <a class="${className}" href="/volunteer/" aria-label="${esc(person.role)}: ${esc(name)}"><span class="den-leader-card__photo-wrap">${imgTag(person, 'leader-card__photo den-leader-card__photo')}<img class="den-leader-card__rank-badge" src="${badgeSrc}" alt="" aria-hidden="true"></span><h3 class="den-leader-card__title">${esc(person.role)}</h3><p class="den-name">${esc(name)}</p>${service}<span class="den-divider" aria-hidden="true"></span><span class="den-mission">${esc(person.favorite)}</span><span class="den-card-cta">Click Here <b aria-hidden="true">&rarr;</b></span></a>`;
 };
 
 const assistantRow = (person) => {
