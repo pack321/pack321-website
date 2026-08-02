@@ -2,12 +2,12 @@
   'use strict';
   async function hydrateAttribution(){
     const code=new URLSearchParams(location.search).get('scout');if(!code)return;
-    try{const scouts=await StoreUtils.loadData('scouts');const scout=scouts.find(item=>item.fundraisingCode===code.toUpperCase()&&item.fundraisingEnabled&&item.visibility==='public'&&item.guardianApproved);if(scout)StoreUtils.setAttribution({type:'scout',scoutCode:scout.fundraisingCode,displayName:scout.publicDisplayName,campaignId:new URLSearchParams(location.search).get('campaign')||new URLSearchParams(location.search).get('id'),sourcePage:location.pathname,timestamp:new Date().toISOString()});}catch(error){console.error('Unable to restore Scout attribution.',error);}
+    try{const scouts=await StoreUtils.loadData('scouts');const scout=scouts.find(item=>item.fundraisingCode===code.toUpperCase()&&item.fundraisingEnabled&&item.visibility==='public'&&item.guardianApproved);if(scout)StoreUtils.setAttribution({type:'scout',scoutCode:scout.fundraisingCode,displayName:scout.publicDisplayName,campaignId:new URLSearchParams(location.search).get('campaign')||new URLSearchParams(location.search).get('id'),sourcePage:location.pathname,attributionSource:'scout-link',timestamp:new Date().toISOString()});}catch(error){console.error('Unable to restore Scout attribution.',error);}
   }
   function renderSupportContext(){
     const context=StoreUtils.readAttribution();if(context?.type!=='scout'||!context.displayName)return;
     const banner=document.createElement('div');banner.className='support-context';banner.innerHTML=`<div class="wrap"><strong>Supporting: ${StoreUtils.escapeHtml(context.displayName)}</strong><span>Attribution follows this order through checkout.</span><button type="button" data-clear-support>Change this order to Pack-wide support</button></div>`;document.querySelector('.site-header')?.insertAdjacentElement('afterend',banner);
-    banner.querySelector('[data-clear-support]').addEventListener('click',()=>{const cart=StoreUtils.readCart();const packAttribution={type:'pack',value:'Pack 321 generally',scoutCode:null,campaignId:null,sourcePage:location.pathname,timestamp:new Date().toISOString()};cart.attribution=packAttribution;cart.items=cart.items.map(item=>({...item,attribution:packAttribution}));StoreUtils.writeCart(cart);StoreUtils.clearAttribution();location.reload();});
+    banner.querySelector('[data-clear-support]').addEventListener('click',()=>{const cart=StoreUtils.readCart();const packAttribution={type:'pack',value:'Pack 321 generally',scoutCode:null,campaignId:null,sourcePage:location.pathname,attributionSource:'pack-wide',timestamp:new Date().toISOString()};cart.attribution=packAttribution;cart.items=cart.items.map(item=>({...item,attribution:packAttribution}));StoreUtils.writeCart(cart);StoreUtils.clearAttribution();location.reload();});
   }
   function placeCodeSearch(page){
     if(document.querySelector('[data-code-search]'))return;

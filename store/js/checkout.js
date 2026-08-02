@@ -1,34 +1,16 @@
 (function(){
   'use strict';
   document.addEventListener('DOMContentLoaded',async()=>{
-    const form=document.querySelector('[data-checkout-form]');
-    if(!form)return;
-    const U=StoreUtils;
+    const form=document.querySelector('[data-checkout-form]');if(!form)return;const U=StoreUtils;
     const [products,campaigns,locations]=await Promise.all([U.loadData('products'),U.loadData('campaigns'),U.loadData('pickup-locations')]);
-    const productMap=Object.fromEntries(products.map(product=>[product.id,product]));
-    const campaignMap=Object.fromEntries(campaigns.map(campaign=>[campaign.id,campaign]));
-    const cart=U.readCart();
-    const pickupIds=new Set();
-    let subtotal=0;
+    const productMap=Object.fromEntries(products.map(product=>[product.id,product]));const campaignMap=Object.fromEntries(campaigns.map(campaign=>[campaign.id,campaign]));const cart=U.readCart();const pickupIds=new Set();let subtotal=0;
     const summary=document.querySelector('[data-checkout-summary]');
     summary.innerHTML=cart.items.length?cart.items.map(item=>{const product=productMap[item.productId];if(!product)return'';subtotal+=product.price*item.quantity;campaignMap[product.campaignId]?.pickupLocationIds?.forEach(id=>pickupIds.add(id));return `<div class="summary-row"><span>${item.quantity} × ${U.escapeHtml(product.name)}</span><strong>${U.formatCurrency(product.price*item.quantity,product.currency)}</strong></div>`;}).join(''):'<p>Your cart is empty.</p>';
     const attribution=cart.attribution||cart.items.find(item=>item.attribution)?.attribution;
-    if(attribution?.type==='scout')summary.insertAdjacentHTML('afterbegin',`<div class="notice"><strong>Supporting: ${U.escapeHtml(attribution.displayName||attribution.value||'Pack 321 Scout')}</strong><br>Campaign and Scout attribution will be preserved through secure payment.</div>`);
-    else summary.insertAdjacentHTML('afterbegin','<div class="notice"><strong>Supporting Pack 321 generally</strong><br>This order is not attributed to an individual Scout.</div>');
+    if(attribution?.type==='scout')summary.insertAdjacentHTML('afterbegin',`<div class="notice"><strong>Supporting: ${U.escapeHtml(attribution.displayName||'Pack 321 Scout')}</strong><br>Campaign and Scout attribution will be preserved through secure payment.</div>`);else summary.insertAdjacentHTML('afterbegin','<div class="notice"><strong>Supporting Pack 321 generally</strong><br>This order is not attributed to an individual Scout.</div>');
     document.querySelector('[data-checkout-total]').textContent=U.formatCurrency(subtotal);
-    const pickup=document.querySelector('#pickup-location');
-    locations.filter(location=>location.active&&(!pickupIds.size||pickupIds.has(location.id))).forEach(location=>pickup.insertAdjacentHTML('beforeend',`<option value="${U.escapeHtml(location.id)}">${U.escapeHtml(location.name)} — ${U.escapeHtml(location.city)}, ${U.escapeHtml(location.state)}</option>`));
-    form.addEventListener('submit',event=>{
-      event.preventDefault();
-      const status=document.querySelector('[data-checkout-status]');
-      const invalid=[...form.querySelectorAll('[required]')].find(element=>!element.checkValidity());
-      if(invalid){status.textContent='Please complete all required fields and acknowledgments.';status.className='inline-message error';invalid.focus();return;}
-      const campaignIds=[...new Set(cart.items.map(item=>productMap[item.productId]?.campaignId).filter(Boolean))];
-      const futurePayload={contact:{firstName:form.firstName.value,lastName:form.lastName.value,email:form.email.value,phone:form.phone.value},cart,pickupLocationId:form.pickupLocation.value,specialInstructions:form.specialInstructions.value,stripeMetadata:{packId:'pack-321',campaignId:campaignIds.length===1?campaignIds[0]:null,campaignIds,scoutCode:attribution?.scoutCode||null,fundraisingCode:attribution?.scoutCode||null,orderSource:attribution?.sourcePage||'storefront',landingPage:attribution?.sourcePage||location.pathname,attributionTimestamp:attribution?.timestamp||null}};
-      console.info('Future secure checkout payload',futurePayload);
-      status.textContent='Contact, pickup, and fundraising attribution are ready. Secure payment remains disabled in this preview.';
-      status.className='inline-message';
-    });
-    // Future server: reload trusted prices, validate public fundraising code and campaign enrollment, then create Stripe Checkout with allowlisted metadata only.
+    const pickup=document.querySelector('#pickup-location');locations.filter(location=>location.active&&(!pickupIds.size||pickupIds.has(location.id))).forEach(location=>pickup.insertAdjacentHTML('beforeend',`<option value="${U.escapeHtml(location.id)}">${U.escapeHtml(location.name)} — ${U.escapeHtml(location.city)}, ${U.escapeHtml(location.state)}</option>`));
+    form.addEventListener('submit',event=>{event.preventDefault();const status=document.querySelector('[data-checkout-status]');const invalid=[...form.querySelectorAll('[required]')].find(element=>!element.checkValidity());if(invalid){status.textContent='Please complete all required fields and acknowledgments.';status.className='inline-message error';invalid.focus();return;}try{const payload=Pack321CheckoutPayload.build({cart,products,contact:{firstName:form.firstName.value,lastName:form.lastName.value,email:form.email.value,phone:form.phone.value},pickupSelection:form.pickupLocation.value});window.dispatchEvent(new CustomEvent('pack321:checkout-payload-ready',{detail:payload}));status.textContent='Contact, pickup, and fundraising attribution are ready. Secure payment remains disabled in this preview.';status.className='inline-message';}catch(error){status.textContent=error.message;status.className='inline-message error';}});
+    // Phase 2 server must reload products and campaigns, then validate prices, status, inventory, option IDs, pickup, and Scout eligibility before creating Stripe Checkout.
   });
 })();

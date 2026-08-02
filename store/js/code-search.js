@@ -16,7 +16,12 @@
       if(!code){fail('Enter a fundraising code to continue.','code_search_invalid');return;}
       if(!CODE_PATTERN.test(code)){fail('Enter a valid six-character fundraising code.','code_search_invalid');return;}
       result.textContent='Checking fundraising code…';
-      try{const limit=await rateLimitCheck({campaignId,sourcePage:location.pathname});if(limit?.allowed===false){fail('We could not complete the lookup. Please try again later.','code_search_unavailable');return;}const scouts=await StoreUtils.loadData('scouts');const scout=scouts.find(item=>item.fundraisingCode===code);if(!publicActive(scout)){fail('We could not find an active public fundraising page for that code. Check the code or support Pack 321 generally.','code_search_not_found');return;}analyticsEvent('code_search_success',campaignId);result.textContent='Scout fundraising page found. Redirecting…';const query=campaignId?`?campaign=${encodeURIComponent(campaignId)}`:'';location.assign(`/scout/${encodeURIComponent(code)}${query}`);}catch{fail('Fundraising code lookup is temporarily unavailable. Please try again later.','code_search_unavailable');}
+      try{
+        const limit=await rateLimitCheck({campaignId,sourcePage:location.pathname});if(limit?.allowed===false){fail('We could not complete the lookup. Please try again later.','code_search_unavailable');return;}
+        const scouts=await StoreUtils.loadData('scouts');const scout=scouts.find(item=>item.fundraisingCode===code);
+        if(!publicActive(scout)){fail('We could not find an active public fundraising page for that code. Check the code or support Pack 321 generally.','code_search_not_found');return;}
+        analyticsEvent('code_search_success',campaignId);result.textContent='Scout fundraising page found. Redirecting…';const query=new URLSearchParams({source:'code-search'});if(campaignId)query.set('campaign',campaignId);location.assign(`/scout/${encodeURIComponent(code)}?${query}`);
+      }catch{fail('Fundraising code lookup is temporarily unavailable. Please try again later.','code_search_unavailable');}
     });
   }
   const init=()=>document.querySelectorAll('[data-code-search]').forEach((host,index)=>{if(!host.dataset.codeSearchReady){host.dataset.codeSearchReady='true';render(host,index);}});

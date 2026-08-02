@@ -49,6 +49,10 @@ for(const test of [
   const match=findCampaign(test[0]);
   if(match?.id!==test[1])failures.push(`campaign lookup ${test[0]} expected ${test[1]}, received ${match?.id||'not found'}`);
 }
+for(const status of ['active','scheduled','closed','archived'])if(!campaigns.some(campaign=>campaign.status===status))failures.push(`missing campaign state fixture: ${status}`);
+const checkoutSource=fs.readFileSync(path.join(storeRoot,'js','checkout.js'),'utf8');
+if(/console\.(?:log|info|warn|error)\s*\(/.test(checkoutSource))failures.push('checkout must not log contact data or checkout payloads');
+for(const forbidden of ['price','total','campaignStatus','inventory','scoutEligibility'])if(!readJson('data/integration-contract.json').serverTrustBoundary.neverTrustFromBrowser.includes(forbidden))failures.push(`missing server trust boundary: ${forbidden}`);
 
 function exactCasePath(absolute){
   const relative=path.relative(storeRoot,absolute);
