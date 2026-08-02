@@ -1,0 +1,38 @@
+[
+  {
+    "id": "wreaths-2026",
+    "slug": "wreaths-2026",
+    "name": "2026 Holiday Wreath Fundraiser",
+    "type": "fundraiser",
+    "status": "active",
+    "featured": true,
+    "description": "Support Pack 321 through our annual holiday wreath fundraiser. Preview details are not final.",
+    "image": "assets/campaigns/wreaths-2026.svg",
+    "startDate": "2026-09-01",
+    "endDate": "2026-11-01",
+    "pickupLocationIds": ["carollton-elementary"],
+    "pickupInstructions": "Final pickup date and instructions will be emailed after ordering.",
+    "scoutAttributionRequired": false,
+    "allowPackSupport": true,
+    "year": 2026,
+    "sample": true
+  },
+  {
+    "id": "seasonal-preview",
+    "slug": "seasonal-preview",
+    "name": "Seasonal Fundraiser Preview",
+    "type": "fundraiser",
+    "status": "scheduled",
+    "featured": false,
+    "description": "A flexible campaign placeholder for a future Pack 321 fundraiser.",
+    "image": "assets/campaigns/seasonal-preview.svg",
+    "startDate": "2027-02-01",
+    "endDate": "2027-03-15",
+    "pickupLocationIds": ["carollton-elementary"],
+    "pickupInstructions": "Pickup details will be added when the campaign is finalized.",
+    "scoutAttributionRequired": false,
+    "allowPackSupport": true,
+    "year": 2027,
+    "sample": true
+  }
+]
