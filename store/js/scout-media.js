@@ -13,6 +13,9 @@
       const current=enrolled.find(c=>c.id===requestedCampaign)||enrolled.find(c=>c.status==='active')||enrolled[0];
       const apply=()=>{
         const placeholder=host.querySelector('.scout-photo-placeholder');if(!placeholder)return false;
+        const privacyCopy=host.querySelectorAll('.privacy-card p');
+        if(privacyCopy[0])privacyCopy[0].textContent='This public page uses only guardian-approved public profile information. Private profile and family data remain protected.';
+        if(privacyCopy[1])privacyCopy[1].textContent='Visibility, photos, messages, goals, enrollment, and sharing tools remain subject to guardian controls.';
         const campaignMedia=manifest.campaigns[campaignKey(current)]?.hero;
         const mayShowScoutPhoto=Boolean(scout.photoEnabled&&scout.photoConsentPublic&&scout.approvedPhoto);
         const selected=mayShowScoutPhoto?{src:scout.approvedPhoto,alt:`Guardian-approved photo of ${scout.publicDisplayName}`}:(campaignMedia?.publicApproved?campaignMedia:manifest.scoutFallback);
