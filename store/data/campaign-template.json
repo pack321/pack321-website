@@ -1,0 +1,6 @@
+{
+  "schemaVersion":1,"description":"Duplicate this record for a new campaign year, retain templateId, and issue a new id and slug.",
+  "required":["id","year","slug","templateId","name","status","visibility","goal","startDate","endDate","productIds","faq","gallery","pickupLocationIds","donationsEnabled","scoutCreditRules","packCreditRules","inventoryMode","refundPolicy"],
+  "copyOnDuplicate":["productIds","gallery","scoutCreditRules","packCreditRules","faq","description","story","pickupInstructions","inventoryMode","refundPolicy"],
+  "resetOnDuplicate":["id","year","slug","status","startDate","endDate","progress.raised","progress.orders","progress.scoutsParticipating"]
+}
