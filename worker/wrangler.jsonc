@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pack321-storefront-api-preview",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-08-02",
+  "workers_dev": true,
+  "vars": {
+    "PACK_ID": "pack-321",
+    "STOREFRONT_ORIGIN": "https://3a61075c.pack321-website.pages.dev"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "pack321-storefront-preview",
+    "database_id": "00000000-0000-0000-0000-000000000000",
+    "preview_database_id": "00000000-0000-0000-0000-000000000000",
+    "migrations_dir": "migrations"
+  }],
+  "ratelimits": [
+    {"name":"CHECKOUT_RATE_LIMITER","namespace_id":"32101","simple":{"limit":10,"period":60}},
+    {"name":"LOOKUP_RATE_LIMITER","namespace_id":"32102","simple":{"limit":10,"period":60}},
+    {"name":"ADMIN_RATE_LIMITER","namespace_id":"32103","simple":{"limit":60,"period":60}}
+  ],
+  "observability": {"enabled": true},
+  "triggers": {"crons":["17 * * * *"]}
+}

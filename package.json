@@ -6,6 +6,10 @@
     "build": "node scripts/generate-cub-rank-pages.js && node scripts/generate-team-page.js && node scripts/apply-seo-metadata.js && node scripts/generate-clean-routes.js && node scripts/generate-store-scout-routes.js && node scripts/generate-seo.js",
     "apply:seo": "node scripts/apply-seo-metadata.js",
     "generate:seo": "node scripts/generate-seo.js",
-    "validate:store": "node scripts/validate-store-deployment.js && node scripts/test-checkout-payload.js"
-  }
+    "validate:store": "node scripts/validate-store-deployment.js && node scripts/test-checkout-payload.js",
+    "test:worker": "node worker/test/domain.test.mjs",
+    "dev:worker": "wrangler dev --config worker/wrangler.jsonc",
+    "deploy:worker:preview": "wrangler deploy --config worker/wrangler.jsonc"
+  },
+  "devDependencies": {"wrangler":"^4.36.0"}
 }
