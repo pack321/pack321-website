@@ -8,8 +8,9 @@
     return params.get('campaign')||params.get('id')||params.get('slug')||'wreaths-2026';
   };
   const findCampaign=(campaigns,key)=>{
-    const requested=normalizeCampaignKey(key);
-    return campaigns.find(item=>[item.id,item.slug].some(value=>normalizeCampaignKey(value)===requested));
+    const aliases={'seasonal':'spring-2027','seasonal-preview':'spring-2027','merchandise':'pack-merchandise','merchandise-campaign':'pack-merchandise'};
+    const requested=aliases[normalizeCampaignKey(key)]||normalizeCampaignKey(key);
+    return campaigns.find(item=>[item.id,item.slug,...(item.aliases||[])].some(value=>normalizeCampaignKey(value)===requested));
   };
   document.addEventListener('DOMContentLoaded',async()=>{
     const host=document.querySelector('[data-campaign-page]');if(!host)return;
@@ -26,6 +27,6 @@
       <section class="page-section soft-section" id="products"><div class="wrap"><div class="section-heading"><p class="eyebrow">Campaign products</p><h2>Choose your way to support</h2></div><div class="product-grid">${campaignProducts.map(item=>{const productMedia=manifest.products[item.id];return `<article class="product-card"><img src="${StoreUtils.escapeHtml(productMedia?.primary||item.image)}" alt="${StoreUtils.escapeHtml(item.name)}" width="600" height="450" loading="lazy"><div class="product-content"><h3>${StoreUtils.escapeHtml(item.name)}</h3><p>${StoreUtils.escapeHtml(item.description)}</p><div class="product-meta"><span>${StoreUtils.formatCurrency(item.price,item.currency)}</span></div><a class="button" href="product.html?id=${encodeURIComponent(item.id)}">View product</a></div></article>`;}).join('')}</div></div></section>
       <section class="page-section"><div class="wrap"><div class="contact-grid"><article class="contact-card"><h3>Volunteer moments</h3><p>Pack volunteers organize products, family communication, and pickup so campaign proceeds can stay focused on Scouts.</p></article><article class="contact-card" id="pickup"><h3>Pickup</h3><p><strong>${StoreUtils.escapeHtml(place?.name||'Location to be confirmed')}</strong><br>${StoreUtils.escapeHtml(campaign.pickupInstructions||place?.instructions||'Instructions will be emailed.')}</p></article><article class="contact-card"><h3>Questions?</h3><p>Our volunteer leaders can help with products, Scout support, or pickup.</p><a href="help.html#contact">Contact campaign support</a></article></div></div></section>
       <section class="page-section soft-section"><div class="wrap"><div class="section-heading"><h2>Campaign FAQ</h2></div><div class="faq-list">${(campaign.faq||[]).map(item=>`<details><summary>${StoreUtils.escapeHtml(item.question)}</summary><p>${StoreUtils.escapeHtml(item.answer)}</p></details>`).join('')||'<details><summary>How do I support this campaign?</summary><p>Choose a product or share the campaign with friends and family.</p></details>'}</div></div></section>`;
-    }catch(error){console.error(error);host.innerHTML='<section class="page-section"><div class="wrap empty-state"><h1>Campaign details could not load</h1><p>Please refresh or visit the Fundraising Center.</p></div></section>';}
+    }catch(error){console.error('Campaign data unavailable',error);host.innerHTML='<section class="page-section"><div class="wrap empty-state"><h1>Campaign Data Unavailable</h1><p>The campaign service or one of its required data files could not be loaded. Please refresh or visit the Fundraising Center.</p></div></section>';}
   });
 })();
