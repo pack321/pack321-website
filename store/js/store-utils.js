@@ -6,8 +6,9 @@
   const escapeHtml=(value='')=>String(value).replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
   const formatCurrency=(cents,currency='usd')=>new Intl.NumberFormat('en-US',{style:'currency',currency:currency.toUpperCase()}).format((Number(cents)||0)/100);
   const formatDate=value=>value?new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric'}).format(new Date(`${value}T12:00:00`)):'';
-  async function loadData(name){if(!cache[name]){const response=await fetch(`data/${name}.json`);if(!response.ok)throw new Error(`Unable to load ${name}.`);cache[name]=response.json();}return cache[name];}
-  async function loadMedia(){if(!cache.media){const response=await fetch('../assets/media/manifest.json');if(!response.ok)throw new Error('Unable to load the approved media manifest.');cache.media=response.json();}return cache.media;}
+  async function fetchJson(url,label){const response=await fetch(url,{headers:{Accept:'application/json'}});if(!response.ok)throw new Error(`${label} unavailable (${response.status})`);try{return await response.json();}catch{throw new Error(`${label} contains invalid JSON`);}}
+  async function loadData(name){if(!cache[name])cache[name]=fetchJson(`/data/${name}.json`,name);return cache[name];}
+  async function loadMedia(){if(!cache.media)cache.media=fetchJson('/assets/media/manifest.json','media manifest');return cache.media;}
   function emptyCart(){return{version:1,attribution:{type:'pack',value:'',scoutCode:null,campaignId:null,sourcePage:null,timestamp:null},items:[]};}
   function readCart(){try{const cart=JSON.parse(localStorage.getItem(CART_KEY));return cart&&cart.version===1&&Array.isArray(cart.items)?cart:emptyCart();}catch{return emptyCart();}}
   function writeCart(cart){localStorage.setItem(CART_KEY,JSON.stringify(cart));updateCartBadge(cart);window.dispatchEvent(new CustomEvent('pack321:cart',{detail:cart}));}
