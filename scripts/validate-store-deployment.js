@@ -21,8 +21,10 @@ if(isPublicActive(inactiveScout))failures.push('ZZ99ZZ must remain unavailable')
 if(isPublicActive(scouts.find(scout=>scout.fundraisingCode==='QQ88QQ')))failures.push('unknown fundraising code must remain unavailable');
 const forbiddenScoutFields=['dateOfBirth','address','school','parentNames','familyNames','email','roster','scoutHQId','privateFundraisingTotals'];
 scouts.forEach((scout,index)=>forbiddenScoutFields.forEach(field=>{if(field in scout)failures.push(`scouts[${index}] exposes private field ${field}`);}));
-const redirects=fs.readFileSync(path.join(storeRoot,'_redirects'),'utf8');
-if(!redirects.includes('/scout/:code /scout.html?code=:code 200'))failures.push('clean Scout fundraising route is missing');
+for(const scout of scouts.filter(isPublicActive)){
+  const route=path.join(storeRoot,'scout',scout.fundraisingCode,'index.html');
+  if(!fs.existsSync(route))failures.push(`clean Scout fundraising route is missing: ${scout.fundraisingCode}`);
+}
 const codeSearchSource=fs.readFileSync(path.join(storeRoot,'js','code-search.js'),'utf8');
 for(const event of ['code_search_started','code_search_success','code_search_not_found','code_search_invalid','code_search_unavailable'])if(!codeSearchSource.includes(event))failures.push(`missing analytics event ${event}`);
 if(/console\.(?:log|info|warn|error)\s*\(/.test(codeSearchSource))failures.push('fundraising code search must not log raw lookup input');
