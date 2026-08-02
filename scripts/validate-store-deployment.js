@@ -11,6 +11,22 @@ const media=readJson('assets/media/manifest.json');
 const campaignTemplate=readJson('data/campaign-template.json');
 const failures=[];
 
+const codePattern=/^[A-Z0-9]{6}$/;
+const activeScout=scouts.find(scout=>scout.fundraisingCode==='AB12CD');
+const inactiveScout=scouts.find(scout=>scout.fundraisingCode==='ZZ99ZZ');
+const isPublicActive=scout=>Boolean(scout&&scout.fundraisingEnabled&&scout.visibility==='public'&&scout.guardianApproved&&scout.status!=='expired');
+if(!codePattern.test('AB12CD')||codePattern.test('bad code'))failures.push('fundraising code pattern validation failed');
+if(!isPublicActive(activeScout))failures.push('AB12CD must resolve as the active public-safe test profile');
+if(isPublicActive(inactiveScout))failures.push('ZZ99ZZ must remain unavailable');
+if(isPublicActive(scouts.find(scout=>scout.fundraisingCode==='QQ88QQ')))failures.push('unknown fundraising code must remain unavailable');
+const forbiddenScoutFields=['dateOfBirth','address','school','parentNames','familyNames','email','roster','scoutHQId','privateFundraisingTotals'];
+scouts.forEach((scout,index)=>forbiddenScoutFields.forEach(field=>{if(field in scout)failures.push(`scouts[${index}] exposes private field ${field}`);}));
+const redirects=fs.readFileSync(path.join(storeRoot,'_redirects'),'utf8');
+if(!redirects.includes('/scout/:code /scout.html?code=:code 200'))failures.push('clean Scout fundraising route is missing');
+const codeSearchSource=fs.readFileSync(path.join(storeRoot,'js','code-search.js'),'utf8');
+for(const event of ['code_search_started','code_search_success','code_search_not_found','code_search_invalid','code_search_unavailable'])if(!codeSearchSource.includes(event))failures.push(`missing analytics event ${event}`);
+if(/console\.(?:log|info|warn|error)\s*\(/.test(codeSearchSource))failures.push('fundraising code search must not log raw lookup input');
+
 const valueAt=(object,key)=>key.split('.').reduce((value,part)=>value?.[part],object);
 for(const campaign of campaigns){
   for(const key of campaignTemplate.required){

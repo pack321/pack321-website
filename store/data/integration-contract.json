@@ -1,6 +1,6 @@
 {
   "schemaVersion":1,
   "stripeCheckoutMetadata":{"packId":"pack-321","campaignId":null,"campaignYear":null,"scoutCode":null,"fundraisingCode":null,"orderSource":null,"landingPage":null,"attributionTimestamp":null},
-  "analytics":{"visitorId":null,"campaignId":null,"scoutCode":null,"sourcePage":null,"landingPage":null,"events":["view","product_view","add_to_cart","checkout_started","purchase"],"measures":["conversion","average_order","campaign_revenue","scout_revenue","donation_total","products_sold","repeat_customer"]},
+  "analytics":{"visitorId":null,"campaignId":null,"scoutCode":null,"sourcePage":null,"landingPage":null,"events":["view","product_view","add_to_cart","checkout_started","purchase","code_search_started","code_search_success","code_search_not_found","code_search_invalid","code_search_unavailable"],"measures":["conversion","average_order","campaign_revenue","scout_revenue","donation_total","products_sold","repeat_customer"]},
   "scoutHQ":{"publicFields":["publicDisplayName","approvedPhoto","personalMessage","goal","campaignIds","visibility","fundraisingEnabled"],"privateFieldsNeverRendered":["dateOfBirth","address","school","parentNames","familyNames","email","roster","scoutHQId","privateFundraisingTotals"],"leaderActions":["enableFundraiser","disableFundraiser","approvePublicPage","uploadApprovedPhoto","assignCampaign","resetGoal","closeCampaign","archiveCampaign","generateQr","viewScoutOrders","viewFundraisingTotals"]}
 }

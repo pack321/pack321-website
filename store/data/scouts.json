@@ -4,5 +4,12 @@
     "qr":{"permanent":{"status":"reserved","path":null},"campaign":{"status":"reserved","paths":{}},"printableFlyer":{"status":"reserved","path":null},"social":{"status":"future"},"businessCard":{"status":"future"},"yardSign":{"status":"future"}},
     "dashboard":{"myGoal":1000,"raised":410,"orders":12,"pending":2,"scoutRank":null,"topProducts":[],"recentSupporters":[],"shareLinks":[],"qrCodes":[]},
     "controls":{"displayNameManagedBy":"ScoutHQ","photoManagedBy":"ScoutHQ","messageManagedBy":"ScoutHQ","goalManagedBy":"ScoutHQ","enrollmentManagedBy":"ScoutHQ","qrManagedBy":"ScoutHQ"}
+  },
+  {
+    "fundraisingCode":"ZZ99ZZ",
+    "fundraisingEnabled":false,
+    "visibility":"private",
+    "guardianApproved":false,
+    "status":"inactive"
   }
 ]

@@ -77,6 +77,21 @@ html{scroll-padding-top:var(--header-offset)}
 .site-footer .brand-copy strong{font-size:23px}
 .footer-bottom{margin-top:38px}
 
+.code-search-section{background:var(--cream)}
+.code-search-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr);gap:54px;align-items:center;padding:36px 42px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:var(--shadow)}
+.code-search-copy h2{margin:0;color:var(--navy);font-size:clamp(32px,3vw,44px);line-height:1.1}
+.code-search-copy p:last-child{max-width:540px;color:var(--muted)}
+.code-search-form{min-width:0}
+.code-search-controls{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}
+.code-search-controls input{text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.field-helper,.code-search-result{margin:7px 0 0;color:var(--muted);font-size:14px}
+.code-search-result{min-height:22px;color:var(--navy);font-weight:800}
+.code-search-error{margin-bottom:14px;padding:12px 14px;border-left:5px solid var(--danger);border-radius:8px;background:#fff0ef;color:var(--danger);font-weight:800}
+.code-search-error:focus{outline:4px solid #2b7bbb;outline-offset:3px}
+.find-scout-hero{min-height:300px;display:grid;align-items:center}
+.find-scout-hero .wrap{max-width:840px;text-align:center}
+.find-scout-hero h1{margin:0;color:#fff;font:900 clamp(48px,5.5vw,72px)/.96 "Bebas Neue",Impact,sans-serif;text-transform:uppercase}
+
 @media(max-width:1180px){
   .menu-toggle{display:inline-flex}
   .nav{display:none;gap:4px}
@@ -91,6 +106,7 @@ html{scroll-padding-top:var(--header-offset)}
   .campaign-hero-grid{grid-template-columns:1fr 1fr;gap:30px}
   .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
   .footer-grid>div:last-child{grid-column:2}
+  .code-search-card{grid-template-columns:1fr;gap:24px}
 }
 @media(max-width:767px){
   :root{--header-offset:96px}
@@ -111,4 +127,6 @@ html{scroll-padding-top:var(--header-offset)}
   .footer-grid>div:last-child{grid-column:auto}
   .campaign-hero img{height:270px}
   .story-band{padding:28px 24px}
+  .code-search-card{padding:26px 22px}
+  .code-search-controls{grid-template-columns:1fr}
 }
