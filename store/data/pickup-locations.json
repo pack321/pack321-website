@@ -1,0 +1,12 @@
+[
+  {
+    "id": "carollton-elementary",
+    "name": "Carollton Elementary School",
+    "addressLine1": "",
+    "city": "Oak Creek",
+    "state": "WI",
+    "postalCode": "",
+    "instructions": "Pickup instructions will be provided by Pack 321.",
+    "active": true
+  }
+]
