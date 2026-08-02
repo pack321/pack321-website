@@ -6,8 +6,9 @@
     "type": "fundraiser",
     "status": "active",
     "featured": true,
-    "description": "Support Pack 321 through our annual holiday wreath fundraiser. Preview details are not final.",
-    "image": "assets/campaigns/wreaths-2026.svg",
+    "description": "Bring home fresh holiday greenery while helping Pack 321 make camping, awards, and hands-on adventures more affordable for every family.",
+    "story": "Our annual wreath fundraiser turns a favorite holiday tradition into a season of adventure. Proceeds help cover campsite fees, program supplies, awards, and special Pack events.",
+    "image": "../assets/images/adventures/camping.jpg",
     "startDate": "2026-09-01",
     "endDate": "2026-11-01",
     "pickupLocationIds": ["carollton-elementary"],
@@ -15,7 +16,8 @@
     "scoutAttributionRequired": false,
     "allowPackSupport": true,
     "year": 2026,
-    "sample": true
+    "sample": true,
+    "progress": {"raised": 18540, "goal": 25000, "scoutsParticipating": 87, "orders": 412, "daysRemaining": 19}
   },
   {
     "id": "seasonal-preview",
@@ -24,8 +26,9 @@
     "type": "fundraiser",
     "status": "scheduled",
     "featured": false,
-    "description": "A flexible campaign placeholder for a future Pack 321 fundraiser.",
-    "image": "assets/campaigns/seasonal-preview.svg",
+    "description": "A spring campaign being prepared to support Pinewood Derby, family activities, and community service.",
+    "story": "This campaign is reserved for our next family-led fundraiser. Details will be shared as soon as dates, products, and pickup plans are confirmed.",
+    "image": "../assets/images/adventures/pinewood-derby.jpg",
     "startDate": "2027-02-01",
     "endDate": "2027-03-15",
     "pickupLocationIds": ["carollton-elementary"],
@@ -33,6 +36,7 @@
     "scoutAttributionRequired": false,
     "allowPackSupport": true,
     "year": 2027,
-    "sample": true
+    "sample": true,
+    "progress": {"raised": 0, "goal": 12000, "scoutsParticipating": 0, "orders": 0, "daysRemaining": null}
   }
 ]
