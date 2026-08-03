@@ -30,8 +30,14 @@
     const footer=document.querySelector('.site-footer');
     if(footer)footer.outerHTML=`<footer class="site-footer"><div class="wrap footer-grid"><div><a class="brand" href="/"><img src="/assets/logos/cub-scout-logo.svg" alt="Pack 321 logo" width="58" height="58"><span class="brand-copy"><strong>Support Pack 321</strong><span>Invest in the next adventure</span></span></a><p>Every purchase helps local Scouts build character, friendships, and lifelong memories.</p></div><div><h3>Support</h3><a href="/campaign.html?id=wreaths-2026">Current campaigns</a><a href="/find-a-scout.html">Find a Scout</a><a href="/fundraising.html">Fundraising center</a><a href="/shop.html?category=Pack%20Merchandise">Pack merchandise</a><a href="/order-lookup.html">Order lookup</a></div><div><h3>Help</h3><a href="/help.html">Help &amp; contact</a><a href="/help.html#refunds">Refund policy</a><a href="/help.html#donations">Donation questions</a><a href="https://pack321wi.org/contact/">Pack contact</a></div><div><h3>Pack 321</h3><a href="https://pack321wi.org/">Pack website</a><a href="https://www.facebook.com/Pack321WI">Facebook</a><a href="https://pack321wi.org/contact/">Contact</a><a href="https://pack321wi.org/#privacy">Privacy</a></div></div><div class="wrap footer-bottom">© <span data-year></span> Cub Scout Pack 321 · Oak Creek, Wisconsin · Storefront preview</div></footer>`;
   }
+  function applyFundraiserTypography(root=document){
+    root.querySelectorAll('.campaign-hero--fundraiser h1').forEach(heading=>heading.classList.add('fundraiser-hero-title'));
+    root.querySelectorAll('main h1:not(.fundraiser-hero-title),.section-heading h2,.story-band h2,.builder-group h3,.symbol-legend-dialog h2').forEach(heading=>heading.classList.add('fundraiser-section-title'));
+    root.querySelectorAll('.eyebrow,.campaign-hero__eyebrow').forEach(label=>label.classList.add('fundraiser-eyebrow'));
+  }
+  window.PackStoreTypography={apply:applyFundraiserTypography};
   document.addEventListener('DOMContentLoaded',()=>{
-    hydrateAttribution().then(renderSupportContext);renderShell();
+    hydrateAttribution().then(renderSupportContext);renderShell();applyFundraiserTypography();
     const toggle=document.querySelector('[data-menu-toggle]');const nav=document.querySelector('[data-store-nav]');
     toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));});
     StoreUtils.updateCartBadge();document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());

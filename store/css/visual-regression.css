@@ -96,7 +96,7 @@ html{scroll-padding-top:var(--header-offset)}
 .code-search-error:focus{outline:4px solid #2b7bbb;outline-offset:3px}
 .find-scout-hero{min-height:300px;display:grid;align-items:center}
 .find-scout-hero .wrap{max-width:840px;text-align:center}
-.find-scout-hero h1{margin:0;color:#fff;font:900 clamp(48px,5.5vw,72px)/.96 "Bebas Neue",Impact,sans-serif;text-transform:uppercase}
+.find-scout-hero h1{margin:0;color:#fff}
 
 @media(max-width:1180px){
   .menu-toggle{display:inline-flex}
