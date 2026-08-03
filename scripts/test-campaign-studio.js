@@ -49,7 +49,15 @@ const veteran = products.find(product => product.id === '20-inch-veterans-wreath
 assert.equal(veteran.fulfillmentType, 'ceremony-placement');
 assert(!/ship|deliver/i.test(veteran.vendorDescription));
 assert.equal(campaign('veterans-wreaths-2026').primaryAction, 'Sponsor a Veteran’s Wreath');
-assert(symbols.every(symbol => symbol.meaning === null && symbol.verificationStatus === 'pending' && !symbol.publiclyInterpreted));
+const verifiedSymbols = symbols.filter(symbol => symbol.verified === true);
+assert.deepEqual(verifiedSymbols.map(symbol => symbol.id), ['gluten-free', 'ou-kosher', 'dairy']);
+assert(symbols.filter(symbol => symbol.verified === false).every(symbol => symbol.meaning === null && symbol.verificationStatus === 'pending' && !symbol.publiclyInterpreted));
+assert.deepEqual(products.find(product => product.id === 'classic-caramel-corn').dietaryAttributes, ['gluten-free', 'ou-kosher', 'dairy']);
+for (const campaign of campaigns.filter(item => ['seroogy-candy-2026', 'popcorn-2026', 'rose-wreaths-2026', 'veterans-wreaths-2026'].includes(item.id))) {
+  assert.equal(campaign.programYearLabel, '2026–2027');
+  assert(campaign.cardTitle.startsWith('2026–2027'));
+  assert(fs.existsSync(path.join(store, campaign.cardImage.replace(/^\//, ''))), campaign.cardImage);
+}
 
 for (const product of products) {
   assert(!/^https?:|\.pdf(?:$|[?#])/i.test(product.image));
@@ -66,7 +74,7 @@ for (const product of products.filter(product => ['seroogy-candy-2026', 'popcorn
 }
 
 const builder = fs.readFileSync(path.join(store, 'js/campaign-builders.js'), 'utf8');
-assert(builder.includes("product.priceStatus!=='pending'"));
+assert(/product\.priceStatus\s*===\s*'approved'/.test(builder));
 assert(builder.includes('fundraisingCode'));
 assert(builder.includes('selectedOptions'));
 const publicJson = JSON.stringify({ campaigns, products });

@@ -345,7 +345,11 @@
     "imageWidth": 92,
     "imageHeight": 120,
     "mediaApprovalStatus": "approved-user-supplied",
-    "dietaryAttributes": [],
+    "dietaryAttributes": [
+      "gluten-free",
+      "ou-kosher",
+      "dairy"
+    ],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
   },

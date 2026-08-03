@@ -1,121 +1,213 @@
 [
   {
+    "id": "gluten-free",
+    "shortLabel": "GF",
+    "displayName": "Gluten Free",
+    "description": "The vendor identifies this product as gluten free.",
+    "verified": true,
+    "visible": true
+  },
+  {
+    "id": "ou-kosher",
+    "shortLabel": "OU",
+    "displayName": "OU Kosher",
+    "description": "This product displays the OU kosher certification symbol.",
+    "verified": true,
+    "visible": true
+  },
+  {
+    "id": "dairy",
+    "shortLabel": "D",
+    "displayName": "Dairy",
+    "description": "The kosher designation identifies this product as dairy.",
+    "verified": true,
+    "visible": true
+  },
+  {
     "id": "pine-tree",
     "displayName": "Pine Tree",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "🌲",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "triangle",
     "displayName": "Triangle",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Triangle",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "tent",
     "displayName": "Tent",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Tent",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "plus-in-circle",
     "displayName": "Plus In Circle",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Plus In Circle",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "checkmark-in-circle",
     "displayName": "Checkmark In Circle",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Checkmark In Circle",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "black-filled-circle",
     "displayName": "Black Filled Circle",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Black Filled Circle",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "black-filled-square",
     "displayName": "Black Filled Square",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Black Filled Square",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "bullseye",
     "displayName": "Bullseye",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Bullseye",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "heart",
     "displayName": "Heart",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Heart",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "mountain-and-trail",
     "displayName": "Mountain And Trail",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Mountain And Trail",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "diamond",
     "displayName": "Diamond",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Diamond",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "pretzel",
     "displayName": "Pretzel",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Pretzel",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "db",
     "displayName": "DB",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "DB",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "3-in-circle",
     "displayName": "3 In Circle",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "3 In Circle",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "4-in-circle",
     "displayName": "4 In Circle",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "4 In Circle",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "5-in-circle",
     "displayName": "5 In Circle",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "5 In Circle",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   },
   {
     "id": "flag",
     "displayName": "Flag",
     "meaning": null,
     "verificationStatus": "pending",
-    "publiclyInterpreted": false
+    "publiclyInterpreted": false,
+    "shortLabel": "Flag",
+    "description": "Vendor product designation. Meaning pending official confirmation.",
+    "verified": false,
+    "visible": true
   }
 ]

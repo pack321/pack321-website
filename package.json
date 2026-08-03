@@ -11,6 +11,7 @@
     "test:campaign-studio": "node scripts/test-campaign-studio.js",
     "build:fundraiser-catalogs": "node scripts/ingest-fundraiser-media.js && node scripts/build-fundraiser-catalogs.js && node scripts/fix-fundraiser-catalog-data.js",
     "import:fundraiser-images": "node scripts/import-fundraiser-image-package.js",
+    "apply:grj-store-009": "node scripts/apply-grj-store-009.js",
     "dev:worker": "wrangler dev --config worker/wrangler.jsonc",
     "deploy:worker:preview": "wrangler deploy --config worker/wrangler.jsonc"
   },

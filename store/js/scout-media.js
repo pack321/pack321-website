@@ -20,7 +20,6 @@
         const mayShowScoutPhoto=Boolean(scout.photoEnabled&&scout.photoConsentPublic&&scout.approvedPhoto);
         const selected=mayShowScoutPhoto?{src:scout.approvedPhoto,alt:`Guardian-approved photo of ${scout.publicDisplayName}`}:(campaignMedia?.publicApproved?campaignMedia:manifest.scoutFallback);
         placeholder.className='scout-media-fallback';placeholder.setAttribute('aria-label',selected.alt);placeholder.innerHTML=`<img src="${StoreUtils.escapeHtml(selected.src)}" alt="${StoreUtils.escapeHtml(selected.alt)}" width="1200" height="800" fetchpriority="high"><span>${mayShowScoutPhoto?'Guardian-approved Scout photo':'Pack campaign photo shown because no public Scout photo is approved.'}</span>`;
-        host.querySelectorAll('.campaign-card img').forEach((image,index)=>{const media=manifest.campaigns[campaignKey(enrolled[index])]?.hero;if(media?.publicApproved){image.src=media.src;image.alt=media.alt;image.width=600;image.height=450;image.loading='lazy';}});
         const currentProducts=products.filter(item=>item.campaignId===current?.id);host.querySelectorAll('.product-card img').forEach((image,index)=>{const product=currentProducts[index];const media=manifest.products[product?.id];if(media){image.src=media.primary;image.alt=`${product.name} product view`;image.width=600;image.height=450;image.loading='lazy';}});
         return true;
       };

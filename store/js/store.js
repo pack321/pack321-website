@@ -17,7 +17,7 @@
     if(page==='help.html')document.querySelector('#order-help')?.insertAdjacentHTML('afterend',section);
   }
   function renderShell(){
-    if(!document.querySelector('link[href="/css/revision-1.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/css/revision-1.css"><link rel="stylesheet" href="/css/revision-2.css"><link rel="stylesheet" href="/css/revision-3.css"><link rel="stylesheet" href="/css/revision-3-scout.css"><link rel="stylesheet" href="/css/visual-regression.css">');
+    if(!document.querySelector('link[href="/css/revision-1.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/css/revision-1.css"><link rel="stylesheet" href="/css/revision-2.css"><link rel="stylesheet" href="/css/revision-3.css"><link rel="stylesheet" href="/css/revision-3-scout.css"><link rel="stylesheet" href="/css/visual-regression.css"><link rel="stylesheet" href="/css/grj-store-009.css">');
     if(!document.querySelector('script[src="/js/code-search.js"]')){const searchScript=document.createElement('script');searchScript.src='/js/code-search.js';document.head.append(searchScript);}
     const page=location.pathname.split('/').pop()||'index.html';
     placeCodeSearch(page);
