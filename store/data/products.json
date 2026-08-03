@@ -112,14 +112,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/seroogy-candy-2026/products/chocolate-meltaway-card.webp",
     "images": [
-      "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/seroogy-candy-2026/products/chocolate-meltaway-card.webp",
+      "/assets/media/campaigns/seroogy-candy-2026/products/chocolate-meltaway-detail.webp"
     ],
-    "imageAlt": "Chocolate Meltaway; campaign fallback shown while approved product photography is pending",
+    "imageAlt": "Chocolate Meltaway fundraiser product",
     "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageHeight": 800,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -143,14 +144,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/seroogy-candy-2026/products/chocolate-crisp-card.webp",
     "images": [
-      "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/seroogy-candy-2026/products/chocolate-crisp-card.webp",
+      "/assets/media/campaigns/seroogy-candy-2026/products/chocolate-crisp-detail.webp"
     ],
-    "imageAlt": "Chocolate Crisp; campaign fallback shown while approved product photography is pending",
+    "imageAlt": "Chocolate Crisp fundraiser product",
     "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageHeight": 800,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -174,14 +176,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/seroogy-candy-2026/products/peanut-butter-crisp-card.webp",
     "images": [
-      "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/seroogy-candy-2026/products/peanut-butter-crisp-card.webp",
+      "/assets/media/campaigns/seroogy-candy-2026/products/peanut-butter-crisp-detail.webp"
     ],
-    "imageAlt": "Peanut Butter Crisp; campaign fallback shown while approved product photography is pending",
+    "imageAlt": "Peanut Butter Crisp fundraiser product",
     "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageHeight": 800,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -205,14 +208,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/seroogy-candy-2026/products/mint-meltaway-card.webp",
     "images": [
-      "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/seroogy-candy-2026/products/mint-meltaway-card.webp",
+      "/assets/media/campaigns/seroogy-candy-2026/products/mint-meltaway-detail.webp"
     ],
-    "imageAlt": "Mint Meltaway; campaign fallback shown while approved product photography is pending",
+    "imageAlt": "Mint Meltaway fundraiser product",
     "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageHeight": 800,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -236,14 +240,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/seroogy-candy-2026/products/almond-meltaway-card.webp",
     "images": [
-      "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/seroogy-candy-2026/products/almond-meltaway-card.webp",
+      "/assets/media/campaigns/seroogy-candy-2026/products/almond-meltaway-detail.webp"
     ],
-    "imageAlt": "Almond Meltaway; campaign fallback shown while approved product photography is pending",
+    "imageAlt": "Almond Meltaway fundraiser product",
     "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageHeight": 800,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -267,14 +272,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/seroogy-candy-2026/products/mocha-meltaway-card.webp",
     "images": [
-      "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/seroogy-candy-2026/products/mocha-meltaway-card.webp",
+      "/assets/media/campaigns/seroogy-candy-2026/products/mocha-meltaway-detail.webp"
     ],
-    "imageAlt": "Mocha Meltaway; campaign fallback shown while approved product photography is pending",
+    "imageAlt": "Mocha Meltaway fundraiser product",
     "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageHeight": 800,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -298,14 +304,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/seroogy-candy-2026/products/shock-rock-meltaway-card.webp",
     "images": [
-      "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/seroogy-candy-2026/products/shock-rock-meltaway-card.webp",
+      "/assets/media/campaigns/seroogy-candy-2026/products/shock-rock-meltaway-detail.webp"
     ],
-    "imageAlt": "Shock Rock Meltaway; campaign fallback shown while approved product photography is pending",
+    "imageAlt": "Shock Rock Meltaway fundraiser product",
     "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageHeight": 800,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -329,14 +336,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/classic-caramel-corn-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/classic-caramel-corn-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/classic-caramel-corn-detail.webp"
     ],
-    "imageAlt": "Classic Caramel Corn; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Classic Caramel Corn fundraiser product",
+    "imageWidth": 92,
+    "imageHeight": 120,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -361,14 +369,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/yellow-popping-corn-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/yellow-popping-corn-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/yellow-popping-corn-detail.webp"
     ],
-    "imageAlt": "Yellow Popping Corn; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Yellow Popping Corn fundraiser product",
+    "imageWidth": 77,
+    "imageHeight": 85,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -393,14 +402,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/cinnamon-roll-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/cinnamon-roll-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/cinnamon-roll-detail.webp"
     ],
-    "imageAlt": "Cinnamon Roll; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Cinnamon Roll fundraiser product",
+    "imageWidth": 83,
+    "imageHeight": 108,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -425,14 +435,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/butter-microwave-15-pack-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/butter-microwave-15-pack-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/butter-microwave-15-pack-detail.webp"
     ],
-    "imageAlt": "Butter Microwave, 15 Pack; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Butter Microwave, 15 Pack fundraiser product",
+    "imageWidth": 100,
+    "imageHeight": 84,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -457,14 +468,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/kettle-corn-microwave-15-pack-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/kettle-corn-microwave-15-pack-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/kettle-corn-microwave-15-pack-detail.webp"
     ],
-    "imageAlt": "Kettle Corn Microwave, 15 Pack; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Kettle Corn Microwave, 15 Pack fundraiser product",
+    "imageWidth": 98,
+    "imageHeight": 74,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -489,14 +501,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/double-butter-microwave-28-pack-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/double-butter-microwave-28-pack-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/double-butter-microwave-28-pack-detail.webp"
     ],
-    "imageAlt": "Double Butter Microwave, 28 Pack; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Double Butter Microwave, 28 Pack fundraiser product",
+    "imageWidth": 121,
+    "imageHeight": 92,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -521,14 +534,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/cheddar-cheese-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/cheddar-cheese-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/cheddar-cheese-detail.webp"
     ],
-    "imageAlt": "Cheddar Cheese; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Cheddar Cheese fundraiser product",
+    "imageWidth": 73,
+    "imageHeight": 102,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -553,14 +567,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/jalapeno-cheese-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/jalapeno-cheese-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/jalapeno-cheese-detail.webp"
     ],
-    "imageAlt": "Jalapeño Cheese; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Jalapeño Cheese fundraiser product",
+    "imageWidth": 76,
+    "imageHeight": 112,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -585,14 +600,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/trail-mix-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/trail-mix-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/trail-mix-detail.webp"
     ],
-    "imageAlt": "Trail Mix; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Trail Mix fundraiser product",
+    "imageWidth": 76,
+    "imageHeight": 84,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -617,14 +633,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/peanut-butter-cup-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/peanut-butter-cup-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/peanut-butter-cup-detail.webp"
     ],
-    "imageAlt": "Peanut Butter Cup; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Peanut Butter Cup fundraiser product",
+    "imageWidth": 78,
+    "imageHeight": 112,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -649,14 +666,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/mountain-munch-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/mountain-munch-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/mountain-munch-detail.webp"
     ],
-    "imageAlt": "Mountain Munch; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Mountain Munch fundraiser product",
+    "imageWidth": 84,
+    "imageHeight": 114,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -681,14 +699,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/caramel-sea-salt-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/caramel-sea-salt-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/caramel-sea-salt-detail.webp"
     ],
-    "imageAlt": "Caramel Sea Salt; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Caramel Sea Salt fundraiser product",
+    "imageWidth": 82,
+    "imageHeight": 112,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -713,14 +732,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/freedom-pretzels-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/freedom-pretzels-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/freedom-pretzels-detail.webp"
     ],
-    "imageAlt": "Freedom Pretzels; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Freedom Pretzels fundraiser product",
+    "imageWidth": 98,
+    "imageHeight": 109,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -745,14 +765,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/classic-trio-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/classic-trio-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/classic-trio-detail.webp"
     ],
-    "imageAlt": "Classic Trio; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Classic Trio fundraiser product",
+    "imageWidth": 99,
+    "imageHeight": 114,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -777,14 +798,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/cheese-lovers-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/cheese-lovers-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/cheese-lovers-detail.webp"
     ],
-    "imageAlt": "Cheese Lovers; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Cheese Lovers fundraiser product",
+    "imageWidth": 109,
+    "imageHeight": 124,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -809,14 +831,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/chocolate-lovers-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/chocolate-lovers-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/chocolate-lovers-detail.webp"
     ],
-    "imageAlt": "Chocolate Lovers; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Chocolate Lovers fundraiser product",
+    "imageWidth": 101,
+    "imageHeight": 141,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": [],
     "descriptionVerificationStatus": "pending-official-flyer-text"
@@ -841,14 +864,15 @@
     "options": [],
     "pickupRequired": false,
     "fulfillmentType": "program-direct-shipment",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/military-donation-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/military-donation-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/military-donation-detail.webp"
     ],
-    "imageAlt": "Military Donation; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Military Donation fundraiser product",
+    "imageWidth": 105,
+    "imageHeight": 108,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -872,14 +896,15 @@
     "options": [],
     "pickupRequired": false,
     "fulfillmentType": "program-direct-shipment",
-    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/popcorn-2026/products/military-donation-card.webp",
     "images": [
-      "/assets/media/campaigns/popcorn-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/popcorn-2026/products/military-donation-card.webp",
+      "/assets/media/campaigns/popcorn-2026/products/military-donation-detail.webp"
     ],
-    "imageAlt": "Military Donation; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Military Donation fundraiser product",
+    "imageWidth": 105,
+    "imageHeight": 108,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -903,14 +928,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/traditional/platinum-24-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/platinum-24-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/platinum-24-wreath-detail.webp"
     ],
-    "imageAlt": "Platinum 24″ Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Platinum 24″ Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -934,14 +960,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/traditional/24-special-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/24-special-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/24-special-wreath-detail.webp"
     ],
-    "imageAlt": "24″ Special Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "24″ Special Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -965,14 +992,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/traditional/20-inch-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/20-inch-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/20-inch-wreath-detail.webp"
     ],
-    "imageAlt": "20″ Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "20″ Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -996,14 +1024,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/traditional/26-inch-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/26-inch-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/26-inch-wreath-detail.webp"
     ],
-    "imageAlt": "26″ Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "26″ Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1027,14 +1056,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/traditional/36-inch-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/36-inch-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/36-inch-wreath-detail.webp"
     ],
-    "imageAlt": "36″ Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "36″ Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1058,14 +1088,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/traditional/48-inch-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/48-inch-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/48-inch-wreath-detail.webp"
     ],
-    "imageAlt": "48″ Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "48″ Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1089,14 +1120,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/traditional/60-inch-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/60-inch-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/60-inch-wreath-detail.webp"
     ],
-    "imageAlt": "60″ Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "60″ Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1120,14 +1152,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/traditional/72-inch-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/72-inch-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/traditional/72-inch-wreath-detail.webp"
     ],
-    "imageAlt": "72″ Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "72″ Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1151,14 +1184,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/double-face/36-inch-double-face-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/double-face/36-inch-double-face-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/double-face/36-inch-double-face-wreath-detail.webp"
     ],
-    "imageAlt": "36″ Double Face Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "36″ Double Face Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1182,14 +1216,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/double-face/48-inch-double-face-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/double-face/48-inch-double-face-wreath-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/double-face/48-inch-double-face-wreath-detail.webp"
     ],
-    "imageAlt": "48″ Double Face Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "48″ Double Face Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1213,14 +1248,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/trees/18-inch-christmas-tree-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/trees/18-inch-christmas-tree-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/trees/18-inch-christmas-tree-detail.webp"
     ],
-    "imageAlt": "18″ Christmas Tree; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "18″ Christmas Tree fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1244,14 +1280,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/trees/27-inch-christmas-tree-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/trees/27-inch-christmas-tree-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/trees/27-inch-christmas-tree-detail.webp"
     ],
-    "imageAlt": "27″ Christmas Tree; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "27″ Christmas Tree fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1275,14 +1312,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/memorial/36-inch-evergreen-cross-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/memorial/36-inch-evergreen-cross-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/memorial/36-inch-evergreen-cross-detail.webp"
     ],
-    "imageAlt": "36″ Evergreen Cross; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "36″ Evergreen Cross fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1306,14 +1344,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/specialty/36-inch-christmas-cane-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/specialty/36-inch-christmas-cane-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/specialty/36-inch-christmas-cane-detail.webp"
     ],
-    "imageAlt": "36″ Christmas Cane; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "36″ Christmas Cane fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1337,14 +1376,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/greenery/30-inch-door-swag-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/greenery/30-inch-door-swag-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/greenery/30-inch-door-swag-detail.webp"
     ],
-    "imageAlt": "30″ Door Swag; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "30″ Door Swag fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1368,14 +1408,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/greenery/25-foot-evergreen-garland-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/greenery/25-foot-evergreen-garland-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/greenery/25-foot-evergreen-garland-detail.webp"
     ],
-    "imageAlt": "25′ Roping / Garland; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "25′ Roping / Garland fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1399,14 +1440,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/accessories/30-inch-wreath-easel-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/accessories/30-inch-wreath-easel-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/accessories/30-inch-wreath-easel-detail.webp"
     ],
-    "imageAlt": "30″ Easel; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "30″ Easel fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1430,14 +1472,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/accessories/15-inch-door-hanger-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/accessories/15-inch-door-hanger-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/accessories/15-inch-door-hanger-detail.webp"
     ],
-    "imageAlt": "15″ Door Hanger; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "15″ Door Hanger fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1461,14 +1504,15 @@
     "options": [],
     "pickupRequired": true,
     "fulfillmentType": "local-pickup",
-    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/centerpieces/boxed-evergreen-centerpiece-card.webp",
     "images": [
-      "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/rose-wreaths-2026/centerpieces/boxed-evergreen-centerpiece-card.webp",
+      "/assets/media/campaigns/rose-wreaths-2026/centerpieces/boxed-evergreen-centerpiece-detail.webp"
     ],
-    "imageAlt": "Boxed Centerpiece; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "Boxed Centerpiece fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   },
@@ -1492,14 +1536,15 @@
     "options": [],
     "pickupRequired": false,
     "fulfillmentType": "ceremony-placement",
-    "image": "/assets/media/campaigns/veterans-wreaths-2026/campaign/fallback-card.webp",
+    "image": "/assets/media/campaigns/veterans-wreaths-2026/products/20-inch-veterans-wreath-card.webp",
     "images": [
-      "/assets/media/campaigns/veterans-wreaths-2026/campaign/fallback-card.webp"
+      "/assets/media/campaigns/veterans-wreaths-2026/products/20-inch-veterans-wreath-card.webp",
+      "/assets/media/campaigns/veterans-wreaths-2026/products/20-inch-veterans-wreath-detail.webp"
     ],
-    "imageAlt": "20″ Veterans Wreath; campaign fallback shown while approved product photography is pending",
-    "imageWidth": 800,
-    "imageHeight": 600,
-    "mediaApprovalStatus": "fallback-pending-product-media",
+    "imageAlt": "20″ Veterans Wreath fundraiser product",
+    "imageWidth": 350,
+    "imageHeight": 350,
+    "mediaApprovalStatus": "approved-user-supplied",
     "dietaryAttributes": [],
     "symbols": []
   }

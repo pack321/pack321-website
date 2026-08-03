@@ -1,0 +1,331 @@
+[
+  {
+    "relative_path": "assets/media/campaigns/candy/branding/seroogys-logo.png",
+    "source_file": "bdfaddda-76ed-46b0-829c-67bd978e63e8.png",
+    "width": 447,
+    "height": 447,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/candy/products/peanut-butter-crisp.png",
+    "source_file": "743d9d7e-ba39-4b72-8805-0163da0a2cc0.png",
+    "width": 1100,
+    "height": 1100,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/candy/products/mint-meltaway.png",
+    "source_file": "d2b27776-6a63-4333-87e7-da236d690dd5.png",
+    "width": 1100,
+    "height": 1100,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/candy/products/chocolate-meltaway.png",
+    "source_file": "2da6e3de-ef10-4a5c-9c86-408538c50e24.png",
+    "width": 1100,
+    "height": 1100,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/candy/products/shock-rock-meltaway.png",
+    "source_file": "b63ec7bb-1f1d-41da-a0a2-cac843794976.png",
+    "width": 1100,
+    "height": 1100,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/candy/products/almond-meltaway.png",
+    "source_file": "ffb6f49f-32c8-4ee0-98b2-bad688664d20.png",
+    "width": 1100,
+    "height": 1100,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/candy/products/chocolate-crisp.png",
+    "source_file": "28f3cf5e-a74c-4cbc-8a1e-e9b41a73a432.png",
+    "width": 1100,
+    "height": 1100,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/candy/products/mocha-meltaway.png",
+    "source_file": "3f2a58d5-4e7b-4dd0-a935-6c4d1eb30bd6.png",
+    "width": 1100,
+    "height": 1100,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/candy/reference/flavor-descriptions.png",
+    "source_file": "ce4dbc21-18bc-4c32-87a7-35776d8f1bdd.png",
+    "width": 750,
+    "height": 575,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/traditional/platinum-24-wreath.png",
+    "source_file": "e19e45cc-4bf1-40b8-8ef3-ac61f92804c8.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/traditional/24-special-wreath.png",
+    "source_file": "208930fd-fa4c-4a50-80d6-d7744b22ce72.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/traditional/20-inch-wreath.png",
+    "source_file": "1764bf6f-f8de-4e89-8922-b2018027ea01.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/traditional/26-inch-wreath.png",
+    "source_file": "f1291652-367d-40de-8426-dbbe44384e60.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/traditional/36-inch-wreath.png",
+    "source_file": "c7ba77c0-88bb-4891-ac1a-2b2628b68cb4.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/traditional/48-inch-wreath.png",
+    "source_file": "f1977b36-fb33-49d8-9e1c-a9d3308ff956.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/traditional/60-inch-wreath.png",
+    "source_file": "6a490170-1472-417b-8d0a-f6a84518897d.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/traditional/72-inch-wreath.png",
+    "source_file": "a41039e1-1e34-4c97-9bd2-1a208340706e.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/double-face/36-inch-double-face-wreath.png",
+    "source_file": "e6743bc7-ad22-4418-8484-5f9a332dacc1.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/double-face/48-inch-double-face-wreath.png",
+    "source_file": "2cf2cdc4-8de7-4ac6-abc5-8646b74c8db8.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/trees/18-inch-christmas-tree.png",
+    "source_file": "6148f1b2-887c-4d97-949a-24dac993b8ca.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/trees/27-inch-christmas-tree.png",
+    "source_file": "df55fb24-f25e-44fe-b183-bc80f461d01c.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/memorial/36-inch-evergreen-cross.png",
+    "source_file": "3adb0130-bd3d-4899-8825-170fbf6f7f2b.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/specialty/36-inch-christmas-cane.png",
+    "source_file": "b6ff4e42-56bb-491b-876b-ee2dfd8f8006.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/greenery/30-inch-door-swag.png",
+    "source_file": "71abe4b2-8c87-4692-a7fd-3641893c114b.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/greenery/25-foot-evergreen-garland.png",
+    "source_file": "286293ea-e6ce-4dd3-8543-ec752d731d9f.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/accessories/30-inch-wreath-easel.png",
+    "source_file": "6de12411-e92f-4f58-930d-5ec4cb075adf.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/accessories/15-inch-door-hanger.png",
+    "source_file": "590b6b8b-6672-4253-87a9-55033b956e22.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/wreaths/centerpieces/boxed-evergreen-centerpiece.png",
+    "source_file": "fe956a52-966a-4590-8c6f-98af87dcaffe.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/veterans-wreaths/products/20-inch-veterans-wreath.png",
+    "source_file": "1764bf6f-f8de-4e89-8922-b2018027ea01.png",
+    "width": 350,
+    "height": 350,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/classic/classic-caramel-corn.png",
+    "source_file": "e8d3784c-5b1e-48dc-b435-7798eb97904b.png",
+    "width": 92,
+    "height": 120,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/pop-at-home/yellow-popping-corn.png",
+    "source_file": "3b1bec89-b439-4c7f-838f-e268bf5556dd.png",
+    "width": 77,
+    "height": 85,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/sweet/cinnamon-roll.png",
+    "source_file": "f9edc48d-d2d1-41fc-92ad-a8de926ae221.png",
+    "width": 83,
+    "height": 108,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/microwave/butter-microwave-15-pack.png",
+    "source_file": "f5689883-45cb-4a45-94ec-318301b45b11.png",
+    "width": 100,
+    "height": 84,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/microwave/kettle-corn-microwave-15-pack.png",
+    "source_file": "64edfa09-28aa-4459-9416-2934dbea14f7.png",
+    "width": 98,
+    "height": 74,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/savory/cheddar-cheese.png",
+    "source_file": "36811157-fd3d-47d9-8a28-57d69139f924.png",
+    "width": 73,
+    "height": 102,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/savory/jalapeno-cheese.png",
+    "source_file": "638930d5-c912-402c-8ce7-6b54476f80e0.png",
+    "width": 76,
+    "height": 112,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/snack-mixes/trail-mix.png",
+    "source_file": "c28caade-e08b-4bf2-9db7-50b4d1f17d65.png",
+    "width": 76,
+    "height": 84,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/chocolate/peanut-butter-cup.png",
+    "source_file": "9c3e3996-5f33-42e6-b10a-df8561a4c14a.png",
+    "width": 78,
+    "height": 112,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/gourmet/mountain-munch.png",
+    "source_file": "eb9419e5-4b26-488a-9ad5-a05ab9a2b66e.png",
+    "width": 84,
+    "height": 114,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/gourmet/caramel-sea-salt.png",
+    "source_file": "c6a6a572-67b2-43d6-a28c-176b18d1cc8f.png",
+    "width": 82,
+    "height": 112,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/specialty/freedom-pretzels.png",
+    "source_file": "69eca6f9-4c94-4bb1-8fec-650691efcb37.png",
+    "width": 98,
+    "height": 109,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/microwave/double-butter-microwave-28-pack.png",
+    "source_file": "5e1179e2-02f2-4a1b-a017-2a584e16e0f2.png",
+    "width": 121,
+    "height": 92,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/variety/classic-trio.png",
+    "source_file": "656083db-d049-4c31-afc9-f60648d26b70.png",
+    "width": 99,
+    "height": 114,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/variety/cheese-lovers.png",
+    "source_file": "67cfd254-776a-41ac-b336-25821fb3a5de.png",
+    "width": 109,
+    "height": 124,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/gift-tins/chocolate-lovers.png",
+    "source_file": "2c62df96-d48b-47d4-a757-674f433bdf65.png",
+    "width": 101,
+    "height": 141,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/products/donations/military-donation.png",
+    "source_file": "b1bb8df7-a7ef-4c78-81fa-157210d278f4.png",
+    "width": 105,
+    "height": 108,
+    "format": "PNG"
+  },
+  {
+    "relative_path": "assets/media/campaigns/popcorn/reference/dietary-symbols.png",
+    "source_file": "e19c010a-483b-4716-8dfa-83d9e1dd83e7.png",
+    "width": 55,
+    "height": 27,
+    "format": "PNG"
+  }
+]
