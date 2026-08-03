@@ -2,36 +2,641 @@
   "schemaVersion": 2,
   "deploymentRoot": "/",
   "homepageHero": [
-    {"id":"hero-camping","src":"/assets/optimized/adventures/camping-640.f8beed81.webp","srcset":"/assets/optimized/adventures/camping-360.abc85275.webp 360w, /assets/optimized/adventures/camping-640.f8beed81.webp 640w","fallback":"/assets/images/adventures/camping.jpg","alt":"Pack 321 Scouts sharing an outdoor camping adventure","headline":"Adventure Starts Together","statement":"Your support helps Scouts discover confidence, friendship, and the outdoors.","primaryCta":{"label":"Support Current Fundraisers","href":"campaign.html?id=wreaths-2026"},"secondaryCta":{"label":"See What Support Makes Possible","href":"#impact"},"publicApproved":true},
-    {"id":"hero-pinewood","src":"/assets/optimized/adventures/pinewood-derby-640.135545b4.webp","srcset":"/assets/optimized/adventures/pinewood-derby-360.de0d4105.webp 360w, /assets/optimized/adventures/pinewood-derby-640.135545b4.webp 640w","fallback":"/assets/images/adventures/pinewood-derby.jpg","alt":"Pack 321 families gathered for Pinewood Derby","headline":"Build Skills. Make Memories.","statement":"Fundraising keeps beloved Pack traditions accessible to every family.","primaryCta":{"label":"Support Pack 321","href":"fundraising.html"},"secondaryCta":{"label":"Shop Pack Merchandise","href":"shop.html?category=Pack%20Merchandise"},"publicApproved":true},
-    {"id":"hero-service","src":"/assets/optimized/adventures/service-640.d16e9200.webp","srcset":"/assets/optimized/adventures/service-360.eb5cbdfa.webp 360w, /assets/optimized/adventures/service-640.d16e9200.webp 640w","fallback":"/assets/images/adventures/service.jpg","alt":"Pack 321 Scouts working together on community service","headline":"Character in Action","statement":"Support helps Scouts learn responsibility by serving their community.","primaryCta":{"label":"Explore Fundraising","href":"fundraising.html"},"secondaryCta":{"label":"Help & Contact","href":"help.html"},"publicApproved":true},
-    {"id":"hero-blue-gold","src":"/assets/optimized/adventures/blue-gold-640.e4046dc9.webp","srcset":"/assets/optimized/adventures/blue-gold-360.69ebe23d.webp 360w, /assets/optimized/adventures/blue-gold-640.e4046dc9.webp 640w","fallback":"/assets/images/adventures/blue-gold.jpg","alt":"Pack 321 families celebrating together at Blue and Gold","headline":"Families Make the Pack","statement":"Every campaign brings local families together for moments that last.","primaryCta":{"label":"Support a Scout","href":"scout.html?code=AB12CD"},"secondaryCta":{"label":"Learn About Our Impact","href":"#impact"},"publicApproved":true}
+    {
+      "id": "hero-camping",
+      "src": "/assets/optimized/adventures/camping-640.f8beed81.webp",
+      "srcset": "/assets/optimized/adventures/camping-360.abc85275.webp 360w, /assets/optimized/adventures/camping-640.f8beed81.webp 640w",
+      "fallback": "/assets/images/adventures/camping.jpg",
+      "alt": "Pack 321 Scouts sharing an outdoor camping adventure",
+      "headline": "Adventure Starts Together",
+      "statement": "Your support helps Scouts discover confidence, friendship, and the outdoors.",
+      "primaryCta": {
+        "label": "Support Current Fundraisers",
+        "href": "campaign.html?id=wreaths-2026"
+      },
+      "secondaryCta": {
+        "label": "See What Support Makes Possible",
+        "href": "#impact"
+      },
+      "publicApproved": true
+    },
+    {
+      "id": "hero-pinewood",
+      "src": "/assets/optimized/adventures/pinewood-derby-640.135545b4.webp",
+      "srcset": "/assets/optimized/adventures/pinewood-derby-360.de0d4105.webp 360w, /assets/optimized/adventures/pinewood-derby-640.135545b4.webp 640w",
+      "fallback": "/assets/images/adventures/pinewood-derby.jpg",
+      "alt": "Pack 321 families gathered for Pinewood Derby",
+      "headline": "Build Skills. Make Memories.",
+      "statement": "Fundraising keeps beloved Pack traditions accessible to every family.",
+      "primaryCta": {
+        "label": "Support Pack 321",
+        "href": "fundraising.html"
+      },
+      "secondaryCta": {
+        "label": "Shop Pack Merchandise",
+        "href": "shop.html?category=Pack%20Merchandise"
+      },
+      "publicApproved": true
+    },
+    {
+      "id": "hero-service",
+      "src": "/assets/optimized/adventures/service-640.d16e9200.webp",
+      "srcset": "/assets/optimized/adventures/service-360.eb5cbdfa.webp 360w, /assets/optimized/adventures/service-640.d16e9200.webp 640w",
+      "fallback": "/assets/images/adventures/service.jpg",
+      "alt": "Pack 321 Scouts working together on community service",
+      "headline": "Character in Action",
+      "statement": "Support helps Scouts learn responsibility by serving their community.",
+      "primaryCta": {
+        "label": "Explore Fundraising",
+        "href": "fundraising.html"
+      },
+      "secondaryCta": {
+        "label": "Help & Contact",
+        "href": "help.html"
+      },
+      "publicApproved": true
+    },
+    {
+      "id": "hero-blue-gold",
+      "src": "/assets/optimized/adventures/blue-gold-640.e4046dc9.webp",
+      "srcset": "/assets/optimized/adventures/blue-gold-360.69ebe23d.webp 360w, /assets/optimized/adventures/blue-gold-640.e4046dc9.webp 640w",
+      "fallback": "/assets/images/adventures/blue-gold.jpg",
+      "alt": "Pack 321 families celebrating together at Blue and Gold",
+      "headline": "Families Make the Pack",
+      "statement": "Every campaign brings local families together for moments that last.",
+      "primaryCta": {
+        "label": "Support a Scout",
+        "href": "scout.html?code=AB12CD"
+      },
+      "secondaryCta": {
+        "label": "Learn About Our Impact",
+        "href": "#impact"
+      },
+      "publicApproved": true
+    }
   ],
   "campaigns": {
-    "holiday-wreaths":{"hero":{"src":"/assets/images/adventures/graduation.jpg","alt":"Pack 321 families celebrating Scout growth and recognition","publicApproved":true},"gallery":[{"src":"/assets/images/adventures/graduation.jpg","alt":"Pack 321 recognition celebration","publicApproved":true},{"src":"/assets/images/adventures/blue-gold.jpg","alt":"Pack families celebrating together","publicApproved":true}]},
-    "popcorn":{"hero":{"src":"/assets/images/adventures/raingutter-regatta.jpg","alt":"Pack 321 families gathered for a hands-on Pack tradition","publicApproved":true},"gallery":[{"src":"/assets/images/adventures/raingutter-regatta.jpg","alt":"Scouts enjoying Raingutter Regatta","publicApproved":true},{"src":"/assets/images/adventures/service.jpg","alt":"Scouts connecting with their community","publicApproved":true}]},
-    "camp-cards":{"hero":{"src":"/assets/images/adventures/hiking.jpg","alt":"Pack 321 Scouts hiking outdoors","publicApproved":true},"gallery":[{"src":"/assets/images/adventures/hiking.jpg","alt":"Pack Scouts on a hike","publicApproved":true},{"src":"/assets/images/adventures/camping.jpg","alt":"Scouts at a Pack camping adventure","publicApproved":true}]},
-    "spring-fundraiser":{"hero":{"src":"/assets/images/adventures/fishing.jpg","alt":"Pack 321 Scouts building outdoor skills while fishing","publicApproved":true},"gallery":[{"src":"/assets/images/adventures/fishing.jpg","alt":"Scouts learning fishing skills","publicApproved":true},{"src":"/assets/images/adventures/pinewood-derby.jpg","alt":"Pack families at Pinewood Derby","publicApproved":true}]},
-    "merchandise":{"hero":{"src":"/assets/images/hero/cub-scouts.jpg","alt":"Pack 321 Cub Scouts participating together","publicApproved":true},"gallery":[]}
+    "holiday-wreaths": {
+      "hero": {
+        "src": "/assets/media/campaigns/holiday-wreaths-2026/fallback-large.webp",
+        "alt": "Pack 321 activity representing the impact of the holiday-wreaths campaign",
+        "width": 1400,
+        "height": 900,
+        "publicApproved": true,
+        "fallback": true
+      },
+      "gallery": []
+    },
+    "popcorn": {
+      "hero": {
+        "src": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+        "alt": "Pack 321 activity representing the impact of the popcorn campaign",
+        "width": 1400,
+        "height": 900,
+        "publicApproved": true,
+        "fallback": true
+      },
+      "gallery": []
+    },
+    "camp-cards": {
+      "hero": {
+        "src": "/assets/images/adventures/hiking.jpg",
+        "alt": "Pack 321 Scouts hiking outdoors",
+        "publicApproved": true
+      },
+      "gallery": [
+        {
+          "src": "/assets/images/adventures/hiking.jpg",
+          "alt": "Pack Scouts on a hike",
+          "publicApproved": true
+        },
+        {
+          "src": "/assets/images/adventures/camping.jpg",
+          "alt": "Scouts at a Pack camping adventure",
+          "publicApproved": true
+        }
+      ]
+    },
+    "spring-fundraiser": {
+      "hero": {
+        "src": "/assets/images/adventures/fishing.jpg",
+        "alt": "Pack 321 Scouts building outdoor skills while fishing",
+        "publicApproved": true
+      },
+      "gallery": [
+        {
+          "src": "/assets/images/adventures/fishing.jpg",
+          "alt": "Scouts learning fishing skills",
+          "publicApproved": true
+        },
+        {
+          "src": "/assets/images/adventures/pinewood-derby.jpg",
+          "alt": "Pack families at Pinewood Derby",
+          "publicApproved": true
+        }
+      ]
+    },
+    "merchandise": {
+      "hero": {
+        "src": "/assets/media/campaigns/merchandise/fallback-large.webp",
+        "alt": "Pack 321 activity representing the impact of the merchandise campaign",
+        "width": 1400,
+        "height": 900,
+        "publicApproved": true,
+        "fallback": true
+      },
+      "gallery": []
+    },
+    "seroogy-candy": {
+      "hero": {
+        "src": "/assets/media/campaigns/candy/fallback-large.webp",
+        "alt": "Pack 321 activity representing the impact of the seroogy-candy campaign",
+        "width": 1400,
+        "height": 900,
+        "publicApproved": true,
+        "fallback": true
+      },
+      "gallery": []
+    }
   },
   "events": {
-    "camping":{"src":"/assets/images/adventures/camping.jpg","alt":"Pack 321 camping adventure","publicApproved":true},
-    "pinewoodDerby":{"src":"/assets/images/adventures/pinewood-derby.jpg","alt":"Pack 321 Pinewood Derby","publicApproved":true},
-    "blueGold":{"src":"/assets/images/adventures/blue-gold.jpg","alt":"Pack 321 Blue and Gold celebration","publicApproved":true},
-    "hiking":{"src":"/assets/images/adventures/hiking.jpg","alt":"Pack 321 hiking adventure","publicApproved":true},
-    "service":{"src":"/assets/images/adventures/service.jpg","alt":"Pack 321 community service","publicApproved":true},
-    "outdoorSkills":{"src":"/assets/images/adventures/fishing.jpg","alt":"Pack 321 Scouts practicing outdoor skills","publicApproved":true},
-    "recognition":{"src":"/assets/images/adventures/graduation.jpg","alt":"Pack 321 Scout recognition","publicApproved":true},
-    "familyActivities":{"src":"/assets/images/adventures/raingutter-regatta.jpg","alt":"Pack families enjoying Raingutter Regatta","publicApproved":true}
+    "camping": {
+      "src": "/assets/images/adventures/camping.jpg",
+      "alt": "Pack 321 camping adventure",
+      "publicApproved": true
+    },
+    "pinewoodDerby": {
+      "src": "/assets/images/adventures/pinewood-derby.jpg",
+      "alt": "Pack 321 Pinewood Derby",
+      "publicApproved": true
+    },
+    "blueGold": {
+      "src": "/assets/images/adventures/blue-gold.jpg",
+      "alt": "Pack 321 Blue and Gold celebration",
+      "publicApproved": true
+    },
+    "hiking": {
+      "src": "/assets/images/adventures/hiking.jpg",
+      "alt": "Pack 321 hiking adventure",
+      "publicApproved": true
+    },
+    "service": {
+      "src": "/assets/images/adventures/service.jpg",
+      "alt": "Pack 321 community service",
+      "publicApproved": true
+    },
+    "outdoorSkills": {
+      "src": "/assets/images/adventures/fishing.jpg",
+      "alt": "Pack 321 Scouts practicing outdoor skills",
+      "publicApproved": true
+    },
+    "recognition": {
+      "src": "/assets/images/adventures/graduation.jpg",
+      "alt": "Pack 321 Scout recognition",
+      "publicApproved": true
+    },
+    "familyActivities": {
+      "src": "/assets/images/adventures/raingutter-regatta.jpg",
+      "alt": "Pack families enjoying Raingutter Regatta",
+      "publicApproved": true
+    }
   },
   "products": {
-    "classic-holiday-wreath":{"primary":"/assets/products/classic-holiday-wreath.svg","hover":"/assets/images/adventures/graduation.jpg","gallery":["/assets/products/classic-holiday-wreath.svg","/assets/images/adventures/graduation.jpg"],"fallback":"/assets/products/placeholder.svg","future360":null},
-    "holiday-door-swag":{"primary":"/assets/products/holiday-door-swag.svg","hover":"/assets/images/adventures/blue-gold.jpg","gallery":["/assets/products/holiday-door-swag.svg","/assets/images/adventures/blue-gold.jpg"],"fallback":"/assets/products/placeholder.svg","future360":null},
-    "pack-321-t-shirt":{"primary":"/assets/products/pack-321-t-shirt.svg","hover":"/assets/images/hero/cub-scouts.jpg","gallery":["/assets/products/pack-321-t-shirt.svg","/assets/images/hero/cub-scouts.jpg"],"fallback":"/assets/products/placeholder.svg","future360":null},
-    "seasonal-fundraiser-item":{"primary":"/assets/products/seasonal-fundraiser-item.svg","hover":"/assets/images/adventures/fishing.jpg","gallery":["/assets/products/seasonal-fundraiser-item.svg","/assets/images/adventures/fishing.jpg"],"fallback":"/assets/products/placeholder.svg","future360":null},
-    "pack-321-donation":{"primary":"/assets/products/pack-321-donation.svg","hover":"/assets/images/adventures/service.jpg","gallery":["/assets/products/pack-321-donation.svg","/assets/images/adventures/service.jpg"],"fallback":"/assets/products/placeholder.svg","future360":null}
+    "classic-holiday-wreath": {
+      "primary": "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/holiday-wreaths-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+        "/assets/media/campaigns/holiday-wreaths-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Classic Holiday Wreath; wreath campaign fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "holiday-door-swag": {
+      "primary": "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/holiday-wreaths-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+        "/assets/media/campaigns/holiday-wreaths-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Holiday Door Swag; wreath campaign fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "pack-321-t-shirt": {
+      "primary": "/assets/media/campaigns/merchandise/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/merchandise/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/merchandise/fallback-standard.webp",
+        "/assets/media/campaigns/merchandise/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/merchandise/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Pack 321 T-Shirt; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "seasonal-fundraiser-item": {
+      "primary": "/assets/media/campaigns/custom/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/custom/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/custom/fallback-standard.webp",
+        "/assets/media/campaigns/custom/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/custom/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Seasonal Fundraiser Item; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "pack-321-donation": {
+      "primary": "/assets/media/campaigns/donations/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/donations/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/donations/fallback-standard.webp",
+        "/assets/media/campaigns/donations/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/donations/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Pack 321 Donation; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "candy-chocolate-meltaway": {
+      "primary": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/candy/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/candy/fallback-standard.webp",
+        "/assets/media/campaigns/candy/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Chocolate Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "candy-chocolate-crisp": {
+      "primary": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/candy/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/candy/fallback-standard.webp",
+        "/assets/media/campaigns/candy/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Chocolate Crisp; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "candy-peanut-butter-crisp": {
+      "primary": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/candy/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/candy/fallback-standard.webp",
+        "/assets/media/campaigns/candy/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Peanut Butter Crisp; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "candy-mint-meltaway": {
+      "primary": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/candy/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/candy/fallback-standard.webp",
+        "/assets/media/campaigns/candy/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Mint Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "candy-almond-meltaway": {
+      "primary": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/candy/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/candy/fallback-standard.webp",
+        "/assets/media/campaigns/candy/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Almond Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "candy-mocha-meltaway": {
+      "primary": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/candy/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/candy/fallback-standard.webp",
+        "/assets/media/campaigns/candy/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Mocha Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "candy-shock-rock-meltaway": {
+      "primary": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/candy/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/candy/fallback-standard.webp",
+        "/assets/media/campaigns/candy/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Shock Rock Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-classic-caramel-corn": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Classic Caramel Corn; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-yellow-popping-corn": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Yellow Popping Corn; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-cinnamon-roll": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Cinnamon Roll; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-butter-microwave-15-pack": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Butter Microwave, 15 Pack; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-kettle-corn-microwave-15-pack": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Kettle Corn Microwave, 15 Pack; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-cheddar-cheese": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Cheddar Cheese; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-jalapen-o-cheese": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Jalapeño Cheese; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-trail-mix": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Trail Mix; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-peanut-butter-cup": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Peanut Butter Cup; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-mountain-munch": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Mountain Munch; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-caramel-sea-salt": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Caramel Sea Salt; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-freedom-pretzels": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Freedom Pretzels; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-double-butter-microwave-28-pack": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Double Butter Microwave, 28 Pack; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-classic-trio": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Classic Trio; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-cheese-lovers": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Cheese Lovers; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-chocolate-lovers": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Chocolate Lovers; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-military-donation-30": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Military Donation — $30; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    },
+    "popcorn-military-donation-50": {
+      "primary": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "hover": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "gallery": [
+        "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+        "/assets/media/campaigns/popcorn-2026/fallback-large.webp"
+      ],
+      "fallback": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Military Donation — $50; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media",
+      "future360": null
+    }
   },
-  "scoutFallback":{"src":"/assets/images/adventures/hiking.jpg","alt":"Pack 321 Scouts sharing an outdoor adventure","publicApproved":true},
-  "branding":{"logo":{"src":"/assets/logos/cub-scout-logo.svg","alt":"Pack 321 logo"}},
-  "privacy":{"requirePublicApproval":true,"consentManagedBy":"ScoutHQ","unapprovedAction":"use campaign hero or scoutFallback"}
+  "scoutFallback": {
+    "src": "/assets/images/adventures/hiking.jpg",
+    "alt": "Pack 321 Scouts sharing an outdoor adventure",
+    "publicApproved": true
+  },
+  "branding": {
+    "logo": {
+      "src": "/assets/logos/cub-scout-logo.svg",
+      "alt": "Pack 321 logo"
+    }
+  },
+  "privacy": {
+    "requirePublicApproval": true,
+    "consentManagedBy": "ScoutHQ",
+    "unapprovedAction": "use campaign hero or scoutFallback"
+  }
 }

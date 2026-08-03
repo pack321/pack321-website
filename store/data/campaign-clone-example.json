@@ -1,0 +1,80 @@
+{
+  "id": "popcorn-2027",
+  "year": 2027,
+  "slug": "popcorn-2027",
+  "templateId": "popcorn",
+  "name": "2027 Popcorn Fundraiser",
+  "shortName": "Popcorn",
+  "type": "fundraiser",
+  "status": "draft",
+  "visibility": "public",
+  "featured": true,
+  "description": "A classic Scouting fundraiser supporting year-round programs and outdoor experiences.",
+  "story": "Popcorn sales help Scouts practice goal setting and communication while earning their way toward Pack adventures.",
+  "image": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+  "gallery": [
+    "/assets/images/adventures/service.jpg"
+  ],
+  "startDate": null,
+  "endDate": null,
+  "productIds": [
+    "popcorn-classic-caramel-corn",
+    "popcorn-yellow-popping-corn",
+    "popcorn-cinnamon-roll",
+    "popcorn-butter-microwave-15-pack",
+    "popcorn-kettle-corn-microwave-15-pack",
+    "popcorn-cheddar-cheese",
+    "popcorn-jalapen-o-cheese",
+    "popcorn-trail-mix",
+    "popcorn-peanut-butter-cup",
+    "popcorn-mountain-munch",
+    "popcorn-caramel-sea-salt",
+    "popcorn-freedom-pretzels",
+    "popcorn-double-butter-microwave-28-pack",
+    "popcorn-classic-trio",
+    "popcorn-cheese-lovers",
+    "popcorn-chocolate-lovers",
+    "popcorn-military-donation-30",
+    "popcorn-military-donation-50"
+  ],
+  "pickupLocationIds": [
+    "carollton-elementary"
+  ],
+  "pickupInstructions": "Pickup details will be published before orders open.",
+  "donationsEnabled": false,
+  "inventoryMode": "preorder",
+  "refundPolicy": "Campaign refund rules will be published before launch.",
+  "scoutCreditRules": {
+    "enabled": true,
+    "method": "eligible-product-net",
+    "rate": null
+  },
+  "packCreditRules": {
+    "enabled": true,
+    "method": "campaign-net"
+  },
+  "allowPackSupport": true,
+  "faq": [],
+  "progress": {
+    "raised": 0,
+    "goal": 18000,
+    "scoutsParticipating": 0,
+    "orders": 0,
+    "daysRemaining": null
+  },
+  "sample": true,
+  "campaignType": "popcorn",
+  "renderer": "popcorn-builder",
+  "orderDeadline": null,
+  "deliveryDate": null,
+  "amountRaised": 0,
+  "scoutParticipationCount": 0,
+  "packWideSupportEnabled": true,
+  "scoutAttributionEnabled": true,
+  "contact": {
+    "label": "Campaign support",
+    "href": "/help.html#contact"
+  },
+  "fulfillmentInstructions": "Pickup details will be published before orders open.",
+  "cloneSourceId": "popcorn-2026"
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "templates": [
+    {
+      "id": "seroogy-candy",
+      "name": "Seroogy's Candy Bars",
+      "campaignType": "candy",
+      "renderer": "candy-builder",
+      "grouping": "flavors",
+      "sharedUnitPrice": 200,
+      "fulfillmentType": "pickup",
+      "expectedFields": [
+        "flavor"
+      ],
+      "scoutCreditDefault": true,
+      "presets": [
+        {
+          "name": "Sampler",
+          "quantity": 7
+        },
+        {
+          "name": "Family",
+          "quantity": 12
+        },
+        {
+          "name": "Party",
+          "quantity": 25
+        }
+      ]
+    },
+    {
+      "id": "three-harbors-popcorn",
+      "name": "Three Harbors Council Popcorn",
+      "campaignType": "popcorn",
+      "renderer": "popcorn-builder",
+      "grouping": "categories",
+      "fulfillmentType": "pickup-with-non-pickup-donations",
+      "expectedFields": [
+        "category",
+        "weight",
+        "description"
+      ],
+      "scoutCreditDefault": true
+    },
+    {
+      "id": "rose-wreath",
+      "name": "Rose Wreath Fundraising",
+      "campaignType": "wreaths",
+      "renderer": "wreath-builder",
+      "grouping": "categories",
+      "fulfillmentType": "pickup",
+      "expectedFields": [
+        "size",
+        "productStyle",
+        "greeneryType",
+        "decoration",
+        "use",
+        "careInstructions"
+      ],
+      "scoutCreditDefault": true,
+      "pricingApprovalRequired": true
+    },
+    {
+      "id": "pack-merchandise",
+      "name": "Pack Merchandise",
+      "campaignType": "merchandise",
+      "renderer": "catalog-builder",
+      "grouping": "categories",
+      "fulfillmentType": "product-defined",
+      "expectedFields": [
+        "options",
+        "inventoryMode"
+      ],
+      "scoutCreditDefault": false
+    },
+    {
+      "id": "general-donation",
+      "name": "General Donation",
+      "campaignType": "donations",
+      "renderer": "donation-builder",
+      "grouping": "giving-levels",
+      "fulfillmentType": "none",
+      "expectedFields": [
+        "givingLevel"
+      ],
+      "scoutCreditDefault": false
+    },
+    {
+      "id": "custom-campaign",
+      "name": "Custom Campaign",
+      "campaignType": "custom",
+      "renderer": "generic-builder",
+      "grouping": "custom",
+      "fulfillmentType": "product-defined",
+      "expectedFields": [
+        "category",
+        "options"
+      ],
+      "scoutCreditDefault": true
+    }
+  ]
+}

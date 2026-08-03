@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-03T00:18:05.957Z",
+  "note": "No approved product photography was present. These local images are campaign fallbacks and must not be presented as product photography.",
+  "images": [
+    {
+      "source": "/assets/images/adventures/blue-gold.jpg",
+      "localFilename": "/assets/media/campaigns/candy/fallback-thumbnail.webp",
+      "campaign": "candy",
+      "productId": null,
+      "variant": "thumbnail",
+      "dimensions": {
+        "width": 320,
+        "height": 240
+      },
+      "altText": "Pack 321 activity representing the impact of the candy campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/blue-gold.jpg",
+      "localFilename": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "campaign": "candy",
+      "productId": null,
+      "variant": "standard",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Pack 321 activity representing the impact of the candy campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/blue-gold.jpg",
+      "localFilename": "/assets/media/campaigns/candy/fallback-large.webp",
+      "campaign": "candy",
+      "productId": null,
+      "variant": "large",
+      "dimensions": {
+        "width": 1400,
+        "height": 900
+      },
+      "altText": "Pack 321 activity representing the impact of the candy campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/service.jpg",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-thumbnail.webp",
+      "campaign": "popcorn-2026",
+      "productId": null,
+      "variant": "thumbnail",
+      "dimensions": {
+        "width": 320,
+        "height": 240
+      },
+      "altText": "Pack 321 activity representing the impact of the popcorn campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/service.jpg",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": null,
+      "variant": "standard",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Pack 321 activity representing the impact of the popcorn campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/service.jpg",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
+      "campaign": "popcorn-2026",
+      "productId": null,
+      "variant": "large",
+      "dimensions": {
+        "width": 1400,
+        "height": 900
+      },
+      "altText": "Pack 321 activity representing the impact of the popcorn campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/graduation.jpg",
+      "localFilename": "/assets/media/campaigns/holiday-wreaths-2026/fallback-thumbnail.webp",
+      "campaign": "holiday-wreaths-2026",
+      "productId": null,
+      "variant": "thumbnail",
+      "dimensions": {
+        "width": 320,
+        "height": 240
+      },
+      "altText": "Pack 321 activity representing the impact of the wreaths campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/graduation.jpg",
+      "localFilename": "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+      "campaign": "holiday-wreaths-2026",
+      "productId": null,
+      "variant": "standard",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Pack 321 activity representing the impact of the wreaths campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/graduation.jpg",
+      "localFilename": "/assets/media/campaigns/holiday-wreaths-2026/fallback-large.webp",
+      "campaign": "holiday-wreaths-2026",
+      "productId": null,
+      "variant": "large",
+      "dimensions": {
+        "width": 1400,
+        "height": 900
+      },
+      "altText": "Pack 321 activity representing the impact of the wreaths campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/hero/cub-scouts.jpg",
+      "localFilename": "/assets/media/campaigns/merchandise/fallback-thumbnail.webp",
+      "campaign": "merchandise",
+      "productId": null,
+      "variant": "thumbnail",
+      "dimensions": {
+        "width": 320,
+        "height": 240
+      },
+      "altText": "Pack 321 activity representing the impact of the merchandise campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/hero/cub-scouts.jpg",
+      "localFilename": "/assets/media/campaigns/merchandise/fallback-standard.webp",
+      "campaign": "merchandise",
+      "productId": null,
+      "variant": "standard",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Pack 321 activity representing the impact of the merchandise campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/hero/cub-scouts.jpg",
+      "localFilename": "/assets/media/campaigns/merchandise/fallback-large.webp",
+      "campaign": "merchandise",
+      "productId": null,
+      "variant": "large",
+      "dimensions": {
+        "width": 1400,
+        "height": 900
+      },
+      "altText": "Pack 321 activity representing the impact of the merchandise campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/service.jpg",
+      "localFilename": "/assets/media/campaigns/donations/fallback-thumbnail.webp",
+      "campaign": "donations",
+      "productId": null,
+      "variant": "thumbnail",
+      "dimensions": {
+        "width": 320,
+        "height": 240
+      },
+      "altText": "Pack 321 activity representing the impact of the donations campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/service.jpg",
+      "localFilename": "/assets/media/campaigns/donations/fallback-standard.webp",
+      "campaign": "donations",
+      "productId": null,
+      "variant": "standard",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Pack 321 activity representing the impact of the donations campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/service.jpg",
+      "localFilename": "/assets/media/campaigns/donations/fallback-large.webp",
+      "campaign": "donations",
+      "productId": null,
+      "variant": "large",
+      "dimensions": {
+        "width": 1400,
+        "height": 900
+      },
+      "altText": "Pack 321 activity representing the impact of the donations campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/hiking.jpg",
+      "localFilename": "/assets/media/campaigns/custom/fallback-thumbnail.webp",
+      "campaign": "custom",
+      "productId": null,
+      "variant": "thumbnail",
+      "dimensions": {
+        "width": 320,
+        "height": 240
+      },
+      "altText": "Pack 321 activity representing the impact of the custom campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/hiking.jpg",
+      "localFilename": "/assets/media/campaigns/custom/fallback-standard.webp",
+      "campaign": "custom",
+      "productId": null,
+      "variant": "standard",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Pack 321 activity representing the impact of the custom campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "/assets/images/adventures/hiking.jpg",
+      "localFilename": "/assets/media/campaigns/custom/fallback-large.webp",
+      "campaign": "custom",
+      "productId": null,
+      "variant": "large",
+      "dimensions": {
+        "width": 1400,
+        "height": 900
+      },
+      "altText": "Pack 321 activity representing the impact of the custom campaign",
+      "approvalStatus": "approved-pack-media-campaign-fallback"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+      "campaign": "holiday-wreaths-2026",
+      "productId": "classic-holiday-wreath",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Classic Holiday Wreath; wreath campaign fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/holiday-wreaths-2026/fallback-standard.webp",
+      "campaign": "holiday-wreaths-2026",
+      "productId": "holiday-door-swag",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Holiday Door Swag; wreath campaign fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/merchandise/fallback-standard.webp",
+      "campaign": "merchandise",
+      "productId": "pack-321-t-shirt",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Pack 321 T-Shirt; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/donations/fallback-standard.webp",
+      "campaign": "donations",
+      "productId": "pack-321-donation",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Pack 321 Donation; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/custom/fallback-standard.webp",
+      "campaign": "custom",
+      "productId": "seasonal-fundraiser-item",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Seasonal Fundraiser Item; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "campaign": "candy",
+      "productId": "candy-chocolate-meltaway",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Chocolate Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "campaign": "candy",
+      "productId": "candy-chocolate-crisp",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Chocolate Crisp; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "campaign": "candy",
+      "productId": "candy-peanut-butter-crisp",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Peanut Butter Crisp; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "campaign": "candy",
+      "productId": "candy-mint-meltaway",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Mint Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "campaign": "candy",
+      "productId": "candy-almond-meltaway",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Almond Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "campaign": "candy",
+      "productId": "candy-mocha-meltaway",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Mocha Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/candy/fallback-standard.webp",
+      "campaign": "candy",
+      "productId": "candy-shock-rock-meltaway",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Shock Rock Meltaway; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-classic-caramel-corn",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Classic Caramel Corn; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-yellow-popping-corn",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Yellow Popping Corn; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-cinnamon-roll",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Cinnamon Roll; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-butter-microwave-15-pack",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Butter Microwave, 15 Pack; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-kettle-corn-microwave-15-pack",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Kettle Corn Microwave, 15 Pack; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-cheddar-cheese",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Cheddar Cheese; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-jalapen-o-cheese",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Jalapeño Cheese; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-trail-mix",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Trail Mix; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-peanut-butter-cup",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Peanut Butter Cup; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-mountain-munch",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Mountain Munch; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-caramel-sea-salt",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Caramel Sea Salt; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-freedom-pretzels",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Freedom Pretzels; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-double-butter-microwave-28-pack",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Double Butter Microwave, 28 Pack; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-classic-trio",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Classic Trio; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-cheese-lovers",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Cheese Lovers; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-chocolate-lovers",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Chocolate Lovers; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-military-donation-30",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Military Donation — $30; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    },
+    {
+      "source": "No approved product image supplied",
+      "localFilename": "/assets/media/campaigns/popcorn-2026/fallback-standard.webp",
+      "campaign": "popcorn-2026",
+      "productId": "popcorn-military-donation-50",
+      "variant": "standard-fallback-reference",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "altText": "Military Donation — $50; campaign-specific fallback shown until approved product photography is available",
+      "approvalStatus": "fallback-approved-pack-media"
+    }
+  ]
+}
