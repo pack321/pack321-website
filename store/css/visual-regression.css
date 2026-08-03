@@ -58,6 +58,13 @@ html{scroll-padding-top:var(--header-offset)}
 .campaign-hero-grid{grid-template-columns:minmax(0,1fr) minmax(460px,.92fr);gap:48px}
 .campaign-hero h1{font-size:clamp(48px,5.5vw,72px);line-height:.96}
 .campaign-hero img{height:360px;border-radius:22px}
+.campaign-hero--fundraiser{min-height:464px}
+.campaign-hero--fundraiser .campaign-hero-grid{min-height:360px}
+.campaign-hero--fundraiser .campaign-hero__copy{min-width:0}
+.campaign-hero--fundraiser .eyebrow{margin-bottom:10px;color:var(--gold)}
+.campaign-hero--fundraiser h1{max-width:680px;margin:0;font-size:clamp(56px,5.25vw,72px);line-height:.96;text-wrap:balance}
+.campaign-hero--fundraiser .campaign-hero__vendor{margin:14px 0 0;color:var(--gold);font-size:15px;font-weight:800;line-height:1.4}
+.campaign-hero--fundraiser .campaign-hero__vendor+p{margin-top:8px}
 .stat-grid{gap:16px}
 .stat{padding:18px 14px}
 .story-band{padding:34px 38px}
@@ -126,6 +133,9 @@ html{scroll-padding-top:var(--header-offset)}
   .product-grid,.product-grid:has(>.product-card:only-child),.campaign-hero-grid,.footer-grid{grid-template-columns:1fr}
   .footer-grid>div:last-child{grid-column:auto}
   .campaign-hero img{height:270px}
+  .campaign-hero--fundraiser{min-height:0}
+  .campaign-hero--fundraiser .campaign-hero-grid{min-height:0}
+  .campaign-hero--fundraiser h1{font-size:clamp(44px,12vw,58px)}
   .story-band{padding:28px 24px}
   .code-search-card{padding:26px 22px}
   .code-search-controls{grid-template-columns:1fr}

@@ -366,6 +366,7 @@
   },
   {
     "id": "seroogy-candy-2026",
+    "vendorName": "Seroogy's Chocolates",
     "name": "2026 Seroogy’s Candy Bar Fundraiser",
     "shortName": "2026 Seroogy’s Candy Bar Fundraiser",
     "slug": "seroogy-candy-2026",
@@ -432,6 +433,7 @@
   },
   {
     "id": "popcorn-2026",
+    "vendorName": "Three Harbors Council",
     "name": "2026 Three Harbors Council Popcorn Fundraiser",
     "shortName": "2026 Three Harbors Council Popcorn Fundraiser",
     "slug": "popcorn-2026",
