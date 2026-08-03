@@ -40,7 +40,7 @@ const normalize=value=>String(value||'').trim().toLowerCase();
 const aliases={'seasonal':'spring-2027','seasonal-preview':'spring-2027','merchandise':'pack-merchandise','merchandise-campaign':'pack-merchandise'};
 const findCampaign=key=>{const wanted=aliases[normalize(key)]||normalize(key);return campaigns.find(campaign=>[campaign.id,campaign.slug,...(campaign.aliases||[])].some(value=>normalize(value)===wanted));};
 for(const test of [
-  ['wreaths-2026','wreaths-2026'],
+  ['rose-wreaths-2026','rose-wreaths-2026'],
   ['seasonal-preview','spring-2027'],
   ['popcorn-2026','popcorn-2026'],
   ['merchandise','pack-merchandise'],

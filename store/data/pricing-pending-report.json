@@ -1,0 +1,34 @@
+{
+  "campaigns": [
+    {
+      "campaignId": "rose-wreaths-2026",
+      "products": [
+        "platinum-24-wreath",
+        "24-special-wreath",
+        "20-inch-wreath",
+        "26-inch-wreath",
+        "36-inch-wreath",
+        "48-inch-wreath",
+        "60-inch-wreath",
+        "72-inch-wreath",
+        "36-inch-double-face-wreath",
+        "48-inch-double-face-wreath",
+        "18-inch-christmas-tree",
+        "27-inch-christmas-tree",
+        "36-inch-evergreen-cross",
+        "36-inch-christmas-cane",
+        "30-inch-door-swag",
+        "25-foot-evergreen-garland",
+        "30-inch-wreath-easel",
+        "15-inch-door-hanger",
+        "boxed-evergreen-centerpiece"
+      ]
+    },
+    {
+      "campaignId": "veterans-wreaths-2026",
+      "products": [
+        "20-inch-veterans-wreath"
+      ]
+    }
+  ]
+}

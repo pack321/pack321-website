@@ -1,0 +1,121 @@
+[
+  {
+    "id": "pine-tree",
+    "displayName": "Pine Tree",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "triangle",
+    "displayName": "Triangle",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "tent",
+    "displayName": "Tent",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "plus-in-circle",
+    "displayName": "Plus In Circle",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "checkmark-in-circle",
+    "displayName": "Checkmark In Circle",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "black-filled-circle",
+    "displayName": "Black Filled Circle",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "black-filled-square",
+    "displayName": "Black Filled Square",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "bullseye",
+    "displayName": "Bullseye",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "heart",
+    "displayName": "Heart",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "mountain-and-trail",
+    "displayName": "Mountain And Trail",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "diamond",
+    "displayName": "Diamond",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "pretzel",
+    "displayName": "Pretzel",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "db",
+    "displayName": "DB",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "3-in-circle",
+    "displayName": "3 In Circle",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "4-in-circle",
+    "displayName": "4 In Circle",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "5-in-circle",
+    "displayName": "5 In Circle",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  },
+  {
+    "id": "flag",
+    "displayName": "Flag",
+    "meaning": null,
+    "verificationStatus": "pending",
+    "publiclyInterpreted": false
+  }
+]

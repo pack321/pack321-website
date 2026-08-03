@@ -1,157 +1,5 @@
 [
   {
-    "id": "wreaths-2026",
-    "year": 2026,
-    "slug": "holiday-wreaths-2026",
-    "templateId": "holiday-wreaths",
-    "name": "2026 Holiday Wreath Fundraiser",
-    "shortName": "Holiday Wreaths",
-    "type": "fundraiser",
-    "status": "active",
-    "visibility": "public",
-    "featured": true,
-    "description": "Bring home fresh holiday greenery while helping Pack 321 make camping, awards, and hands-on adventures more affordable for every family.",
-    "story": "Our annual wreath fundraiser turns a favorite holiday tradition into a season of adventure. Proceeds help cover campsite fees, program supplies, awards, and special Pack events.",
-    "image": "/assets/images/adventures/camping.jpg",
-    "gallery": [
-      "/assets/images/adventures/camping.jpg",
-      "/assets/images/adventures/hiking.jpg"
-    ],
-    "startDate": "2026-09-01",
-    "endDate": "2026-11-01",
-    "productIds": [
-      "classic-holiday-wreath",
-      "holiday-door-swag"
-    ],
-    "pickupLocationIds": [
-      "carollton-elementary"
-    ],
-    "pickupInstructions": "Final pickup date and instructions will be emailed after ordering.",
-    "donationsEnabled": false,
-    "inventoryMode": "preorder",
-    "refundPolicy": "Changes are considered before the campaign deadline; submitted preorders may be nonrefundable.",
-    "scoutCreditRules": {
-      "enabled": true,
-      "method": "eligible-product-net",
-      "rate": null
-    },
-    "packCreditRules": {
-      "enabled": true,
-      "method": "campaign-net"
-    },
-    "allowPackSupport": true,
-    "faq": [
-      {
-        "question": "How does pickup work?",
-        "answer": "Final pickup details are emailed after the campaign closes."
-      },
-      {
-        "question": "Can I support a Scout?",
-        "answer": "Yes. Use a Scout fundraising link or choose Scout support on an eligible product."
-      }
-    ],
-    "progress": {
-      "raised": 18540,
-      "goal": 25000,
-      "scoutsParticipating": 87,
-      "orders": 412,
-      "daysRemaining": 19
-    },
-    "sample": true,
-    "campaignType": "wreaths",
-    "renderer": "wreath-builder",
-    "orderDeadline": "2026-11-01",
-    "deliveryDate": null,
-    "amountRaised": 18540,
-    "scoutParticipationCount": 87,
-    "packWideSupportEnabled": true,
-    "scoutAttributionEnabled": true,
-    "contact": {
-      "label": "Campaign support",
-      "href": "/help.html#contact"
-    },
-    "fulfillmentInstructions": "Final pickup date and instructions will be emailed after ordering."
-  },
-  {
-    "id": "popcorn-2026",
-    "year": 2026,
-    "slug": "popcorn-2026",
-    "templateId": "popcorn",
-    "name": "2026 Popcorn Fundraiser",
-    "shortName": "Popcorn",
-    "type": "fundraiser",
-    "status": "scheduled",
-    "visibility": "public",
-    "featured": true,
-    "description": "A classic Scouting fundraiser supporting year-round programs and outdoor experiences.",
-    "story": "Popcorn sales help Scouts practice goal setting and communication while earning their way toward Pack adventures.",
-    "image": "/assets/media/campaigns/popcorn-2026/fallback-large.webp",
-    "gallery": [
-      "/assets/images/adventures/service.jpg"
-    ],
-    "startDate": "2026-09-15",
-    "endDate": "2026-10-31",
-    "productIds": [
-      "popcorn-classic-caramel-corn",
-      "popcorn-yellow-popping-corn",
-      "popcorn-cinnamon-roll",
-      "popcorn-butter-microwave-15-pack",
-      "popcorn-kettle-corn-microwave-15-pack",
-      "popcorn-cheddar-cheese",
-      "popcorn-jalapen-o-cheese",
-      "popcorn-trail-mix",
-      "popcorn-peanut-butter-cup",
-      "popcorn-mountain-munch",
-      "popcorn-caramel-sea-salt",
-      "popcorn-freedom-pretzels",
-      "popcorn-double-butter-microwave-28-pack",
-      "popcorn-classic-trio",
-      "popcorn-cheese-lovers",
-      "popcorn-chocolate-lovers",
-      "popcorn-military-donation-30",
-      "popcorn-military-donation-50"
-    ],
-    "pickupLocationIds": [
-      "carollton-elementary"
-    ],
-    "pickupInstructions": "Pickup details will be published before orders open.",
-    "donationsEnabled": false,
-    "inventoryMode": "preorder",
-    "refundPolicy": "Campaign refund rules will be published before launch.",
-    "scoutCreditRules": {
-      "enabled": true,
-      "method": "eligible-product-net",
-      "rate": null
-    },
-    "packCreditRules": {
-      "enabled": true,
-      "method": "campaign-net"
-    },
-    "allowPackSupport": true,
-    "faq": [],
-    "progress": {
-      "raised": 0,
-      "goal": 18000,
-      "scoutsParticipating": 0,
-      "orders": 0,
-      "daysRemaining": null
-    },
-    "sample": true,
-    "campaignType": "popcorn",
-    "renderer": "popcorn-builder",
-    "orderDeadline": "2026-10-31",
-    "deliveryDate": null,
-    "amountRaised": 0,
-    "scoutParticipationCount": 0,
-    "packWideSupportEnabled": true,
-    "scoutAttributionEnabled": true,
-    "contact": {
-      "label": "Campaign support",
-      "href": "/help.html#contact"
-    },
-    "fulfillmentInstructions": "Pickup details will be published before orders open."
-  },
-  {
     "id": "spring-2027",
     "year": 2027,
     "slug": "spring-fundraiser-2027",
@@ -517,43 +365,44 @@
     "fulfillmentInstructions": "This campaign is archived."
   },
   {
-    "id": "candy-2026",
-    "year": 2026,
-    "slug": "candy-2026",
-    "templateId": "seroogy-candy",
-    "name": "2026 Seroogy's Candy Bar Fundraiser",
-    "shortName": "Candy Bars",
-    "type": "fundraiser",
-    "campaignType": "candy",
+    "id": "seroogy-candy-2026",
+    "name": "2026 Seroogy’s Candy Bar Fundraiser",
+    "shortName": "2026 Seroogy’s Candy Bar Fundraiser",
+    "slug": "seroogy-candy-2026",
+    "type": "candy-builder",
+    "campaignType": "candy-builder",
     "renderer": "candy-builder",
+    "year": 2026,
     "status": "active",
+    "priceStatus": "approved",
     "visibility": "public",
+    "published": true,
     "featured": true,
-    "description": "Mix and match favorite candy-bar flavors while supporting Pack adventures.",
-    "story": "Every bar helps Pack 321 keep activities accessible to families.",
-    "image": "/assets/media/campaigns/candy/fallback-large.webp",
+    "description": "Mix and match seven candy-bar flavors at $2 each.",
+    "story": "Mix and match seven candy-bar flavors at $2 each.",
+    "image": "/assets/media/campaigns/seroogy-candy-2026/campaign/fallback-detail.webp",
     "gallery": [],
-    "startDate": "2026-08-01",
-    "endDate": "2026-09-30",
-    "orderDeadline": "2026-09-30",
+    "startDate": null,
+    "endDate": null,
+    "orderDeadline": null,
     "deliveryDate": null,
     "productIds": [
-      "candy-chocolate-meltaway",
-      "candy-chocolate-crisp",
-      "candy-peanut-butter-crisp",
-      "candy-mint-meltaway",
-      "candy-almond-meltaway",
-      "candy-mocha-meltaway",
-      "candy-shock-rock-meltaway"
+      "chocolate-meltaway",
+      "chocolate-crisp",
+      "peanut-butter-crisp",
+      "mint-meltaway",
+      "almond-meltaway",
+      "mocha-meltaway",
+      "shock-rock-meltaway"
     ],
     "pickupLocationIds": [
       "carollton-elementary"
     ],
-    "pickupInstructions": "Final pickup instructions will be emailed.",
-    "fulfillmentInstructions": "Pickup required for candy orders.",
+    "pickupInstructions": "Final pickup date, location, and instructions are pending.",
+    "fulfillmentInstructions": "Local pickup details are pending.",
     "donationsEnabled": false,
     "inventoryMode": "preorder",
-    "refundPolicy": "Preorders may become nonrefundable after the deadline.",
+    "refundPolicy": "Final campaign policy pending.",
     "scoutCreditRules": {
       "enabled": true,
       "method": "eligible-product-net",
@@ -569,17 +418,236 @@
     "faq": [],
     "progress": {
       "raised": 0,
-      "goal": 12000,
+      "goal": 0,
       "scoutsParticipating": 0,
       "orders": 0,
       "daysRemaining": null
     },
-    "amountRaised": 0,
-    "scoutParticipationCount": 0,
     "contact": {
       "label": "Campaign support",
       "href": "/help.html#contact"
     },
-    "sample": true
+    "sharedUnitPrice": 200,
+    "templateId": "candy-builder"
+  },
+  {
+    "id": "popcorn-2026",
+    "name": "2026 Three Harbors Council Popcorn Fundraiser",
+    "shortName": "2026 Three Harbors Council Popcorn Fundraiser",
+    "slug": "popcorn-2026",
+    "type": "popcorn-builder",
+    "campaignType": "popcorn-builder",
+    "renderer": "popcorn-builder",
+    "year": 2026,
+    "status": "scheduled",
+    "priceStatus": "approved",
+    "visibility": "public",
+    "published": true,
+    "featured": true,
+    "description": "More than 70% of sales supports Scouting programs.",
+    "story": "More than 70% of sales supports Scouting programs.",
+    "image": "/assets/media/campaigns/popcorn-2026/campaign/fallback-detail.webp",
+    "gallery": [],
+    "startDate": null,
+    "endDate": null,
+    "orderDeadline": null,
+    "deliveryDate": null,
+    "productIds": [
+      "classic-caramel-corn",
+      "yellow-popping-corn",
+      "cinnamon-roll",
+      "butter-microwave-15",
+      "kettle-corn-microwave-15",
+      "double-butter-microwave-28",
+      "cheddar-cheese",
+      "jalapeno-cheese",
+      "trail-mix",
+      "peanut-butter-cup",
+      "mountain-munch",
+      "caramel-sea-salt",
+      "freedom-pretzels",
+      "classic-trio",
+      "cheese-lovers",
+      "chocolate-lovers",
+      "military-donation-30",
+      "military-donation-50"
+    ],
+    "pickupLocationIds": [
+      "carollton-elementary"
+    ],
+    "pickupInstructions": "Final pickup date, location, and instructions are pending.",
+    "fulfillmentInstructions": "Local pickup except military donations, which ship directly through the popcorn program.",
+    "donationsEnabled": false,
+    "inventoryMode": "preorder",
+    "refundPolicy": "Final campaign policy pending.",
+    "scoutCreditRules": {
+      "enabled": true,
+      "method": "eligible-product-net",
+      "rate": null
+    },
+    "packCreditRules": {
+      "enabled": true,
+      "method": "campaign-net"
+    },
+    "allowPackSupport": true,
+    "packWideSupportEnabled": true,
+    "scoutAttributionEnabled": true,
+    "faq": [],
+    "progress": {
+      "raised": 0,
+      "goal": 0,
+      "scoutsParticipating": 0,
+      "orders": 0,
+      "daysRemaining": null
+    },
+    "contact": {
+      "label": "Campaign support",
+      "href": "/help.html#contact"
+    },
+    "templateId": "popcorn-builder"
+  },
+  {
+    "id": "rose-wreaths-2026",
+    "name": "2026 Holiday Wreath Fundraiser",
+    "shortName": "2026 Holiday Wreath Fundraiser",
+    "slug": "rose-wreaths-2026",
+    "type": "wreath-builder",
+    "campaignType": "wreath-builder",
+    "renderer": "wreath-builder",
+    "year": 2026,
+    "status": "pricing-pending",
+    "priceStatus": "pending",
+    "visibility": "public",
+    "published": true,
+    "featured": true,
+    "description": "Holiday wreath catalog preview. All prices require Pack 321 approval.",
+    "story": "Holiday wreath catalog preview. All prices require Pack 321 approval.",
+    "image": "/assets/media/campaigns/rose-wreaths-2026/campaign/fallback-detail.webp",
+    "gallery": [],
+    "startDate": null,
+    "endDate": null,
+    "orderDeadline": null,
+    "deliveryDate": null,
+    "productIds": [
+      "platinum-24-wreath",
+      "24-special-wreath",
+      "20-inch-wreath",
+      "26-inch-wreath",
+      "36-inch-wreath",
+      "48-inch-wreath",
+      "60-inch-wreath",
+      "72-inch-wreath",
+      "36-inch-double-face-wreath",
+      "48-inch-double-face-wreath",
+      "18-inch-christmas-tree",
+      "27-inch-christmas-tree",
+      "36-inch-evergreen-cross",
+      "36-inch-christmas-cane",
+      "30-inch-door-swag",
+      "25-foot-evergreen-garland",
+      "30-inch-wreath-easel",
+      "15-inch-door-hanger",
+      "boxed-evergreen-centerpiece"
+    ],
+    "pickupLocationIds": [
+      "carollton-elementary"
+    ],
+    "pickupInstructions": "Final pickup date, location, and instructions are pending.",
+    "fulfillmentInstructions": "Local pickup details are pending.",
+    "donationsEnabled": false,
+    "inventoryMode": "preorder",
+    "refundPolicy": "Final campaign policy pending.",
+    "scoutCreditRules": {
+      "enabled": true,
+      "method": "eligible-product-net",
+      "rate": null
+    },
+    "packCreditRules": {
+      "enabled": true,
+      "method": "campaign-net"
+    },
+    "allowPackSupport": true,
+    "packWideSupportEnabled": true,
+    "scoutAttributionEnabled": true,
+    "faq": [],
+    "progress": {
+      "raised": 0,
+      "goal": 0,
+      "scoutsParticipating": 0,
+      "orders": 0,
+      "daysRemaining": null
+    },
+    "contact": {
+      "label": "Campaign support",
+      "href": "/help.html#contact"
+    },
+    "templateId": "wreath-builder"
+  },
+  {
+    "id": "veterans-wreaths-2026",
+    "name": "Veterans Wreath Sponsorship",
+    "shortName": "Veterans Wreath Sponsorship",
+    "slug": "veterans-wreaths-2026",
+    "type": "sponsorship-builder",
+    "campaignType": "sponsorship-builder",
+    "renderer": "sponsorship-builder",
+    "year": 2026,
+    "status": "pricing-pending",
+    "priceStatus": "pending",
+    "visibility": "public",
+    "published": true,
+    "featured": true,
+    "description": "Honor the service and sacrifice of our nation’s veterans by sponsoring a 20″ evergreen remembrance wreath.",
+    "story": "Honor the service and sacrifice of our nation’s veterans by sponsoring a 20″ evergreen remembrance wreath.",
+    "image": "/assets/media/campaigns/veterans-wreaths-2026/campaign/fallback-detail.webp",
+    "gallery": [],
+    "startDate": null,
+    "endDate": null,
+    "orderDeadline": null,
+    "deliveryDate": null,
+    "productIds": [
+      "20-inch-veterans-wreath"
+    ],
+    "pickupLocationIds": [],
+    "pickupInstructions": "Final pickup date, location, and instructions are pending.",
+    "fulfillmentInstructions": "Local pickup details are pending.",
+    "donationsEnabled": false,
+    "inventoryMode": "preorder",
+    "refundPolicy": "Final campaign policy pending.",
+    "scoutCreditRules": {
+      "enabled": true,
+      "method": "eligible-product-net",
+      "rate": null
+    },
+    "packCreditRules": {
+      "enabled": true,
+      "method": "campaign-net"
+    },
+    "allowPackSupport": true,
+    "packWideSupportEnabled": true,
+    "scoutAttributionEnabled": true,
+    "faq": [],
+    "progress": {
+      "raised": 0,
+      "goal": 0,
+      "scoutsParticipating": 0,
+      "orders": 0,
+      "daysRemaining": null
+    },
+    "contact": {
+      "label": "Campaign support",
+      "href": "/help.html#contact"
+    },
+    "pickupRequired": false,
+    "fulfillmentType": "ceremony-placement",
+    "ceremonyDate": null,
+    "ceremonyLocation": null,
+    "sponsorshipDeadline": null,
+    "wreathGoal": null,
+    "numberSponsored": 0,
+    "numberRemaining": null,
+    "placementInstructions": "Placement instructions pending Pack 321 approval.",
+    "primaryAction": "Sponsor a Veteran’s Wreath",
+    "templateId": "sponsorship-builder"
   }
 ]
