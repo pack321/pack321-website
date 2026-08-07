@@ -1,0 +1,12 @@
+/* Storefront V3: focused Help & Orders polish. */
+body[data-store-page=help] .help-hero-visual{background-size:cover}
+body[data-store-page=help] .scout-help-reference{margin:var(--space-5,24px) 0 0;text-align:center;color:var(--slate,var(--muted));font-weight:650}
+body[data-store-page=help] .scout-help-reference a{color:var(--navy);font-weight:850;text-underline-offset:3px}
+body[data-store-page=help] .faq-section .section-heading{margin-bottom:calc(32px + var(--space-3,12px))}
+body[data-store-page=help] .help-contact-grid>.contact-card{display:flex;min-width:0;flex-direction:column}
+body[data-store-page=help] .help-contact-grid .contact-card h3{display:flex;align-items:center;gap:var(--space-3,12px);margin-top:0}
+body[data-store-page=help] .contact-card__icon{display:inline-grid;width:34px;height:34px;flex:0 0 34px;place-items:center;border-radius:50%;background:#eef3f7;color:var(--navy)}
+body[data-store-page=help] .contact-card__icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+body[data-store-page=help] .help-contact-grid .contact-card:last-child .contact-card__icon svg{fill:currentColor;stroke:none}
+body[data-store-page=help] .help-contact-grid .contact-card>.button{width:100%;min-height:46px;margin-top:auto;padding:10px 14px;text-align:center}
+@media(max-width:767px){body[data-store-page=help] .faq-section .section-heading{margin-bottom:var(--space-6,32px)}}

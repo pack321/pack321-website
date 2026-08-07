@@ -1,0 +1,8 @@
+/* Storefront V3 LC1: compact, content-sized Cart empty state. */
+body.phase2-cart .cart-layout:has(.empty-state){grid-template-columns:minmax(0,1fr);place-items:center}
+body.phase2-cart .cart-layout:has(.empty-state) .cart-list{display:grid;width:100%;padding:0;overflow:visible;place-items:center}
+body.phase2-cart .cart-list>.empty-state{width:min(100%,560px);max-width:560px;min-height:0;margin:0;padding:var(--space-6,32px) var(--space-7,48px);text-align:center}
+body.phase2-cart .cart-list>.empty-state h1{max-width:11ch;margin:0 auto;color:var(--navy);font-family:var(--font-heading);font-size:clamp(2.5rem,3.5vw,3rem);font-weight:780;line-height:1.04;letter-spacing:-.04em}
+body.phase2-cart .cart-list>.empty-state p{margin:var(--space-5,24px) 0 var(--space-5,24px);color:var(--slate,var(--muted))}
+body.phase2-cart .cart-list>.empty-state .button{min-height:44px}
+@media(max-width:900px){body.phase2-cart .cart-list>.empty-state{padding:var(--space-6,32px) var(--space-5,24px)}body.phase2-cart .cart-list>.empty-state h1{font-size:clamp(2.15rem,10vw,2.75rem)}}

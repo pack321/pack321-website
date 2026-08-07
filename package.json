@@ -9,6 +9,7 @@
     "validate:store": "node scripts/validate-store-deployment.js && node scripts/test-checkout-payload.js",
     "test:worker": "node worker/test/domain.test.mjs",
     "test:campaign-studio": "node scripts/test-campaign-studio.js",
+    "test:product-detail": "node scripts/test-product-detail.js",
     "build:fundraiser-catalogs": "node scripts/ingest-fundraiser-media.js && node scripts/build-fundraiser-catalogs.js && node scripts/fix-fundraiser-catalog-data.js",
     "import:fundraiser-images": "node scripts/import-fundraiser-image-package.js",
     "apply:grj-store-009": "node scripts/apply-grj-store-009.js",

@@ -1,5 +1,7 @@
 /* Restores the proportions of the approved storefront while retaining the Revision 1–3 architecture. */
 :root{--store-max:1240px;--header-offset:118px;--font-heading:"Inter","Aptos Display","Segoe UI Variable Display","Segoe UI",Arial,sans-serif;--font-body:"Inter","Aptos","Segoe UI Variable Text","Segoe UI",Arial,sans-serif}
+.fundraiser-hero-title{max-width:16ch;margin:0;font-family:var(--font-heading);font-size:clamp(3rem,5vw,4.75rem);font-weight:760;line-height:1;letter-spacing:-.045em;text-wrap:balance}
+.fundraiser-section-title{margin:0;color:var(--navy);font-family:var(--font-heading);font-size:clamp(2.4rem,4.5vw,3.875rem);font-weight:760;line-height:1;letter-spacing:-.04em;text-wrap:balance}
 html{scroll-padding-top:var(--header-offset)}
 [id]{scroll-margin-top:var(--header-offset)}
 .wrap{width:min(var(--store-max),calc(100% - 48px))}
@@ -55,13 +57,11 @@ html{scroll-padding-top:var(--header-offset)}
 
 .campaign-hero{padding:52px 0}
 .campaign-hero-grid{grid-template-columns:minmax(0,1fr) minmax(460px,.92fr);gap:48px}
-.campaign-hero h1{font-size:clamp(48px,5.5vw,72px);line-height:.96}
 .campaign-hero img{height:360px;border-radius:22px}
 .campaign-hero--fundraiser{min-height:464px}
 .campaign-hero--fundraiser .campaign-hero-grid{min-height:360px}
 .campaign-hero--fundraiser .campaign-hero__copy{min-width:0}
 .campaign-hero--fundraiser .eyebrow{margin-bottom:10px;color:var(--gold)}
-.campaign-hero--fundraiser h1{max-width:680px;margin:0;font-size:clamp(56px,5.25vw,72px);line-height:.96;text-wrap:balance}
 .campaign-hero--fundraiser .campaign-hero__vendor{margin:14px 0 0;color:var(--gold);font-size:15px;font-weight:800;line-height:1.4}
 .campaign-hero--fundraiser .campaign-hero__vendor+p{margin-top:8px}
 .stat-grid{gap:16px}
@@ -96,7 +96,7 @@ html{scroll-padding-top:var(--header-offset)}
 .code-search-error:focus{outline:4px solid #2b7bbb;outline-offset:3px}
 .find-scout-hero{min-height:300px;display:grid;align-items:center}
 .find-scout-hero .wrap{max-width:840px;text-align:center}
-.find-scout-hero h1{margin:0;color:#fff;font:900 clamp(48px,5.5vw,72px)/.96 "Bebas Neue",Impact,sans-serif;text-transform:uppercase}
+.find-scout-hero h1{margin:0;color:#fff;font-family:var(--font-heading);font-size:clamp(2.5rem,4.3vw,4.25rem);font-weight:800;line-height:1;letter-spacing:-.05em;text-transform:none}
 
 @media(max-width:1180px){
   .menu-toggle{display:inline-flex}
@@ -135,7 +135,6 @@ html{scroll-padding-top:var(--header-offset)}
   .campaign-hero--fundraiser{min-height:0}
   .campaign-hero--fundraiser .campaign-hero-grid{min-height:0}
   .campaign-hero--fundraiser .campaign-hero__copy{display:flex;min-height:467px;flex-direction:column;justify-content:center}
-  .campaign-hero--fundraiser h1{font-size:clamp(44px,12vw,58px)}
   .story-band{padding:28px 24px}
   .code-search-card{padding:26px 22px}
   .code-search-controls{grid-template-columns:1fr}

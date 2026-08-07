@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "catalog": {"canonical_products":48,"visible_products":48,"wreath_products":19,"filters":"PASS","sort":"PASS","scroll":"PASS","zero_price_leakage":"PASS"},
+  "product_detail": {"shared_templates":1,"records_tested":["chocolate-meltaway","classic-caramel-corn","yellow-popping-corn","cheddar-cheese","platinum-24-wreath","20-inch-wreath","military-donation-30","does-not-exist-lc1"],"gallery":"PASS","lightbox":"PASS","accordions":"PASS","not_found":"PASS"},
+  "attribution": {"scout_code":"AB12CD","scout_display":"Emily G.","scout_persistence":"PASS","pack_wide_conversion":"PASS","mixed_conversion_lines":0},
+  "cart": {"empty":"PASS","populated":"PASS","large_cart_count":33,"quantity":"PASS","remove":"PASS","persistence":"PASS"},
+  "checkout": {"empty_summary":"PASS","empty_progression_blocked":true,"automatic_restore":"PASS","information":"PASS","fulfillment":"PASS","review":"PASS","payload_allowlist":"PASS","military_direct_shipment":"PASS","live_payment":false},
+  "privacy": {"code_only_scout_lookup":"PASS","generic_scout_errors":"PASS","public_directory":false,"autocomplete":false,"order_enumeration":"PASS","private_data_leakage":false},
+  "donations": {"amounts":[25,50,100,"custom"],"selected_state":"PASS","custom_validation":"PASS","optional_note":"PASS","live_payment":false},
+  "navigation": {"desktop_dropdowns":"PASS","svg_chevrons":"PASS","active_state":"PASS","mobile_menu":"PASS","escape":"PASS","keyboard":"PASS"},
+  "accessibility": {"unlabeled_visible_inputs":0,"unnamed_visible_buttons":0,"missing_image_alt":0,"duplicate_ids":0,"dialog_focus_restoration":"PASS","semantic_accordions":"PASS"},
+  "automated": {"validate_store":"PASS","campaign_studio":"PASS","product_detail":"PASS","javascript_syntax":"PASS","diff_check":"PASS"}
+}

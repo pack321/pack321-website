@@ -6,6 +6,7 @@
   'use strict';
   const optionValueId=value=>String(value||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
   const clean=value=>String(value||'').trim();
+  const requiresPickup=(cart,products)=>{const productMap=Object.fromEntries(products.map(product=>[product.id,product]));return cart.items.some(item=>{const product=productMap[item.productId];return product&&product.pickupRequired!==false&&product.fulfillmentType!=='program-direct-shipment';});};
   function build({cart,products,contact,pickupSelection}){
     const productMap=Object.fromEntries(products.map(product=>[product.id,product]));
     const campaignIds=[...new Set(cart.items.map(item=>productMap[item.productId]?.campaignId).filter(Boolean))];
@@ -20,5 +21,5 @@
       customerContact:{firstName:clean(contact.firstName),lastName:clean(contact.lastName),email:clean(contact.email),phone:clean(contact.phone)}
     };
   }
-  return {build,optionValueId};
+  return {build,optionValueId,requiresPickup};
 });

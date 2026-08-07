@@ -2,6 +2,7 @@
   'use strict';
   const e = value => StoreUtils.escapeHtml(value);
   const money = (price, currency = 'usd') => StoreUtils.formatCurrency(price, currency);
+  const detailUrl = id => StoreUtils.getProductUrl(id);
   const display = window.PackCampaignDisplay || {};
   const renderBadges = (ids, definitions) => {
     const map = new Map(definitions.map(item => [item.id, item]));
@@ -16,7 +17,9 @@
     const price = product.priceStatus === 'pending' || product.price === 0 ? '<strong class="product-card__price product-card__price--pending">Pricing Pending</strong>' : `<strong>${money(product.price, product.currency)}</strong>`;
     const fulfillment = product.fulfillmentType === 'program-direct-shipment' ? '<p><small>Direct shipment through the popcorn program; no customer pickup.</small></p>' : product.fulfillmentType === 'ceremony-placement' ? '<p><small>Placed during the approved remembrance ceremony; not delivered to the purchaser.</small></p>' : '';
     const unavailable = enabled ? '' : `<span class="button button--disabled" aria-disabled="true">${product.priceStatus === 'pending' ? 'Available When Pricing Is Final' : 'Ordering Unavailable'}</span>`;
-    return `<article class="builder-product" data-builder-product="${e(product.id)}"><img src="${e(product.image)}" alt="${e(product.imageAlt || product.name)}" width="${product.imageWidth || 800}" height="${product.imageHeight || 600}" loading="lazy"><div><h4>${e(product.name)}</h4>${product.weight ? `<p><strong>${e(product.weight)}</strong></p>` : ''}<p>${e(product.vendorDescription || product.description)}</p>${renderBadges(product.dietaryAttributes, symbols)}${price}${fulfillment}${unavailable}</div><label class="quantity-control"><span>Quantity</span><button type="button" data-quantity-change="-1" ${enabled ? '' : 'disabled'} aria-label="Decrease ${e(product.name)} quantity">−</button><input type="number" min="0" max="99" value="0" data-quantity ${enabled ? '' : 'disabled'} aria-label="${e(product.name)} quantity"><button type="button" data-quantity-change="1" ${enabled ? '' : 'disabled'} aria-label="Increase ${e(product.name)} quantity">+</button></label></article>`;
+    const wreathClass = campaign.renderer === 'wreath-builder' ? ' wreath-product-row' : '';
+    const url=detailUrl(product.id);
+    return `<article class="builder-product product-row${wreathClass}" id="product-${e(product.id)}" data-builder-product="${e(product.id)}"><div class="product-row__media product-thumbnail-wrap"><a href="${e(url)}" aria-label="View ${e(product.name)}"><img class="product-row__image product-card__image product-thumbnail" src="${e(product.image)}" alt="${e(product.imageAlt || product.name)}" width="96" height="96" loading="lazy"></a></div><div><h4><a href="${e(url)}">${e(product.name)}</a></h4>${product.weight ? `<p><strong>${e(product.weight)}</strong></p>` : ''}<p>${e(product.vendorDescription || product.description)}</p>${renderBadges(product.dietaryAttributes, symbols)}${price}${fulfillment}${unavailable}</div><label class="quantity-control"><span>Quantity</span><button type="button" data-quantity-change="-1" ${enabled ? '' : 'disabled'} aria-label="Decrease ${e(product.name)} quantity">−</button><input type="number" min="0" max="99" value="0" data-quantity ${enabled ? '' : 'disabled'} aria-label="${e(product.name)} quantity"><button type="button" data-quantity-change="1" ${enabled ? '' : 'disabled'} aria-label="Increase ${e(product.name)} quantity">+</button></label></article>`;
   }
   function legend(symbols) {
     if (!symbols.length) return '';
@@ -33,20 +36,32 @@
     const attribution = StoreUtils.readAttribution();
     const support = attribution?.type === 'scout' ? `Supporting ${e(attribution.displayName || 'a Pack 321 Scout')}` : 'Supporting Pack 321';
     const groups = products.reduce((output, product) => ((output[product.category || 'Products'] ??= []).push(product), output), {});
-    return `<div class="builder-shell" data-campaign-builder>${state}${presets}${campaign.renderer === 'popcorn-builder' ? legend(symbols) : ''}<div class="builder-groups">${Object.entries(groups).map(([name, items]) => `<section class="builder-group"><h3>${e(name)}</h3>${items.map(product => row(product, campaign, symbols)).join('')}</section>`).join('') || '<div class="empty-state"><h3>Products coming soon</h3></div>'}</div><div class="builder-summary"><span>${support}</span><span><strong data-builder-count>0</strong> items</span><strong data-builder-total>${money(0)}</strong><button class="button gold" type="button" data-add-everything ${hasSaleable ? '' : 'disabled'}>${e(campaign.renderer === 'sponsorship-builder' ? campaign.primaryAction : 'Add Everything to Cart')}</button></div><p data-builder-message aria-live="polite"></p></div>`;
+    const definitions=campaign.renderer==='popcorn-builder'?[['Featured',/Popcorn Favorites/i],['Classic',/Pop at Home/i],['Microwave',/Microwave/i],['Sweet',/Chocolate|Specialty/i],['Savory',/Savory|Snack Mix/i],['Gourmet',/Premium Gourmet|Gift Tin/i],['Variety',/Variety/i],['Military',/Military/i]]:campaign.renderer==='wreath-builder'?[['Traditional',/Front Door/i],['Large',/Large Display/i],['Double Face',/Double-Face/i],['Trees',/Holiday Trees/i],['Greenery',/Holiday Greenery/i],['Centerpieces',/Centerpieces/i],['Memorial',/Memorial|Religious/i],['Accessories',/Accessories/i]]:[];
+    const entries=definitions.length?definitions.map(([label,pattern])=>[label,Object.entries(groups).filter(([name])=>pattern.test(name)).flatMap(([,items])=>items)]).filter(([,items])=>items.length):Object.entries(groups);
+    const aliases = definitions.map(([label])=>label);
+    const tabs = aliases.length && entries.length > 1 ? `<div class="store-tabs builder-tabs" role="tablist" aria-label="Product categories">${entries.map(([name],index)=>`<button type="button" role="tab" id="builder-tab-${index}" aria-controls="builder-panel-${index}" aria-selected="${index===0}" tabindex="${index===0?0:-1}">${e(aliases[index]||name)}</button>`).join('')}</div>` : '';
+    const panels = entries.map(([name,items],index)=>`<section class="builder-group" ${tabs?`role="tabpanel" id="builder-panel-${index}" aria-labelledby="builder-tab-${index}"${index?' hidden':''}`:''}><h3>${e(name)}</h3><div class="builder-product-grid">${items.map(product=>row(product,campaign,symbols)).join('')}</div></section>`).join('') || '<div class="empty-state"><h3>Products coming soon</h3></div>';
+    return `<div class="builder-shell builder-shell--${e(campaign.renderer)}" data-campaign-builder>${state}<div class="builder-workspace"><div class="builder-catalog">${presets}${campaign.renderer === 'popcorn-builder' ? legend(symbols) : ''}${tabs}<div class="builder-groups store-scroll-region">${panels}</div></div><aside class="builder-summary persistent-summary" aria-label="Live order summary"><span>${support}</span><span><strong data-builder-count>0</strong> items selected</span><strong data-builder-total>${money(0)}</strong><button class="button gold" type="button" data-add-everything ${hasSaleable ? '' : 'disabled'}>${e(campaign.renderer === 'sponsorship-builder' ? campaign.primaryAction : 'Add Everything to Cart')}</button><p data-builder-message aria-live="polite"></p></aside></div></div>`;
   }
   function bind(host, campaign, products) {
     const builder = host.querySelector('[data-campaign-builder]'); if (!builder) return;
     const dialog = builder.querySelector('#campaign-symbol-legend');
-    builder.querySelector('[data-open-symbol-legend]')?.addEventListener('click', () => dialog.showModal());
-    dialog?.querySelector('[data-close-symbol-legend]')?.addEventListener('click', () => dialog.close());
-    dialog?.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+    const legendTrigger = builder.querySelector('[data-open-symbol-legend]');
+    const closeLegend = () => { dialog?.close(); legendTrigger?.focus(); };
+    legendTrigger?.addEventListener('click', () => dialog.showModal());
+    dialog?.querySelector('[data-close-symbol-legend]')?.addEventListener('click', closeLegend);
+    dialog?.addEventListener('cancel', event => { event.preventDefault(); closeLegend(); });
+    dialog?.addEventListener('keydown', event => { if (event.key === 'Escape') { event.preventDefault(); closeLegend(); } });
+    dialog?.addEventListener('click', event => { if (event.target === dialog) closeLegend(); });
     const values = () => [...builder.querySelectorAll('[data-builder-product]')].map(element => ({ row: element, product: products.find(product => product.id === element.dataset.builderProduct), quantity: Number(element.querySelector('[data-quantity]').value) || 0 }));
+    const tabs=[...builder.querySelectorAll('[role="tab"]')];
+    const selectTab=tab=>tabs.forEach(item=>{const selected=item===tab;item.setAttribute('aria-selected',String(selected));item.tabIndex=selected?0:-1;const panel=builder.querySelector(`#${item.getAttribute('aria-controls')}`);if(panel)panel.hidden=!selected;});
+    tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].focus();selectTab(tabs[next]);});});
     const update = () => { const list = values(); builder.querySelector('[data-builder-count]').textContent = list.reduce((sum, item) => sum + item.quantity, 0); builder.querySelector('[data-builder-total]').textContent = money(list.reduce((sum, item) => sum + item.quantity * item.product.price, 0)); };
     builder.addEventListener('input', update);
     builder.addEventListener('click', event => {
       const step = event.target.closest('[data-quantity-change]');
-      if (step) { const input = step.parentElement.querySelector('[data-quantity]'); input.value = Math.max(0, Math.min(99, Number(input.value || 0) + Number(step.dataset.quantityChange))); update(); return; }
+      if (step) { const input = step.parentElement.querySelector('[data-quantity]'); StoreUtils.stepQuantity(input,step.dataset.quantityChange,{min:0,max:99}); update(); return; }
       const preset = event.target.closest('[data-preset]');
       if (preset) { let left = Number(preset.dataset.preset); values().filter(item => !item.row.querySelector('[data-quantity]').disabled).forEach((item, index, array) => { const amount = Math.ceil(left / (array.length - index)); item.row.querySelector('[data-quantity]').value = amount; left -= amount; }); update(); return; }
       if (!event.target.closest('[data-add-everything]')) return;

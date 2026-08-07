@@ -1,0 +1,20 @@
+{
+  "base_url": "http://127.0.0.1:8765/",
+  "server_command": "python -m http.server 8765 --bind 127.0.0.1 --directory store",
+  "routes": [
+    {"name":"Home","url":"http://127.0.0.1:8765/","status":200},
+    {"name":"Fundraising Center","url":"http://127.0.0.1:8765/fundraising.html","status":200},
+    {"name":"Shop","url":"http://127.0.0.1:8765/shop.html","status":200},
+    {"name":"Candy Campaign","url":"http://127.0.0.1:8765/campaign.html?id=candy-2026","status":200},
+    {"name":"Popcorn Campaign","url":"http://127.0.0.1:8765/campaign.html?id=popcorn-2026","status":200},
+    {"name":"Wreath Campaign","url":"http://127.0.0.1:8765/campaign.html?id=wreaths-2027","status":200},
+    {"name":"Product Detail","url":"http://127.0.0.1:8765/product.html?id=chocolate-meltaway","status":200},
+    {"name":"Find a Scout","url":"http://127.0.0.1:8765/find-a-scout.html","status":200},
+    {"name":"Approved Scout","url":"http://127.0.0.1:8765/scout/AB12CD?source=code-search","status":200},
+    {"name":"Donations","url":"http://127.0.0.1:8765/donations.html","status":200},
+    {"name":"Help & Orders","url":"http://127.0.0.1:8765/help.html","status":200},
+    {"name":"Order Lookup","url":"http://127.0.0.1:8765/order-lookup.html","status":200},
+    {"name":"Cart","url":"http://127.0.0.1:8765/cart.html","status":200},
+    {"name":"Checkout","url":"http://127.0.0.1:8765/checkout.html","status":200}
+  ]
+}

@@ -1,6 +1,6 @@
 [
   {
-    "fundraisingCode":"AB12CD","publicDisplayName":"Emily G.","pack":"Pack 321","fundraisingEnabled":true,"visibility":"public","photoEnabled":false,"photoConsentPublic":false,"approvedPhoto":null,"personalMessage":"Thank you for helping me earn my way to camp!","guardianApproved":true,"goal":1000,"raised":410,"supporters":18,"daysRemaining":19,"campaignIds":["wreaths-2026","popcorn-2026","spring-2027"],
+    "fundraisingCode":"AB12CD","publicDisplayName":"Emily G.","pack":"Pack 321","fundraisingEnabled":true,"visibility":"public","photoEnabled":false,"photoConsentPublic":false,"approvedPhoto":null,"personalMessage":"Thank you for helping me earn my way to camp!","guardianApproved":true,"goal":1000,"raised":410,"supporters":18,"daysRemaining":19,"campaignIds":["seroogy-candy-2026","popcorn-2026","wreaths-2027","veterans-wreaths-2026"],
     "qr":{"permanent":{"status":"reserved","path":null},"campaign":{"status":"reserved","paths":{}},"printableFlyer":{"status":"reserved","path":null},"social":{"status":"future"},"businessCard":{"status":"future"},"yardSign":{"status":"future"}},
     "dashboard":{"myGoal":1000,"raised":410,"orders":12,"pending":2,"scoutRank":null,"topProducts":[],"recentSupporters":[],"shareLinks":[],"qrCodes":[]},
     "controls":{"displayNameManagedBy":"ScoutHQ","photoManagedBy":"ScoutHQ","messageManagedBy":"ScoutHQ","goalManagedBy":"ScoutHQ","enrollmentManagedBy":"ScoutHQ","qrManagedBy":"ScoutHQ"}

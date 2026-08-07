@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "cases": 36,
+  "routes": ["/", "/shop.html", "/product.html?id=classic-caramel-corn", "/find-a-scout.html"],
+  "viewports": [
+    "1920x1080",
+    "1440x900",
+    "1366x768",
+    "1280x720",
+    "1024x576 layout-equivalent",
+    "768x1024",
+    "390x844",
+    "125% layout-equivalent (1152x720)",
+    "150% layout-equivalent (960x600)"
+  ],
+  "unintended_overlaps": 0,
+  "horizontal_overflow_failures": 0,
+  "broken_image_failures": 0,
+  "catalog_footer_reachable": true,
+  "expanded_accordion_footer_reachable": true,
+  "desktop_utility_scroll_failures": 0,
+  "notes": [
+    "Zoom cases are layout-equivalent responsive tests, not claims of pixel-identical browser zoom parity.",
+    "Product Detail accordion bodies matched their natural scroll heights with visible overflow."
+  ]
+}

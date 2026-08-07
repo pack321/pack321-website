@@ -1,0 +1,17 @@
+/* Storefront V3: privacy-first Find a Scout utility workspace. */
+body[data-store-page=find-a-scout] .find-scout-main{display:grid;min-height:0;place-items:center;padding:var(--space-4,16px) max(var(--space-4,16px),calc((100% - 1040px)/2));background:#f7f3e9}
+.find-scout-workspace{width:100%;max-width:1040px}
+.find-scout-card{display:grid;grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:var(--space-7,48px);align-items:center;padding:var(--space-6,32px);border:1px solid var(--line);border-radius:var(--radius-lg,18px);background:#fff;box-shadow:var(--shadow-sm,0 8px 24px rgba(8,43,87,.09))}
+.find-scout-privacy h1{margin:0;color:var(--navy);font-family:var(--font-heading);font-size:clamp(2rem,3.2vw,3rem);line-height:1;letter-spacing:-.045em}
+.find-scout-privacy>p{margin:var(--space-3,12px) 0;color:var(--slate,var(--muted));line-height:1.5}
+.find-scout-privacy ul{display:grid;gap:var(--space-1,4px);margin:var(--space-3,12px) 0;padding-left:1.3rem;color:var(--navy);font-weight:750}
+.find-scout-lookup{padding-left:var(--space-6,32px);border-left:1px solid var(--line)}
+.find-scout-lookup h2{margin:0 0 var(--space-4,16px);color:var(--navy);font-family:var(--font-heading);font-size:1.35rem;text-transform:uppercase;letter-spacing:.06em}
+.find-scout-lookup .form-field label{font-size:.8rem}
+.find-scout-lookup .code-search-controls{grid-template-columns:minmax(0,1fr) auto}
+.find-scout-lookup .code-search-controls input{min-height:56px;padding-inline:var(--space-4,16px);border:2px solid var(--navy);font-size:1.08rem;letter-spacing:.1em;text-transform:uppercase}
+.find-scout-lookup .code-search-controls .button{min-height:56px}
+.find-scout-fallback{margin-top:var(--space-4,16px)}
+@media (min-width:901px){body.store-app[data-store-page=find-a-scout]{height:100dvh;overflow:hidden;grid-template-rows:auto auto minmax(0,1fr) auto}body.store-app[data-store-page=find-a-scout]>main{min-height:0;overflow:hidden}}
+@media (max-width:900px){body.store-app[data-store-page=find-a-scout]{height:auto;overflow-x:clip;overflow-y:auto}body[data-store-page=find-a-scout] .find-scout-main{display:block;padding:var(--space-5,24px) var(--space-4,16px)}.find-scout-card{grid-template-columns:1fr;gap:var(--space-5,24px);padding:var(--space-5,24px)}.find-scout-lookup{padding:var(--space-5,24px) 0 0;border-top:1px solid var(--line);border-left:0}}
+@media (max-width:560px){.find-scout-lookup .code-search-controls{grid-template-columns:1fr}.find-scout-fallback{width:100%}}

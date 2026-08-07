@@ -1,0 +1,4 @@
+/* Storefront V3 LC1: donation amount state and custom validation. */
+.donation-amounts button[aria-pressed=true]{border-color:var(--navy);background:#eef3f7;box-shadow:0 0 0 3px rgba(8,43,87,.12)}
+.donation-custom{margin-top:var(--space-4,16px)}
+.donation-custom[hidden]{display:none!important}

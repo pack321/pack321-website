@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "routes_audited": 17,
+  "uncaught_javascript_errors": 0,
+  "broken_required_images": 0,
+  "failed_canonical_data_loads": 0,
+  "duplicate_shell_headers": 0,
+  "duplicate_shell_footers": 0,
+  "http_route_failures": 0,
+  "mixed_content_errors": 0,
+  "notes": [
+    "All canonical HTTP routes returned 200.",
+    "Browser console error logs were empty on primary launch routes and the Product Detail matrix.",
+    "All rendered required images reported non-zero natural dimensions."
+  ]
+}

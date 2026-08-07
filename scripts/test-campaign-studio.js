@@ -44,6 +44,8 @@ const wreaths = items('rose-wreaths-2026');
 assert.equal(wreaths.length, 19);
 assert(wreaths.every(product => product.price === 0 && product.priceStatus === 'pending' && !product.availableForSale));
 assert.equal(products.find(product => product.id === '27-inch-christmas-tree').vendorDescription, 'Description Pending');
+assert.equal(campaign('wreaths-2027').productIds.length, 19);
+assert.deepEqual(campaign('wreaths-2027').productIds, campaign('rose-wreaths-2026').productIds);
 
 const veteran = products.find(product => product.id === '20-inch-veterans-wreath');
 assert.equal(veteran.fulfillmentType, 'ceremony-placement');
@@ -58,6 +60,8 @@ for (const campaign of campaigns.filter(item => ['seroogy-candy-2026', 'popcorn-
   assert(campaign.cardTitle.startsWith('2026–2027'));
   assert(fs.existsSync(path.join(store, campaign.cardImage.replace(/^\//, ''))), campaign.cardImage);
 }
+const candyCard = path.join(store, campaign('seroogy-candy-2026').cardImage.replace(/^\//, ''));
+assert.equal(fs.readFileSync(candyCard, { start: 0, end: 3 }).subarray(0, 4).toString('ascii'), 'RIFF');
 
 for (const product of products) {
   assert(!/^https?:|\.pdf(?:$|[?#])/i.test(product.image));
@@ -77,6 +81,28 @@ const builder = fs.readFileSync(path.join(store, 'js/campaign-builders.js'), 'ut
 assert(/product\.priceStatus\s*===\s*'approved'/.test(builder));
 assert(builder.includes('fundraisingCode'));
 assert(builder.includes('selectedOptions'));
+assert(builder.includes('product-row__media product-thumbnail-wrap'));
+assert(builder.includes('product-row__image product-card__image product-thumbnail'));
+const builderCss = fs.readFileSync(path.join(store, 'css/campaign-builders.css'), 'utf8');
+assert(/\.product-row__image[\s\S]*?object-fit:\s*contain/.test(builderCss));
+assert(/\.wreath-product-row \.product-row__image[\s\S]*?width:\s*108px/.test(builderCss));
+const fundraisingHtml = fs.readFileSync(path.join(store, 'fundraising.html'), 'utf8');
+const indexHtml = fs.readFileSync(path.join(store, 'index.html'), 'utf8');
+const helpHtml = fs.readFileSync(path.join(store, 'help.html'), 'utf8');
+const campaignJs = fs.readFileSync(path.join(store, 'js/campaign.js'), 'utf8');
+const revisionOneCss = fs.readFileSync(path.join(store, 'css/revision-1.css'), 'utf8');
+const visualRegressionCss = fs.readFileSync(path.join(store, 'css/visual-regression.css'), 'utf8');
+assert(fundraisingHtml.includes('<h1>Fundraising Center</h1>'));
+assert(fundraisingHtml.includes('<h2>Choose a campaign to support</h2>'));
+assert(indexHtml.includes('<h2>Choose Your Way to Support</h2>'));
+assert(indexHtml.includes('class="trust-strip"'));
+assert(helpHtml.includes('class="fundraiser-section-title">Reach the right volunteer'));
+assert(campaignJs.includes('campaign-hero__title fundraiser-hero-title'));
+assert(campaignJs.includes('class="fundraiser-section-title">Choose your way to support'));
+assert(campaignJs.includes('class="fundraiser-section-title">Campaign FAQ'));
+assert(!/\.campaign-hero h1\{[^}]*Bebas Neue/.test(revisionOneCss));
+assert(/\.fundraiser-hero-title\{[^}]*font-family:var\(--font-heading\)[^}]*line-height:1/.test(visualRegressionCss));
+assert(/\.fundraiser-section-title\{[^}]*font-family:var\(--font-heading\)[^}]*line-height:1/.test(visualRegressionCss));
 const publicJson = JSON.stringify({ campaigns, products });
 for (const forbidden of ['dateOfBirth', 'parentDetails', 'schoolInformation', 'privateScoutHQId', 'internalFinancialNotes']) {
   assert(!publicJson.includes(forbidden));

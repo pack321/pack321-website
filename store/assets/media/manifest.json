@@ -3,11 +3,11 @@
   "deploymentRoot": "/",
   "homepageHero": [
     {
-      "id": "hero-camping",
-      "src": "/assets/optimized/adventures/camping-640.f8beed81.webp",
-      "srcset": "/assets/optimized/adventures/camping-360.abc85275.webp 360w, /assets/optimized/adventures/camping-640.f8beed81.webp 640w",
-      "fallback": "/assets/images/adventures/camping.jpg",
-      "alt": "Pack 321 Scouts sharing an outdoor camping adventure",
+      "id": "hero-eagle-cave",
+      "src": "/assets/optimized/adventures/eagle-cave-640.37cef2da.webp",
+      "srcset": "/assets/optimized/adventures/eagle-cave-360.9d80186c.webp 360w, /assets/optimized/adventures/eagle-cave-640.37cef2da.webp 640w",
+      "fallback": "/assets/images/adventures/eagle-cave.jpg",
+      "alt": "Pack 321 Scouts and families gathered with their Pack flag at the snowy Eagle Cave entrance",
       "headline": "Adventure Starts Together",
       "statement": "Your support helps Scouts discover confidence, friendship, and the outdoors.",
       "primaryCta": {
@@ -178,6 +178,13 @@
     "hiking": {
       "src": "/assets/images/adventures/hiking.jpg",
       "alt": "Pack 321 hiking adventure",
+      "publicApproved": true
+    },
+    "popcornFundraising": {
+      "src": "/assets/optimized/adventures/popcorn-fundraising-1800.aebee9f1.webp",
+      "srcset": "/assets/optimized/adventures/popcorn-fundraising-360.00123653.webp 360w, /assets/optimized/adventures/popcorn-fundraising-640.e05562b4.webp 640w, /assets/optimized/adventures/popcorn-fundraising-800.55b280bb.webp 800w, /assets/optimized/adventures/popcorn-fundraising-1200.256490e4.webp 1200w, /assets/optimized/adventures/popcorn-fundraising-1800.aebee9f1.webp 1800w",
+      "fallback": "/assets/images/adventures/popcorn-fundraising.jpg",
+      "alt": "Three Pack 321 Scouts participating in a popcorn fundraiser behind their product table",
       "publicApproved": true
     },
     "service": {

@@ -1,5 +1,5 @@
 const assert=require('assert');
-const {build}=require('../store/js/checkout-payload.js');
+const {build,requiresPickup}=require('../store/js/checkout-payload.js');
 const products=require('../store/data/products.json');
 
 const payload=build({
@@ -15,5 +15,10 @@ assert.strictEqual(payload.campaignId,'seroogy-candy-2026');
 assert.strictEqual(payload.fundraisingCode,'AB12CD');
 assert.strictEqual(JSON.stringify(payload).includes('price'),false);
 assert.strictEqual(JSON.stringify(payload).includes('inventory'),false);
+const militaryPayload=build({cart:{attribution:{type:'pack',attributionSource:'pack-wide'},items:[{productId:'military-donation-30',quantity:1,options:{}}]},products,contact:{},pickupSelection:null});
+assert.strictEqual(militaryPayload.campaignId,'popcorn-2026');
+assert.strictEqual(militaryPayload.pickupSelection,null);
+assert.strictEqual(requiresPickup({items:[{productId:'military-donation-30'}]},products),false);
+assert.strictEqual(requiresPickup({items:[{productId:'chocolate-meltaway'}]},products),true);
 assert.throws(()=>build({cart:{items:[{productId:'chocolate-meltaway',quantity:1},{productId:'classic-caramel-corn',quantity:1}]},products,contact:{},pickupSelection:null}),/single fundraising campaign/);
 console.log('Checkout payload allowlist passed.');
