@@ -6,7 +6,7 @@
     "build": "node scripts/generate-cub-rank-pages.js && node scripts/generate-team-page.js && node scripts/apply-seo-metadata.js && node scripts/generate-clean-routes.js && node scripts/generate-store-scout-routes.js && node scripts/generate-seo.js",
     "apply:seo": "node scripts/apply-seo-metadata.js",
     "generate:seo": "node scripts/generate-seo.js",
-    "validate:store": "node scripts/validate-store-deployment.js && node scripts/test-checkout-payload.js",
+    "validate:store": "node scripts/validate-store-deployment.js && node scripts/test-checkout-payload.js && node scripts/test-goal-progress.js",
     "test:worker": "node worker/test/domain.test.mjs",
     "test:campaign-studio": "node scripts/test-campaign-studio.js",
     "test:product-detail": "node scripts/test-product-detail.js",

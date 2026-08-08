@@ -5,6 +5,15 @@
   const cache={};
   const escapeHtml=(value='')=>String(value).replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
   const formatCurrency=(cents,currency='usd')=>new Intl.NumberFormat('en-US',{style:'currency',currency:currency.toUpperCase()}).format((Number(cents)||0)/100);
+  function getFundraisingProgress(progress={},owner={}){
+    const goal=Number(progress?.goal);
+    const raised=Number(progress?.raised);
+    const approval=progress?.goalApprovalStatus??owner?.goalApprovalStatus;
+    const explicitlyUnapproved=approval!==undefined&&approval!==null&&approval!==true&&String(approval).toLowerCase()!=='approved';
+    const publiclyVisible=owner?.visibility===undefined||owner.visibility==='public';
+    const hasValidGoal=Number.isFinite(goal)&&goal>0&&!explicitlyUnapproved&&publiclyVisible;
+    return{hasValidGoal,goal:hasValidGoal?goal:null,raised:Number.isFinite(raised)?raised:0,percent:hasValidGoal?Math.min(100,Math.max(0,Math.round((Number.isFinite(raised)?raised:0)/goal*100))):null};
+  }
   const formatDate=value=>value?new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric'}).format(new Date(`${value}T12:00:00`)):'';
   async function fetchJson(url,label){const response=await fetch(url,{headers:{Accept:'application/json'}});if(!response.ok)throw new Error(`${label} unavailable (${response.status})`);try{return await response.json();}catch{throw new Error(`${label} contains invalid JSON`);}}
   async function loadData(name){if(!cache[name])cache[name]=fetchJson(`/data/${name}.json`,name);return cache[name];}
@@ -25,5 +34,5 @@
   function getProductUrl(product,{attribution=readAttribution()}={}){const id=typeof product==='string'?product:product?.id;if(!id)return'';const base=location.pathname.startsWith('/store/')?'/store':'';const params=new URLSearchParams({id});if(attribution?.type==='scout'&&attribution.scoutCode)params.set('scout',attribution.scoutCode);else if(attribution?.type==='pack')params.set('support','pack');return`${base}/product.html?${params}`;}
   function isAvailable(product,campaign){if(!product?.active||product.availableForSale===false||product.priceStatus!=='approved'||Number(product.price)<=0)return false;if(product.inventoryMode==='sold out'||product.inventoryQuantity===0)return false;if(campaign&&campaignStatus(campaign)!=='active')return false;return true;}
   function stepQuantity(input,delta,{min=0,max=99}={}){const value=Math.max(min,Math.min(max,(Number(input?.value)||0)+Number(delta||0)));if(input)input.value=String(value);return value;}
-  window.StoreUtils={CART_KEY,ATTRIBUTION_KEY,escapeHtml,formatCurrency,formatDate,loadData,loadMedia,readCart,writeCart,updateCartBadge,addCartItem,showToast,campaignStatus,getCampaignUrl,getProductUrl,isAvailable,stepQuantity,readAttribution,setAttribution,clearAttribution};
+  window.StoreUtils={CART_KEY,ATTRIBUTION_KEY,escapeHtml,formatCurrency,getFundraisingProgress,formatDate,loadData,loadMedia,readCart,writeCart,updateCartBadge,addCartItem,showToast,campaignStatus,getCampaignUrl,getProductUrl,isAvailable,stepQuantity,readAttribution,setAttribution,clearAttribution};
 })();
