@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { parseICalendar, selectUpcomingEvents } from '../js/calendar.js';
+import { loadUpcomingEvents, parseICalendar, selectUpcomingEvents } from '../js/calendar.js';
 
 const fixture = `BEGIN:VCALENDAR
 BEGIN:VEVENT
@@ -62,4 +62,12 @@ const [allDay] = parseICalendar(allDayFixture);
 assert.equal(allDay.start.toISOString(), '2026-11-01T05:00:00.000Z');
 assert.equal(allDay.end.toISOString(), '2026-11-02T06:00:00.000Z');
 
-console.log('Calendar event tests passed: ordering, expiration, ongoing multi-day, America/Chicago DST, all-day, and optional fields.');
+const unavailableMount = { dataset: {}, innerHTML: '' };
+const unavailableEvents = await loadUpcomingEvents(unavailableMount, {
+  fetchImpl: async () => ({ ok: false, status: 503 })
+});
+assert.deepEqual(unavailableEvents, []);
+assert.match(unavailableMount.innerHTML, /calendar is temporarily unavailable/i);
+assert.doesNotMatch(unavailableMount.innerHTML, /event-card/);
+
+console.log('Calendar event tests passed: ordering, expiration, ongoing multi-day, America/Chicago DST, all-day, optional fields, and unavailable state.');
