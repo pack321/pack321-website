@@ -7,6 +7,7 @@
     "apply:seo": "node scripts/apply-seo-metadata.js",
     "generate:seo": "node scripts/generate-seo.js",
     "validate:store": "node scripts/validate-store-deployment.js && node scripts/test-checkout-payload.js && node scripts/test-goal-progress.js",
+    "test:calendar": "node scripts/test-calendar-events.mjs",
     "test:worker": "node worker/test/domain.test.mjs",
     "test:campaign-studio": "node scripts/test-campaign-studio.js",
     "test:product-detail": "node scripts/test-product-detail.js",

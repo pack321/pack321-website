@@ -1309,6 +1309,18 @@ body.modal-open { overflow: hidden; }
   font-weight: 800;
 }
 .event-card.loading { opacity: .76; }
+.event-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 24px 28px;
+  border-left: 6px solid var(--gold);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--navy);
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
+.event-status--error { border-left-color: #b42318; }
 .compact-heading { margin-bottom: 24px; }
 .calendar-section { background: #fff; }
 .calendar-frame {
