@@ -1313,7 +1313,8 @@ body.modal-open { overflow: hidden; }
 .calendar-section { background: #fff; }
 .calendar-frame {
   width: 100%;
-  min-height: 720px;
+  height: 700px;
+  min-height: 0;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #fff;
@@ -1321,7 +1322,7 @@ body.modal-open { overflow: hidden; }
 }
 @media (max-width: 900px) {
   .event-card-grid { grid-template-columns: 1fr; }
-  .calendar-frame { min-height: 620px; }
+  .calendar-frame { height: 550px; }
 }
 
 /* Uniform standards page */
