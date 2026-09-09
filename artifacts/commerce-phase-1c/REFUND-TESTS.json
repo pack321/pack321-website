@@ -1,0 +1,14 @@
+{
+  "status": "local-policy-passed; live-test-blocked",
+  "policy": {
+    "customer_requested_full": 0,
+    "customer_requested_partial": 0,
+    "pack_cancellation": 300,
+    "pack_unfulfillable": 300,
+    "pack_duplicate": 300,
+    "pack_error": 300
+  },
+  "verified": ["explicit category required", "refund amount does not determine fee treatment", "fee cannot be refunded twice", "cumulative fields present", "actor and reason recorded", "Stripe refund ID required", "Scout adjustment explicitly supplied and capped"],
+  "stripeRefundsCreated": 0,
+  "blocker": "No paid Stripe test orders and no Worker Stripe test secret"
+}

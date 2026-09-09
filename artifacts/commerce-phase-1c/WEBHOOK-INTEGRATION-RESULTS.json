@@ -1,0 +1,9 @@
+{
+  "status": "blocked",
+  "endpoint": "https://pack321-storefront-api-test.wicubscoutpack321.workers.dev/api/stripe/webhook",
+  "configuredInStripe": false,
+  "signingSecretInstalled": false,
+  "plannedMinimalEvents": ["checkout.session.completed", "checkout.session.expired", "payment_intent.payment_failed", "charge.refunded"],
+  "localValidation": {"signatureVerification": "passed", "duplicateClaim": "passed", "replayHandling": "passed", "lateSuccessReconciliation": "passed", "expirationHandler": "passed"},
+  "reason": "A webhook endpoint cannot be activated safely until its signing secret can be installed without exposing it"
+}

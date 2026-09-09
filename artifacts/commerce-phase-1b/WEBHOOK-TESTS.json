@@ -1,0 +1,20 @@
+{
+  "result": "PARTIAL_PASS",
+  "passed": [
+    "valid raw-body HMAC",
+    "multiple v1 signatures",
+    "malformed signature rejection",
+    "timestamp replay tolerance rejection",
+    "atomic duplicate event claim",
+    "failed claim reclaim contract",
+    "late-payment reconciliation contract",
+    "full/partial/multiple refund schema support"
+  ],
+  "blocked": [
+    "live Stripe test webhook delivery",
+    "out-of-order remote event delivery",
+    "actual balance transaction fee capture",
+    "real full and partial test refunds"
+  ]
+}
+

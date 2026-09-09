@@ -1,25 +1,57 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "pack321-storefront-api-preview",
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "pack321-storefront-api",
   "main": "src/index.mjs",
-  "compatibility_date": "2026-08-02",
+  "compatibility_date": "2026-08-07",
+  "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
+  "observability": {"enabled": true, "head_sampling_rate": 1},
   "vars": {
+    "COMMERCE_MODE": "disabled",
     "PACK_ID": "pack-321",
-    "STOREFRONT_ORIGIN": "https://3a61075c.pack321-website.pages.dev"
+    "STOREFRONT_ORIGIN": "",
+    "STOREFRONT_ORIGINS": ""
   },
-  "d1_databases": [{
-    "binding": "DB",
-    "database_name": "pack321-storefront-preview",
-    "database_id": "00000000-0000-0000-0000-000000000000",
-    "preview_database_id": "00000000-0000-0000-0000-000000000000",
-    "migrations_dir": "migrations"
-  }],
-  "ratelimits": [
-    {"name":"CHECKOUT_RATE_LIMITER","namespace_id":"32101","simple":{"limit":10,"period":60}},
-    {"name":"LOOKUP_RATE_LIMITER","namespace_id":"32102","simple":{"limit":10,"period":60}},
-    {"name":"ADMIN_RATE_LIMITER","namespace_id":"32103","simple":{"limit":60,"period":60}}
-  ],
-  "observability": {"enabled": true},
-  "triggers": {"crons":["17 * * * *"]}
+  "env": {
+    "public-preview": {
+      "name": "pack321-storefront-api-public-preview-disabled",
+      "vars": {"COMMERCE_MODE":"disabled","PACK_ID":"pack-321","STOREFRONT_ORIGIN":"","STOREFRONT_ORIGINS":""}
+    },
+    "test-commerce": {
+      "name": "pack321-storefront-api-test",
+      "vars": {
+        "COMMERCE_MODE": "test",
+        "PACK_ID": "pack-321",
+        "STOREFRONT_ORIGIN": "https://test-shop.pack321wi.org",
+        "STOREFRONT_ORIGINS": "https://test-shop.pack321wi.org,https://pack321-storefront-test.pages.dev",
+        "ACCESS_TEAM_DOMAIN": "https://divine-forest-294a.cloudflareaccess.com",
+        "ACCESS_AUD": "a711b3114d445df94450e1b2e45c61878ce52db9a3b3d22b961e3331236e5813",
+        "STRIPE_API_VERSION": "2026-07-29.dahlia"
+      },
+      "d1_databases": [{"binding":"DB","database_name":"pack321-storefront-commerce-test","database_id":"4f8c972a-4353-4444-b442-a7660d1a8167","migrations_dir":"migrations"}],
+      "ratelimits": [
+        {"name":"CHECKOUT_RATE_LIMITER","namespace_id":"32111","simple":{"limit":10,"period":60}},
+        {"name":"LOOKUP_RATE_LIMITER","namespace_id":"32112","simple":{"limit":10,"period":60}},
+        {"name":"ADMIN_RATE_LIMITER","namespace_id":"32113","simple":{"limit":60,"period":60}}
+      ],
+      "triggers": {"crons":["17 * * * *"]}
+    },
+    "production-commerce": {
+      "name": "pack321-storefront-api-production-disabled",
+      "vars": {
+        "COMMERCE_MODE":"disabled",
+        "PACK_ID":"pack-321",
+        "STOREFRONT_ORIGIN":"https://shop.pack321wi.org",
+        "STOREFRONT_ORIGINS":"https://shop.pack321wi.org,https://pack321-storefront-preview.pages.dev",
+        "ACCESS_TEAM_DOMAIN":"",
+        "ACCESS_AUD":""
+      },
+      "d1_databases": [{"binding":"DB","database_name":"pack321-storefront-support-production","database_id":"ce98cc70-a5c9-4931-a2c0-ebb53e13081c","migrations_dir":"migrations"}],
+      "ratelimits": [
+        {"name":"CHECKOUT_RATE_LIMITER","namespace_id":"32121","simple":{"limit":1,"period":60}},
+        {"name":"LOOKUP_RATE_LIMITER","namespace_id":"32122","simple":{"limit":10,"period":60}},
+        {"name":"ADMIN_RATE_LIMITER","namespace_id":"32123","simple":{"limit":1,"period":60}}
+      ]
+    }
+  }
 }

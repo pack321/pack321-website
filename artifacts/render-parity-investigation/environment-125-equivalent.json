@@ -1,0 +1,1412 @@
+[
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": null,
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 21504,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": {
+        "bottom": 275.48,
+        "height": 154.14,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 237.19,
+        "height": 72,
+        "right": 269.08,
+        "width": 249.08,
+        "x": 20,
+        "y": 165.19
+      },
+      "productWorkspace": null,
+      "summaryPanel": null
+    },
+    "route": "/index.html",
+    "screen": null,
+    "selectedTabs": [],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap",
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-components.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "homepage",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1500,
+    "wallClockSinceNavigationMs": 1810,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-homepage.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    }
+  },
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": "2026–2027 · active",
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": {
+        "bottom": 343.94,
+        "height": 190,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 153.94
+      },
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 316.17,
+        "height": 32,
+        "right": 307.58,
+        "width": 287.58,
+        "x": 20,
+        "y": 284.17
+      },
+      "productWorkspace": {
+        "bottom": 515,
+        "height": 159.06,
+        "right": 1004,
+        "width": 984,
+        "x": 20,
+        "y": 355.94
+      },
+      "summaryPanel": {
+        "bottom": 515,
+        "height": 159.06,
+        "right": 1004,
+        "width": 250,
+        "x": 754,
+        "y": 355.94
+      }
+    },
+    "route": "/campaign.html?id=seroogy-candy-2026&scout=AB12CD",
+    "screen": null,
+    "selectedTabs": [],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-components.css",
+      "http://127.0.0.1:8765/css/campaign-builders.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "candy",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1500,
+    "wallClockSinceNavigationMs": 1664,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-candy.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    }
+  },
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": "2026–2027 · scheduled",
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": {
+        "bottom": 343.94,
+        "height": 190,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 153.94
+      },
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 316.17,
+        "height": 32,
+        "right": 307.58,
+        "width": 287.58,
+        "x": 20,
+        "y": 284.17
+      },
+      "productWorkspace": {
+        "bottom": 515,
+        "height": 159.06,
+        "right": 1004,
+        "width": 984,
+        "x": 20,
+        "y": 355.94
+      },
+      "summaryPanel": {
+        "bottom": 515,
+        "height": 46.56,
+        "right": 1004,
+        "width": 250,
+        "x": 754,
+        "y": 468.44
+      }
+    },
+    "route": "/campaign.html?id=popcorn-2026&scout=AB12CD",
+    "screen": null,
+    "selectedTabs": [
+      "Savory"
+    ],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-components.css",
+      "http://127.0.0.1:8765/css/campaign-builders.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "popcorn-savory",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1750,
+    "wallClockSinceNavigationMs": 2202,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-popcorn-savory.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    },
+    "note": "Savory selected by keyboard ArrowRight sequence; ordinary pointer click was intercepted by the responsive navigation overlay at this viewport."
+  },
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": "2026–2027 · pricing-pending",
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": {
+        "bottom": 343.94,
+        "height": 190,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 153.94
+      },
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 323.97,
+        "height": 64,
+        "right": 307.58,
+        "width": 287.58,
+        "x": 20,
+        "y": 259.97
+      },
+      "productWorkspace": {
+        "bottom": 515,
+        "height": 159.06,
+        "right": 1004,
+        "width": 984,
+        "x": 20,
+        "y": 355.94
+      },
+      "summaryPanel": {
+        "bottom": 515,
+        "height": 46.56,
+        "right": 1004,
+        "width": 250,
+        "x": 754,
+        "y": 468.44
+      }
+    },
+    "route": "/campaign.html?id=rose-wreaths-2026&scout=AB12CD",
+    "screen": null,
+    "selectedTabs": [
+      "Centerpieces"
+    ],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-components.css",
+      "http://127.0.0.1:8765/css/campaign-builders.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "holiday-wreaths-centerpieces",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1750,
+    "wallClockSinceNavigationMs": 2214,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-holiday-wreaths-centerpieces.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    }
+  },
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": "2026–2027 · scheduled",
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": {
+        "bottom": 343.94,
+        "height": 190,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 153.94
+      },
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 341.47,
+        "height": 64,
+        "right": 307.58,
+        "width": 287.58,
+        "x": 20,
+        "y": 277.47
+      },
+      "productWorkspace": {
+        "bottom": 515,
+        "height": 159.06,
+        "right": 1004,
+        "width": 984,
+        "x": 20,
+        "y": 355.94
+      },
+      "summaryPanel": {
+        "bottom": 515,
+        "height": 46.56,
+        "right": 1004,
+        "width": 250,
+        "x": 754,
+        "y": 468.44
+      }
+    },
+    "route": "/campaign.html?id=veterans-wreaths-2026&scout=AB12CD",
+    "screen": null,
+    "selectedTabs": [],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-components.css",
+      "http://127.0.0.1:8765/css/campaign-builders.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "veterans-long-title",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1500,
+    "wallClockSinceNavigationMs": 1762,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-veterans-long-title.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    }
+  },
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": null,
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": null,
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 215.08,
+        "height": 34.55,
+        "right": 782.92,
+        "width": 541.84,
+        "x": 241.08,
+        "y": 180.53
+      },
+      "productWorkspace": {
+        "bottom": 505,
+        "height": 194.39,
+        "right": 1004,
+        "width": 984,
+        "x": 20,
+        "y": 310.61
+      },
+      "summaryPanel": null
+    },
+    "route": "/shop.html?campaign=seroogy-candy-2026&scout=AB12CD",
+    "screen": null,
+    "selectedTabs": [],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-components.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "shop",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1500,
+    "wallClockSinceNavigationMs": 1666,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-shop.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    }
+  },
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": null,
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 2952,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": null,
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 203.98,
+        "height": 36.8,
+        "right": 1004,
+        "width": 576,
+        "x": 428,
+        "y": 167.19
+      },
+      "productWorkspace": {
+        "bottom": 509,
+        "height": 369.66,
+        "right": 1004,
+        "width": 984,
+        "x": 20,
+        "y": 139.34
+      },
+      "summaryPanel": null
+    },
+    "route": "/product.html?id=chocolate-meltaway&scout=AB12CD",
+    "screen": null,
+    "selectedTabs": [],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-components.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "product-detail",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1500,
+    "wallClockSinceNavigationMs": 1662,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-product-detail.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    }
+  },
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": null,
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": null,
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 177.89,
+        "height": 34.55,
+        "right": 752.48,
+        "width": 480.98,
+        "x": 271.5,
+        "y": 143.34
+      },
+      "productWorkspace": {
+        "bottom": 505,
+        "height": 275.92,
+        "right": 1004,
+        "width": 984,
+        "x": 20,
+        "y": 229.08
+      },
+      "summaryPanel": {
+        "bottom": 505,
+        "height": 275.92,
+        "right": 1004,
+        "width": 360,
+        "x": 644,
+        "y": 229.08
+      }
+    },
+    "route": "/cart.html?scout=AB12CD",
+    "screen": null,
+    "selectedTabs": [],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "cart",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1500,
+    "wallClockSinceNavigationMs": 1708,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-cart.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    }
+  },
+  {
+    "actualViewport": {
+      "height": 576,
+      "width": 1024
+    },
+    "attributionText": "Supporting: Emily G.\nAttribution follows this order through checkout.\nChange to Pack-wide support",
+    "campaignStatus": null,
+    "cartCount": "33",
+    "devicePixelRatio": 1,
+    "documentElement": {
+      "clientHeight": 576,
+      "clientWidth": 1024,
+      "scrollHeight": 576,
+      "scrollWidth": 1024
+    },
+    "headingFont": "Inter, \"Segoe UI\", Arial, sans-serif",
+    "outerWindow": {
+      "height": 820,
+      "width": 1280
+    },
+    "overlaps": [
+      {
+        "a": "announcement",
+        "area": 0,
+        "b": "navigation"
+      },
+      {
+        "a": "navigation",
+        "area": 0,
+        "b": "attribution"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "hero"
+      },
+      {
+        "a": "attribution",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "hero",
+        "area": 0,
+        "b": "productWorkspace"
+      },
+      {
+        "a": "productWorkspace",
+        "area": 0,
+        "b": "footer"
+      },
+      {
+        "a": "summaryPanel",
+        "area": 0,
+        "b": "footer"
+      }
+    ],
+    "rectangles": {
+      "announcement": {
+        "bottom": 38.34,
+        "height": 38.34,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 0
+      },
+      "attribution": {
+        "bottom": 142.34,
+        "height": 21,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 121.34
+      },
+      "footer": {
+        "bottom": 576,
+        "height": 49,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 527
+      },
+      "hero": null,
+      "navigation": {
+        "bottom": 121.34,
+        "height": 83,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 38.34
+      },
+      "pageTitle": {
+        "bottom": 215.08,
+        "height": 34.55,
+        "right": 772.06,
+        "width": 520.14,
+        "x": 251.92,
+        "y": 180.53
+      },
+      "productWorkspace": {
+        "bottom": 505,
+        "height": 238.73,
+        "right": 1004,
+        "width": 984,
+        "x": 20,
+        "y": 266.27
+      },
+      "summaryPanel": {
+        "bottom": 505,
+        "height": 238.73,
+        "right": 1004,
+        "width": 360,
+        "x": 644,
+        "y": 266.27
+      }
+    },
+    "route": "/checkout.html?scout=AB12CD",
+    "screen": null,
+    "selectedTabs": [],
+    "serviceWorkerControlled": false,
+    "stylesheets": [
+      "http://127.0.0.1:8765/css/store.css",
+      "http://127.0.0.1:8765/css/store-layout.css",
+      "http://127.0.0.1:8765/css/store-v3-phase2.css",
+      "http://127.0.0.1:8765/css/revision-1.css",
+      "http://127.0.0.1:8765/css/revision-2.css",
+      "http://127.0.0.1:8765/css/revision-3.css",
+      "http://127.0.0.1:8765/css/revision-3-scout.css",
+      "http://127.0.0.1:8765/css/visual-regression.css",
+      "http://127.0.0.1:8765/css/grj-store-009.css",
+      "http://127.0.0.1:8765/css/store-v2.css",
+      "http://127.0.0.1:8765/css/store-v3-shell.css"
+    ],
+    "userAgent": null,
+    "visualViewportScale": 1,
+    "windowInner": {
+      "height": 576,
+      "width": 1024
+    },
+    "zoomDetect": {
+      "outerToInnerWidth": 1.25
+    },
+    "label": "checkout",
+    "zoomTest": "zoom-125-equivalent",
+    "captureDelayRequestedMs": 1500,
+    "wallClockSinceNavigationMs": 1651,
+    "screenshot": "D:/Projects/pack321-website/artifacts/render-parity-investigation/zoom-125-equivalent-checkout.png",
+    "zoomControlAttempt": {
+      "method": "Ctrl+0 then Ctrl++ twice",
+      "detectedChange": false,
+      "actualBrowserZoom": "unavailable",
+      "simulation": "1024x576 CSS viewport = 1280x720 divided by 1.25; DPR remains 1"
+    }
+  }
+]

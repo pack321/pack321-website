@@ -16,7 +16,7 @@ const isPublicActive = scout => Boolean(
 
 for (const scout of scouts.filter(isPublicActive)) {
   const code = String(scout.fundraisingCode).trim().toUpperCase();
-  if (!/^[A-Z0-9]{6}$/.test(code)) continue;
+  if (!/^[0-9A-HJKMNP-TV-Z]{8}$/.test(code)) continue;
   const route = path.join(store, 'scout', code);
   fs.mkdirSync(route, { recursive: true });
   fs.writeFileSync(path.join(route, 'index.html'), template, 'utf8');

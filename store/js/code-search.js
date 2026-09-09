@@ -1,9 +1,10 @@
 (function(){
   'use strict';
-  const CODE_PATTERN=/^[A-Z0-9]{6}$/;
+  const normalize=value=>String(value||'').trim().toUpperCase().replace(/[\s-]/g,'');
+  const CODE_PATTERN=/^[0-9A-HJKMNP-TV-Z]{8}$/;
   const analyticsEvent=(event,campaignId=null)=>window.dispatchEvent(new CustomEvent('pack321:analytics',{detail:{event,component:'fundraising_code_search',campaignId}}));
   const campaignContext=host=>{const params=new URLSearchParams(location.search);return host.dataset.campaign||params.get('campaign')||params.get('id')||null;};
-  const publicActive=scout=>Boolean(scout&&scout.fundraisingEnabled&&scout.visibility==='public'&&scout.guardianApproved&&scout.status!=='expired');
+  const publicActive=scout=>Boolean(scout&&(scout.available===true||(scout.fundraisingEnabled&&scout.visibility==='public'&&scout.guardianApproved&&scout.status!=='expired')));
   const unavailableMessage='We could not find an active public fundraising page for that code. Check the code or support Pack 321 generally.';
   const rateLimitCheck=async context=>{const hook=window.Pack321CodeSearchRateLimit?.beforeLookup;if(typeof hook!=='function')return{allowed:true};return await hook(context);};
   function render(host,index){
@@ -13,13 +14,13 @@
     const fail=(message,event)=>{error.textContent=message;error.hidden=false;result.textContent='';input.setAttribute('aria-invalid','true');analyticsEvent(event,campaignId);error.focus();};
     input.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();form.requestSubmit();}});
     form.addEventListener('submit',async event=>{
-      event.preventDefault();const code=String(input.value||'').trim().toUpperCase();input.value=code;error.hidden=true;error.textContent='';input.removeAttribute('aria-invalid');result.textContent='';analyticsEvent('code_search_started',campaignId);
+      event.preventDefault();const code=normalize(input.value);input.value=code.length===8?`${code.slice(0,4)}-${code.slice(4)}`:code;error.hidden=true;error.textContent='';input.removeAttribute('aria-invalid');result.textContent='';analyticsEvent('code_search_started',campaignId);
       if(!code){fail('Enter a fundraising code to continue.','code_search_invalid');return;}
       if(!CODE_PATTERN.test(code)){fail(unavailableMessage,'code_search_invalid');return;}
       result.textContent='Checking fundraising code…';
       try{
         const limit=await rateLimitCheck({campaignId,sourcePage:location.pathname});if(limit?.allowed===false){fail('We could not complete the lookup. Please try again later.','code_search_unavailable');return;}
-        const scouts=await StoreUtils.loadData('scouts');const scout=scouts.find(item=>item.fundraisingCode===code);
+        const api=String(window.PACK321_API_BASE||'').replace(/\/$/,'');let scout=null;if(api&&campaignId){const response=await fetch(`${api}/api/fundraising-code/${encodeURIComponent(code)}?campaign=${encodeURIComponent(campaignId)}`);if(response.ok)scout=await response.json();}else{const scouts=await StoreUtils.loadData('scouts');scout=scouts.find(item=>item.fundraisingCode===code);}
         if(!publicActive(scout)){fail(unavailableMessage,'code_search_not_found');return;}
         analyticsEvent('code_search_success',campaignId);result.textContent='Scout fundraising page found. Redirecting…';const query=new URLSearchParams({source:'code-search'});if(campaignId)query.set('campaign',campaignId);location.assign(`/scout/${encodeURIComponent(code)}?${query}`);
       }catch{fail('Fundraising code lookup is temporarily unavailable. Please try again later.','code_search_unavailable');}
@@ -27,5 +28,5 @@
   }
   const init=()=>document.querySelectorAll('[data-code-search]').forEach((host,index)=>{if(!host.dataset.codeSearchReady){host.dataset.codeSearchReady='true';render(host,index);}});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
-  window.Pack321CodeSearch={normalize:value=>String(value||'').trim().toUpperCase(),isValid:value=>CODE_PATTERN.test(String(value||'').trim().toUpperCase()),isPublicActive:publicActive,init};
+  window.Pack321CodeSearch={normalize,isValid:value=>CODE_PATTERN.test(normalize(value)),isPublicActive:publicActive,init};
 })();

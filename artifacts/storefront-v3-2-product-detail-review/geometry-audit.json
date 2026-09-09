@@ -1,0 +1,137 @@
+[
+  {
+    "client": [
+      1920,
+      1080
+    ],
+    "clipped": [],
+    "collisions": {
+      "accordionsFooter": false,
+      "crumbsSpot": false,
+      "galleryPurchase": false,
+      "spotAccordions": false
+    },
+    "document": [
+      1920,
+      1235
+    ],
+    "horizontal": false,
+    "pass": true,
+    "requested": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "client": [
+      1366,
+      768
+    ],
+    "clipped": [],
+    "collisions": {
+      "accordionsFooter": false,
+      "crumbsSpot": false,
+      "galleryPurchase": false,
+      "spotAccordions": false
+    },
+    "document": [
+      1366,
+      1235
+    ],
+    "horizontal": false,
+    "pass": true,
+    "requested": [
+      1366,
+      768
+    ],
+    "viewport": [
+      1366,
+      768
+    ]
+  },
+  {
+    "client": [
+      1280,
+      720
+    ],
+    "clipped": [],
+    "collisions": {
+      "accordionsFooter": false,
+      "crumbsSpot": false,
+      "galleryPurchase": false,
+      "spotAccordions": false
+    },
+    "document": [
+      1280,
+      1235
+    ],
+    "horizontal": false,
+    "pass": true,
+    "requested": [
+      1280,
+      720
+    ],
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  {
+    "client": [
+      1009,
+      576
+    ],
+    "clipped": [],
+    "collisions": {
+      "accordionsFooter": false,
+      "crumbsSpot": false,
+      "galleryPurchase": false,
+      "spotAccordions": false
+    },
+    "document": [
+      1009,
+      1196
+    ],
+    "horizontal": false,
+    "pass": true,
+    "requested": [
+      1024,
+      576
+    ],
+    "viewport": [
+      1024,
+      576
+    ]
+  },
+  {
+    "client": [
+      375,
+      844
+    ],
+    "clipped": [],
+    "collisions": {
+      "accordionsFooter": false,
+      "crumbsSpot": false,
+      "galleryPurchase": false,
+      "spotAccordions": false
+    },
+    "document": [
+      375,
+      2135
+    ],
+    "horizontal": false,
+    "pass": true,
+    "requested": [
+      390,
+      844
+    ],
+    "viewport": [
+      390,
+      844
+    ]
+  }
+]

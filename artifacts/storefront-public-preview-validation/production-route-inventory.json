@@ -1,0 +1,21 @@
+{
+  "result": "BLOCKED",
+  "base_url": "https://shop.pack321wi.org",
+  "dns": "NXDOMAIN",
+  "routes_tested": 0,
+  "required_routes": [
+    "/",
+    "/fundraising.html",
+    "/shop.html",
+    "/find-a-scout.html",
+    "/donations.html",
+    "/help.html",
+    "/order-lookup.html",
+    "/cart.html",
+    "/checkout.html",
+    "/product.html?id=chocolate-meltaway",
+    "/product.html?id=classic-caramel-corn",
+    "/product.html?id=platinum-24-wreath",
+    "/product.html?id=military-donation-30"
+  ]
+}

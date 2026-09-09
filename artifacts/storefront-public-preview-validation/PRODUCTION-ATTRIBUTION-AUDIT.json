@@ -1,0 +1,15 @@
+{
+  "result": "PASS_WITH_OBSERVATION",
+  "test_code": "AB12CD",
+  "find_a_scout": true,
+  "attribution_banner": "Supporting Emily G.",
+  "campaign_attribution": true,
+  "product_attribution": true,
+  "cart_attribution": true,
+  "persists_after_refresh": true,
+  "checkout_review_target": "Emily G.",
+  "pack_wide_conversion_checkout_target": "Pack 321 generally",
+  "private_scout_name_in_url": false,
+  "public_url_contains_only_shared_fundraising_code": true,
+  "observation": "Scout context can be re-derived from an attributed cart item after leaving the explicit support=pack URL; checkout itself correctly rendered Pack-wide support after conversion."
+}

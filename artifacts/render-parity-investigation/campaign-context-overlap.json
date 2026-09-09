@@ -1,0 +1,23 @@
+{
+  "zoom": "100%",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "route": "/campaign.html?id=seroogy-candy-2026&scout=AB12CD",
+  "attribution": {
+    "x": 0,
+    "y": 123.09375,
+    "width": 1280,
+    "height": 21,
+    "bottom": 144.09375
+  },
+  "campaignContext": {
+    "x": 20,
+    "y": 123.09375,
+    "width": 1240,
+    "height": 32.59375,
+    "bottom": 155.6875
+  },
+  "overlapArea": 26040
+}

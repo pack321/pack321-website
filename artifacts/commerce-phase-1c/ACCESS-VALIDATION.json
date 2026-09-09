@@ -1,0 +1,11 @@
+{
+  "application": "Pack 321 Commerce Test Administration",
+  "status": "active-partial-validation",
+  "protectedRoute": "pack321-storefront-api-test.wicubscoutpack321.workers.dev/api/admin/*",
+  "teamDomain": "https://divine-forest-294a.cloudflareaccess.com",
+  "aud": "a711b3114d445df94450e1b2e45c61878ce52db9a3b3d22b961e3331236e5813",
+  "identityClaim": "email",
+  "unauthenticated": {"result": "denied", "httpStatus": 302, "destination": "Cloudflare Access login"},
+  "authenticatedOperator": {"result": "not-run", "reason": "No authenticated browser session was asserted during this run"},
+  "browserActorSpoofing": "not accepted; actor body field is ignored and JWT email is used"
+}

@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  if(!document.querySelector('link[href$="store-v3-phase2.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/css/store-v3-phase2.css">');
+  if(!document.querySelector('link[href^="/css/store-v3-phase2.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/css/store-v3-phase2.css?v=20260808-menu-hotfix">');
   const overviewPage=location.pathname.split('/').pop()||'index.html';
   if(['index.html','fundraising.html'].includes(overviewPage))document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('phase2-commerce-page','phase2-home'),{once:true});
   const U=()=>window.StoreUtils;

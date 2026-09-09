@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "validated_at": "2026-08-08",
+  "command": "npm run test:scouthq-auth",
+  "checks": {
+    "leadership_authentication": true,
+    "parent_authentication": true,
+    "application_session_created": true,
+    "refresh_persistence": true,
+    "normal_logout": true,
+    "account_switching": true,
+    "new_identity_onboarding": true,
+    "griffin_family_created_once": true,
+    "access_request_created_once": true,
+    "pending_state": true,
+    "leadership_queue_visibility": true,
+    "leadership_approval": true,
+    "parent_role_from_database": true,
+    "approved_parent_experience": true,
+    "parent_leadership_route_denied": true,
+    "branded_denial_with_correlation_id": true,
+    "audit_actor_server_derived": true,
+    "production_unchanged": true
+  }
+}

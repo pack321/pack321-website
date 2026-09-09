@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Storefront V2 Visual Review</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, Arial, sans-serif; color: #071d3b; background: #f5f1e8; }
+    body { margin: 0; padding: 32px; }
+    main { max-width: 1500px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; }
+    .summary { max-width: 980px; line-height: 1.55; }
+    .notice { padding: 16px 18px; border-left: 5px solid #f4b400; background: white; border-radius: 8px; }
+    .table-wrap { overflow-x: auto; margin-top: 24px; background: white; border-radius: 14px; box-shadow: 0 8px 24px rgba(7,29,59,.1); }
+    table { width: 100%; border-collapse: collapse; min-width: 1120px; }
+    th, td { padding: 14px; border-bottom: 1px solid #dce1e8; text-align: left; vertical-align: top; line-height: 1.4; }
+    th { position: sticky; top: 0; background: #071d3b; color: white; }
+    tr:last-child td { border-bottom: 0; }
+    code { white-space: nowrap; }
+    a { color: #074f9e; font-weight: 700; }
+    .concern { max-width: 420px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Storefront V2 Visual Review</h1>
+  <p class="summary">Actual rendered captures at 1440px desktop and 390px mobile viewports. Pages were captured at full document height with realistic populated state. PNG width excludes the browser scrollbar gutter (typically 1425px desktop and 375px mobile). Detected overflow is documented rather than concealed. Capture date: August 4, 2026.</p>
+  <p class="notice"><strong>Global findings:</strong> Product Detail renders 396px wide at the 390px mobile viewport. Popcorn, Holiday Wreaths, and Product Catalog are very long on mobile. Real Pack/product photography differs from some approved AI lifestyle reference imagery. No storefront design changes or commit were made.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th># / Page</th><th>Route</th><th>Page title</th><th>Desktop</th><th>Mobile</th><th>Placeholder / AI imagery</th><th>Outstanding visual concerns</th></tr></thead>
+    <tbody>
+      <tr><td>1. Storefront Home</td><td><code>/</code></td><td>Support Pack 321 | Fundraisers &amp; Merchandise</td><td><a href="01-storefront-home-desktop.png">1440px</a></td><td><a href="01-storefront-home-mobile.png">390px</a></td><td>No placeholder; real Pack camping and approved product imagery.</td><td class="concern">Real camp photo differs from approved campfire reference. Capture shows the seeded Emily G. attribution and populated cart.</td></tr>
+      <tr><td>2. Fundraising Center</td><td><code>/fundraising.html</code></td><td>Fundraising Center | Support Pack 321</td><td><a href="02-fundraising-center-desktop.png">1440px</a></td><td><a href="02-fundraising-center-mobile.png">390px</a></td><td>No placeholder; real Pack hiking and product imagery.</td><td class="concern">Hero photography/composition differs from the approved reference.</td></tr>
+      <tr><td>3. Current Fundraisers</td><td><code>/fundraising.html#current</code></td><td>Fundraising Center | Support Pack 321</td><td><a href="03-current-fundraisers-desktop.png">1440px</a></td><td><a href="03-current-fundraisers-mobile.png">390px</a></td><td>No placeholder; campaign product imagery is present.</td><td class="concern">No standalone page; the full-page capture is the Fundraising Center document with an anchor target.</td></tr>
+      <tr><td>4. Candy Campaign</td><td><code>/campaign.html?id=seroogy-candy-2026</code></td><td>2026–2027 Candy Fundraiser | Support Pack 321</td><td><a href="04-candy-campaign-desktop.png">1440px</a></td><td><a href="04-candy-campaign-mobile.png">390px</a></td><td>No placeholder; approved candy product imagery.</td><td class="concern">Title says “Candy Fundraiser,” not approved “Candy Bar Fundraiser.” Campaign metrics remain zeroed. Seven flavors are visibly selected.</td></tr>
+      <tr><td>5. Popcorn Campaign</td><td><code>/campaign.html?id=popcorn-2026</code></td><td>2026–2027 Popcorn Fundraiser | Support Pack 321</td><td><a href="05-popcorn-campaign-desktop.png">1440px</a> · <a href="05-popcorn-symbol-legend-desktop.png">legend</a></td><td><a href="05-popcorn-campaign-mobile.png">390px</a> · <a href="05-popcorn-symbol-legend-mobile.png">legend</a></td><td>No placeholder; approved popcorn product imagery.</td><td class="concern">Very long mobile catalog (about 13,319px). Dietary badges are shown; the expanded symbol legend is supplied as a separate detail capture.</td></tr>
+      <tr><td>6. Holiday Wreath Campaign</td><td><code>/campaign.html?id=rose-wreaths-2026</code></td><td>2026–2027 Holiday Wreath Fundraiser | Support Pack 321</td><td><a href="06-holiday-wreath-campaign-desktop.png">1440px</a></td><td><a href="06-holiday-wreath-campaign-mobile.png">390px</a></td><td>No placeholder; full wreath catalog imagery.</td><td class="concern">Very long mobile catalog (about 13,625px); pricing-pending content remains visible where supplied by campaign data.</td></tr>
+      <tr><td>7. Veterans Wreath Sponsorship</td><td><code>/campaign.html?id=veterans-wreaths-2026</code></td><td>2026–2027 Veterans Wreath Sponsorship | Support Pack 321</td><td><a href="07-veterans-wreath-sponsorship-desktop.png">1440px</a></td><td><a href="07-veterans-wreath-sponsorship-mobile.png">390px</a></td><td>No placeholder; veterans wreath product image.</td><td class="concern">Sponsorship language is correct and no delivery language was observed; visual composition differs from the reference rendering.</td></tr>
+      <tr><td>8. Find a Scout</td><td><code>/find-a-scout.html</code></td><td>Find a Scout | Support Pack 321</td><td><a href="08-find-a-scout-desktop.png">1440px</a></td><td><a href="08-find-a-scout-mobile.png">390px</a></td><td>Current lifestyle hero imagery; code field populated with AB12CD.</td><td class="concern">Current flow is fundraising-code based rather than the approved reference’s combined name/code search treatment.</td></tr>
+      <tr><td>9. Individual Scout Page</td><td><code>/scout/AB12CD</code></td><td>Support Emily G. | Pack 321</td><td><a href="09-individual-scout-page-desktop.png">1440px</a></td><td><a href="09-individual-scout-page-mobile.png">390px</a></td><td>Intentional privacy-safe Scout portrait placeholder.</td><td class="concern">Portrait is intentionally generic rather than the approved named-scout photo reference.</td></tr>
+      <tr><td>10. Product Catalog</td><td><code>/shop.html</code></td><td>Shop | Pack 321 Store</td><td><a href="10-product-catalog-desktop.png">1440px</a></td><td><a href="10-product-catalog-mobile.png">390px</a></td><td>Approved product imagery; some future merchandise may use fallback artwork.</td><td class="concern">Extremely long mobile catalog (about 13,431px) due to the full product list stacking.</td></tr>
+      <tr><td>11. Product Detail</td><td><code>/product.html?id=chocolate-meltaway</code></td><td>Product | Support Pack 321</td><td><a href="11-product-detail-desktop.png">1440px</a></td><td><a href="11-product-detail-mobile.png">390px</a></td><td>Approved product image; no AI placeholder.</td><td class="concern">Real defect preserved: content renders 396px wide at a 390px viewport. Browser title remains generic “Product.”</td></tr>
+      <tr><td>12. Cart</td><td><code>/cart.html</code></td><td>Cart | Pack 321 Store</td><td><a href="12-cart-desktop.png">1440px</a></td><td><a href="12-cart-mobile.png">390px</a></td><td>Approved product thumbnails; no AI placeholder.</td><td class="concern">Populated with seven candy products and Emily G. attribution as required; no additional concern observed.</td></tr>
+      <tr><td>13. Checkout Review</td><td><code>/checkout.html</code></td><td>Checkout Preview | Pack 321 Store</td><td><a href="13-checkout-review-desktop.png">1440px</a></td><td><a href="13-checkout-review-mobile.png">390px</a></td><td>No hero imagery; populated product summary.</td><td class="concern">This is a non-submitting checkout preview, not the approved multi-stage live checkout. Full contact/order review state is populated.</td></tr>
+      <tr><td>14. Donations</td><td><code>/donations.html</code></td><td>Donations | Support Pack 321</td><td><a href="14-donations-desktop.png">1440px</a></td><td><a href="14-donations-mobile.png">390px</a></td><td>No imagery or AI placeholder.</td><td class="concern">Donation functionality remains a preview rather than a live flow.</td></tr>
+      <tr><td>15. Pack Merchandise</td><td><code>/shop.html?category=Pack%20Merchandise</code></td><td>Shop | Pack 321 Store</td><td><a href="15-pack-merchandise-desktop.png">1440px</a></td><td><a href="15-pack-merchandise-mobile.png">390px</a></td><td>Merchandise uses current SVG/fallback product artwork.</td><td class="concern">Final merchandise photography is still needed for items represented by fallback art.</td></tr>
+      <tr><td>16. Order Lookup</td><td><code>/order-lookup.html</code></td><td>Order Lookup | Pack 321 Store</td><td><a href="16-order-lookup-desktop.png">1440px</a></td><td><a href="16-order-lookup-mobile.png">390px</a></td><td>No imagery or AI placeholder.</td><td class="concern">Realistic sample order number/email are populated, but lookup was not submitted.</td></tr>
+      <tr><td>17. Help &amp; Contact</td><td><code>/help.html</code></td><td>Help &amp; Contact | Support Pack 321</td><td><a href="17-help-contact-desktop.png">1440px</a></td><td><a href="17-help-contact-mobile.png">390px</a></td><td>No imagery or AI placeholder.</td><td class="concern">Long mobile information stack (about 4,501px); otherwise no overflow observed.</td></tr>
+      <tr><td>18. Selling Resources</td><td><code>/selling-resources.html</code></td><td>Selling Resources | Pack 321 Fundraising Center</td><td><a href="18-selling-resources-desktop.png">1440px</a></td><td><a href="18-selling-resources-mobile.png">390px</a></td><td>Real Pack service photo; no AI placeholder.</td><td class="concern">Several resource tools remain labeled “Coming soon,” and imagery/composition differs from the approved reference.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</main>
+</body>
+</html>

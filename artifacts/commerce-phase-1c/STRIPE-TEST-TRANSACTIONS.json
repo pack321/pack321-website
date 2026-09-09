@@ -1,0 +1,9 @@
+{
+  "mode": "test",
+  "status": "blocked",
+  "successfulTransactions": 0,
+  "failedStripeTransactions": 0,
+  "reason": "STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET are absent from the test Worker",
+  "requiredScenarios": ["Candy", "multiple Candy items", "regular Popcorn", "Scout-attributed order", "Pack-wide order", "mixed pickup + Military Donation", "donation + physical item", "donation-only"],
+  "failClosedCheck": {"httpStatus": 503, "corsOrigin": "https://test-shop.pack321wi.org", "chargeCreated": false}
+}

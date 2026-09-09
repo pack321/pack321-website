@@ -1,0 +1,31 @@
+{
+  "shopLinks": {
+    "image": "/product.html?id=pack-321-t-shirt&scout=AB12CD",
+    "quick": true,
+    "title": "/product.html?id=pack-321-t-shirt&scout=AB12CD"
+  },
+  "campaignLinks": {
+    "image": "/product.html?id=chocolate-meltaway&scout=AB12CD",
+    "quantity": true,
+    "title": "/product.html?id=chocolate-meltaway&scout=AB12CD"
+  },
+  "scoutLinks": {
+    "image": "/product.html?id=chocolate-meltaway&scout=AB12CD",
+    "title": "/product.html?id=chocolate-meltaway&scout=AB12CD",
+    "view": "/product.html?id=chocolate-meltaway&scout=AB12CD"
+  },
+  "errors": [],
+  "cart": {
+    "before": "33",
+    "after": "34",
+    "message": "Chocolate Meltaway added to cart."
+  },
+  "lightbox": {
+    "escapeCloses": true,
+    "focusReturnsTo": "Enlarge Chocolate Meltaway image"
+  },
+  "quantity": {
+    "before": "1",
+    "afterIncrement": "2"
+  }
+}

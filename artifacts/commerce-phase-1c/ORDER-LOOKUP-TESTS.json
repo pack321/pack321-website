@@ -1,0 +1,6 @@
+{
+  "status": "implementation-and-generic-failure-validation-passed; paid-order-validation-blocked",
+  "verifiedByTests": ["public order number format", "normalized email matching", "generic failure response", "attribution-safe display text", "pickup and fulfillment fields", "refund ledger fields", "support contact"],
+  "testOrdersQueried": 0,
+  "reason": "No paid Stripe test orders exist"
+}

@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  if(!document.querySelector('link[href$="store-v3-phase2.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/css/store-v3-phase2.css">');
+  if(!document.querySelector('link[href^="/css/store-v3-phase2.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/css/store-v3-phase2.css?v=20260808-menu-hotfix">');
   const stat=(value,label)=>`<div class="stat"><strong>${value}</strong><span>${label}</span></div>`;
   const mediaKey=campaign=>campaign.templateId==='holiday-wreaths'?'holiday-wreaths':campaign.templateId;
   const programYear=campaign=>PackCampaignDisplay.formatProgramYear(campaign);

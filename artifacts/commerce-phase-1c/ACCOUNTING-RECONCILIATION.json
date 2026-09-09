@@ -1,0 +1,8 @@
+{
+  "status": "schema-and-unit-validation-passed; transaction-reconciliation-blocked",
+  "example": {"subtotal_amount": 5000, "customer_fee_amount": 300, "tax_amount": 0, "gross_amount": 5300},
+  "requiredD1Fields": ["subtotal_amount", "customer_fee_amount", "tax_amount", "gross_amount", "stripe_fee_amount", "refund_amount", "net_amount"],
+  "actualStripeFeeCaptureImplementation": "PaymentIntent latest_charge.balance_transaction.fee",
+  "actualStripeFeesCaptured": 0,
+  "reason": "No successful Stripe test transaction"
+}

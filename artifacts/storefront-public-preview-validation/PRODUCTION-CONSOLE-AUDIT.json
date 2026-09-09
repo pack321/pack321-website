@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "routes_observed": 17,
+  "desktop_console_errors": 0,
+  "mobile_console_errors": 0,
+  "checkout_console_errors": 0,
+  "lightbox_console_errors": 0,
+  "notes": ["No console-breaking errors were captured during route, interaction, checkout, lightbox, or mobile validation."]
+}

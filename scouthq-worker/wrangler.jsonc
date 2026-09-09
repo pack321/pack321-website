@@ -1,0 +1,17 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "scouthq-identity",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-08-08",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {"enabled": true, "head_sampling_rate": 1},
+  "vars": {"ENVIRONMENT":"local","ACCESS_TEAM_DOMAIN":"","ACCESS_AUD":"","SESSION_TTL_SECONDS":"28800"},
+  "env": {
+    "staging": {
+      "name": "scouthq-identity-staging",
+      "workers_dev": false,
+      "vars": {"ENVIRONMENT":"staging","ACCESS_TEAM_DOMAIN":"https://divine-forest-294a.cloudflareaccess.com","ACCESS_AUD":"88fab3bb241d052ded79f0a2d60b4538c8ae2c2684eb4348e4c8b1ce95fdbfdc","SESSION_TTL_SECONDS":"28800"},
+      "d1_databases": [{"binding":"IDENTITY_DB","database_name":"scouthq-identity-staging","database_id":"5261a2b5-3c86-46f3-ab74-cef5f19534ae","migrations_dir":"migrations"}]
+    }
+  }
+}

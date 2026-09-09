@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  if(!document.querySelector('link[href$="store-v3-phase2.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/css/store-v3-phase2.css">');
+  if(!document.querySelector('link[href^="/css/store-v3-phase2.css"]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/css/store-v3-phase2.css?v=20260808-menu-hotfix">');
   document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('phase2-commerce-page','phase2-cart'),{once:true});
   document.addEventListener('DOMContentLoaded',async()=>{
     const host=document.querySelector('[data-cart]');if(!host)return;const U=StoreUtils;const [products,campaigns,manifest]=await Promise.all([U.loadData('products'),U.loadData('campaigns'),U.loadMedia()]);const productMap=Object.fromEntries(products.map(product=>[product.id,product]));const campaignMap=Object.fromEntries(campaigns.map(campaign=>[campaign.id,campaign]));

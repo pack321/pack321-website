@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "preview_banner_visible": true,
+  "pack321_api_base": "unset/empty",
+  "pages_environment_variables": {},
+  "pages_functions": false,
+  "d1_binding": false,
+  "stripe_worker_attached": false,
+  "live_stripe_key_in_public_source": false,
+  "checkout_test": {
+    "attempted_with_synthetic_contact_data": true,
+    "remained_on_shop_hostname": true,
+    "checkout_session_created": false,
+    "message": "Checkout API is not configured for this preview."
+  },
+  "live_payment_possible": false
+}

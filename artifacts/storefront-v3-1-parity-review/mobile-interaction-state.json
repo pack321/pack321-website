@@ -1,0 +1,36 @@
+{
+  "mobileMetaV31": {
+    "cart": "33",
+    "menuOpen": false,
+    "scroll": [
+      375,
+      5982
+    ],
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  "openStateV31": {
+    "active": "☰Menu",
+    "aria": "true",
+    "drawer": {
+      "bottom": 750,
+      "height": 750,
+      "left": 35,
+      "right": 375,
+      "top": 0,
+      "width": 340,
+      "x": 35,
+      "y": 0
+    },
+    "menuOpen": true
+  },
+  "closedStateV31": {
+    "aria": "false",
+    "menuOpen": false,
+    "selected": [
+      "Classic"
+    ]
+  }
+}

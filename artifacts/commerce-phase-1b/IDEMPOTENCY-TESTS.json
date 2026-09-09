@@ -1,0 +1,13 @@
+{
+  "result": "PASS_LOCAL",
+  "tests": {
+    "deterministic_fingerprint": "pass",
+    "atomic_unique_order_insert": "pass",
+    "concurrent_identical_requests_reuse_order": "pass",
+    "stripe_idempotency_key_uses_fingerprint": "pass",
+    "payment_attempt_fingerprint_unique": "pass",
+    "atomic_stripe_event_claim": "pass"
+  },
+  "remote_stripe_concurrency": "blocked_without_test_secret"
+}
+

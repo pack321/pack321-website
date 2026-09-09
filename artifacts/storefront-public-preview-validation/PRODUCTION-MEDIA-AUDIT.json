@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "required_assets": {
+    "css": 200,
+    "javascript": 200,
+    "products_json": 200,
+    "campaigns_json": 200,
+    "media_manifest": 200,
+    "eagle_cave_hero": 200,
+    "fundraising_scouts_hero": 200,
+    "candy_product": 200,
+    "popcorn_product": 200,
+    "wreath_product": 200,
+    "logo": 200,
+    "product_lightbox": "visible; image 800x800"
+  },
+  "mixed_content": false,
+  "localhost_urls": false,
+  "windows_paths": false,
+  "temporary_upload_paths": false,
+  "service_worker_present": false,
+  "required_broken_images": 0,
+  "cache_observation": "Live requests returned LC1 assets from the current Pages deployment; no service worker can serve stale pre-LC1 content.",
+  "note": "Off-screen lazy images initially remained incomplete until requested; direct HTTPS checks returned the required image assets successfully."
+}

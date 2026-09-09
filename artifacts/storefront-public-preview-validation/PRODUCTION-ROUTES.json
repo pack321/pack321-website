@@ -1,0 +1,26 @@
+{
+  "result": "FAIL",
+  "base_url": "https://shop.pack321wi.org",
+  "deployment_id": "7691e979-37fb-4d8b-a1a9-695831663c2a",
+  "commit": "39ca6d885713914e286ecd6aee35879bdeb4b3ec",
+  "routes": [
+    {"path":"/","status":200,"final":"/","preview_banner":true,"console_errors":0},
+    {"path":"/fundraising.html","status":200,"final":"/fundraising","preview_banner":true,"console_errors":0},
+    {"path":"/shop.html","status":200,"final":"/shop","preview_banner":true,"console_errors":0},
+    {"path":"/find-a-scout.html","status":200,"final":"/find-a-scout","preview_banner":true,"console_errors":0},
+    {"path":"/donations.html","status":200,"final":"/donations","preview_banner":true,"console_errors":0},
+    {"path":"/help.html","status":200,"final":"/help","preview_banner":true,"console_errors":0},
+    {"path":"/order-lookup.html","status":200,"final":"/order-lookup","preview_banner":true,"console_errors":0},
+    {"path":"/cart.html","status":200,"final":"/cart","preview_banner":true,"console_errors":0},
+    {"path":"/checkout.html","status":200,"final":"/checkout","preview_banner":true,"console_errors":0},
+    {"path":"/product.html?id=chocolate-meltaway","status":200,"final":"/product?id=chocolate-meltaway","console_errors":0},
+    {"path":"/product.html?id=classic-caramel-corn","status":200,"final":"/product?id=classic-caramel-corn","console_errors":0},
+    {"path":"/product.html?id=platinum-24-wreath","status":200,"final":"/product?id=platinum-24-wreath","console_errors":0},
+    {"path":"/product.html?id=military-donation-30","status":200,"final":"/product?id=military-donation-30","console_errors":0},
+    {"path":"/campaign.html?id=seroogy-candy-2026","status":200,"console_errors":0},
+    {"path":"/campaign.html?id=popcorn-2026","status":200,"console_errors":0},
+    {"path":"/campaign.html?id=rose-wreaths-2026","status":200,"console_errors":0},
+    {"path":"/campaign.html?id=veterans-wreaths-2026","status":200,"console_errors":0}
+  ],
+  "failure": "Public campaign progress contains $0.00 goals."
+}

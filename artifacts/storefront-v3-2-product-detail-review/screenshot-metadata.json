@@ -1,0 +1,182 @@
+[
+  {
+    "attribution": "SupportingEmily G.Every purchase helps Pack 321 adventures.Change to Pack-wide support",
+    "client": [
+      1280,
+      720
+    ],
+    "h1": "Chocolate Meltaway",
+    "overflow": false,
+    "price": "$2.00",
+    "scroll": [
+      1280,
+      1235
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=chocolate-meltaway&scout=AB12CD",
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleBroken": 0
+  },
+  {
+    "attribution": "SupportingEmily G.Every purchase helps Pack 321 adventures.Change to Pack-wide support",
+    "client": [
+      1280,
+      720
+    ],
+    "h1": "Classic Caramel Corn",
+    "overflow": false,
+    "price": "Campaign Scheduled",
+    "scroll": [
+      1280,
+      1244
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=classic-caramel-corn&scout=AB12CD",
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleBroken": 0
+  },
+  {
+    "attribution": "SupportingEmily G.Every purchase helps Pack 321 adventures.Change to Pack-wide support",
+    "client": [
+      1280,
+      720
+    ],
+    "h1": "36″ Wreath",
+    "overflow": false,
+    "price": "Pricing Pending",
+    "scroll": [
+      1280,
+      1235
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=36-inch-wreath&scout=AB12CD",
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleBroken": 0
+  },
+  {
+    "attribution": "SupportingEmily G.Every purchase helps Pack 321 adventures.Change to Pack-wide support",
+    "client": [
+      1280,
+      720
+    ],
+    "h1": "Platinum 24″ Wreath",
+    "overflow": false,
+    "price": "Pricing Pending",
+    "scroll": [
+      1280,
+      1235
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=platinum-24-wreath&scout=AB12CD",
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleBroken": 0
+  },
+  {
+    "attribution": "SupportingEmily G.Every purchase helps Pack 321 adventures.Change to Pack-wide support",
+    "client": [
+      1280,
+      720
+    ],
+    "h1": "Military Donation",
+    "overflow": false,
+    "price": "Campaign Scheduled",
+    "scroll": [
+      1280,
+      1244
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=military-donation-30&scout=AB12CD",
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleBroken": 0
+  },
+  {
+    "attribution": null,
+    "client": [
+      1280,
+      720
+    ],
+    "h1": "Product Not Found",
+    "overflow": false,
+    "price": null,
+    "scroll": [
+      1280,
+      720
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=unknown-product&scout=AB12CD",
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleBroken": 0
+  },
+  {
+    "attribution": "SupportingEmily G.Every purchase helps Pack 321 adventures.Change to Pack-wide support",
+    "client": [
+      1280,
+      720
+    ],
+    "h1": "Chocolate Meltaway",
+    "overflow": false,
+    "price": "$2.00",
+    "scroll": [
+      1280,
+      1235
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=chocolate-meltaway&scout=AB12CD",
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleBroken": 0
+  },
+  {
+    "attribution": "SupportingPack 321Every purchase helps Pack 321 adventures.",
+    "client": [
+      1280,
+      720
+    ],
+    "h1": "Chocolate Meltaway",
+    "overflow": false,
+    "price": "$2.00",
+    "scroll": [
+      1280,
+      1178
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=chocolate-meltaway&support=pack",
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleBroken": 0
+  },
+  {
+    "attribution": "SupportingEmily G.Every purchase helps Pack 321 adventures.Change to Pack-wide support",
+    "client": [
+      375,
+      844
+    ],
+    "h1": "Chocolate Meltaway",
+    "overflow": false,
+    "price": "$2.00",
+    "scroll": [
+      375,
+      2135
+    ],
+    "url": "http://127.0.0.1:8765/product.html?id=chocolate-meltaway&scout=AB12CD",
+    "viewport": [
+      390,
+      844
+    ],
+    "visibleBroken": 0
+  }
+]
