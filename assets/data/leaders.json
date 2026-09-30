@@ -127,13 +127,13 @@
   "assistants": [
     {
       "role": "Assistant Den Leader",
-      "roleKey": "bear-den-assistant",
+      "roleKey": "arrow-of-light-assistant",
       "name": "Dan Schneider",
-      "den": "Bear Den",
+      "den": "Arrow of Light",
       "started": 2023,
       "favorite": "Helping Scouts",
-      "photo": "assets/images/leaders/bear-den-assistant.jpg",
-      "bio": "Assists Bear Scouts as they learn new skills and take part in Pack adventures."
+      "photo": "assets/images/leaders/arrow-of-light-assistant.JPG",
+      "bio": "Assists Arrow of Light Scouts as they build leadership skills and prepare for the next step in Scouting."
     }
   ],
   "committee": [
