@@ -823,7 +823,7 @@ body.modal-open { overflow: hidden; }
   border: 3px solid var(--gold);
   border-radius: 50%;
   object-fit: cover;
-  object-position: center;
+  object-position: var(--leader-focal-x, 50%) var(--leader-focal-y, 28%);
   background: #fff;
   box-shadow: 0 10px 24px rgba(8,43,87,.15);
 }
