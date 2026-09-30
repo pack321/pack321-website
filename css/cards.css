@@ -461,7 +461,7 @@ body.modal-open { overflow: hidden; }
 }
 .leader-card__photo {
   object-fit: cover;
-  object-position: center;
+  object-position: var(--leader-focal-x, 50%) var(--leader-focal-y, 28%);
   border-radius: 50%;
 }
 .leader-photo-wrap .leader-card__photo {
