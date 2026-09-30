@@ -55,6 +55,17 @@
       "email": "treasurer@pack321wi.org",
       "contactLabel": "Contact Treasurer",
       "bio": "Manages Pack finances, budgeting, fundraising support, and helps ensure resources are available for every Scout."
+    },
+    {
+      "role": "Assistant Treasurer",
+      "roleKey": "assistant-treasurer",
+      "name": "Melissa Skrivanek",
+      "started": "2024",
+      "favorite": "Supporting Pack Finances",
+      "photo": "assets/images/leaders/assistant-treasurer.JPG",
+      "email": "treasurer@pack321wi.org",
+      "contactLabel": "Contact Treasurer",
+      "bio": "Supports Pack financial recordkeeping, budgeting, reimbursements, and Treasurer responsibilities."
     }
   ],
   "dens": [
