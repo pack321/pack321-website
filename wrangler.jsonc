@@ -1,0 +1,8 @@
+{
+  "name": "pack321-website",
+  "pages_build_output_dir": ".",
+  "compatibility_date": "2026-08-02",
+  "services": [
+    { "binding": "LEADERSHIP_PUBLICATION", "service": "scouthq-pack321-preview" }
+  ]
+}
