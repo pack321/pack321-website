@@ -9,7 +9,7 @@ export async function onRequest({ request, env, params }) {
   try {
     const upstream = await env.LEADERSHIP_PUBLICATION.fetch(new Request(
       'https://preview-hq.pack321wi.org' + (photo ? '/api/leadership/photos/' + photo[1] : '/api/public/leadership'),
-      {signal: AbortSignal.timeout(10000)}
+      {headers: {Host: 'preview-hq.pack321wi.org', 'X-Forwarded-Host': 'preview-hq.pack321wi.org', 'X-Forwarded-Proto': 'https'}, signal: AbortSignal.timeout(10000)}
     ));
     if (!upstream.ok) return new Response(null, {status: upstream.status, headers});
     const type = upstream.headers.get('Content-Type') || '';
