@@ -22,3 +22,14 @@ test('configuration diagnostics identify short signing secrets without revealing
   assert.match(config.setupIssues[0],/RECEIPTS_SIGNING_SECRET/);
   assert.ok(!body.includes('too-short')); assert.ok(!body.includes('private-test-value'));
 });
+
+test('a forty-character signing secret passes availability checks without revealing it',async()=>{
+  const secret='x'.repeat(40);
+  const env={RECEIPTS_ENABLED:'true',RECEIPTS_SCRIPT_URL:'https://script.google.com/macros/s/test-id/exec',RECEIPTS_SIGNING_SECRET:secret,RECEIPTS_TURNSTILE_SITE_KEY:'public-test-key',RECEIPTS_TURNSTILE_SECRET:'private-test-value'};
+  const response=await onRequestGet({env}); const body=await response.text();const config=JSON.parse(body);
+  assert.equal(config.enabled,true);assert.deepEqual(config.setupIssues,[]);
+  assert.ok(!body.includes(secret));assert.ok(!body.includes('private-test-value'));
+  delete env.RECEIPTS_SIGNING_SECRET;
+  const missing=await (await onRequestGet({env})).json();
+  assert.match(missing.setupIssues[0],/missing from this deployment/);
+});
