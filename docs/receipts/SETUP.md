@@ -36,3 +36,9 @@ Run controlled acceptance with a marked synthetic receipt: confirm original file
 Attach `receipts.pack321wi.org` to the existing **Pack website Cloudflare Pages project**, not to the former ChatGPT preview. Add the DNS records returned by Cloudflare. Configure a hostname-specific redirect from its root to `https://pack321wi.org/receipts/` (preserve path `/receipts/` if desired). The canonical route is the Pack website page; do not replace the Pack root homepage or add a domain-wide redirect.
 
 DNS, Google deployment and mailbox routing are account configuration steps, not repository code. The unrelated private preview's custom-domain reservation should be removed before activating the Pack-hosted subdomain. No unrelated ScoutHQ or leadership service settings should change.
+
+## Short receipt references
+
+New receipts use `R-2627-0001`: Pack financial year 2026–2027 and a sequential receipt number across all events in that financial year. The counter is a Script Property named `RECEIPT_SEQUENCE_2026–2027`; never reset or delete it. Gaps after failed saves are permitted. The existing script lock serializes counter allocation. Internal request UUIDs remain the duplicate-submission keys; retries retain their allocated reference. Old receipt records retain their original references. The receipt email body, confirmation and new attachment filenames use the short reference. The agreed email subject format remains unchanged.
+
+The script's notification recipient is `wicubscoutpack321@gmail.com`, sent directly to avoid the Cloudflare forward-back-to-sender path. `receipts@pack321wi.org` remains the address for manually emailed receipts. After copying the updated Code.gs into Apps Script, save and update the existing deployment using **New version** so the `/exec` URL remains unchanged. Deploy the website's compatible bridge before the new Google script.

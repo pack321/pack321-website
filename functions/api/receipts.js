@@ -48,7 +48,7 @@ export async function onRequestPost({request,env}) {
     const signature = Array.from(new Uint8Array(await crypto.subtle.sign('HMAC',key,new TextEncoder().encode(timestamp + '.' + body))), b => b.toString(16).padStart(2,'0')).join('');
     const upstream = await fetch(env.RECEIPTS_SCRIPT_URL, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({timestamp,body,signature}),signal:AbortSignal.timeout(45000)});
     const result = await upstream.json();
-    if (!upstream.ok || !result.ok || result.reference !== payload.data.requestId || typeof result.subject !== 'string' || typeof result.emailSent !== 'boolean') return json({ok:false,error:'Submission status needs review. Keep your reference before trying again.'},502);
+    if (!upstream.ok || !result.ok || (result.requestId || result.reference) !== payload.data.requestId || !/^(R-\\d{4}-\\d{4,}|[a-f0-9-]{36})$/i.test(result.reference || '') || typeof result.subject !== 'string' || typeof result.emailSent !== 'boolean') return json({ok:false,error:'Submission status needs review. Keep your reference before trying again.'},502);
     return json({ok:true,reference:result.reference,subject:result.subject,emailSent:result.emailSent});
   } catch { return json({ok:false,error:'Unable to confirm receipt submission. Keep your reference for follow-up.'},502); }
 }

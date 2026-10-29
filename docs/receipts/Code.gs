@@ -1,7 +1,7 @@
 // Pack-owned Drive and email service. See docs/receipts/SETUP.md.
 // Keep the Pack's credentials out of source and out of the browser.
 const ROOT_FOLDER_ID = '1zYcK335PXOdCA0F4Ve30RUv2W_SO76Z4';
-const RECEIPT_EMAIL = 'receipts@pack321wi.org';
+const RECEIPT_EMAIL = 'wicubscoutpack321@gmail.com';
 
 function isReady() {
   return PropertiesService.getScriptProperties().getProperty('RECEIPTS_ENABLED') === 'true';
@@ -45,6 +45,17 @@ function validate_(data) {
   });
   return clean;
 }
+// Called only while the script lock is held. Never reset these counters.
+function nextReference_(year) {
+  const properties=PropertiesService.getScriptProperties();
+  const key='RECEIPT_SEQUENCE_'+year;
+  const previous=properties.getProperty(key);
+  if(previous!==null && !/^\d+$/.test(previous)) throw Error('Receipt counter needs Treasurer review.');
+  const sequence=Number(previous || '0')+1;
+  if(!Number.isSafeInteger(sequence)) throw Error('Receipt counter needs Treasurer review.');
+  properties.setProperty(key,String(sequence));
+  return 'R-'+year.slice(2,4)+year.slice(-2)+'-'+String(sequence).padStart(4,'0');
+}
 function submitReceipt(data) {
   if(!isReady()) throw Error('Receipt submissions are not active yet.');
   const clean=validate_(data);
@@ -58,16 +69,16 @@ function submitReceipt(data) {
     const records=eventFolder.getFilesByName(recordName);
     if(records.hasNext()) {
       const existing=JSON.parse(records.next().getBlob().getDataAsString());
-      if(existing.state==='complete') return {reference:existing.reference,subject:existing.subject,emailSent:existing.emailSent};
-      throw Error('This submission may already be saved. Give the Treasurer reference '+clean.requestId+' before submitting again.');
+      if(existing.state==='complete') return {requestId:clean.requestId,reference:existing.reference,subject:existing.subject,emailSent:existing.emailSent};
+      throw Error('This submission may already be saved. Give the Treasurer reference '+(existing.reference || clean.requestId)+' before submitting again.');
     }
     const subject=ReceiptRules.subject(clean.event,clean.amount);
-    const record={reference:clean.requestId,subject:subject,name:clean.name,email:clean.email,vendor:clean.vendor,date:clean.date,amount:clean.amount,financialYear:clean.year,event:clean.event,notes:clean.notes,createdAt:new Date().toISOString(),state:'saving',emailSent:false,files:[]};
+    const record={requestId:clean.requestId,reference:nextReference_(clean.year),subject:subject,name:clean.name,email:clean.email,vendor:clean.vendor,date:clean.date,amount:clean.amount,financialYear:clean.year,event:clean.event,notes:clean.notes,createdAt:new Date().toISOString(),state:'saving',emailSent:false,files:[]};
     // Durable marker before uploads prevents duplicate retries after a partial failure.
     const marker=eventFolder.createFile(recordName,JSON.stringify(record,null,2),MimeType.PLAIN_TEXT);
     const attachments=[];
     clean.files.forEach(function(file,index) {
-      const name=clean.date+'_'+subject+'_'+clean.requestId+'_'+(index+1)+'.'+file.extension;
+      const name=clean.date+'_'+subject+'_'+record.reference+'_'+(index+1)+'.'+file.extension;
       const blob=Utilities.newBlob(file.bytes,file.type,name);
       const saved=eventFolder.createFile(blob);
       record.files.push({id:saved.getId(),name:name,url:saved.getUrl()});
@@ -85,7 +96,7 @@ function submitReceipt(data) {
     } catch(error) { record.emailStatus='needs-review'; }
     record.state='complete';
     marker.setContent(JSON.stringify(record,null,2));
-    return {reference:record.reference,subject:record.subject,emailSent:record.emailSent};
+    return {requestId:clean.requestId,reference:record.reference,subject:record.subject,emailSent:record.emailSent};
   } finally {lock.releaseLock();}
 }
 
@@ -102,6 +113,6 @@ function doPost(e) {
     for(let i=0;i<64;i++) mismatch |= expected.charCodeAt(i)^envelope.signature.charCodeAt(i);
     if(mismatch) return output({ok:false});
     const result=submitReceipt(JSON.parse(envelope.body));
-    return output({ok:true,reference:result.reference,subject:result.subject,emailSent:result.emailSent});
+    return output({ok:true,requestId:result.requestId,reference:result.reference,subject:result.subject,emailSent:result.emailSent});
   } catch(error) { return output({ok:false}); }
 }
