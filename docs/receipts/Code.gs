@@ -66,7 +66,10 @@ function submitReceipt(data) {
     const yearFolder=folder_(DriveApp.getFolderById(ROOT_FOLDER_ID),clean.year);
     const eventFolder=folder_(yearFolder,clean.event);
     const recordName=clean.requestId+'.json';
-    const records=eventFolder.getFilesByName(recordName);
+    // Preserve lookups for records created before short filenames.
+    let records=eventFolder.getFilesByName(recordName);
+    const indexFolder=folder_(yearFolder,'_submission-index');
+    if(!records.hasNext()) records=indexFolder.getFilesByName(recordName);
     if(records.hasNext()) {
       const existing=JSON.parse(records.next().getBlob().getDataAsString());
       if(existing.state==='complete') return {requestId:clean.requestId,reference:existing.reference,subject:existing.subject,emailSent:existing.emailSent};
@@ -75,7 +78,13 @@ function submitReceipt(data) {
     const subject=ReceiptRules.subject(clean.event,clean.amount);
     const record={requestId:clean.requestId,reference:nextReference_(clean.year),subject:subject,name:clean.name,email:clean.email,vendor:clean.vendor,date:clean.date,amount:clean.amount,financialYear:clean.year,event:clean.event,notes:clean.notes,createdAt:new Date().toISOString(),state:'saving',emailSent:false,files:[]};
     // Durable marker before uploads prevents duplicate retries after a partial failure.
-    const marker=eventFolder.createFile(recordName,JSON.stringify(record,null,2),MimeType.PLAIN_TEXT);
+    const marker=indexFolder.createFile(recordName,JSON.stringify(record,null,2),MimeType.PLAIN_TEXT);
+    const details=eventFolder.createFile(record.reference+'.json',JSON.stringify(record,null,2),MimeType.PLAIN_TEXT);
+    function persistRecord() {
+      const content=JSON.stringify(record,null,2);
+      details.setContent(content);
+      marker.setContent(content);
+    }
     const attachments=[];
     clean.files.forEach(function(file,index) {
       const name=clean.date+'_'+subject+'_'+record.reference+'_'+(index+1)+'.'+file.extension;
@@ -83,19 +92,19 @@ function submitReceipt(data) {
       const saved=eventFolder.createFile(blob);
       record.files.push({id:saved.getId(),name:name,url:saved.getUrl()});
       attachments.push(blob);
-      marker.setContent(JSON.stringify(record,null,2));
+      persistRecord();
     });
     record.state='saved';
-    marker.setContent(JSON.stringify(record,null,2));
+    persistRecord();
     const body=['Pack 321 receipt submission','Reference: '+record.reference,'Submitted by: '+record.name+' <'+record.email+'>','Vendor: '+record.vendor,'Purchase date: '+record.date,'Amount: $'+record.amount,'Pack year: '+record.financialYear,'Event: '+record.event,'Notes: '+record.notes,'','Saved receipt files:',record.files.map(function(f){return f.name+'\n'+f.url}).join('\n\n'),'','Reimbursement approval is handled separately.'].join('\n');
     // Do not automatically replay an email after uncertain delivery.
-    record.emailStatus='attempting';marker.setContent(JSON.stringify(record,null,2));
+    record.emailStatus='attempting';persistRecord();
     try {
       MailApp.sendEmail({to:RECEIPT_EMAIL,subject:subject,body:body,replyTo:record.email,attachments:attachments,name:'Pack 321 Receipts'});
       record.emailSent=true;record.emailStatus='sent';
     } catch(error) { record.emailStatus='needs-review'; }
     record.state='complete';
-    marker.setContent(JSON.stringify(record,null,2));
+    persistRecord();
     return {requestId:clean.requestId,reference:record.reference,subject:record.subject,emailSent:record.emailSent};
   } finally {lock.releaseLock();}
 }

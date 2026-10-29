@@ -34,9 +34,22 @@ test('short references increment across events, reset by financial year, and reu
   assert.equal(s.context.submitReceipt(s.data('44444444-4444-4444-4444-444444444444','2027-07-31')).reference,'R-2627-0003');
   const files=s.root.folders.get('2026–2027').folders.get('Camping').files;
   assert.ok(files.some(f=>f.name.includes('_R-2627-0001_1.pdf')));
+  assert.ok(files.some(f=>f.name==='R-2627-0001.json'));
+  assert.ok(!files.some(f=>f.name===id+'.json'));
+  const details=JSON.parse(files.find(f=>f.name==='R-2627-0001.json').getBlob().getDataAsString());
+  assert.equal(details.reference,first.reference);assert.equal(details.state,'complete');assert.equal(details.emailSent,true);
+  assert.ok(s.root.folders.get('2026–2027').folders.get('_submission-index').files.some(f=>f.name===id+'.json'));
 });
 test('a damaged counter is rejected rather than silently restarted',()=>{
   const s=service();s.values.set('RECEIPT_SEQUENCE_2026–2027','invalid');
   assert.throws(()=>s.context.submitReceipt(s.data('55555555-5555-5555-5555-555555555555')),/counter needs/);
   assert.equal(s.sent.length,0);
+});
+
+test('existing UUID-named records remain readable without allocating another receipt',()=>{
+  const s=service(),id='66666666-6666-6666-6666-666666666666';
+  const year=s.root.createFolder('2026–2027'),event=year.createFolder('Camping');
+  event.createFile(id+'.json',JSON.stringify({reference:'R-2627-0001',subject:'Receipt-Camping-$0.01',emailSent:true,state:'complete'}));
+  const replay=s.context.submitReceipt(s.data(id));assert.equal(replay.reference,'R-2627-0001');
+  assert.equal(s.sent.length,0);assert.equal(s.values.has('RECEIPT_SEQUENCE_2026–2027'),false);
 });
