@@ -7,7 +7,13 @@ function configured(env) {
 }
 export async function onRequestGet({env}) {
   const enabled = configured(env);
-  return json({enabled,siteKey:enabled ? env.RECEIPTS_TURNSTILE_SITE_KEY : null});
+  const setupIssues = [];
+  if (env.RECEIPTS_ENABLED !== 'true') setupIssues.push('RECEIPTS_ENABLED must be lowercase true without quotes or spaces');
+  if (!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(env.RECEIPTS_SCRIPT_URL || '')) setupIssues.push('RECEIPTS_SCRIPT_URL must be the Google Apps Script URL ending in /exec');
+  if ((env.RECEIPTS_SIGNING_SECRET || '').length < 32) setupIssues.push('RECEIPTS_SIGNING_SECRET must contain at least 32 characters');
+  if (!env.RECEIPTS_TURNSTILE_SITE_KEY) setupIssues.push('RECEIPTS_TURNSTILE_SITE_KEY is missing');
+  if (!env.RECEIPTS_TURNSTILE_SECRET) setupIssues.push('RECEIPTS_TURNSTILE_SECRET is missing');
+  return json({enabled,siteKey:enabled ? env.RECEIPTS_TURNSTILE_SITE_KEY : null,setupIssues});
 }
 async function readBounded(request) {
   const reader = request.body.getReader(), chunks = []; let size = 0;
